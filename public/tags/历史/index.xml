@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>历史 on 个人博客</title>
+    <link>http://localhost:1313/tags/%E5%8E%86%E5%8F%B2/</link>
+    <description>Recent content in 历史 on 个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>wrongtrojan0.@gmail (木马)</managingEditor>
+    <webMaster>wrongtrojan0.@gmail (木马)</webMaster>
+    <copyright>@2025木马</copyright>
+    <lastBuildDate>Sat, 06 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%8E%86%E5%8F%B2/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>屈平之死</title>
+      <link>http://localhost:1313/create/novel/%E5%B1%88%E5%B9%B3%E4%B9%8B%E6%AD%BB/</link>
+      <pubDate>Sat, 06 Dec 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/create/novel/%E5%B1%88%E5%B9%B3%E4%B9%8B%E6%AD%BB/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>继承 on 个人博客</title>
+    <link>http://localhost:1313/tags/%E7%BB%A7%E6%89%BF/</link>
+    <description>Recent content in 继承 on 个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>wrongtrojan0.@gmail (木马)</managingEditor>
+    <webMaster>wrongtrojan0.@gmail (木马)</webMaster>
+    <copyright>@2025木马</copyright>
+    <lastBuildDate>Mon, 24 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%BB%A7%E6%89%BF/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>7.类的继承</title>
+      <link>http://localhost:1313/note/cpp/7.%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF/</link>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/note/cpp/7.%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

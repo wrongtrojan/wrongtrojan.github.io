@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>讽喻 on 个人博客</title>
+    <link>http://localhost:1313/tags/%E8%AE%BD%E5%96%BB/</link>
+    <description>Recent content in 讽喻 on 个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>wrongtrojan0.@gmail (木马)</managingEditor>
+    <webMaster>wrongtrojan0.@gmail (木马)</webMaster>
+    <copyright>@2025木马</copyright>
+    <lastBuildDate>Sat, 06 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E8%AE%BD%E5%96%BB/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>晋升</title>
+      <link>http://localhost:1313/create/novel/%E6%99%8B%E5%8D%87/</link>
+      <pubDate>Sat, 06 Dec 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/create/novel/%E6%99%8B%E5%8D%87/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>偶像</title>
+      <link>http://localhost:1313/create/novel/%E5%81%B6%E5%83%8F/</link>
+      <pubDate>Sat, 06 Dec 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/create/novel/%E5%81%B6%E5%83%8F/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>学生时代</title>
+      <link>http://localhost:1313/create/novel/%E5%AD%A6%E7%94%9F%E6%97%B6%E4%BB%A3/</link>
+      <pubDate>Sat, 06 Dec 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/create/novel/%E5%AD%A6%E7%94%9F%E6%97%B6%E4%BB%A3/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1731 @@
+<!doctype html>
+<html
+  lang="zh-cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-cn">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>7.类的继承 &middot; 个人博客</title>
+    <meta name="title" content="7.类的继承 &middot; 个人博客">
+  
+
+  
+  
+    <meta name="description" content="My personal blog">
+  
+  
+    <meta name="keywords" content="Cpp,类,继承,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/note/cpp/7.%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF/">
+  
+
+  
+  
+    <meta name="author" content="木马">
+  
+  
+    
+      
+        
+          <link href="https://github.com/wrongtrojan" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/note/cpp/7.%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF/">
+  <meta property="og:site_name" content="个人博客">
+  <meta property="og:title" content="7.类的继承">
+  <meta property="og:description" content="My personal blog">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="note">
+    <meta property="article:published_time" content="2025-11-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-11-24T00:00:00+00:00">
+    <meta property="article:tag" content="Cpp">
+    <meta property="article:tag" content="类">
+    <meta property="article:tag" content="继承">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="7.类的继承">
+  <meta name="twitter:description" content="My personal blog">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.39b2b72cb1187e8a119efd4db44b21dee736dc64f705a4ca37fc0e5fe991b88ddf384bc0ee3e5eefb169205ec963ef484a63f723317257724989ad7eb345b678.css"
+    integrity="sha512-ObK3LLEYfooRnv1NtEsh3uc23GT3BaTKN/wOX&#43;mRuI3fOEvA7j5e77FpIF7JY&#43;9ISmP3IzFyV3JJia1&#43;s0W2eA==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.b4b722fcb5d42f34f52b30a92f3521b69f403ca9d96d0d6179eb537cb870f5d83fdf1fe836688d95d5c99fefbda4170487711006e56051fa67ea00da10521721.js" integrity="sha512-tLci/LXULzT1KzCpLzUhtp9APKnZbQ1heetTfLhw9dg/3x/oNmiNldXJn&#43;&#43;9pBcEh3EQBuVgUfpn6gDaEFIXIQ=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.e3d337dd3f18427eb20aa355839d583ef6382bc42e34cfe789adb9358d463ef51f53691e32f524259380d4d3add49162f522426784990f3a5dbd39c33c6ed05a.js"
+      integrity="sha512-49M33T8YQn6yCqNVg51YPvY4K8QuNM/nia25NY1GPvUfU2keMvUkJZOA1NOt1JFi9SJCZ4SZDzpdvTnDPG7QWg=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "笔记",
+    "name": "7.类的继承",
+    "headline": "7.类的继承",
+    
+    
+    "inLanguage": "zh-cn",
+    "url" : "http://localhost:1313/note/cpp/7.%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF/",
+    "author" : {
+      "@type": "Person",
+      "name": "木马"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-11-24T00:00:00\u002b00:00",
+    "datePublished": "2025-11-24T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-11-24T00:00:00\u002b00:00",
+    
+    "keywords": ["Cpp","类","继承"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1500"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          个人博客
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="首页"
+  title="个人博客">
+  
+  
+    <p class="text-base font-medium">
+      首页
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/about/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="关于"
+  title="关于">
+  
+  
+    <p class="text-base font-medium">
+      关于
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a
+      
+        href="/note/"
+        
+      
+      aria-label="笔记"
+      class="text-base font-medium hover:text-primary-600 dark:hover:text-primary-400"
+      title="笔记">
+      <p>
+        笔记
+      </p>
+    </a>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+          <a
+            href="/note/cpp/"
+            
+            aria-label="Cpp程序设计"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="Cpp程序设计">
+              Cpp程序设计
+            </p>
+          </a>
+        
+          <a
+            href="/note/datastructandalgorithm/"
+            
+            aria-label="数据结构与算法"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="数据结构与算法">
+              数据结构与算法
+            </p>
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      
+        
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a
+      
+        href="/create/"
+        
+      
+      aria-label="创作"
+      class="text-base font-medium hover:text-primary-600 dark:hover:text-primary-400"
+      title="创作">
+      <p>
+        创作
+      </p>
+    </a>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+          <a
+            href="/create/novel/"
+            
+            aria-label="小说"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="小说">
+              小说
+            </p>
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="搜索 (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="搜索 (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="首页"
+    title="个人博客">
+    
+    
+      <p class="text-bg font-bg">
+        首页
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/about/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="关于"
+    title="关于">
+    
+    
+      <p class="text-bg font-bg">
+        关于
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/note/"
+    aria-label="笔记"
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="笔记">
+      笔记
+    </p>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </a>
+</li>
+
+  <li class="mt-1">
+    <a
+      href="/note/cpp/"
+      
+      aria-label="Cpp程序设计"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="Cpp程序设计">
+        Cpp程序设计
+      </p>
+    </a>
+  </li>
+
+  <li class="mt-1">
+    <a
+      href="/note/datastructandalgorithm/"
+      
+      aria-label="数据结构与算法"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="数据结构与算法">
+        数据结构与算法
+      </p>
+    </a>
+  </li>
+
+<li class="mb-2"></li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/create/"
+    aria-label="创作"
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="创作">
+      创作
+    </p>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </a>
+</li>
+
+  <li class="mt-1">
+    <a
+      href="/create/novel/"
+      
+      aria-label="小说"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="小说">
+        小说
+      </p>
+    </a>
+  </li>
+
+<li class="mb-2"></li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+  
+  
+    
+    
+  
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/defaultBackgroundImage_hu_a4dab90c6724ce91.jpg"
+      alt="7.类的继承"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+      >
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div>
+    <div
+      class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div>
+  </div>
+
+  
+    <div
+      id="background-blur"
+      class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/background-blur.min.00a57c73ea12f2cab2980c3c3d649e89f6d82f190f74bbe2b67f2f5e39ab7d032ece47086400ca05396758aace13299da49aca43ea643d2625e62c506267a169.js"
+      integrity="sha512-AKV8c&#43;oS8sqymAw8PWSeifbYLxkPdLvitn8vXjmrfQMuzkcIZADKBTlnWKrOEymdpJrKQ&#43;pkPSYl5ixQYmehaQ=="
+      data-blur-id="background-blur"
+      data-image-id="background-image"
+      data-image-url="/defaultBackgroundImage_hu_a4dab90c6724ce91.jpg"></script>
+  
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        7.类的继承
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>1500 字</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/cpp/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Cpp
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E7%B1%BB/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    类
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E7%BB%A7%E6%89%BF/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    继承
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="木马"
+        src="/author_hu_b32b149bc35b336c.jpg"
+        data-zoom-src="/author_hu_7803839ca98ef477.jpg">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        作者
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        木马
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/wrongtrojan"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#基类与派生类">基类与派生类</a></li>
+    <li><a href="#派生类的定义">派生类的定义</a></li>
+    <li><a href="#派生类生成过程">派生类生成过程</a>
+      <ul>
+        <li><a href="#吸收基类成员">吸收基类成员</a></li>
+        <li><a href="#改造基类成员">改造基类成员</a></li>
+        <li><a href="#添加新的成员">添加新的成员</a></li>
+      </ul>
+    </li>
+    <li><a href="#继承访问控制">继承访问控制</a>
+      <ul>
+        <li><a href="#公有继承public">公有继承(public)</a></li>
+        <li><a href="#私有继承private">私有继承(private)</a></li>
+        <li><a href="#保护继承protected">保护继承(protected)</a></li>
+      </ul>
+    </li>
+    <li><a href="#类型兼容规则">类型兼容规则</a>
+      <ul>
+        <li><a href="#公有派生类的对象替代基类对象">公有派生类的对象替代基类对象</a></li>
+      </ul>
+    </li>
+    <li><a href="#派生类构造函数与析构函数">派生类构造函数与析构函数</a>
+      <ul>
+        <li><a href="#构造函数">构造函数</a></li>
+        <li><a href="#复制构造函数">复制构造函数</a></li>
+        <li><a href="#析构函数">析构函数</a></li>
+        <li><a href="#delete构造函数">delete构造函数</a></li>
+      </ul>
+    </li>
+    <li><a href="#派生类成员的标识与访问">派生类成员的标识与访问</a>
+      <ul>
+        <li><a href="#成员按访问属性划分">成员按访问属性划分</a></li>
+        <li><a href="#作用域分辨符-">作用域分辨符 &ldquo;::&rdquo;</a></li>
+      </ul>
+    </li>
+    <li><a href="#虚基类">虚基类</a></li>
+    <li><a href="#虚基类及其派生类构造函数">虚基类及其派生类构造函数</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#基类与派生类">基类与派生类</a></li>
+    <li><a href="#派生类的定义">派生类的定义</a></li>
+    <li><a href="#派生类生成过程">派生类生成过程</a>
+      <ul>
+        <li><a href="#吸收基类成员">吸收基类成员</a></li>
+        <li><a href="#改造基类成员">改造基类成员</a></li>
+        <li><a href="#添加新的成员">添加新的成员</a></li>
+      </ul>
+    </li>
+    <li><a href="#继承访问控制">继承访问控制</a>
+      <ul>
+        <li><a href="#公有继承public">公有继承(public)</a></li>
+        <li><a href="#私有继承private">私有继承(private)</a></li>
+        <li><a href="#保护继承protected">保护继承(protected)</a></li>
+      </ul>
+    </li>
+    <li><a href="#类型兼容规则">类型兼容规则</a>
+      <ul>
+        <li><a href="#公有派生类的对象替代基类对象">公有派生类的对象替代基类对象</a></li>
+      </ul>
+    </li>
+    <li><a href="#派生类构造函数与析构函数">派生类构造函数与析构函数</a>
+      <ul>
+        <li><a href="#构造函数">构造函数</a></li>
+        <li><a href="#复制构造函数">复制构造函数</a></li>
+        <li><a href="#析构函数">析构函数</a></li>
+        <li><a href="#delete构造函数">delete构造函数</a></li>
+      </ul>
+    </li>
+    <li><a href="#派生类成员的标识与访问">派生类成员的标识与访问</a>
+      <ul>
+        <li><a href="#成员按访问属性划分">成员按访问属性划分</a></li>
+        <li><a href="#作用域分辨符-">作用域分辨符 &ldquo;::&rdquo;</a></li>
+      </ul>
+    </li>
+    <li><a href="#虚基类">虚基类</a></li>
+    <li><a href="#虚基类及其派生类构造函数">虚基类及其派生类构造函数</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <h2 class="relative group">基类与派生类
+    <div id="基类与派生类" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9f%ba%e7%b1%bb%e4%b8%8e%e6%b4%be%e7%94%9f%e7%b1%bb" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+<pre><code>  类的继承，是新的类从已有类得到已有的特性
+
+  从已有类产生新类的过程就是类的派生
+
+  已有的类称为基类或父类，新类称为派生类或子类
+</code></pre>
+</blockquote>
+
+<h2 class="relative group">派生类的定义
+    <div id="派生类的定义" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b4%be%e7%94%9f%e7%b1%bb%e7%9a%84%e5%ae%9a%e4%b9%89" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+<pre><code>  class 派生类名：继承方式 基类名列表{ 派生类成员声明; };
+
+  一个派生类可以有多个基类，称为多继承；也可以只有一个直接基类，称为单继承
+
+  类族中直接派生出某类的基类称为直接基类，基类的基类或更高层称为间接基类
+
+  继承方式规定了如何访问从基类继承的成，系统默认为私有继承
+
+  派生类成员是指除了基类继承来的成员外新增加的数据和函数成员
+</code></pre>
+</blockquote>
+
+<h2 class="relative group">派生类生成过程
+    <div id="派生类生成过程" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b4%be%e7%94%9f%e7%b1%bb%e7%94%9f%e6%88%90%e8%bf%87%e7%a8%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+
+<h3 class="relative group">吸收基类成员
+    <div id="吸收基类成员" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%90%b8%e6%94%b6%e5%9f%ba%e7%b1%bb%e6%88%90%e5%91%98" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>派生类不包含基类的构造函数和析构函数
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">改造基类成员
+    <div id="改造基类成员" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%94%b9%e9%80%a0%e5%9f%ba%e7%b1%bb%e6%88%90%e5%91%98" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>基类成员的访问控制问题
+
+  主要依靠派生类定义时继承方式控制
+
+基类成员的覆盖或隐藏
+
+  成员覆盖
+
+    在第八章介绍
+
+  成员隐藏
+
+    派生类中声明和基类数据或函数成员同名的新成员即同名隐藏
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">添加新的成员
+    <div id="添加新的成员" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b7%bb%e5%8a%a0%e6%96%b0%e7%9a%84%e6%88%90%e5%91%98" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>加入新的适当的数据和函数成员
+
+实现特别的初始化和扫尾工作需加入新构造函数和析构函数
+</code></pre>
+</blockquote>
+
+<h2 class="relative group">继承访问控制
+    <div id="继承访问控制" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%bb%a7%e6%89%bf%e8%ae%bf%e9%97%ae%e6%8e%a7%e5%88%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+<pre><code>  派生类继承了基类除构造、析构函数的所有成员，但成员访问属性可以调整
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">公有继承(public)
+    <div id="公有继承public" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%85%ac%e6%9c%89%e7%bb%a7%e6%89%bfpublic" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>基类的公有和保护成员在派生类访问属性不变，基类的私有成员不可直接访问
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">私有继承(private)
+    <div id="私有继承private" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%a7%81%e6%9c%89%e7%bb%a7%e6%89%bfprivate" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>基类的公有和保护成员变为派生类私有成员，基类的私有成员不可直接访问
+
+进一步派生时，基类全部成员无法被直接访问，终止了基类功能的继续派生
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">保护继承(protected)
+    <div id="保护继承protected" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bf%9d%e6%8a%a4%e7%bb%a7%e6%89%bfprotected" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>基类的公有和保护成员变为派生类保护成员，基类的私有成员不可直接访问
+</code></pre>
+</blockquote>
+
+<h2 class="relative group">类型兼容规则
+    <div id="类型兼容规则" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%b1%bb%e5%9e%8b%e5%85%bc%e5%ae%b9%e8%a7%84%e5%88%99" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+
+<h3 class="relative group">公有派生类的对象替代基类对象
+    <div id="公有派生类的对象替代基类对象" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%85%ac%e6%9c%89%e6%b4%be%e7%94%9f%e7%b1%bb%e7%9a%84%e5%af%b9%e8%b1%a1%e6%9b%bf%e4%bb%a3%e5%9f%ba%e7%b1%bb%e5%af%b9%e8%b1%a1" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>派生类对象可以隐含转换临时基类对象(基类有复制/移动构造函数时)
+
+派生类的对象可以初始化基类的引用
+
+派生类的指针可以隐含转换为基类的指针
+
+替代之后，派生类对象可作为基类对象使用，但只能使用从基类继承的成员
+
+*对象依旧是原来的派生类对象
+</code></pre>
+</blockquote>
+
+<h2 class="relative group">派生类构造函数与析构函数
+    <div id="派生类构造函数与析构函数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b4%be%e7%94%9f%e7%b1%bb%e6%9e%84%e9%80%a0%e5%87%bd%e6%95%b0%e4%b8%8e%e6%9e%90%e6%9e%84%e5%87%bd%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+
+<h3 class="relative group">构造函数
+    <div id="构造函数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%9e%84%e9%80%a0%e5%87%bd%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>构造派生类对象时，要对基类成员对象和新增成员对象进行初始化
+
+派生类::派生类名(参数表): 基类名表(参数表),新成员对象表(参数表){}
+
+对基类初始化需调有形参表构造函数时，派生类必须声明构造函数
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">复制构造函数
+    <div id="复制构造函数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%8d%e5%88%b6%e6%9e%84%e9%80%a0%e5%87%bd%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>派生类::派生类名(const 派生类名 &amp;v): 基类名(v){\...} //类型兼容规则发挥作用
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">析构函数
+    <div id="析构函数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%9e%90%e6%9e%84%e5%87%bd%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>与没有继承关系的类中析构函数的声明方法完全相同
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">delete构造函数
+    <div id="delete构造函数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#delete%e6%9e%84%e9%80%a0%e5%87%bd%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>在基类中删除的构造函数在派生类中也对应是删除状态
+
+编译器无法执行派生类中基类部分对应的构造或赋值操作
+</code></pre>
+</blockquote>
+
+<h2 class="relative group">派生类成员的标识与访问
+    <div id="派生类成员的标识与访问" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b4%be%e7%94%9f%e7%b1%bb%e6%88%90%e5%91%98%e7%9a%84%e6%a0%87%e8%af%86%e4%b8%8e%e8%ae%bf%e9%97%ae" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+
+<h3 class="relative group">成员按访问属性划分
+    <div id="成员按访问属性划分" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%88%90%e5%91%98%e6%8c%89%e8%ae%bf%e9%97%ae%e5%b1%9e%e6%80%a7%e5%88%92%e5%88%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>不可访问成员 私有成员 保护成员 公有成员
+
+唯一标识问题和可见性问题 访问一个能够唯一标识的可见成员
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">作用域分辨符 &ldquo;::&rdquo;
+    <div id="作用域分辨符-" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bd%9c%e7%94%a8%e5%9f%9f%e5%88%86%e8%be%a8%e7%ac%a6-" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>可见性原则：外层声明的标识符如果在内层无同名标识符则可见，反之不可见
+
+隐藏规则与同名成员处理
+
+  派生类声明与基类同名成员，会隐藏基类同名成员，直接访问到派生类成员
+
+  派生类声明与基类同名函数，基类重载会被隐藏，需 &quot;::&quot; 访问基类版本。
+
+多继承下同名成员访问
+
+  派生类的多基类有同名成员，派生类无同名成员，需用基类名::成员名标识
+
+  派生类有同名成员，则隐藏基类同名成员，基类成员需基类名::成员名访问
+
+解决二义性的补充方法
+
+  可通过using关键字将基类成员引入派生类作用域，明确成员归属
+
+  也可用于让基类同名但参数不同的函数不被隐藏，实现重载共存
+
+共同基类的处理
+
+  多直接基类来自共同基类，同名成员需直接基类名加作用域分辨符唯一标识
+</code></pre>
+</blockquote>
+
+<h2 class="relative group">虚基类
+    <div id="虚基类" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%99%9a%e5%9f%ba%e7%b1%bb" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+<pre><code>  将共同基类设置为虚基类，从不同路径继承过来的同名成员在内存只有一个
+
+  class 派生类名: virtual 继承方式 基类名
+</code></pre>
+</blockquote>
+
+<h2 class="relative group">虚基类及其派生类构造函数
+    <div id="虚基类及其派生类构造函数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%99%9a%e5%9f%ba%e7%b1%bb%e5%8f%8a%e5%85%b6%e6%b4%be%e7%94%9f%e7%b1%bb%e6%9e%84%e9%80%a0%e5%87%bd%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+<pre><code>  虚基类无默认构造函数而有带形参构造函数则无法使用自动生成的默认构造函数
+
+  此时需在派生类构造函数初始化表中列出虚基类初始化
+
+  *构造一个类的一般顺序
+</code></pre>
+</blockquote>
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_note\cpp\7.类的继承.md"
+          data-oid-likes="likes_note\cpp\7.类的继承.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+      
+      
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/note/cpp/6.%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;6.数组、指针与字符串
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/note/cpp/8.%E5%A4%9A%E6%80%81%E6%80%A7/">
+              <span class="leading-6">
+                8.多态性&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+          
+          
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 ">
+        <ul class="flex list-none flex-col sm:flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/tags/"
+                title="Tags">
+                
+                Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="https://github.com/wrongtrojan/wrongtrojan.github.io"
+                title="">
+                
+                  <span >
+                    <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span>
+                  </span>
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          @2025木马
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

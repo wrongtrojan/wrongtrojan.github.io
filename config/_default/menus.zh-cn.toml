@@ -1,0 +1,97 @@
+# -- Main Menu --
+# The main menu is displayed in the header at the top of the page.
+# Acceptable parameters are name, pageRef, page, url, title, weight.
+# 
+# The simplest menu configuration is to provide:
+#   name = The name to be displayed for this menu link
+#   pageRef = The identifier of the page or section to link to
+#
+# By default the menu is ordered alphabetically. This can be
+# overridden by providing a weight value. The menu will then be
+# ordered by weight from lowest to highest.
+
+[[main]]
+  name = "首页"
+  pageRef = "/"
+  weight = 1
+
+[[main]]
+  name = "关于"
+  pageRef = "about"
+  weight = 2
+
+[[main]]
+  name = "笔记"
+  pageRef = "note"
+  weight = 3
+
+[[main]]
+  name = "Cpp程序设计"
+  parent = "笔记"
+  pageRef = "note/cpp"
+  weight = 10
+
+[[main]]
+  name = "数据结构与算法"
+  parent = "笔记"
+  pageRef = "note/dataStructAndAlgorithm"
+  weight = 20
+
+[[main]]
+  name = "创作"
+  pageRef = "create"
+  weight = 4
+
+[[main]]
+  name = "小说"
+  parent = "创作"
+  pageRef = "novel"
+  weight = 10
+
+#[[main]]
+#  name = "Parent"
+#  weight = 20
+
+#[[main]]
+#  name = "example sub-menu 2"
+#  parent = "Parent"
+#  pageRef = "posts"
+#  weight = 20
+
+#[[subnavigation]]
+#  name = "An interesting topic"
+#  pageRef = "tags/interesting-topic"
+#  weight = 10
+
+#[[main]]
+#  name = "Categories"
+#  pageRef = "categories"
+#  weight = 20
+
+#[[main]]
+#  name = "Tags"
+#  pageRef = "tags"
+#  weight = 30
+
+
+# -- Footer Menu --
+# The footer menu is displayed at the bottom of the page, just before
+# the copyright notice. Configure as per the main menu above.
+
+
+ [[footer]]
+   name = "Tags"
+   pageRef = "tags"
+   weight = 1
+
+# [[footer]]
+#   name = "Categories"
+#   pageRef = "categories"
+#   weight = 2
+
+[[footer]]
+  #name = "Github"
+  pre = "github"
+  url ="https://github.com/wrongtrojan/wrongtrojan.github.io"
+  pageRef = "categories/awesome"
+  weight = 2
