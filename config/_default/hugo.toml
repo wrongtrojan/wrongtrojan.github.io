@@ -4,7 +4,7 @@
 
 theme = "blowfish" # UNCOMMENT THIS LINE
 baseURL = "https://wrongtrojan.github.io/"
-LanguageCode = "zh-cn"
+defaultContentLanguage = "zh-cn"
 hasCJKLanguage= true
 
 pluralizeListTitles = false # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
