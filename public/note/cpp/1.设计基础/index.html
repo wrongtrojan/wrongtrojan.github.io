@@ -1,0 +1,1892 @@
+<!doctype html>
+<html
+  lang="zh-cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-cn">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>1.设计基础 &middot; 个人博客</title>
+    <meta name="title" content="1.设计基础 &middot; 个人博客">
+  
+
+  
+  
+    <meta name="description" content="My personal blog">
+  
+  
+    <meta name="keywords" content="Cpp,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/note/cpp/1.%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80/">
+  
+
+  
+  
+    <meta name="author" content="木马">
+  
+  
+    
+      
+        
+          <link href="https://github.com/wrongtrojan" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/note/cpp/1.%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80/">
+  <meta property="og:site_name" content="个人博客">
+  <meta property="og:title" content="1.设计基础">
+  <meta property="og:description" content="My personal blog">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="note">
+    <meta property="article:published_time" content="2025-11-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-11-24T00:00:00+00:00">
+    <meta property="article:tag" content="Cpp">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="1.设计基础">
+  <meta name="twitter:description" content="My personal blog">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.39b2b72cb1187e8a119efd4db44b21dee736dc64f705a4ca37fc0e5fe991b88ddf384bc0ee3e5eefb169205ec963ef484a63f723317257724989ad7eb345b678.css"
+    integrity="sha512-ObK3LLEYfooRnv1NtEsh3uc23GT3BaTKN/wOX&#43;mRuI3fOEvA7j5e77FpIF7JY&#43;9ISmP3IzFyV3JJia1&#43;s0W2eA==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.b4b722fcb5d42f34f52b30a92f3521b69f403ca9d96d0d6179eb537cb870f5d83fdf1fe836688d95d5c99fefbda4170487711006e56051fa67ea00da10521721.js" integrity="sha512-tLci/LXULzT1KzCpLzUhtp9APKnZbQ1heetTfLhw9dg/3x/oNmiNldXJn&#43;&#43;9pBcEh3EQBuVgUfpn6gDaEFIXIQ=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.e3d337dd3f18427eb20aa355839d583ef6382bc42e34cfe789adb9358d463ef51f53691e32f524259380d4d3add49162f522426784990f3a5dbd39c33c6ed05a.js"
+      integrity="sha512-49M33T8YQn6yCqNVg51YPvY4K8QuNM/nia25NY1GPvUfU2keMvUkJZOA1NOt1JFi9SJCZ4SZDzpdvTnDPG7QWg=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "笔记",
+    "name": "1.设计基础",
+    "headline": "1.设计基础",
+    
+    
+    "inLanguage": "zh-cn",
+    "url" : "http://localhost:1313/note/cpp/1.%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80/",
+    "author" : {
+      "@type": "Person",
+      "name": "木马"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-11-24T00:00:00\u002b00:00",
+    "datePublished": "2025-11-24T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-11-24T00:00:00\u002b00:00",
+    
+    "keywords": ["Cpp"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1664"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          个人博客
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="首页"
+  title="个人博客">
+  
+  
+    <p class="text-base font-medium">
+      首页
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/about/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="关于"
+  title="关于">
+  
+  
+    <p class="text-base font-medium">
+      关于
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a
+      
+        href="/note/"
+        
+      
+      aria-label="笔记"
+      class="text-base font-medium hover:text-primary-600 dark:hover:text-primary-400"
+      title="笔记">
+      <p>
+        笔记
+      </p>
+    </a>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+          <a
+            href="/note/cpp/"
+            
+            aria-label="Cpp程序设计"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="Cpp程序设计">
+              Cpp程序设计
+            </p>
+          </a>
+        
+          <a
+            href="/note/datastructandalgorithm/"
+            
+            aria-label="数据结构与算法"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="数据结构与算法">
+              数据结构与算法
+            </p>
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      
+        
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a
+      
+        href="/create/"
+        
+      
+      aria-label="创作"
+      class="text-base font-medium hover:text-primary-600 dark:hover:text-primary-400"
+      title="创作">
+      <p>
+        创作
+      </p>
+    </a>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+          <a
+            href="/create/novel/"
+            
+            aria-label="小说"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="小说">
+              小说
+            </p>
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="搜索 (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="搜索 (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="首页"
+    title="个人博客">
+    
+    
+      <p class="text-bg font-bg">
+        首页
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/about/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="关于"
+    title="关于">
+    
+    
+      <p class="text-bg font-bg">
+        关于
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/note/"
+    aria-label="笔记"
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="笔记">
+      笔记
+    </p>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </a>
+</li>
+
+  <li class="mt-1">
+    <a
+      href="/note/cpp/"
+      
+      aria-label="Cpp程序设计"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="Cpp程序设计">
+        Cpp程序设计
+      </p>
+    </a>
+  </li>
+
+  <li class="mt-1">
+    <a
+      href="/note/datastructandalgorithm/"
+      
+      aria-label="数据结构与算法"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="数据结构与算法">
+        数据结构与算法
+      </p>
+    </a>
+  </li>
+
+<li class="mb-2"></li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/create/"
+    aria-label="创作"
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="创作">
+      创作
+    </p>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </a>
+</li>
+
+  <li class="mt-1">
+    <a
+      href="/create/novel/"
+      
+      aria-label="小说"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="小说">
+        小说
+      </p>
+    </a>
+  </li>
+
+<li class="mb-2"></li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+  
+  
+    
+    
+  
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/defaultBackgroundImage_hu_a4dab90c6724ce91.jpg"
+      alt="1.设计基础"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+      >
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div>
+    <div
+      class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div>
+  </div>
+
+  
+    <div
+      id="background-blur"
+      class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/background-blur.min.00a57c73ea12f2cab2980c3c3d649e89f6d82f190f74bbe2b67f2f5e39ab7d032ece47086400ca05396758aace13299da49aca43ea643d2625e62c506267a169.js"
+      integrity="sha512-AKV8c&#43;oS8sqymAw8PWSeifbYLxkPdLvitn8vXjmrfQMuzkcIZADKBTlnWKrOEymdpJrKQ&#43;pkPSYl5ixQYmehaQ=="
+      data-blur-id="background-blur"
+      data-image-id="background-image"
+      data-image-url="/defaultBackgroundImage_hu_a4dab90c6724ce91.jpg"></script>
+  
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        1.设计基础
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>1664 字</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/cpp/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Cpp
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="木马"
+        src="/author_hu_b32b149bc35b336c.jpg"
+        data-zoom-src="/author_hu_7803839ca98ef477.jpg">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        作者
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        木马
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/wrongtrojan"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#语言组成">语言组成</a>
+      <ul>
+        <li><a href="#字符集">字符集</a></li>
+        <li><a href="#词法记号">词法记号</a></li>
+      </ul>
+    </li>
+    <li><a href="#数据类型">数据类型</a>
+      <ul>
+        <li><a href="#整型">整型</a></li>
+        <li><a href="#浮点型">浮点型</a></li>
+        <li><a href="#字符型">字符型</a></li>
+        <li><a href="#布尔型">布尔型</a></li>
+        <li><a href="#类型转化">类型转化</a></li>
+      </ul>
+    </li>
+    <li><a href="#类型别名和推断">类型别名和推断</a>
+      <ul>
+        <li><a href="#类型别名">类型别名</a></li>
+        <li><a href="#类型判断">类型判断</a></li>
+      </ul>
+    </li>
+    <li><a href="#常量与变量">常量与变量</a>
+      <ul>
+        <li><a href="#字面常量">字面常量</a></li>
+        <li><a href="#变量">变量</a></li>
+        <li><a href="#符号常量">符号常量</a></li>
+      </ul>
+    </li>
+    <li><a href="#运算符与表达式">运算符（与表达式）</a>
+      <ul>
+        <li><a href="#运算符">运算符</a></li>
+        <li><a href="#操作数">操作数</a></li>
+        <li><a href="#算元">算元</a></li>
+      </ul>
+    </li>
+    <li><a href="#数据的输出与输入">数据的输出与输入</a>
+      <ul>
+        <li><a href="#插入符与提取符">插入符与提取符</a></li>
+        <li><a href="#简单的io控制">简单的I/O控制</a></li>
+      </ul>
+    </li>
+    <li><a href="#算法的基本控制结构">算法的基本控制结构</a>
+      <ul>
+        <li><a href="#顺序结构">顺序结构</a></li>
+        <li><a href="#选择结构">选择结构</a></li>
+        <li><a href="#循环结构">循环结构</a></li>
+        <li><a href="#goto语句">goto语句</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#语言组成">语言组成</a>
+      <ul>
+        <li><a href="#字符集">字符集</a></li>
+        <li><a href="#词法记号">词法记号</a></li>
+      </ul>
+    </li>
+    <li><a href="#数据类型">数据类型</a>
+      <ul>
+        <li><a href="#整型">整型</a></li>
+        <li><a href="#浮点型">浮点型</a></li>
+        <li><a href="#字符型">字符型</a></li>
+        <li><a href="#布尔型">布尔型</a></li>
+        <li><a href="#类型转化">类型转化</a></li>
+      </ul>
+    </li>
+    <li><a href="#类型别名和推断">类型别名和推断</a>
+      <ul>
+        <li><a href="#类型别名">类型别名</a></li>
+        <li><a href="#类型判断">类型判断</a></li>
+      </ul>
+    </li>
+    <li><a href="#常量与变量">常量与变量</a>
+      <ul>
+        <li><a href="#字面常量">字面常量</a></li>
+        <li><a href="#变量">变量</a></li>
+        <li><a href="#符号常量">符号常量</a></li>
+      </ul>
+    </li>
+    <li><a href="#运算符与表达式">运算符（与表达式）</a>
+      <ul>
+        <li><a href="#运算符">运算符</a></li>
+        <li><a href="#操作数">操作数</a></li>
+        <li><a href="#算元">算元</a></li>
+      </ul>
+    </li>
+    <li><a href="#数据的输出与输入">数据的输出与输入</a>
+      <ul>
+        <li><a href="#插入符与提取符">插入符与提取符</a></li>
+        <li><a href="#简单的io控制">简单的I/O控制</a></li>
+      </ul>
+    </li>
+    <li><a href="#算法的基本控制结构">算法的基本控制结构</a>
+      <ul>
+        <li><a href="#顺序结构">顺序结构</a></li>
+        <li><a href="#选择结构">选择结构</a></li>
+        <li><a href="#循环结构">循环结构</a></li>
+        <li><a href="#goto语句">goto语句</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <h2 class="relative group">语言组成
+    <div id="语言组成" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%af%ad%e8%a8%80%e7%bb%84%e6%88%90" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+
+<h3 class="relative group">字符集
+    <div id="字符集" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ad%97%e7%ac%a6%e9%9b%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  英文字母
+
+  数字字符
+
+  特殊字符
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">词法记号
+    <div id="词法记号" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%af%8d%e6%b3%95%e8%ae%b0%e5%8f%b7" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  关键字
+
+  标识符（函数名，变量名，类名，对象名等）
+
+      字母或下划线开始
+
+      可以由字母、下划线和数字组成
+
+      区分大小写
+
+      不能与语言关键字或操作冲突
+
+  文字
+
+  操作符（运算符）
+
+  分隔符（&quot;（）&quot;&quot;{}&quot;&quot;，&quot;&quot;：&quot;&quot;；&quot;）
+
+  空白（空格、制表符、换行符、回车符，注释）
+</code></pre>
+</blockquote>
+
+<h2 class="relative group">数据类型
+    <div id="数据类型" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+
+<h3 class="relative group">整型
+    <div id="整型" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b4%e5%9e%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  short 2byte
+
+  int 4byte
+
+  long 8byte
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">浮点型
+    <div id="浮点型" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b5%ae%e7%82%b9%e5%9e%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  float 4byte
+
+  double 8byte
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">字符型
+    <div id="字符型" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ad%97%e7%ac%a6%e5%9e%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  char 1byte
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">布尔型
+    <div id="布尔型" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b8%83%e5%b0%94%e5%9e%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  bool 1btye
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">类型转化
+    <div id="类型转化" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%b1%bb%e5%9e%8b%e8%bd%ac%e5%8c%96" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>隐式转化
+
+    逻辑运算 非零数据转化为true，零转化为false
+
+    算术运算
+
+    赋值运算
+
+显式转化
+
+    （类型说明符）表达式
+
+    四种类型转化操作符
+
+        const_cast\&lt;类型\&gt;（表达式）
+
+        dynamic_cast\&lt;类型\&gt;（表达式）
+
+        reinterpret_cast\&lt;类型\&gt;（表达式）
+
+        static_cast\&lt;类型\&gt;（表达式）
+</code></pre>
+</blockquote>
+
+<h2 class="relative group">类型别名和推断
+    <div id="类型别名和推断" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%b1%bb%e5%9e%8b%e5%88%ab%e5%90%8d%e5%92%8c%e6%8e%a8%e6%96%ad" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+
+<h3 class="relative group">类型别名
+    <div id="类型别名" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%b1%bb%e5%9e%8b%e5%88%ab%e5%90%8d" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  类型声明
+
+      typedef 已有类型 新类型（将标识符声明成某数据类型）
+
+  别名声明
+
+      using 新类型=已有类型（一次只能声明一个别名）
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">类型判断
+    <div id="类型判断" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%b1%bb%e5%9e%8b%e5%88%a4%e6%96%ad" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  auto类型
+
+      让编译器替我们分析类型 定义时必须有初始值
+
+      同样可以一次定义多个变量，但是变量间需类型一致
+
+  decltype类型
+
+      decltype（i）j 可以无需初始值，表达j与i类型一致
+</code></pre>
+</blockquote>
+
+<h2 class="relative group">常量与变量
+    <div id="常量与变量" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b8%b8%e9%87%8f%e4%b8%8e%e5%8f%98%e9%87%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+
+<h3 class="relative group">字面常量
+    <div id="字面常量" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ad%97%e9%9d%a2%e5%b8%b8%e9%87%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  整型常量（八进制以0开头，十六进制以0x开头）
+
+      后缀u表示unsigned 类型
+
+  实型常量
+
+      一般形式
+
+      指数形式 e后数表示十的次方数
+
+  字符常量
+
+      单引号括起来
+
+      ASCII码
+
+  字符串常量
+
+      每个字符占一节，在末尾添加\\0作为标记
+
+  布尔常量
+
+      false 和 true
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">变量
+    <div id="变量" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8f%98%e9%87%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  变量声明 类型+名称
+
+  变量初始化
+
+      非列表初始化 &quot;=&quot;&quot;（）&quot;
+
+      列表初始化 &quot;{}&quot;&quot;={}&quot;（不允许数据丢失）
+
+  变量储存类型
+
+      register 寄存器
+
+      extern 所有函数和程序段中使用
+
+      static 固定地址存放，整个运行期间有效
+
+      thread_local 具有线程存储生存期
+
+          修饰命名空间、块作用域中变量
+
+          以及被指定为static存储类型的变量
+
+      mutable 只作用于类数据成员
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">符号常量
+    <div id="符号常量" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%a6%e5%8f%b7%e5%b8%b8%e9%87%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  声明的同时初始化 const 类型 变量名=常量值
+
+  程序中间不可改变其值
+
+  constexpr关键字 验证是否为常量表达式，暗含const属性
+</code></pre>
+</blockquote>
+
+<h2 class="relative group">运算符（与表达式）
+    <div id="运算符与表达式" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%90%e7%ae%97%e7%ac%a6%e4%b8%8e%e8%a1%a8%e8%be%be%e5%bc%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+
+<h3 class="relative group">运算符
+    <div id="运算符" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%90%e7%ae%97%e7%ac%a6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  算术运算符 &quot;+&quot;&quot;-&quot;&quot;\*&quot;&quot;/&quot;&quot;%&quot;&quot;++&quot;&quot;\--&quot;
+
+  赋值运算符 &quot;=&quot;&quot;（基础算术运算符或位运算符）=&quot;
+
+  逗号运算符 表达先后顺序
+
+  关系运算符
+
+      大小关系 &quot;\&lt;&quot;&quot;=&quot;&quot;\&gt;&quot;（高）
+
+      等于关系 &quot;==&quot;&quot;！=&quot;（低）
+
+  逻辑运算符
+
+      &quot;！（非）&quot;&quot;&amp;&amp;与&quot;&quot;\|\|或&quot;（与和或有短路效应）
+
+      （高 --------------------------- 低）
+
+  条件运算符 实现选择功能 布尔类型表达式？表达式1：表达式2
+
+  sizeof运算符 计算某种类型对象占据的byte
+
+  位运算符
+
+      按位与(&amp;) 按每一位做与运算
+
+      按位或(\|) 按每一位做或运算
+
+      按位异或(\^) 按每一位做异或运算
+
+      按位取反(\~) 按每一位做非运算
+
+      移位 左移（\&lt;\&lt;） 右移（\&gt;\&gt;）
+
+  运算符优先级
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">操作数
+    <div id="操作数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%93%8d%e4%bd%9c%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  表达式中，一个操作的输入值
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">算元
+    <div id="算元" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ae%97%e5%85%83" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  所需要的操作数的数目
+</code></pre>
+</blockquote>
+
+<h2 class="relative group">数据的输出与输入
+    <div id="数据的输出与输入" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e6%8d%ae%e7%9a%84%e8%be%93%e5%87%ba%e4%b8%8e%e8%be%93%e5%85%a5" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+<p><strong>I/O流</strong> 数据从一个对象到另一个对象是流，输入输出流</p>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">插入符与提取符
+    <div id="插入符与提取符" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8f%92%e5%85%a5%e7%ac%a6%e4%b8%8e%e6%8f%90%e5%8f%96%e7%ac%a6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  \&lt;\&lt; 插入符 输出数据
+
+  \&gt;\&gt; 提取符 输入数据
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">简单的I/O控制
+    <div id="简单的io控制" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ae%80%e5%8d%95%e7%9a%84io%e6%8e%a7%e5%88%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  常用操作符
+</code></pre>
+</blockquote>
+
+<h2 class="relative group">算法的基本控制结构
+    <div id="算法的基本控制结构" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ae%97%e6%b3%95%e7%9a%84%e5%9f%ba%e6%9c%ac%e6%8e%a7%e5%88%b6%e7%bb%93%e6%9e%84" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+
+<h3 class="relative group">顺序结构
+    <div id="顺序结构" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%a1%ba%e5%ba%8f%e7%bb%93%e6%9e%84" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">选择结构
+    <div id="选择结构" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%80%89%e6%8b%a9%e7%bb%93%e6%9e%84" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  if语句
+
+      if-else if语句后代码块语句有多个代码语句时
+
+      if-else if-else（嵌套结构在else分支中）（本质是语法糖）
+
+  switch语句
+
+      switch-case（break）-default
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">循环结构
+    <div id="循环结构" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%be%aa%e7%8e%af%e7%bb%93%e6%9e%84" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  while语句
+
+      while
+
+      do-while（至少执行一次循环体语句）
+
+  for 语句
+
+      for（初始值;循环控制;变量改变）
+
+      范围for语句 for(声明：变量)
+
+  break语句
+
+      从循环跳出
+
+  continue语句
+      结束本次循环开始下一次
+</code></pre>
+</blockquote>
+<blockquote>
+
+<h3 class="relative group">goto语句
+    <div id="goto语句" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#goto%e8%af%ad%e5%8f%a5" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>  跳转到标识符
+</code></pre>
+</blockquote>
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_note\cpp\1.设计基础.md"
+          data-oid-likes="likes_note\cpp\1.设计基础.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+      
+      
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/note/cpp/2.%E5%87%BD%E6%95%B0/">
+              <span class="leading-6">
+                2.函数&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+          
+          
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 ">
+        <ul class="flex list-none flex-col sm:flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/tags/"
+                title="Tags">
+                
+                Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="https://github.com/wrongtrojan/wrongtrojan.github.io"
+                title="">
+                
+                  <span >
+                    <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span>
+                  </span>
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          @2025木马
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

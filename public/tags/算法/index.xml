@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>算法 on 个人博客</title>
+    <link>http://localhost:1313/tags/%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 算法 on 个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>wrongtrojan0.@gmail (木马)</managingEditor>
+    <webMaster>wrongtrojan0.@gmail (木马)</webMaster>
+    <copyright>@2025木马</copyright>
+    <lastBuildDate>Sat, 06 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>高精度计算</title>
+      <link>http://localhost:1313/note/datastructandalgorithm/%E9%AB%98%E7%B2%BE%E5%BA%A6%E8%AE%A1%E7%AE%97.docx/</link>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/note/datastructandalgorithm/%E9%AB%98%E7%B2%BE%E5%BA%A6%E8%AE%A1%E7%AE%97.docx/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>递归算法</title>
+      <link>http://localhost:1313/note/datastructandalgorithm/%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95.docx/</link>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/note/datastructandalgorithm/%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95.docx/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>算法分析</title>
+      <link>http://localhost:1313/note/datastructandalgorithm/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90.docx/</link>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/note/datastructandalgorithm/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90.docx/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>搜索和排序</title>
+      <link>http://localhost:1313/note/datastructandalgorithm/%E6%90%9C%E7%B4%A2%E5%92%8C%E6%8E%92%E5%BA%8F.docx/</link>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/note/datastructandalgorithm/%E6%90%9C%E7%B4%A2%E5%92%8C%E6%8E%92%E5%BA%8F.docx/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>10.3.函数对象和算法</title>
+      <link>http://localhost:1313/note/cpp/10.3.%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Sat, 06 Dec 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/note/cpp/10.3.%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
