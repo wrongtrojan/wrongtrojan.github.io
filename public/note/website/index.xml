@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>网页探索 on 个人博客</title>
+    <link>http://localhost:1313/note/website/</link>
+    <description>Recent content in 网页探索 on 个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>wrongtrojan0.@gmail (木马)</managingEditor>
+    <webMaster>wrongtrojan0.@gmail (木马)</webMaster>
+    <copyright>@2025木马</copyright>
+    <lastBuildDate>Tue, 09 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/note/website/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>网页搭建流程梳理</title>
+      <link>http://localhost:1313/note/website/%E6%B5%81%E7%A8%8B%E6%A2%B3%E7%90%86/</link>
+      <pubDate>Tue, 09 Dec 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/note/website/%E6%B5%81%E7%A8%8B%E6%A2%B3%E7%90%86/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

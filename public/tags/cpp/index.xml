@@ -9,7 +9,7 @@
     <managingEditor>wrongtrojan0.@gmail (木马)</managingEditor>
     <webMaster>wrongtrojan0.@gmail (木马)</webMaster>
     <copyright>@2025木马</copyright>
-    <lastBuildDate>Sat, 06 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>1.设计基础</title>
@@ -47,6 +47,16 @@
       <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
       <author>wrongtrojan0.@gmail (木马)</author>
       <guid>http://localhost:1313/note/cpp/4.%E7%BB%93%E6%9E%84%E4%BD%93%E8%81%94%E5%90%88%E4%BD%93%E5%92%8C%E6%9E%9A%E4%B8%BE%E4%BD%93/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>5.数据的共享与保护</title>
+      <link>http://localhost:1313/note/cpp/5.%E6%95%B0%E6%8D%AE%E7%9A%84%E5%85%B1%E4%BA%AB%E4%B8%8E%E4%BF%9D%E6%8A%A4/</link>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/note/cpp/5.%E6%95%B0%E6%8D%AE%E7%9A%84%E5%85%B1%E4%BA%AB%E4%B8%8E%E4%BF%9D%E6%8A%A4/</guid>
       <description></description>
       
     </item>
@@ -137,6 +147,16 @@
       <pubDate>Sat, 06 Dec 2025 00:00:00 +0000</pubDate>
       <author>wrongtrojan0.@gmail (木马)</author>
       <guid>http://localhost:1313/note/cpp/11.%E6%B5%81%E7%B1%BB%E5%BA%93%E4%B8%8E%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>12.异常处理</title>
+      <link>http://localhost:1313/note/cpp/12.%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</link>
+      <pubDate>Mon, 08 Dec 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/note/cpp/12.%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</guid>
       <description></description>
       
     </item>

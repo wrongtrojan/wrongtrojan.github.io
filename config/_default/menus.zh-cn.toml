@@ -38,6 +38,12 @@
   weight = 20
 
 [[main]]
+  name = "网页探索"
+  parent = "笔记"
+  pageRef = "note/website"
+  weight = 30
+
+[[main]]
   name = "创作"
   pageRef = "create"
   weight = 4
