@@ -34,14 +34,20 @@
 [[main]]
   name = "数据结构与算法"
   parent = "笔记"
-  pageRef = "note/dataStructAndAlgorithm"
+  pageRef = "note/DSAA"
   weight = 20
 
 [[main]]
   name = "网页探索"
   parent = "笔记"
-  pageRef = "note/website"
+  pageRef = "note/Website"
   weight = 30
+
+[[main]]
+  name = "Git"
+  parent = "笔记"
+  pageRef = "note/Git"
+  weight = 40
 
 [[main]]
   name = "创作"
@@ -51,7 +57,7 @@
 [[main]]
   name = "小说"
   parent = "创作"
-  pageRef = "novel"
+  pageRef = "Novel"
   weight = 10
 
 #[[main]]
