@@ -15,8 +15,8 @@
 
   
   
-    <title>1.设计基础 &middot; 个人博客</title>
-    <meta name="title" content="1.设计基础 &middot; 个人博客">
+    <title>Git分支 &middot; 个人博客</title>
+    <meta name="title" content="Git分支 &middot; 个人博客">
   
 
   
@@ -24,11 +24,11 @@
     <meta name="description" content="My personal blog">
   
   
-    <meta name="keywords" content="Cpp,">
+    <meta name="keywords" content="Git,">
   
   
   
-  <link rel="canonical" href="http://localhost:1313/note/cpp/1.%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80/">
+  <link rel="canonical" href="http://localhost:1313/note/git/gitbranching/">
   
 
   
@@ -46,20 +46,20 @@
   
 
   
-  <meta property="og:url" content="http://localhost:1313/note/cpp/1.%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80/">
+  <meta property="og:url" content="http://localhost:1313/note/git/gitbranching/">
   <meta property="og:site_name" content="个人博客">
-  <meta property="og:title" content="1.设计基础">
+  <meta property="og:title" content="Git分支">
   <meta property="og:description" content="My personal blog">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="note">
-    <meta property="article:published_time" content="2025-11-24T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-11-24T00:00:00+00:00">
-    <meta property="article:tag" content="Cpp">
+    <meta property="article:published_time" content="2025-12-18T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-12-18T00:00:00+00:00">
+    <meta property="article:tag" content="Git">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="1.设计基础">
+  <meta name="twitter:title" content="Git分支">
   <meta name="twitter:description" content="My personal blog">
 
   
@@ -207,26 +207,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "笔记",
-    "name": "1.设计基础",
-    "headline": "1.设计基础",
+    "name": "Git分支",
+    "headline": "Git分支",
     
     
     "inLanguage": "zh-cn",
-    "url" : "http://localhost:1313/note/cpp/1.%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80/",
+    "url" : "http://localhost:1313/note/git/gitbranching/",
     "author" : {
       "@type": "Person",
       "name": "木马"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-11-24T00:00:00\u002b00:00",
-    "datePublished": "2025-11-24T00:00:00\u002b00:00",
+    "dateCreated": "2025-12-18T00:00:00\u002b00:00",
+    "datePublished": "2025-12-18T00:00:00\u002b00:00",
     
-    "dateModified": "2025-11-24T00:00:00\u002b00:00",
+    "dateModified": "2025-12-18T00:00:00\u002b00:00",
     
-    "keywords": ["Cpp"],
+    "keywords": ["Git"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1633"
+    "wordCount": "870"
   }]
   </script>
 
@@ -837,7 +837,7 @@
     <img
       id="background-image"
       src="/defaultBackgroundImage_hu_a4dab90c6724ce91.jpg"
-      alt="1.设计基础"
+      alt="Git分支"
       loading="eager"
       decoding="async"
       fetchpriority="high"
@@ -870,7 +870,7 @@
     <header id="single_header" class="mt-5 max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        1.设计基础
+        Git分支
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -920,7 +920,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>1633 字</span>
+      <time datetime="2025-12-18T00:00:00&#43;00:00">2025年12月18日</time><span class="px-2 text-primary-500">&middot;</span><span>870 字</span>
     
 
     
@@ -936,11 +936,11 @@
         
           
             
-              <a class="relative mt-[0.5rem] me-2" href="/tags/cpp/">
+              <a class="relative mt-[0.5rem] me-2" href="/tags/git/">
                 <span class="flex cursor-pointer">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Cpp
+    Git
   </span>
 </span>
 
@@ -1060,53 +1060,17 @@
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#语言组成">语言组成</a>
+    <li>
       <ul>
-        <li><a href="#字符集">字符集</a></li>
-        <li><a href="#词法记号">词法记号</a></li>
-      </ul>
-    </li>
-    <li><a href="#数据类型">数据类型</a>
-      <ul>
-        <li><a href="#整型">整型</a></li>
-        <li><a href="#浮点型">浮点型</a></li>
-        <li><a href="#字符型">字符型</a></li>
-        <li><a href="#布尔型">布尔型</a></li>
-        <li><a href="#类型转化">类型转化</a></li>
-      </ul>
-    </li>
-    <li><a href="#类型别名和推断">类型别名和推断</a>
-      <ul>
-        <li><a href="#类型别名">类型别名</a></li>
-        <li><a href="#类型判断">类型判断</a></li>
-      </ul>
-    </li>
-    <li><a href="#常量与变量">常量与变量</a>
-      <ul>
-        <li><a href="#字面常量">字面常量</a></li>
-        <li><a href="#变量">变量</a></li>
-        <li><a href="#符号常量">符号常量</a></li>
-      </ul>
-    </li>
-    <li><a href="#运算符与表达式">运算符（与表达式）</a>
-      <ul>
-        <li><a href="#运算符">运算符</a></li>
-        <li><a href="#操作数">操作数</a></li>
-        <li><a href="#算元">算元</a></li>
-      </ul>
-    </li>
-    <li><a href="#数据的输出与输入">数据的输出与输入</a>
-      <ul>
-        <li><a href="#插入符与提取符">插入符与提取符</a></li>
-        <li><a href="#简单的io控制">简单的I/O控制</a></li>
-      </ul>
-    </li>
-    <li><a href="#算法的基本控制结构">算法的基本控制结构</a>
-      <ul>
-        <li><a href="#顺序结构">顺序结构</a></li>
-        <li><a href="#选择结构">选择结构</a></li>
-        <li><a href="#循环结构">循环结构</a></li>
-        <li><a href="#goto语句">goto语句</a></li>
+        <li><a href="#git-branch"><code>git branch</code></a></li>
+        <li><a href="#git-switch"><code>git switch</code></a></li>
+        <li><a href="#git-merge"><code>git merge</code></a></li>
+        <li><a href="#git-status"><code>git status</code></a></li>
+        <li><a href="#git-add"><code>git add</code></a></li>
+        <li><a href="#git-fetch"><code>git fetch</code></a></li>
+        <li><a href="#git-push"><code>git push</code></a></li>
+        <li><a href="#git-checkout"><code>git checkout</code></a></li>
+        <li><a href="#git-rebase"><code>git rebase</code></a></li>
       </ul>
     </li>
   </ul>
@@ -1122,53 +1086,17 @@
     class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#语言组成">语言组成</a>
+    <li>
       <ul>
-        <li><a href="#字符集">字符集</a></li>
-        <li><a href="#词法记号">词法记号</a></li>
-      </ul>
-    </li>
-    <li><a href="#数据类型">数据类型</a>
-      <ul>
-        <li><a href="#整型">整型</a></li>
-        <li><a href="#浮点型">浮点型</a></li>
-        <li><a href="#字符型">字符型</a></li>
-        <li><a href="#布尔型">布尔型</a></li>
-        <li><a href="#类型转化">类型转化</a></li>
-      </ul>
-    </li>
-    <li><a href="#类型别名和推断">类型别名和推断</a>
-      <ul>
-        <li><a href="#类型别名">类型别名</a></li>
-        <li><a href="#类型判断">类型判断</a></li>
-      </ul>
-    </li>
-    <li><a href="#常量与变量">常量与变量</a>
-      <ul>
-        <li><a href="#字面常量">字面常量</a></li>
-        <li><a href="#变量">变量</a></li>
-        <li><a href="#符号常量">符号常量</a></li>
-      </ul>
-    </li>
-    <li><a href="#运算符与表达式">运算符（与表达式）</a>
-      <ul>
-        <li><a href="#运算符">运算符</a></li>
-        <li><a href="#操作数">操作数</a></li>
-        <li><a href="#算元">算元</a></li>
-      </ul>
-    </li>
-    <li><a href="#数据的输出与输入">数据的输出与输入</a>
-      <ul>
-        <li><a href="#插入符与提取符">插入符与提取符</a></li>
-        <li><a href="#简单的io控制">简单的I/O控制</a></li>
-      </ul>
-    </li>
-    <li><a href="#算法的基本控制结构">算法的基本控制结构</a>
-      <ul>
-        <li><a href="#顺序结构">顺序结构</a></li>
-        <li><a href="#选择结构">选择结构</a></li>
-        <li><a href="#循环结构">循环结构</a></li>
-        <li><a href="#goto语句">goto语句</a></li>
+        <li><a href="#git-branch"><code>git branch</code></a></li>
+        <li><a href="#git-switch"><code>git switch</code></a></li>
+        <li><a href="#git-merge"><code>git merge</code></a></li>
+        <li><a href="#git-status"><code>git status</code></a></li>
+        <li><a href="#git-add"><code>git add</code></a></li>
+        <li><a href="#git-fetch"><code>git fetch</code></a></li>
+        <li><a href="#git-push"><code>git push</code></a></li>
+        <li><a href="#git-checkout"><code>git checkout</code></a></li>
+        <li><a href="#git-rebase"><code>git rebase</code></a></li>
       </ul>
     </li>
   </ul>
@@ -1188,497 +1116,145 @@
         
 
         <div class="article-content max-w-prose mb-20">
-          <h2 class="relative group">语言组成
-    <div id="语言组成" class="anchor"></div>
+          
+<h3 class="relative group"><code>git branch</code>
+    <div id="git-branch" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%af%ad%e8%a8%80%e7%bb%84%e6%88%90" aria-label="锚点">#</a>
-    </span>
-    
-</h2>
-
-<h3 class="relative group">字符集
-    <div id="字符集" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ad%97%e7%ac%a6%e9%9b%86" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git-branch" aria-label="锚点">#</a>
     </span>
     
 </h3>
-<pre><code>   英文字母
+<ul>
+<li><code>git branch</code>查看当前所有分支的列表<code>*</code>标识当前所在分支</li>
+<li><code>git branch -v</code>查看分支最后一次提交</li>
+<li><code>--merged</code> <code>--no-merged</code>过滤出已/未合并到当前分支的分支</li>
+<li><code>git branch &lt;name&gt;</code>创建分支</li>
+<li><code>git branch -d &lt;name&gt;</code>删除已合并工作的分支</li>
+<li><code>git branch -D &lt;name&gt;</code>强制删除分支</li>
+<li><code>git branch -vv</code>查看设置的所有跟踪分支
+<br></li>
+</ul>
 
-   数字字符
-
-   特殊字符
-</code></pre>
-
-<h3 class="relative group">词法记号
-    <div id="词法记号" class="anchor"></div>
+<h3 class="relative group"><code>git switch</code>
+    <div id="git-switch" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%af%8d%e6%b3%95%e8%ae%b0%e5%8f%b7" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git-switch" aria-label="锚点">#</a>
     </span>
     
 </h3>
-<pre><code>   关键字
+<ul>
+<li><code>git switch</code>能完成的任务<code>git checkout</code>都能完成<br>但<code>git switch</code>更加安全更加现代更推荐使用</li>
+<li><code>git switch &lt;name&gt;</code>切换到已存在的分支</li>
+<li><code>git switch -c &lt;name&gt;</code>若分支存在只切换,若不存在创建后切换<br>(<code>git checkout -b &lt;name&gt;</code>)
+<br></li>
+</ul>
 
-   标识符（函数名，变量名，类名，对象名等）
-
-       字母或下划线开始
-
-       可以由字母、下划线和数字组成
-
-       区分大小写
-
-       不能与语言关键字或操作冲突
-
-   文字
-
-   操作符（运算符）
-
-   分隔符（&quot;（）&quot;&quot;{}&quot;&quot;，&quot;&quot;：&quot;&quot;；&quot;）
-
-   空白（空格、制表符、换行符、回车符，注释）
-</code></pre>
-
-<h2 class="relative group">数据类型
-    <div id="数据类型" class="anchor"></div>
+<h3 class="relative group"><code>git merge</code>
+    <div id="git-merge" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b" aria-label="锚点">#</a>
-    </span>
-    
-</h2>
-
-<h3 class="relative group">整型
-    <div id="整型" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b4%e5%9e%8b" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git-merge" aria-label="锚点">#</a>
     </span>
     
 </h3>
-<pre><code>   short 2byte
+<ul>
+<li><code>git merge &lt;name&gt;</code>合并<code>&lt;name&gt;</code>分支到所在分支<br>若合并分支是所在提交的直接后继,以<code>fast-forward</code>方式合并
+<br></li>
+</ul>
 
-   int 4byte
-
-   long 8byte
-</code></pre>
-
-<h3 class="relative group">浮点型
-    <div id="浮点型" class="anchor"></div>
+<h3 class="relative group"><code>git status</code>
+    <div id="git-status" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b5%ae%e7%82%b9%e5%9e%8b" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git-status" aria-label="锚点">#</a>
     </span>
     
 </h3>
-<pre><code>   float 4byte
+<ul>
+<li>查看因包含冲突而未合并的文件
+<br></li>
+</ul>
 
-   double 8byte
-</code></pre>
-
-<h3 class="relative group">字符型
-    <div id="字符型" class="anchor"></div>
+<h3 class="relative group"><code>git add</code>
+    <div id="git-add" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ad%97%e7%ac%a6%e5%9e%8b" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git-add" aria-label="锚点">#</a>
     </span>
     
 </h3>
-<pre><code>   char 1byte
-</code></pre>
+<ul>
+<li>将有冲突的文件标记为冲突已经被解决
+<br></li>
+</ul>
 
-<h3 class="relative group">布尔型
-    <div id="布尔型" class="anchor"></div>
+<h3 class="relative group"><code>git fetch</code>
+    <div id="git-fetch" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b8%83%e5%b0%94%e5%9e%8b" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git-fetch" aria-label="锚点">#</a>
     </span>
     
 </h3>
-<pre><code>   bool 1btye
-</code></pre>
+<ul>
+<li><code>git fetch</code>拉取数据的同时会更新远程跟踪分支
+<br></li>
+</ul>
 
-<h3 class="relative group">类型转化
-    <div id="类型转化" class="anchor"></div>
+<h3 class="relative group"><code>git push</code>
+    <div id="git-push" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%b1%bb%e5%9e%8b%e8%bd%ac%e5%8c%96" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git-push" aria-label="锚点">#</a>
     </span>
     
 </h3>
-<pre><code> 隐式转化
+<ul>
+<li><code>git push &lt;remote&gt; &lt;branch&gt;</code>推送本地分支到远程</li>
+<li><code>git push &lt;remote&gt; &lt;branch&gt;:&lt;branchname&gt;</code>推送本地分支到命名不同的远程分支</li>
+<li><code>git push &lt;remote&gt; --deelete &lt;branch&gt;</code>删除远程分支<br>该命令基本上只移除指针,通常Git服务器保留一段时间数据
+<br></li>
+</ul>
 
-     逻辑运算 非零数据转化为true，零转化为false
-
-     算术运算
-
-     赋值运算
-
- 显式转化
-
-     （类型说明符）表达式
-
-     四种类型转化操作符
-
-         const_cast&lt;类型&gt;（表达式）
-
-         dynamic_cast&lt;类型&gt;（表达式）
-
-         reinterpret_cast&lt;类型&gt;（表达式）
-
-         static_cast&lt;类型&gt;（表达式）
-</code></pre>
-
-<h2 class="relative group">类型别名和推断
-    <div id="类型别名和推断" class="anchor"></div>
+<h3 class="relative group"><code>git checkout</code>
+    <div id="git-checkout" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%b1%bb%e5%9e%8b%e5%88%ab%e5%90%8d%e5%92%8c%e6%8e%a8%e6%96%ad" aria-label="锚点">#</a>
-    </span>
-    
-</h2>
-
-<h3 class="relative group">类型别名
-    <div id="类型别名" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%b1%bb%e5%9e%8b%e5%88%ab%e5%90%8d" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git-checkout" aria-label="锚点">#</a>
     </span>
     
 </h3>
-<pre><code>   类型声明
+<ul>
+<li><code>git checkout -b &lt;branch&gt; &lt;remote&gt;/&lt;branch&gt;</code>远程仓库的跟踪分支基础上创建分支并切换<br>可以简写为<code>git checkout --track &lt;remote&gt;/&lt;branch&gt;</code>创建远程分支同名分支并切换</li>
+<li>若尝试<code>checkout</code>的分支不存在且远程仅唯一名字匹配可使用<code>git checkout &lt;branch&gt;</code></li>
+<li><code>-u</code> <code>--set-upstream-to</code>显式设置已有分支跟踪拉取的远程分支或修改上游分支</li>
+</ul>
 
-       typedef 已有类型 新类型（将标识符声明成某数据类型）
-
-   别名声明
-
-       using 新类型=已有类型（一次只能声明一个别名）
-</code></pre>
-
-<h3 class="relative group">类型判断
-    <div id="类型判断" class="anchor"></div>
+<h3 class="relative group"><code>git rebase</code>
+    <div id="git-rebase" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%b1%bb%e5%9e%8b%e5%88%a4%e6%96%ad" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git-rebase" aria-label="锚点">#</a>
     </span>
     
 </h3>
-<pre><code>   auto类型
+<ul>
+<li><code>git rebase &lt;branch&gt;</code>将所在分支的补丁和修改变基到<code>&lt;branch&gt;</code>分支上</li>
+<li><code>git rebase --onto &lt;branch1&gt; &lt;branch2&gt; &lt;branch3&gt;</code><br>选中在<code>&lt;branch3&gt;</code>不在<code>&lt;branch2&gt;</code>的补丁修改变基到<code>&lt;branch3&gt;</code>上</li>
+<li><code>git rebase &lt;remote&gt;/&lt;master&gt;</code>基于远程重新排布</li>
+</ul>
 
-       让编译器替我们分析类型 定义时必须有初始值
-
-       同样可以一次定义多个变量，但是变量间需类型一致
-
-   decltype类型
-
-       decltype（i）j 可以无需初始值，表达j与i类型一致
-</code></pre>
-
-<h2 class="relative group">常量与变量
-    <div id="常量与变量" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b8%b8%e9%87%8f%e4%b8%8e%e5%8f%98%e9%87%8f" aria-label="锚点">#</a>
-    </span>
-    
-</h2>
-
-<h3 class="relative group">字面常量
-    <div id="字面常量" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ad%97%e9%9d%a2%e5%b8%b8%e9%87%8f" aria-label="锚点">#</a>
-    </span>
-    
-</h3>
-<pre><code>   整型常量（八进制以0开头，十六进制以0x开头）
-
-       后缀u表示unsigned 类型
-
-   实型常量
-
-       一般形式
-
-       指数形式 e后数表示十的次方数
-
-   字符常量
-
-       单引号括起来
-
-       ASCII码
-
-   字符串常量
-
-       每个字符占一节，在末尾添加\\0作为标记
-
-   布尔常量
-
-       false 和 true
-</code></pre>
-
-<h3 class="relative group">变量
-    <div id="变量" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8f%98%e9%87%8f" aria-label="锚点">#</a>
-    </span>
-    
-</h3>
-<pre><code>   变量声明 类型+名称
-
-   变量初始化
-
-       非列表初始化 &quot;=&quot;&quot;（）&quot;
-
-       列表初始化 &quot;{}&quot;&quot;={}&quot;（不允许数据丢失）
-
-   变量储存类型
-
-       register 寄存器
-
-       extern 所有函数和程序段中使用
-
-       static 固定地址存放，整个运行期间有效
-
-       thread_local 具有线程存储生存期
-
-           修饰命名空间、块作用域中变量
-
-           以及被指定为static存储类型的变量
-
-       mutable 只作用于类数据成员
-</code></pre>
-
-<h3 class="relative group">符号常量
-    <div id="符号常量" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%a6%e5%8f%b7%e5%b8%b8%e9%87%8f" aria-label="锚点">#</a>
-    </span>
-    
-</h3>
-<pre><code>   声明的同时初始化 const 类型 变量名=常量值
-
-   程序中间不可改变其值
-
-   constexpr关键字 验证是否为常量表达式，暗含const属性
-</code></pre>
-
-<h2 class="relative group">运算符（与表达式）
-    <div id="运算符与表达式" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%90%e7%ae%97%e7%ac%a6%e4%b8%8e%e8%a1%a8%e8%be%be%e5%bc%8f" aria-label="锚点">#</a>
-    </span>
-    
-</h2>
-
-<h3 class="relative group">运算符
-    <div id="运算符" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%90%e7%ae%97%e7%ac%a6" aria-label="锚点">#</a>
-    </span>
-    
-</h3>
-<pre><code>   算术运算符 &quot;+&quot;&quot;-&quot;&quot;*&quot;&quot;/&quot;&quot;%&quot;&quot;++&quot;&quot;--&quot;
-
-   赋值运算符 &quot;=&quot;&quot;（基础算术运算符或位运算符）=&quot;
-
-   逗号运算符 表达先后顺序
-
-   关系运算符
-
-       大小关系 &quot;&lt;&quot;&quot;=&quot;&quot;&gt;&quot;（高）
-
-       等于关系 &quot;==&quot;&quot;！=&quot;（低）
-
-   逻辑运算符
-
-       &quot;！（非）&quot;&amp;&amp;与&quot;||或&quot;（与和或有短路效应）
-
-       （高 --------------------------- 低）
-
-   条件运算符 实现选择功能 布尔类型表达式？表达式1：表达式2
-
-   sizeof运算符 计算某种类型对象占据的byte
-
-   位运算符
-
-       按位与(&amp;) 按每一位做与运算
-
-       按位或(|) 按每一位做或运算
-
-       按位异或(^) 按每一位做异或运算
-
-       按位取反(~) 按每一位做非运算
-
-       移位 左移（&lt;&lt;） 右移（&gt;&gt;）
-
-   运算符优先级
-</code></pre>
-
-<h3 class="relative group">操作数
-    <div id="操作数" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%93%8d%e4%bd%9c%e6%95%b0" aria-label="锚点">#</a>
-    </span>
-    
-</h3>
-<pre><code>   表达式中，一个操作的输入值
-</code></pre>
-
-<h3 class="relative group">算元
-    <div id="算元" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ae%97%e5%85%83" aria-label="锚点">#</a>
-    </span>
-    
-</h3>
-<pre><code>   所需要的操作数的数目
-</code></pre>
-
-<h2 class="relative group">数据的输出与输入
-    <div id="数据的输出与输入" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e6%8d%ae%e7%9a%84%e8%be%93%e5%87%ba%e4%b8%8e%e8%be%93%e5%85%a5" aria-label="锚点">#</a>
-    </span>
-    
-</h2>
-<p><strong>I/O流</strong> 数据从一个对象到另一个对象是流，输入输出流</p>
-
-<h3 class="relative group">插入符与提取符
-    <div id="插入符与提取符" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8f%92%e5%85%a5%e7%ac%a6%e4%b8%8e%e6%8f%90%e5%8f%96%e7%ac%a6" aria-label="锚点">#</a>
-    </span>
-    
-</h3>
-<pre><code>   &lt;&lt; 插入符 输出数据
-
-   &gt;&gt; 提取符 输入数据
-</code></pre>
-
-<h3 class="relative group">简单的I/O控制
-    <div id="简单的io控制" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ae%80%e5%8d%95%e7%9a%84io%e6%8e%a7%e5%88%b6" aria-label="锚点">#</a>
-    </span>
-    
-</h3>
-<pre><code>   常用操作符
-</code></pre>
-
-<h2 class="relative group">算法的基本控制结构
-    <div id="算法的基本控制结构" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ae%97%e6%b3%95%e7%9a%84%e5%9f%ba%e6%9c%ac%e6%8e%a7%e5%88%b6%e7%bb%93%e6%9e%84" aria-label="锚点">#</a>
-    </span>
-    
-</h2>
-
-<h3 class="relative group">顺序结构
-    <div id="顺序结构" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%a1%ba%e5%ba%8f%e7%bb%93%e6%9e%84" aria-label="锚点">#</a>
-    </span>
-    
-</h3>
-
-<h3 class="relative group">选择结构
-    <div id="选择结构" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%80%89%e6%8b%a9%e7%bb%93%e6%9e%84" aria-label="锚点">#</a>
-    </span>
-    
-</h3>
-<pre><code>   if语句
-
-       if-else if语句后代码块语句有多个代码语句时
-
-       if-else if-else（嵌套结构在else分支中）（本质是语法糖）
-
-   switch语句
-
-       switch-case（break）-default
-</code></pre>
-
-<h3 class="relative group">循环结构
-    <div id="循环结构" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%be%aa%e7%8e%af%e7%bb%93%e6%9e%84" aria-label="锚点">#</a>
-    </span>
-    
-</h3>
-<pre><code>   while语句
-
-       while
-
-       do-while（至少执行一次循环体语句）
-
-   for 语句
-
-       for（初始值;循环控制;变量改变）
-
-       范围for语句 for(声明：变量)
-
-   break语句
-
-       从循环跳出
-
-   continue语句
-       结束本次循环开始下一次
-</code></pre>
-
-<h3 class="relative group">goto语句
-    <div id="goto语句" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#goto%e8%af%ad%e5%8f%a5" aria-label="锚点">#</a>
-    </span>
-    
-</h3>
-<pre><code>   跳转到标识符
-</code></pre>
           
           
           
@@ -1705,8 +1281,8 @@
           type="text/javascript"
           src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
           integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
-          data-oid="views_note\Cpp\1.设计基础.md"
-          data-oid-likes="likes_note\Cpp\1.设计基础.md"></script>
+          data-oid="views_note\Git\GitBranching.md"
+          data-oid-likes="likes_note\Git\GitBranching.md"></script>
       
     </section>
 
@@ -1725,21 +1301,21 @@
       <div class="flex justify-between pt-3">
         <span class="flex flex-col">
           
-        </span>
-        <span class="flex flex-col items-end">
-          
             <a
-              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/note/cpp/2.%E5%87%BD%E6%95%B0/">
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/note/git/gitbasics/">
               <span class="leading-6">
-                2.函数&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Git基础
               </span>
             </a>
             
-              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time>
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-12-13T00:00:00&#43;00:00">2025年12月13日</time>
               </span>
             
+          
+        </span>
+        <span class="flex flex-col items-end">
           
         </span>
       </div>

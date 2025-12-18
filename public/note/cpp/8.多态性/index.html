@@ -1193,9 +1193,7 @@
         
 
         <div class="article-content max-w-prose mb-20">
-          <blockquote>
-<p>多态是指同样消息被不同类型对象接收时导致不同的行为</p>
-</blockquote>
+          <p>多态是指同样消息被不同类型对象接收时导致不同的行为</p>
 
 <h2 class="relative group">多态的类型
     <div id="多态的类型" class="anchor"></div>
@@ -1206,7 +1204,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">专用多态
     <div id="专用多态" class="anchor"></div>
@@ -1217,12 +1214,10 @@
     </span>
     
 </h3>
-<pre><code>  重载多态
+<pre><code>   重载多态
 
-  强制多态 将变元的类型加以变化以符合一个函数或者操作的要求
+   强制多态 将变元的类型加以变化以符合一个函数或者操作的要求
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">通用多态
     <div id="通用多态" class="anchor"></div>
@@ -1233,11 +1228,10 @@
     </span>
     
 </h3>
-<pre><code>  包含多态 定义于不同类中的同名函数成员的多态行为，通过虚函数实现
+<pre><code>   包含多态 定义于不同类中的同名函数成员的多态行为，通过虚函数实现
 
-  参数多态 参数多态与类模板关联，在使用时必须赋予实际的类型实例化
+   参数多态 参数多态与类模板关联，在使用时必须赋予实际的类型实例化
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">多态的实现
     <div id="多态的实现" class="anchor"></div>
@@ -1248,7 +1242,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">编译时的多态
     <div id="编译时的多态" class="anchor"></div>
@@ -1259,10 +1252,8 @@
     </span>
     
 </h3>
-<pre><code>  编译的过程中确定了同名操作的具体操作对象
+<pre><code>   编译的过程中确定了同名操作的具体操作对象
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">运行时的多态
     <div id="运行时的多态" class="anchor"></div>
@@ -1273,10 +1264,8 @@
     </span>
     
 </h3>
-<pre><code>  程序运行过程中才动态地确定操作所针对的具体对象
+<pre><code>   程序运行过程中才动态地确定操作所针对的具体对象
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">绑定
     <div id="绑定" class="anchor"></div>
@@ -1287,25 +1276,24 @@
     </span>
     
 </h3>
-<pre><code>  确定操作的具体对象就是绑定
+<pre><code>   确定操作的具体对象就是绑定
 
-  也即计算机程序自身彼此关联的过程，把一条信息和一个对象相结合
+   也即计算机程序自身彼此关联的过程，把一条信息和一个对象相结合
 
-  静态绑定(早期绑定/前绑定)
+   静态绑定(早期绑定/前绑定)
 
-      绑定工作在编译连接阶段完成的情况是静态绑定
+       绑定工作在编译连接阶段完成的情况是静态绑定
 
-      系统根据类型匹配等特诊确定程序中操作与执行操作代码的关系
+       系统根据类型匹配等特诊确定程序中操作与执行操作代码的关系
 
-      重载、强制和参数多态都是通过静态绑定解决
+       重载、强制和参数多态都是通过静态绑定解决
 
-  动态绑定(晚期绑定/后绑定)
+   动态绑定(晚期绑定/后绑定)
 
-      绑定工作在程序运行阶段完成的情况称为动态绑定
+       绑定工作在程序运行阶段完成的情况称为动态绑定
 
-      包含多态操作通过动态绑定完成
+       包含多态操作通过动态绑定完成
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">重载多态-运算符重载
     <div id="重载多态-运算符重载" class="anchor"></div>
@@ -1316,11 +1304,8 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  赋予已有的运算符多重含义，使同一运算符作用不同类型数据导致不同行为
+<pre><code>   赋予已有的运算符多重含义，使同一运算符作用不同类型数据导致不同行为
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">运算符重载规则
     <div id="运算符重载规则" class="anchor"></div>
@@ -1331,32 +1316,30 @@
     </span>
     
 </h3>
-<pre><code>  只能重载Cpp已存在运算符
+<pre><code>   只能重载Cpp已存在运算符
 
-  关系运算&quot;.&quot;/成员指针运算&quot;.*&quot;/作用域分辨&quot;::&quot;/选择运算&quot;?:&quot;符号不可重载
+   关系运算&quot;.&quot;/成员指针运算&quot;.*&quot;/作用域分辨&quot;::&quot;/选择运算&quot;?:&quot;符号不可重载
 
-  重载之后运算符的优先级和结合性都不会改变
+   重载之后运算符的优先级和结合性都不会改变
 
-  一般重载功能与原功能相似，不改变操作对象个数且至少一个为自定义类型
+   一般重载功能与原功能相似，不改变操作对象个数且至少一个为自定义类型
 
-  重载形式
+   重载形式
 
-      非静态成员函数
+       非静态成员函数
 
-      返回类型 类名::operator 运算符(形参表){函数体}
+       返回类型 类名::operator 运算符(形参表){函数体}
 
-      函数参数个数比原来的操作数个数要少一个(后置++/\--除外)
+       函数参数个数比原来的操作数个数要少一个(后置++/\--除外)
 
-      第一个操作数会被作为函数调用对象无需出现在参数表中
+       第一个操作数会被作为函数调用对象无需出现在参数表中
 
-  非成员函数
+   非成员函数
 
-      返回类型 operator 运算符(形参表){函数体}
+       返回类型 operator 运算符(形参表){函数体}
 
-      参数个数与原操作个数相同
+       参数个数与原操作个数相同
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">运算符重载为成员函数
     <div id="运算符重载为成员函数" class="anchor"></div>
@@ -1367,30 +1350,28 @@
     </span>
     
 </h3>
-<pre><code>  对于双目运算符
+<pre><code>   对于双目运算符
 
-      (A类型)oprd1 操作符 (B类型)oprd2
+       (A类型)oprd1 操作符 (B类型)oprd2
 
-      应当将操作符重载为A类的成员函数，形参为B类型
+       应当将操作符重载为A类的成员函数，形参为B类型
 
-  对于前置单目运算
+   对于前置单目运算
 
-      操作符 (A类型)oprd
+       操作符 (A类型)oprd
 
-      应当将操作符重载为类的成员函数，函数没有形参
+       应当将操作符重载为类的成员函数，函数没有形参
 
-  对于后置单目运算符
+   对于后置单目运算符
 
-      (A类型)oprd 操作符
+       (A类型)oprd 操作符
 
-      应当将操作符重载为A类的成员函数，这时函数带有整型形参
+       应当将操作符重载为A类的成员函数，这时函数带有整型形参
 
-      整型形参不起运算作用，用于区别前后置
+       整型形参不起运算作用，用于区别前后置
 
-  &quot;=&quot;/&quot;[]&quot;/&quot;()&quot;/&quot;-&gt;&quot;只能被重载为成员函数
+   &quot;=&quot;/&quot;[]&quot;/&quot;()&quot;/&quot;-&gt;&quot;只能被重载为成员函数
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">运算符重载为非成员函数
     <div id="运算符重载为非成员函数" class="anchor"></div>
@@ -1401,33 +1382,32 @@
     </span>
     
 </h3>
-<pre><code>  对于双目运算符
+<pre><code>   对于双目运算符
 
-      (A类型)oprd1 操作符 (B类型)oprd2
+       (A类型)oprd1 操作符 (B类型)oprd2
 
-      只需一个为定义类型，则可以将操作符重载为非成员函数
+       只需一个为定义类型，则可以将操作符重载为非成员函数
 
-      形参为oprd1和oprd2
+       形参为oprd1和oprd2
 
-  对于前置单目运算符
+   对于前置单目运算符
 
-      操作符 (A类型)oprd
+       操作符 (A类型)oprd
 
-      需oprd为自定义类型，函数形参为oprd
+       需oprd为自定义类型，函数形参为oprd
 
-  对于后置运算符
+   对于后置运算符
 
-      (A类型)oprd 操作符
+       (A类型)oprd 操作符
 
-      需oprd为自定义类型，形参为oprd和int类型形参
+       需oprd为自定义类型，形参为oprd和int类型形参
 
-  使用非函数成员重载的情况
+   使用非函数成员重载的情况
 
-      重载的操作符第一个操作数不是可更改类型
+       重载的操作符第一个操作数不是可更改类型
 
-      以非成员函数形式重载支持更灵活类型转换
+       以非成员函数形式重载支持更灵活类型转换
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">包含多态-虚函数
     <div id="包含多态-虚函数" class="anchor"></div>
@@ -1438,15 +1418,12 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  虚函数必须是非静态的成员函数
+<pre><code>   虚函数必须是非静态的成员函数
 
-  需通过基类指针指向派生类对象并访问同名成员时，在基类中将函数说明为虚函数
+   需通过基类指针指向派生类对象并访问同名成员时，在基类中将函数说明为虚函数
 
-  此时通过基类类型指针就可以使不同派生类的不同对象产生不同行为
+   此时通过基类类型指针就可以使不同派生类的不同对象产生不同行为
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">一般虚函数成员
     <div id="一般虚函数成员" class="anchor"></div>
@@ -1457,28 +1434,26 @@
     </span>
     
 </h3>
-<pre><code>  virtual 函数类型 函数名(形参表);
+<pre><code>   virtual 函数类型 函数名(形参表);
 
-  虚函数声明只能出现在类定义中的函数原型声明中，而不能在成员函数实现时
+   虚函数声明只能出现在类定义中的函数原型声明中，而不能在成员函数实现时
 
-  运行时多态需满足
+   运行时多态需满足
 
-      类之间满足赋值兼容规则
+       类之间满足赋值兼容规则
 
-      声明虚函数
+       声明虚函数
 
-      成员函数调用或通过指针、引用访问虚函数
+       成员函数调用或通过指针、引用访问虚函数
 
-      (基类指针可指向派生类，基类引用可作为派生类对象别名)
+       (基类指针可指向派生类，基类引用可作为派生类对象别名)
 
-      (但基类对象不能表示派生类对象)
+       (但基类对象不能表示派生类对象)
 
-  满足上述条件后，派生类虚函数便覆盖基类虚函数，并隐藏基类同名函数重载
+   满足上述条件后，派生类虚函数便覆盖基类虚函数，并隐藏基类同名函数重载
 
-  对象切片 用派生类对象复制构造基类对象的行为(直接生成全新基类)
+   对象切片 用派生类对象复制构造基类对象的行为(直接生成全新基类)
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">final和override说明符
     <div id="final和override说明符" class="anchor"></div>
@@ -1489,14 +1464,12 @@
     </span>
     
 </h3>
-<pre><code>  override说明符 表明函数应该覆盖已存在的虚函数，未覆盖则报错
+<pre><code>   override说明符 表明函数应该覆盖已存在的虚函数，未覆盖则报错
 
-  final 说明符 表明函数不能被覆盖，若发生覆盖操作则报错
+   final 说明符 表明函数不能被覆盖，若发生覆盖操作则报错
 
-  这两个说明符说明在函数声明的参数列表以及尾置的返回类型之后
+   这两个说明符说明在函数声明的参数列表以及尾置的返回类型之后
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">虚析构函数
     <div id="虚析构函数" class="anchor"></div>
@@ -1507,13 +1480,12 @@
     </span>
     
 </h3>
-<pre><code>  Cpp中不能声明虚构造函数但可以声明虚析构函数
+<pre><code>   Cpp中不能声明虚构造函数但可以声明虚析构函数
 
-  解决基类指针指向派生类对象，delete基类指针无法正确析构派生部分问题
+   解决基类指针指向派生类对象，delete基类指针无法正确析构派生部分问题
 
-  virtual ~类名();
+   virtual ~类名();
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">包含多态-纯虚函数与抽象类
     <div id="包含多态-纯虚函数与抽象类" class="anchor"></div>
@@ -1524,7 +1496,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">纯虚函数
     <div id="纯虚函数" class="anchor"></div>
@@ -1535,14 +1506,12 @@
     </span>
     
 </h3>
-<pre><code>  纯虚函数是在基类中声明的没有定义具体操作内容的虚函数
+<pre><code>   纯虚函数是在基类中声明的没有定义具体操作内容的虚函数
 
-  virtual 函数类型 函数名(参数表)=0;
+   virtual 函数类型 函数名(参数表)=0;
 
-  声明未纯虚函数之后，基类中就可以不再给出函数的实现部分
+   声明未纯虚函数之后，基类中就可以不再给出函数的实现部分
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">抽象类
     <div id="抽象类" class="anchor"></div>
@@ -1553,15 +1522,14 @@
     </span>
     
 </h3>
-<pre><code>  带有纯虚函数的类是抽象类
+<pre><code>   带有纯虚函数的类是抽象类
 
-  主要作用是通过它为一个类族建立一个公共的接口，是更有效发挥多态特性
+   主要作用是通过它为一个类族建立一个公共的接口，是更有效发挥多态特性
 
-  抽象类的派生类给出所有纯虚函数的函数实现才能定义自己的对象
+   抽象类的派生类给出所有纯虚函数的函数实现才能定义自己的对象
 
-  抽象类本身不能实例化，但可以定义抽象类的指针和引用
+   抽象类本身不能实例化，但可以定义抽象类的指针和引用
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">*dynamic_cast
     <div id="dynamic_cast" class="anchor"></div>
@@ -1572,16 +1540,14 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  对多态类型的指针或引用进行转化
+<pre><code>   对多态类型的指针或引用进行转化
 
-  将基类的指针或引用显式转换为派生类的指针(或void指针)或引用
+   将基类的指针或引用显式转换为派生类的指针(或void指针)或引用
 
-  与static_cast不同在于 转换前会检查指针所指向对象的类型与目的类型是否兼容
+   与static_cast不同在于 转换前会检查指针所指向对象的类型与目的类型是否兼容
 
-  否则指针转化会得到空指针，引用转化会抛出异常
+   否则指针转化会得到空指针，引用转化会抛出异常
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">typeid获取运行时类型信息
     <div id="typeid获取运行时类型信息" class="anchor"></div>
@@ -1592,16 +1558,14 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  typeid(表达式)/typeid(类型)
+<pre><code>   typeid(表达式)/typeid(类型)
 
-  通过typeid得到的式type_info类型的常引用
+   通过typeid得到的式type_info类型的常引用
 
-  type_info是标准库的额一个类，专门用于运行时表示类型信息
+   type_info是标准库的额一个类，专门用于运行时表示类型信息
 
-  该类重载了&quot;==&quot;和&quot;!=&quot;操作符使两个对象之间可以进行比较
+   该类重载了&quot;==&quot;和&quot;!=&quot;操作符使两个对象之间可以进行比较
 </code></pre>
-</blockquote>
           
           
           

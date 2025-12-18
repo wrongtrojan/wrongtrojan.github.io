@@ -1128,12 +1128,10 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  结构体是一种特殊形态的类，唯一区别在访问控制属性
+<pre><code>   结构体是一种特殊形态的类，唯一区别在访问控制属性
 
-  结构体中未指定访问控制属性的成员，默认为公有属性
+   结构体中未指定访问控制属性的成员，默认为公有属性
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">联合体(Union)
     <div id="联合体union" class="anchor"></div>
@@ -1144,18 +1142,16 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  一组数据中某些数据只在一些情况下有效，另些在其他情况下有效
+<pre><code>   一组数据中某些数据只在一些情况下有效，另些在其他情况下有效
 
-  联合体的全部数据成员共享同一组内存单元，至多只有一个成员有意义
+   联合体的全部数据成员共享同一组内存单元，至多只有一个成员有意义
 
-  联合体各个对象成员不能有自定义的构造、析构函数，重载的赋值运算符
+   联合体各个对象成员不能有自定义的构造、析构函数，重载的赋值运算符
 
-  联合体不能继承，因为也不支持包含多态
+   联合体不能继承，因为也不支持包含多态
 
-  无名联合体只声明一个成员项的集合，由成员项的名字直接访问
+   无名联合体只声明一个成员项的集合，由成员项的名字直接访问
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">枚举体(Enum)
     <div id="枚举体enum" class="anchor"></div>
@@ -1166,7 +1162,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">不限定作用域
     <div id="不限定作用域" class="anchor"></div>
@@ -1177,10 +1172,8 @@
     </span>
     
 </h3>
-<pre><code>  enum (枚举类型名) {变量值类表};
+<pre><code>   enum (枚举类型名) {变量值类表};
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">限定作用域
     <div id="限定作用域" class="anchor"></div>
@@ -1191,10 +1184,8 @@
     </span>
     
 </h3>
-<pre><code>  enum(枚举类型名) ：类型 {变量值类表};
+<pre><code>   enum(枚举类型名) ：类型 {变量值类表};
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">*枚举类
     <div id="枚举类" class="anchor"></div>
@@ -1205,15 +1196,12 @@
     </span>
     
 </h3>
-<pre><code>  enum class 枚举类型名 {变量值列表};
+<pre><code>   enum class 枚举类型名 {变量值列表};
 
-  enum struct 枚举类型名 {变量值列表};
+   enum struct 枚举类型名 {变量值列表};
+
+   枚举元素具有默认值，也可以在声明时用赋值运算符另行定义
 </code></pre>
-</blockquote>
-<blockquote>
-<pre><code>  枚举元素具有默认值，也可以在声明时用赋值运算符另行定义
-</code></pre>
-</blockquote>
           
           
           

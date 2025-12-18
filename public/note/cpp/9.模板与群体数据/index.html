@@ -1180,9 +1180,7 @@
         
 
         <div class="article-content max-w-prose mb-20">
-          <blockquote>
-<p>群体分为线性群体与非线性群体，线性群体元素按位置排列有序</p>
-</blockquote>
+          <p>群体分为线性群体与非线性群体，线性群体元素按位置排列有序</p>
 
 <h2 class="relative group">函数模板与类模板
     <div id="函数模板与类模板" class="anchor"></div>
@@ -1194,7 +1192,6 @@
     
 </h2>
 <p>参数多态化，将程序处理的对象类型参数化，使一段程序可处理多种不同类型对象</p>
-<blockquote>
 
 <h3 class="relative group">函数模板
     <div id="函数模板" class="anchor"></div>
@@ -1205,29 +1202,27 @@
     </span>
     
 </h3>
-<pre><code>  函数模板的定义形式
+<pre><code>   函数模板的定义形式
 
-      template&lt;模板参数表&gt;
+       template&lt;模板参数表&gt;
 
-      类型名 函数名(参数表){函数体}
+       类型名 函数名(参数表){函数体}
 
-  模板参数表
+   模板参数表
 
-      class(typename) 标识符，指明可以接受一个类型参数(预定义或自定义类型)
+       class(typename) 标识符，指明可以接受一个类型参数(预定义或自定义类型)
 
-      类型说明符 标识符，指明可以接受一个该类型的常量参数
+       类型说明符 标识符，指明可以接受一个该类型的常量参数
 
-      template&lt;参数表&gt;class 标识符，指明可以接受类模板作为参数
+       template&lt;参数表&gt;class 标识符，指明可以接受类模板作为参数
 
-  函数模板的特点
+   函数模板的特点
 
-      模板生成的实例才会生成目标代码，模板本身不生成
-      若被多源文件引用，函数模板需要连同函数体一起放在头文件中
+       模板生成的实例才会生成目标代码，模板本身不生成
+       若被多源文件引用，函数模板需要连同函数体一起放在头文件中
 
-      函数指针只能指向模板的实例
+       函数指针只能指向模板的实例
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">类模板
     <div id="类模板" class="anchor"></div>
@@ -1238,33 +1233,32 @@
     </span>
     
 </h3>
-<pre><code>  使用类模板可以为类定义一种模式，使得类中各个数据取不同类型
+<pre><code>   使用类模板可以为类定义一种模式，使得类中各个数据取不同类型
 
-  定义形式
+   定义形式
 
-      类内声明
+       类内声明
 
-          template &lt;模板参数表&gt;
+           template &lt;模板参数表&gt;
 
-          class 类名{类成员声明};
+           class 类名{类成员声明};
 
-      类外定义
+       类外定义
 
-          template&lt;模板参数表&gt;
+           template&lt;模板参数表&gt;
 
-          类型名 类名 &lt;模板参数标识符列表&gt;::函数名(参数表)
+           类型名 类名 &lt;模板参数标识符列表&gt;::函数名(参数表)
 
-      使用形式
+       使用形式
 
-          模板名&lt;模板参数表&gt; 对象名1,...,对象名n;
+           模板名&lt;模板参数表&gt; 对象名1,...,对象名n;
 
-      类模板别名
+       类模板别名
 
-          类模板别名 using
+           类模板别名 using
 
-          类模板的类实例别名 typedef/using
+           类模板的类实例别名 typedef/using
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">线性群体(详细内容见数据结构与算法)
     <div id="线性群体详细内容见数据结构与算法" class="anchor"></div>
@@ -1275,7 +1269,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">概念
     <div id="概念" class="anchor"></div>
@@ -1286,16 +1279,14 @@
     </span>
     
 </h3>
-<pre><code>  线性群体中的元素次序与位置关系对应
+<pre><code>   线性群体中的元素次序与位置关系对应
 
-  有直接访问、顺序访问和索引访问三种访问方式
+   有直接访问、顺序访问和索引访问三种访问方式
 
-  直接访问 直接访问群体中的任何一个元素
+   直接访问 直接访问群体中的任何一个元素
 
-  顺序访问 只能按元素的排列顺序依次访问各个元素
+   顺序访问 只能按元素的排列顺序依次访问各个元素
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">直接访问群体-数组类
     <div id="直接访问群体-数组类" class="anchor"></div>
@@ -1306,8 +1297,6 @@
     </span>
     
 </h3>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">顺序访问群体-链表类
     <div id="顺序访问群体-链表类" class="anchor"></div>
@@ -1318,8 +1307,6 @@
     </span>
     
 </h3>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">栈和队列
     <div id="栈和队列" class="anchor"></div>
@@ -1330,8 +1317,6 @@
     </span>
     
 </h3>
-</blockquote>
-<blockquote>
 
 <h2 class="relative group">*为模板定义特殊的实现
     <div id="为模板定义特殊的实现" class="anchor"></div>
@@ -1342,8 +1327,6 @@
     </span>
     
 </h2>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">模板的特化
     <div id="模板的特化" class="anchor"></div>
@@ -1354,14 +1337,12 @@
     </span>
     
 </h3>
-<pre><code>  为一个函数模板或类模板在某些特定参数下提供特殊的定义
+<pre><code>   为一个函数模板或类模板在某些特定参数下提供特殊的定义
 
-  也可以对模板类的个别成员函数和个别静态数据成员进行特化
+   也可以对模板类的个别成员函数和个别静态数据成员进行特化
 
-  特化后不再是模板而是普通的类和函数
+   特化后不再是模板而是普通的类和函数
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">类模板的偏特化
     <div id="类模板的偏特化" class="anchor"></div>
@@ -1372,12 +1353,10 @@
     </span>
     
 </h3>
-<pre><code>  一部分参数固定另一部分参数可变的模板特殊实现，只针对类模板
+<pre><code>   一部分参数固定另一部分参数可变的模板特殊实现，只针对类模板
 
-  模板偏特化保留了一部分未定的参数，仍旧是模板
+   模板偏特化保留了一部分未定的参数，仍旧是模板
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">函数模板的重载
     <div id="函数模板的重载" class="anchor"></div>
@@ -1388,10 +1367,9 @@
     </span>
     
 </h3>
-<pre><code>  函数模板可以像普通函数那样被重载
+<pre><code>   函数模板可以像普通函数那样被重载
 </code></pre>
 <p><strong>类模板和函数模板的默认实参</strong></p>
-</blockquote>
 
 <h2 class="relative group">*模板元编程
     <div id="模板元编程" class="anchor"></div>
@@ -1402,10 +1380,8 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  在模板实例化的同时利用编译器完成一些计算任务，把运行时计算的任务放到编译
+<pre><code>   在模板实例化的同时利用编译器完成一些计算任务，把运行时计算的任务放到编译
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">*可变参数模板
     <div id="可变参数模板" class="anchor"></div>
@@ -1416,18 +1392,16 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  接受参数个数可变的模板，在参数类型可变的基础上实现了参数个数的&gt;变化
+<pre><code>   接受参数个数可变的模板，在参数类型可变的基础上实现了参数个数的&gt;变化
 
-  可变参数模板的参数称为参数包，通过省略号表示零或多个模板参数
+   可变参数模板的参数称为参数包，通过省略号表示零或多个模板参数
 
-  声明语法
+   声明语法
 
-      template\&lt;typenameT, typenaame... TypeArgs&gt; //TypeArgs模板参数包
+       template\&lt;typenameT, typenaame... TypeArgs&gt; //TypeArgs模板参数包
 
-      void func(T &amp;t,TypeArgs &amp;... args);//args 函数参数包
+       void func(T &amp;t,TypeArgs &amp;... args);//args 函数参数包
 </code></pre>
-</blockquote>
           
           
           

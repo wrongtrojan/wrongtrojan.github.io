@@ -54,13 +54,13 @@ tags=["Git"]
 
 ### `git diff`
 
-- 查看未暂存文件更新部分 `git diff`
-- 查看已暂存文件与最后提交差异 `git diff --staged`<br>此处`--staged`与`--cached`同义
+- `git diff`查看未暂存文件更新部分 
+- `git diff --staged`查看已暂存文件与最后提交差异<br>此处`--staged`与`--cached`同义
 <br>
 
 ### `git commit`
 
-- 提交暂存区文件,回启动文本编辑器输入提交声明
+- `git commit`提交暂存区文件,回启动文本编辑器输入提交声明
 - `git commit -m ""`将提交信息与命令放在同一行
 - `git commit -a`在提交前先进行`git add`操作
 - `git commit --amend`用后一次提交代替前一次提交
@@ -136,7 +136,7 @@ tags=["Git"]
 
 ### `git remote`
   
-- 查看远程仓库服务器
+- `git remote`查看远程仓库服务器
 - `-v`显示读写远程仓库的Git保存简写与其对应URL
 - `git remote add <shortname> <url>`添加一个新的远程Git仓库
 - `git remote show <remote>`查看远程仓库更多信息
@@ -161,6 +161,7 @@ tags=["Git"]
 <br>
 
 ### `git push`
+
 - `git push <remote> <branch>`将项目推送到服务器
 - `git push <remote> <tagname>`将标签推送到服务器
 - `git push <remote> --tags`推送所有标签
@@ -168,7 +169,7 @@ tags=["Git"]
 
 ### `git tag`
 
-- 在Git中列出已有的标签(若按通配模式匹配需强制使用`-l` `--list`)
+- `git tag`在Git中列出已有的标签(若按通配模式匹配需强制使用`-l` `--list`)
 - `-a`创建附注标签(`annotated`),`-m`指定信息
 - `git tag <tagname>`创建轻量标签(`lightweight`) 
 - `git tag <tagname> <hash value>`补加标签

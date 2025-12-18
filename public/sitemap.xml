@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/note/git/gitbasic/</loc>
+    <loc>http://localhost:1313/note/git/gitbasics/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -29,6 +29,12 @@
   <url>
     <loc>http://localhost:1313/note/dsaa/%E9%AB%98%E7%B2%BE%E5%BA%A6%E8%AE%A1%E7%AE%97.docx/</loc>
     <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/note/git/gitbranching/</loc>
+    <lastmod>2025-12-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -220,30 +226,36 @@
   </url>
   <url>
     <loc>http://localhost:1313/note/cpp/</loc>
-    <lastmod>2025-12-13T00:00:00+00:00</lastmod>
+    <lastmod>2025-12-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/note/git/</loc>
-    <lastmod>2025-12-13T00:00:00+00:00</lastmod>
+    <lastmod>2025-12-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/note/</loc>
-    <lastmod>2025-12-13T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/create/</loc>
-    <lastmod>2025-12-13T00:00:00+00:00</lastmod>
+    <lastmod>2025-12-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2025-12-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/note/cpp/%E6%98%93%E9%94%99%E7%82%B9%E6%95%B4%E7%90%86/</loc>
+    <lastmod>2025-12-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/create/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

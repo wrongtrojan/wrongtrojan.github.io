@@ -1199,7 +1199,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">抽象
     <div id="抽象" class="anchor"></div>
@@ -1210,12 +1209,10 @@
     </span>
     
 </h3>
-<pre><code>  数据抽象 描述某类对象的属性或状态
+<pre><code>   数据抽象 描述某类对象的属性或状态
 
-  行为抽象 某类对象的共同行为或功能特征
+   行为抽象 某类对象的共同行为或功能特征
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">封装
     <div id="封装" class="anchor"></div>
@@ -1226,10 +1223,8 @@
     </span>
     
 </h3>
-<pre><code>  抽象得到的数据和行为相结合，形成有机整体
+<pre><code>   抽象得到的数据和行为相结合，形成有机整体
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">继承
     <div id="继承" class="anchor"></div>
@@ -1240,7 +1235,7 @@
     </span>
     
 </h3>
-<pre><code>  一般概念中的属性和行为可以被特殊概念共享
+<pre><code>   一般概念中的属性和行为可以被特殊概念共享
 </code></pre>
 
 <h3 class="relative group">多态
@@ -1252,15 +1247,14 @@
     </span>
     
 </h3>
-<pre><code>  多态性是一段程序能够处理多种类型对象的能力
+<pre><code>   多态性是一段程序能够处理多种类型对象的能力
 
-  通过强制多态、重载多态、类型参数化多态、包含多态4种形式实现
+   通过强制多态、重载多态、类型参数化多态、包含多态4种形式实现
 
-  强制多态和重载多态属于特殊多态性，只是表面的多态性
+   强制多态和重载多态属于特殊多态性，只是表面的多态性
 
-  通过虚函数实现包含多态，通过模板实现类型参数化多态
+   通过虚函数实现包含多态，通过模板实现类型参数化多态
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">类与对象
     <div id="类与对象" class="anchor"></div>
@@ -1271,7 +1265,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">类的定义
     <div id="类的定义" class="anchor"></div>
@@ -1282,12 +1275,10 @@
     </span>
     
 </h3>
-<pre><code>  数据成员
+<pre><code>   数据成员
 
-  函数成员
+   函数成员
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">类成员的访问控制
     <div id="类成员的访问控制" class="anchor"></div>
@@ -1298,14 +1289,12 @@
     </span>
     
 </h3>
-<pre><code>  公有类型(public) 定义了类的外部接口
+<pre><code>   公有类型(public) 定义了类的外部接口
 
-  私有类型(private) 只能被本类的成员函数访问，来自外部任何访问非法
+   私有类型(private) 只能被本类的成员函数访问，来自外部任何访问非法
 
-  保护类型(protected) 性质与私有类型相似，子类成员可以访问
+   保护类型(protected) 性质与私有类型相似，子类成员可以访问
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">对象
     <div id="对象" class="anchor"></div>
@@ -1316,14 +1305,12 @@
     </span>
     
 </h3>
-<pre><code>  声明一个对象和声明一个一般变量相同
+<pre><code>   声明一个对象和声明一个一般变量相同
 
-  访问对象的成员采取的是 &quot;.&quot; 运算符
+   访问对象的成员采取的是 &quot;.&quot; 运算符
 
-  直接初始化或列表初始化
+   直接初始化或列表初始化
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">类的成员函数
     <div id="类的成员函数" class="anchor"></div>
@@ -1334,29 +1321,26 @@
     </span>
     
 </h3>
-</blockquote>
-<blockquote>
-<pre><code>  成员函数的实现
+<pre><code>   成员函数的实现
 
-      函数的具体实现一般在类定义外，要指明类的名称
+       函数的具体实现一般在类定义外，要指明类的名称
 
-      返回值类型 类名::函数成员名(参数表){函数体}
+       返回值类型 类名::函数成员名(参数表){函数体}
 
-  成员函数调用
+   成员函数调用
 
-      调用成员函数是，需要用 &quot;.&quot; 操作符指出调用针对的对象，称为目的对象
+       调用成员函数是，需要用 &quot;.&quot; 操作符指出调用针对的对象，称为目的对象
 
-      成员函数中可以不使用 &quot;.&quot; 直接引用目的对象的数据成员和函数成员
+       成员函数中可以不使用 &quot;.&quot; 直接引用目的对象的数据成员和函数成员
 
-  带默认形参值的成员函数
+   带默认形参值的成员函数
 
-  内联成员函数
+   内联成员函数
 
-      隐式声明 将函数体直接放在类体内
+       隐式声明 将函数体直接放在类体内
 
-      显式声明 保证类定义的简洁，可以采用inline显式声明的方式
+       显式声明 保证类定义的简洁，可以采用inline显式声明的方式
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">构造函数与析构函数
     <div id="构造函数与析构函数" class="anchor"></div>
@@ -1367,7 +1351,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">构造函数
     <div id="构造函数" class="anchor"></div>
@@ -1378,16 +1361,14 @@
     </span>
     
 </h3>
-<pre><code>  类名(int a,int b,int c)[ :member1(a),member2(b),member3(c) ]{}
+<pre><code>   类名(int a,int b,int c)[ :member1(a),member2(b),member3(c) ]{}
 
-  构造函数作用是再在对象被创建时将对象初始化为一个特定的状态
+   构造函数作用是再在对象被创建时将对象初始化为一个特定的状态
 
-  对象被创建时将自动调用构造函数
+   对象被创建时将自动调用构造函数
 
-  没有参数的构造函数称为默认构造函数
+   没有参数的构造函数称为默认构造函数
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">默认构造函数
     <div id="默认构造函数" class="anchor"></div>
@@ -1398,16 +1379,14 @@
     </span>
     
 </h3>
-<pre><code>  合成的默认构造函数 编译器隐式地定义一个默认构造函数
+<pre><code>   合成的默认构造函数 编译器隐式地定义一个默认构造函数
 
-  自定义默认构造函数
+   自定义默认构造函数
 
-      编译器只在类不包含构造函数的情况下生产默认构造函数
+       编译器只在类不包含构造函数的情况下生产默认构造函数
 
-      合成的默认构造函数可能会执行错误的操作
+       合成的默认构造函数可能会执行错误的操作
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">委托构造函数
     <div id="委托构造函数" class="anchor"></div>
@@ -1418,12 +1397,10 @@
     </span>
     
 </h3>
-<pre><code>  委托构造函数使用所属类的其他构造函数执行它自己的初始化过程
+<pre><code>   委托构造函数使用所属类的其他构造函数执行它自己的初始化过程
 
-  如 Clock:Clock(0,0,0){} &quot;:&quot; 在这里是构造函数委托的语法标志
+   如 Clock:Clock(0,0,0){} &quot;:&quot; 在这里是构造函数委托的语法标志
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">复制构造函数
     <div id="复制构造函数" class="anchor"></div>
@@ -1434,22 +1411,20 @@
     </span>
     
 </h3>
-<pre><code>  类名(类名 &amp;对象){}
+<pre><code>   类名(类名 &amp;对象){}
 
-  形参是本类对象的引用，作用是使用一个已经存在的对象初始化同类新对象
+   形参是本类对象的引用，作用是使用一个已经存在的对象初始化同类新对象
 
-  若未自定义，系统会在必要时自动生成隐含复制构造函数(clone)
+   若未自定义，系统会在必要时自动生成隐含复制构造函数(clone)
 
-  复制构造函数调用
+   复制构造函数调用
 
-      用类的一个对象去初始化该类的另一个对象
+       用类的一个对象去初始化该类的另一个对象
 
-      函数的形参是类的对象
+       函数的形参是类的对象
 
-      函数的返回值是类的对象
+       函数的返回值是类的对象
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">移动构造函数
     <div id="移动构造函数" class="anchor"></div>
@@ -1460,20 +1435,18 @@
     </span>
     
 </h3>
-<pre><code>  类名(类名 &amp;&amp;对象){}
+<pre><code>   类名(类名 &amp;&amp;对象){}
 
-  左值和右值
+   左值和右值
 
-      左值是位于赋值语句左侧的对象变量，右值是赋值语句右侧的值
+       左值是位于赋值语句左侧的对象变量，右值是赋值语句右侧的值
 
-      持久存在变量的引用称为左值引用，短暂存在可被移动的右值称为右值引用
+       持久存在变量的引用称为左值引用，短暂存在可被移动的右值称为右值引用
 
-      右值引用 &amp;&amp; 引用名=右值（不可绑定左值）
+       右值引用 &amp;&amp; 引用名=右值（不可绑定左值）
 
-      move函数可以将左值对象移动成为右值
+       move函数可以将左值对象移动成为右值
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">析构函数
     <div id="析构函数" class="anchor"></div>
@@ -1484,16 +1457,14 @@
     </span>
     
 </h3>
-<pre><code>  ~类名（）{delete [] 标识符}
+<pre><code>   ~类名（）{delete [] 标识符}
 
-  完成对象被删除前的清理工作，对象生存期即将结束时被自动调用
+   完成对象被删除前的清理工作，对象生存期即将结束时被自动调用
 
-  默认析构函数无法清除动态内存，需要自定义析构函数
+   默认析构函数无法清除动态内存，需要自定义析构函数
 
-  析构函数不接受任何参数，但可以是虚函数
+   析构函数不接受任何参数，但可以是虚函数
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">default、delete函数
     <div id="defaultdelete函数" class="anchor"></div>
@@ -1504,11 +1475,10 @@
     </span>
     
 </h3>
-<pre><code>  default函数 让编译器合成简单的无参默认、复制构造函数和析构函数
+<pre><code>   default函数 让编译器合成简单的无参默认、复制构造函数和析构函数
 
-  delete函数 删除不希望存在的相关操作（除析构函数外）(operate=delete)
+   delete函数 删除不希望存在的相关操作（除析构函数外）(operate=delete)
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">类的组合
     <div id="类的组合" class="anchor"></div>
@@ -1519,7 +1489,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">组合
     <div id="组合" class="anchor"></div>
@@ -1530,16 +1499,14 @@
     </span>
     
 </h3>
-<pre><code>  一个类内嵌其他类的对象作为成员
+<pre><code>   一个类内嵌其他类的对象作为成员
 
-  创建类对象时，各个内嵌对象被自动创作，都需要被初始化
+   创建类对象时，各个内嵌对象被自动创作，都需要被初始化
 
-  内嵌对象构造函数先调用，本类构造函数后调用
+   内嵌对象构造函数先调用，本类构造函数后调用
 
-  析构函数和构造函数顺序相反
+   析构函数和构造函数顺序相反
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">前向引用声明
     <div id="前向引用声明" class="anchor"></div>
@@ -1550,11 +1517,10 @@
     </span>
     
 </h3>
-<pre><code>  相互调内嵌时，前向引用声明类
+<pre><code>   相互调内嵌时，前向引用声明类
 
-  由于不清楚类占据的内存，在嵌套时使用引用或指针
+   由于不清楚类占据的内存，在嵌套时使用引用或指针
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">*构造函数定义类型转换
     <div id="构造函数定义类型转换" class="anchor"></div>
@@ -1565,7 +1531,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">用构造函数定义的类型转换
     <div id="用构造函数定义的类型转换" class="anchor"></div>
@@ -1576,14 +1541,12 @@
     </span>
     
 </h3>
-<pre><code>  通过直接使用类名调用类的构造函数创建一个临时对象
+<pre><code>   通过直接使用类名调用类的构造函数创建一个临时对象
 
-  再调用临时对象成员函数返回转换的其他类型
+   再调用临时对象成员函数返回转换的其他类型
 
-  类的构造函数规定的类型转化允许隐含类型转换进行
+   类的构造函数规定的类型转化允许隐含类型转换进行
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">只允许显示执行的类型转换
     <div id="只允许显示执行的类型转换" class="anchor"></div>
@@ -1594,9 +1557,8 @@
     </span>
     
 </h3>
-<pre><code>  在构造函数前加上explicit关键字使得类型转换只能显式进行
+<pre><code>   在构造函数前加上explicit关键字使得类型转换只能显式进行
 </code></pre>
-</blockquote>
           
           
           

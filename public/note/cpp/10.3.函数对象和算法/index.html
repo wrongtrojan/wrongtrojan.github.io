@@ -1164,7 +1164,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">函数对象的概念
     <div id="函数对象的概念" class="anchor"></div>
@@ -1175,39 +1174,37 @@
     </span>
     
 </h3>
-<pre><code>  行为类似函数的对象，可以不需参数或带有若干参数
+<pre><code>   行为类似函数的对象，可以不需参数或带有若干参数
 
-  功能是获取一个值或者改变操作的类型
+   功能是获取一个值或者改变操作的类型
 
-  普通函数、函数指针、lambda表达式和重载运算符的类对象都可作为函数对象
+   普通函数、函数指针、lambda表达式和重载运算符的类对象都可作为函数对象
 
-  常用函数对象可分为五类
+   常用函数对象可分为五类
 
-      产生器(Generator) 一元函数(Unary Function) 二元函数(Binary Function)
+       产生器(Generator) 一元函数(Unary Function) 二元函数(Binary Function)
 
-      一元谓词(Unary Predicate) 二元谓词(Binary Predicate)
+       一元谓词(Unary Predicate) 二元谓词(Binary Predicate)
 
-  标准函数对象
+   标准函数对象
 
-      产生器、一元函数和二元函数
+       产生器、一元函数和二元函数
 
-          一般具有0、1和2个传入参数的函数对象是产生器、一元函数和二元函数
+           一般具有0、1和2个传入参数的函数对象是产生器、一元函数和二元函数
 
-          STL标准库中二元函数对象
+           STL标准库中二元函数对象
 
-              plus&lt;T&gt; minus&lt;T&gt; multiplies&lt;T&gt;
+               plus&lt;T&gt; minus&lt;T&gt; multiplies&lt;T&gt;
 
-              divides&lt;T&gt; modulus&lt;T&gt; negate&lt;T&gt;
+               divides&lt;T&gt; modulus&lt;T&gt; negate&lt;T&gt;
 
-          一元谓词和二元谓词
+           一元谓词和二元谓词
 
-              返回型为bool型，并具有一个或两个参数，称为一元谓词和二元谓词
+               返回型为bool型，并具有一个或两个参数，称为一元谓词和二元谓词
 
-              equal_to&lt;T&gt; not_equal_to&lt;T&gt; greater&lt;T&gt; less&lt;T&gt; greater_equal&lt;T&gt;
-              less_equal&lt;T&gt; logical_and&lt;T&gt; logical_or&lt;T&gt; logical_not&lt;T&gt;
+               equal_to&lt;T&gt; not_equal_to&lt;T&gt; greater&lt;T&gt; less&lt;T&gt; greater_equal&lt;T&gt;
+               less_equal&lt;T&gt; logical_and&lt;T&gt; logical_or&lt;T&gt; logical_not&lt;T&gt;
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">lambda表达式
     <div id="lambda表达式" class="anchor"></div>
@@ -1218,14 +1215,12 @@
     </span>
     
 </h3>
-<pre><code>  类似未命名的内联函数，可定义在函数内部
+<pre><code>   类似未命名的内联函数，可定义在函数内部
 
-  [捕获列表](参数列表)(-&gt;返回类型)(可省去){函数体}
+   [捕获列表](参数列表)(-&gt;返回类型)(可省去){函数体}
 
-  捕获列表是所在函数中定义的局部变量列表，使用尾置返回
+   捕获列表是所在函数中定义的局部变量列表，使用尾置返回
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">函数对象参数绑定
     <div id="函数对象参数绑定" class="anchor"></div>
@@ -1236,15 +1231,14 @@
     </span>
     
 </h3>
-<pre><code>  参数绑定(bind)将一种函数对象转换为另一种符合要求的函数对象
+<pre><code>   参数绑定(bind)将一种函数对象转换为另一种符合要求的函数对象
 
-  template\&lt;class F,class\...Args\&gt;
+   template\&lt;class F,class\...Args\&gt;
 
-  bind(F &amp;&amp;f,Args&amp;&amp;\...args);
+   bind(F &amp;&amp;f,Args&amp;&amp;\...args);
 
-  auto newFunc=bind(Func,arg_list);
+   auto newFunc=bind(Func,arg_list);
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">算法
     <div id="算法" class="anchor"></div>
@@ -1255,11 +1249,8 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  算法本身就是一种函数模板
+<pre><code>   算法本身就是一种函数模板
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">STL算法基础
     <div id="stl算法基础" class="anchor"></div>
@@ -1270,16 +1261,14 @@
     </span>
     
 </h3>
-<pre><code>  不可变序列算法
+<pre><code>   不可变序列算法
 
-  可变序列算法
+   可变序列算法
 
-  排序和搜索算法
+   排序和搜索算法
 
-  数值算法
+   数值算法
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">不可变序列算法(non-mutating algorithms)
     <div id="不可变序列算法non-mutating-algorithms" class="anchor"></div>
@@ -1290,20 +1279,18 @@
     </span>
     
 </h3>
-<pre><code>  指那些不直接修改所操作的容器内容的算法
+<pre><code>   指那些不直接修改所操作的容器内容的算法
 
-  包括查找元素、相等检查、对序列元素计数的算法
+   包括查找元素、相等检查、对序列元素计数的算法
 
-  查找算法的目的
+   查找算法的目的
 
-      查找元素位置并返回查找结果
+       查找元素位置并返回查找结果
 
-      查找某个元素并返回元素或元素的值
+       查找某个元素并返回元素或元素的值
 
-      查找元素并返回是否在被查找的容器中
+       查找元素并返回是否在被查找的容器中
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">可变序列算法(Mutating algorithms)
     <div id="可变序列算法mutating-algorithms" class="anchor"></div>
@@ -1314,17 +1301,15 @@
     </span>
     
 </h3>
-<pre><code>  可以修改所操作的容器的元素
+<pre><code>   可以修改所操作的容器的元素
 
-  算法的操作
+   算法的操作
 
-      复制(copy) 生成(generate) 删除(remove) 替换(replace) 倒序(reverse)
-      旋转(rotate) 交换(swap) 变换(transform) 分割(partition) 去重(unique)
+       复制(copy) 生成(generate) 删除(remove) 替换(replace) 倒序(reverse)
+       旋转(rotate) 交换(swap) 变换(transform) 分割(partition) 去重(unique)
 
-      填充(fill) 洗牌(shuffle)
+       填充(fill) 洗牌(shuffle)
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">排序和搜索算法
     <div id="排序和搜索算法" class="anchor"></div>
@@ -1335,21 +1320,20 @@
     </span>
     
 </h3>
-<pre><code>  4个排序算法 sort partial_sort  partial_sort_copy  stable_sort
+<pre><code>   4个排序算法 sort partial_sort  partial_sort_copy  stable_sort
 
-  4个二分查找 binary_search  lower_bound  uper_bound  equal_range
+   4个二分查找 binary_search  lower_bound  uper_bound  equal_range
 
-  2个合并有序区间通用算法 merge  inplace_merge
+   2个合并有序区间通用算法 merge  inplace_merge
 
-  4个最值算法 min  max  min_element  max_element
+   4个最值算法 min  max  min_element  max_element
 
-  3个排列方式相关算法 lexicographical_compare  next_permutation  prev_permutation
+   3个排列方式相关算法 lexicographical_compare  next_permutation  prev_permutation
 
-  5个有序列集合操作算法 includes  set_union  set_intersection  set_difference  set_symmetric_difference
+   5个有序列集合操作算法 includes  set_union  set_intersection  set_difference  set_symmetric_difference
+
+   4个堆创建和操作提供的算法 make_heap  pop_heap  push_heap  sort_heap
 </code></pre>
-<p>4个堆创建和操作提供的算法 make_heap  pop_heap  push_heap  sort_heap</p>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">数值算法
     <div id="数值算法" class="anchor"></div>
@@ -1360,9 +1344,8 @@
     </span>
     
 </h3>
-<pre><code>  调用此类算法需包含&lt;numeric&gt;头文件
+<pre><code>   调用此类算法需包含&lt;numeric&gt;头文件
 </code></pre>
-</blockquote>
           
           
           
