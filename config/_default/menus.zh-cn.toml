@@ -26,28 +26,46 @@
   weight = 3
 
 [[main]]
-  name = "Cpp程序设计"
-  parent = "笔记"
-  pageRef = "note/cpp"
-  weight = 10
+  name = "计算机科学"
+  parent="笔记"
+  pageRef = "note/ComputerScience"
+  weight = 1
 
 [[main]]
-  name = "数据结构与算法"
-  parent = "笔记"
-  pageRef = "note/DSAA"
-  weight = 20
+  name = "数学"
+  parent="笔记"
+  pageRef = "note/Mathematics"
+  weight = 2
 
 [[main]]
-  name = "网页探索"
-  parent = "笔记"
-  pageRef = "note/Website"
-  weight = 30
+  name = "其他"
+  parent="笔记"
+  pageRef = "note/Others"
+  weight = 3
 
-[[main]]
-  name = "Git"
-  parent = "笔记"
-  pageRef = "note/Git"
-  weight = 40
+#[[main]]
+#  name = "Cpp程序设计"
+#  parent = "笔记"
+#  pageRef = "note/cpp"
+#  weight = 10
+
+#[[main]]
+#  name = "数据结构与算法"
+#  parent = "笔记"
+#  pageRef = "note/DSAA"
+#  weight = 20
+
+#[[main]]
+#  name = "网页探索"
+#  parent = "笔记"
+#  pageRef = "note/Website"
+#  weight = 30
+
+#[[main]]
+#  name = "Git"
+#  parent = "笔记"
+#  pageRef = "note/Git"
+#  weight = 40
 
 [[main]]
   name = "创作"

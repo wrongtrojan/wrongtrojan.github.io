@@ -226,7 +226,7 @@
     "keywords": ["算法"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1069"
+    "wordCount": "1061"
   }]
   </script>
 
@@ -920,7 +920,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>1069 字</span>
+      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>1061 字</span>
     
 
     
@@ -1069,7 +1069,7 @@
     <li><a href="#核心运算实现以非负整数为例">核心运算实现（以非负整数为例）</a>
       <ul>
         <li><a href="#高精度加法ab">高精度加法(A+B)</a></li>
-        <li><a href="#高精度减法a-b需ab">高精度减法（A-B，需A&gt;=B）</a></li>
+        <li><a href="#高精度减法a-b需ab">高精度减法（A-B，需A=B）</a></li>
         <li><a href="#高精度乘法ab">高精度乘法（A*B）</a></li>
         <li><a href="#高精度除法ab">高精度除法（A/B）</a></li>
         <li><a href="#处理正负号">处理正负号</a></li>
@@ -1097,7 +1097,7 @@
     <li><a href="#核心运算实现以非负整数为例">核心运算实现（以非负整数为例）</a>
       <ul>
         <li><a href="#高精度加法ab">高精度加法(A+B)</a></li>
-        <li><a href="#高精度减法a-b需ab">高精度减法（A-B，需A&gt;=B）</a></li>
+        <li><a href="#高精度减法a-b需ab">高精度减法（A-B，需A=B）</a></li>
         <li><a href="#高精度乘法ab">高精度乘法（A*B）</a></li>
         <li><a href="#高精度除法ab">高精度除法（A/B）</a></li>
         <li><a href="#处理正负号">处理正负号</a></li>
@@ -1120,10 +1120,7 @@
         
 
         <div class="article-content max-w-prose mb-20">
-          <blockquote>
-<pre><code>  高精度计算(High-Precision Calculation)通过自定义存储和模拟手工运算实现计算
-</code></pre>
-</blockquote>
+          <p>高精度计算(High-Precision Calculation)通过自定义存储和模拟手工运算实现计算</p>
 
 <h2 class="relative group">核心问题
     <div id="核心问题" class="anchor"></div>
@@ -1134,10 +1131,8 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  常规数据类型的范围有限,处理更大的数时，常规类型会发生溢出
+<pre><code>   常规数据类型的范围有限,处理更大的数时，常规类型会发生溢出
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">数据存储方式
     <div id="数据存储方式" class="anchor"></div>
@@ -1148,21 +1143,16 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  高精度计算的核心是用字符串或数组存储大整数,两种方式各有优势
-</code></pre>
-</blockquote>
-<blockquote>
-<pre><code>-----------------------------------------------------------------------
-存储方式         优势                    适用场景
+<pre><code>   高精度计算的核心是用字符串或数组存储大整数,两种方式各有优势
 
-字符串           直接输入，便于输出       输入输出频繁、需直接处理字符的场景
+ -----------------------------------------------------------------------
+ 存储方式         优势                    适用场景
 
-动态数组         访问效率高，便于运算     运算密集型场景（如乘法、除法）
-------------------------------------------------------------------------
+ 字符串           直接输入，便于输出       输入输出频繁、需直接处理字符的场景
+
+ 动态数组         访问效率高，便于运算     运算密集型场景（如乘法、除法）
+ ------------------------------------------------------------------------
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">存储细节
     <div id="存储细节" class="anchor"></div>
@@ -1173,13 +1163,12 @@
     </span>
     
 </h3>
-<pre><code>顺序 通常按低位在前，高位在后存储，方便从低位开始处理进位/借位；
+<pre><code> 顺序 通常按低位在前，高位在后存储，方便从低位开始处理进位/借位；
 
-正负号 用单独的标志位存储符号，数值部分仅存绝对值
+ 正负号 用单独的标志位存储符号，数值部分仅存绝对值
 
-前导零 存储时需去除前导零，避免运算错误。
+ 前导零 存储时需去除前导零，避免运算错误。
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">核心运算实现（以非负整数为例）
     <div id="核心运算实现以非负整数为例" class="anchor"></div>
@@ -1190,7 +1179,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">高精度加法(A+B)
     <div id="高精度加法ab" class="anchor"></div>
@@ -1201,28 +1189,26 @@
     </span>
     
 </h3>
-<pre><code>核心逻辑 从低位到高位逐位相加，累加进位，最终合并结果。
+<pre><code> 核心逻辑 从低位到高位逐位相加，累加进位，最终合并结果。
 
-步骤
+ 步骤
 
-  反转A和B（使低位在前）
+   反转A和B（使低位在前）
 
-  初始化进位carry=0，遍历两数的每一位
+   初始化进位carry=0，遍历两数的每一位
 
-  当前位总和 = A[i]的数值 + B[i]的数值 + carry
+   当前位总和 = A[i]的数值 + B[i]的数值 + carry
 
-    结果当前位 = 总和 % 10
+     结果当前位 = 总和 % 10
 
-    新进位 = 总和 / 10
+     新进位 = 总和 / 10
 
-  遍历结束后，若仍有进位(carry&gt;0)，将进位添加到结果
+   遍历结束后，若仍有进位(carry0)，将进位添加到结果
 
-  反转结果，得到最终答案
+   反转结果，得到最终答案
 </code></pre>
-</blockquote>
-<blockquote>
 
-<h3 class="relative group">高精度减法（A-B，需A&gt;=B）
+<h3 class="relative group">高精度减法（A-B，需A=B）
     <div id="高精度减法a-b需ab" class="anchor"></div>
     
     <span
@@ -1231,24 +1217,22 @@
     </span>
     
 </h3>
-<pre><code>  核心逻辑  从低位到高位逐位相减，处理借位(若当前位A[i]&lt;B[i]，则借位)
+<pre><code>   核心逻辑  从低位到高位逐位相减，处理借位(若当前位A[i]&lt;B[i]，则借位)
 
-  步骤
+   步骤
 
-    先判断A≥B（位数多则大；位数相同则逐位比较）
+     先判断A≥B（位数多则大；位数相同则逐位比较）
 
-    反转A和B，初始化借位borrow = 0，遍历每一位
+     反转A和B，初始化借位borrow = 0，遍历每一位
 
-      当前位A[i]的数值 = 原数值 - borrow（减去上一位的借位）
+       当前位A[i]的数值 = 原数值 - borrow（减去上一位的借位）
 
-      若A[i]&lt;B[i]，则A[i]+=10，同时borrow=1（向高位借位）
+       若A[i]&lt;B[i]，则A[i]+=10，同时borrow=1（向高位借位）
 
-      结果当前位=A[i]-B[i]
+       结果当前位=A[i]-B[i]
 
-    反转结果，去除前导零。
+     反转结果，去除前导零。
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">高精度乘法（A*B）
     <div id="高精度乘法ab" class="anchor"></div>
@@ -1259,26 +1243,24 @@
     </span>
     
 </h3>
-<pre><code>  核心逻辑 逐位相乘后累加，利用数组存储中间结果，最后处理进位。
+<pre><code>   核心逻辑 逐位相乘后累加，利用数组存储中间结果，最后处理进位。
 
-  步骤
+   步骤
 
-    若A或B为&quot;0&quot;，直接返回&quot;0&quot;
+     若A或B为&quot;0&quot;，直接返回&quot;0&quot;
 
-    初始化结果数组resArr(长度为A.size()+B.size())
+     初始化结果数组resArr(长度为A.size()+B.size())
 
-    遍历A的每一位和B的每一位（从低位到高位）
+     遍历A的每一位和B的每一位（从低位到高位）
 
-      乘积 = A[i]的数值*B[j]的数值
+       乘积 = A[i]的数值*B[j]的数值
 
-      累加至resArr[i+j+1](当前位),并将进位累加到resArr[i+j]
+       累加至resArr[i+j+1](当前位),并将进位累加到resArr[i+j]
 
-      处理数组中的进位（每一位超过 10 则向高位进位）
+       处理数组中的进位（每一位超过 10 则向高位进位）
 
-    将数组转换为字符串，去除前导零。
+     将数组转换为字符串，去除前导零。
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">高精度除法（A/B）
     <div id="高精度除法ab" class="anchor"></div>
@@ -1289,20 +1271,16 @@
     </span>
     
 </h3>
-<pre><code>高精度除法分两种场景，实现难度差异较大：
-</code></pre>
-</blockquote>
-<blockquote>
-<pre><code>---------------------------------------------------
-场景             难度       核心逻辑
+<pre><code> 高精度除法分两种场景，实现难度差异较大：
 
-高精度/低精度     简单       从高到低逐位试商，保留余数
+ ---------------------------------------------------
+ 场景             难度       核心逻辑
 
-高精度/高精度     复杂       用减法模拟除法或二分法
-----------------------------------------------------
+ 高精度/低精度     简单       从高到低逐位试商，保留余数
+
+ 高精度/高精度     复杂       用减法模拟除法或二分法
+ ----------------------------------------------------
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">处理正负号
     <div id="处理正负号" class="anchor"></div>
@@ -1313,15 +1291,14 @@
     </span>
     
 </h3>
-<pre><code>上述运算仅支持非负整数，若需处理负数，需增加符号逻辑
+<pre><code> 上述运算仅支持非负整数，若需处理负数，需增加符号逻辑
 
-用标志位（如bool negA = (a[0] == '-')）记录A和B的符号
+ 用标志位（如bool negA = (a[0] == '-')）记录A和B的符号
 
-提取绝对值部分（如a = a.substr(1)）进行运算
+ 提取绝对值部分（如a = a.substr(1)）进行运算
 
-根据符号和运算类型确定结果符号
+ 根据符号和运算类型确定结果符号
 </code></pre>
-</blockquote>
           
           
           

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on 个人博客</title>
+    <link>http://localhost:1313/note/computerscience/git/</link>
+    <description>Recent content in Git on 个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>wrongtrojan0.@gmail (木马)</managingEditor>
+    <webMaster>wrongtrojan0.@gmail (木马)</webMaster>
+    <copyright>@2025木马</copyright>
+    <lastBuildDate>Thu, 18 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/note/computerscience/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Git基础</title>
+      <link>http://localhost:1313/note/computerscience/git/gitbasics/</link>
+      <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/note/computerscience/git/gitbasics/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Git分支</title>
+      <link>http://localhost:1313/note/computerscience/git/gitbranching/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/note/computerscience/git/gitbranching/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

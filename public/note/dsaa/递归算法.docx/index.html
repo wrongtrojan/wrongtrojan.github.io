@@ -1131,7 +1131,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">基准情形
     <div id="基准情形" class="anchor"></div>
@@ -1142,10 +1141,8 @@
     </span>
     
 </h3>
-<pre><code>  有某些基准的情形，不需要递归就能求解
+<pre><code>   有某些基准的情形，不需要递归就能求解
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">不断推进
     <div id="不断推进" class="anchor"></div>
@@ -1156,10 +1153,8 @@
     </span>
     
 </h3>
-<pre><code>  递归调用总能朝着产生基准情形的方向推进
+<pre><code>   递归调用总能朝着产生基准情形的方向推进
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">设计法则
     <div id="设计法则" class="anchor"></div>
@@ -1170,10 +1165,8 @@
     </span>
     
 </h3>
-<pre><code>  假设所有递归调用都能运行，不必知道簿记管理的细节
+<pre><code>   假设所有递归调用都能运行，不必知道簿记管理的细节
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">合成效益法则
     <div id="合成效益法则" class="anchor"></div>
@@ -1184,9 +1177,8 @@
     </span>
     
 </h3>
-<pre><code>  求解一个问题的同一实例，切勿在不同递归调用做重复性工作
+<pre><code>   求解一个问题的同一实例，切勿在不同递归调用做重复性工作
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">书写方式（准确性待商榷）
     <div id="书写方式准确性待商榷" class="anchor"></div>
@@ -1197,14 +1189,12 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  确定递归的基准情形（也即递推的尽头和回归的开始）
+<pre><code>   确定递归的基准情形（也即递推的尽头和回归的开始）
 
-  将问题分解为低一规模问题（找到演进方式）
+   将问题分解为低一规模问题（找到演进方式）
 
-  假设函数能实现低一规模问题，调用函数解决高规模问题
+   假设函数能实现低一规模问题，调用函数解决高规模问题
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">复杂的递归问题
     <div id="复杂的递归问题" class="anchor"></div>
@@ -1215,7 +1205,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">汉诺塔
     <div id="汉诺塔" class="anchor"></div>
@@ -1226,14 +1215,12 @@
     </span>
     
 </h3>
-<pre><code>  借助终点柱，将高度为height-1的一叠盘子移到中间柱子
+<pre><code>   借助终点柱，将高度为height-1的一叠盘子移到中间柱子
 
-  将最后一个盘子移到终点柱子
+   将最后一个盘子移到终点柱子
 
-  借助起点柱子将高度为height-1的一叠盘子从中间柱子移到终点柱子
+   借助起点柱子将高度为height-1的一叠盘子从中间柱子移到终点柱子
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">探索迷宫
     <div id="探索迷宫" class="anchor"></div>
@@ -1244,22 +1231,20 @@
     </span>
     
 </h3>
-<pre><code>  DFS（深度优先）
+<pre><code>   DFS（深度优先）
 
-  起始位置开始首先向北移动一格，在新位置递归重复
+   起始位置开始首先向北移动一格，在新位置递归重复
 
-  第一步向北行不通，尝试向南移动一格，递归重复
+   第一步向北行不通，尝试向南移动一格，递归重复
 
-  向南也行不通，就尝试向西移动一格，递归重复
+   向南也行不通，就尝试向西移动一格，递归重复
 
-  如果向北、南、西都不行，就尝试向东移动一格，递归重复
+   如果向北、南、西都不行，就尝试向东移动一格，递归重复
 
-  四个方向都不行，意味没有出路
+   四个方向都不行，意味没有出路
 
-  （为避免陷入循环，已经探索过的位置不再探索）
+   （为避免陷入循环，已经探索过的位置不再探索）
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">找零问题
     <div id="找零问题" class="anchor"></div>
@@ -1270,29 +1255,28 @@
     </span>
     
 </h3>
-<pre><code>  贪婪算法
+<pre><code>   贪婪算法
 
-      尽可能用面值大的硬币
+       尽可能用面值大的硬币
 
-  递归算法
+   递归算法
 
-      基准情形：找的零钱金额与硬币面值相同，只需要1枚硬币
+       基准情形：找的零钱金额与硬币面值相同，只需要1枚硬币
 
-      不断推进：减去1枚硬币后比较大小选择
+       不断推进：减去1枚硬币后比较大小选择
 
-  记忆化
+   记忆化
 
-      基础的递归算法有大量重复性计算与法则第四条违背
+       基础的递归算法有大量重复性计算与法则第四条违背
 
-      将已经计算的找零数目储存，在递归中进行查询
+       将已经计算的找零数目储存，在递归中进行查询
 
-  动态规划
+   动态规划
 
-      从1分找零开始，系统地计算到所需的找零金额
+       从1分找零开始，系统地计算到所需的找零金额
 
-      是一种有比较的递推算法
+       是一种有比较的递推算法
 </code></pre>
-</blockquote>
           
           
           

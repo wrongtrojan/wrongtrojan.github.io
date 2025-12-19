@@ -1153,10 +1153,8 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  ADT是一些操作的集合，可以有诸如并、交、测定大小、取余、查找等操作
+<pre><code>   ADT是一些操作的集合，可以有诸如并、交、测定大小、取余、查找等操作
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">列表(List)ADT
     <div id="列表listadt" class="anchor"></div>
@@ -1167,7 +1165,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">列表模型
     <div id="列表模型" class="anchor"></div>
@@ -1178,14 +1175,12 @@
     </span>
     
 </h3>
-<pre><code>  元素的集合，每一个元素有其相对位置
+<pre><code>   元素的集合，每一个元素有其相对位置
 
-  支持操作 add() remove() search isEmpty() length() index()
+   支持操作 add() remove() search isEmpty() length() index()
 
-          append() insert(pos,item) pop() pop(pos)
+           append() insert(pos,item) pop() pop(pos)
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">列表的数组实现
     <div id="列表的数组实现" class="anchor"></div>
@@ -1196,10 +1191,8 @@
     </span>
     
 </h3>
-<pre><code>  插入和删除的运行时间复杂度高，表的大小必须事先已知
+<pre><code>   插入和删除的运行时间复杂度高，表的大小必须事先已知
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">链表(linked list)（允许表不连续存储）
     <div id="链表linked-list允许表不连续存储" class="anchor"></div>
@@ -1210,16 +1203,14 @@
     </span>
     
 </h3>
-<pre><code>  链表的每个节点均含有数据域和指向后继节点的指针域（Next指针）
+<pre><code>   链表的每个节点均含有数据域和指向后继节点的指针域（Next指针）
 
-  最后一个节点的Next指针指向NULL（0）
+   最后一个节点的Next指针指向NULL（0）
 
-  留出一个标志节点，称为表头(header)或哑结点(dummy node)
+   留出一个标志节点，称为表头(header)或哑结点(dummy node)
 
-  Delete可以通过修改指向待删除节点指针，使之指向下一节点实现
+   Delete可以通过修改指向待删除节点指针，使之指向下一节点实现
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">双链表(double linked list)（允许双向扫描链表）
     <div id="双链表double-linked-list允许双向扫描链表" class="anchor"></div>
@@ -1230,12 +1221,10 @@
     </span>
     
 </h3>
-<pre><code>  在链表节点结构上附加一个域，使节点包含指向上一个节点的指针
+<pre><code>   在链表节点结构上附加一个域，使节点包含指向上一个节点的指针
 
-  增加了空间需求，使插入和删除的开销增加一倍，但简化了删除操作
+   增加了空间需求，使插入和删除的开销增加一倍，但简化了删除操作
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">循环链表
     <div id="循环链表" class="anchor"></div>
@@ -1246,10 +1235,8 @@
     </span>
     
 </h3>
-<pre><code>  最后节点反过来直指第一个节点
+<pre><code>   最后节点反过来直指第一个节点
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">链表的应用
     <div id="链表的应用" class="anchor"></div>
@@ -1260,9 +1247,8 @@
     </span>
     
 </h3>
-<pre><code>  基数排序(radix sort)
+<pre><code>   基数排序(radix sort)
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">栈(stack)ADT
     <div id="栈stackadt" class="anchor"></div>
@@ -1273,7 +1259,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">栈模型
     <div id="栈模型" class="anchor"></div>
@@ -1284,12 +1269,10 @@
     </span>
     
 </h3>
-<pre><code>  限制插入（进栈）和删除（出栈）只在栈顶进行的表，又称为FILO表
+<pre><code>   限制插入（进栈）和删除（出栈）只在栈顶进行的表，又称为FILO表
 
-  支持操作 push() pop() peak()~（返回栈顶）~ isEmpty() size()
+   支持操作 push() pop() peak()~（返回栈顶）~ isEmpty() size()
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">栈的链表实现
     <div id="栈的链表实现" class="anchor"></div>
@@ -1300,7 +1283,7 @@
     </span>
     
 </h3>
-<pre><code>  操作指针的例程开销昂贵
+<pre><code>   操作指针的例程开销昂贵
 </code></pre>
 
 <h3 class="relative group">栈的数组实现
@@ -1322,13 +1305,12 @@
     </span>
     
 </h3>
-<pre><code>  匹配括号
+<pre><code>   匹配括号
 
-  进制转化
+   进制转化
 
-  前、中、后序表达式转化
+   前、中、后序表达式转化
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">队列(queue)ADT
     <div id="队列queueadt" class="anchor"></div>
@@ -1339,7 +1321,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">队列模型
     <div id="队列模型" class="anchor"></div>
@@ -1350,12 +1331,10 @@
     </span>
     
 </h3>
-<pre><code>  在队尾(rear)插入（入队），在队头(front)删除（出队）的表，又称FIFO表
+<pre><code>   在队尾(rear)插入（入队），在队头(front)删除（出队）的表，又称FIFO表
 
-  支持操作 enqueue() dequeue() isEmpty() size()
+   支持操作 enqueue() dequeue() isEmpty() size()
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">队列的数组实现
     <div id="队列的数组实现" class="anchor"></div>
@@ -1366,10 +1345,8 @@
     </span>
     
 </h3>
-<pre><code>  通过循环数组(circular array)实现
+<pre><code>   通过循环数组(circular array)实现
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">队列的应用
     <div id="队列的应用" class="anchor"></div>
@@ -1380,11 +1357,10 @@
     </span>
     
 </h3>
-<pre><code>  模拟：约瑟夫问题
+<pre><code>   模拟：约瑟夫问题
 
-  模拟：打印任务
+   模拟：打印任务
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">双端队列(deque)ADT
     <div id="双端队列dequeadt" class="anchor"></div>
@@ -1395,14 +1371,12 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  同时具备栈和队列的特性
+<pre><code>   同时具备栈和队列的特性
 
-  双端队列的应用
+   双端队列的应用
 
-      回文检测器
+       回文检测器
 </code></pre>
-</blockquote>
           
           
           

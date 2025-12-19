@@ -226,7 +226,7 @@
     "keywords": ["ADT"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1209"
+    "wordCount": "1205"
   }]
   </script>
 
@@ -920,7 +920,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>1209 字</span>
+      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>1205 字</span>
     
 
     
@@ -1171,7 +1171,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">优先队列至少允许的操作
     <div id="优先队列至少允许的操作" class="anchor"></div>
@@ -1182,12 +1181,10 @@
     </span>
     
 </h3>
-<pre><code>  Insert( ) 插入元素
+<pre><code>   Insert( ) 插入元素
 
-  DeleteMIn( ) 找出、返回和删除优先队列的最小元素
+   DeleteMIn( ) 找出、返回和删除优先队列的最小元素
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">其他扩展操作
     <div id="其他扩展操作" class="anchor"></div>
@@ -1198,21 +1195,20 @@
     </span>
     
 </h3>
-<pre><code>  FindMIn( ) 返回最小元素，元素留在堆中
+<pre><code>   FindMIn( ) 返回最小元素，元素留在堆中
 
-  isEmpty( ) 判断堆是否为空
+   isEmpty( ) 判断堆是否为空
 
-  size( ) 返回堆中元素个数
+   size( ) 返回堆中元素个数
 
-  buildHeap() 根据关键字创建堆
+   buildHeap() 根据关键字创建堆
 
-  *若能直到关键字的具体位置
+   *若能直到关键字的具体位置
 
-  DecreaseKey( ) 降低关键字的值
+   DecreaseKey( ) 降低关键字的值
 
-  IncreaseKey( ) 增加关键字的值
+   IncreaseKey( ) 增加关键字的值
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">简单实现
     <div id="简单实现" class="anchor"></div>
@@ -1223,7 +1219,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">使用简单链表
     <div id="使用简单链表" class="anchor"></div>
@@ -1234,12 +1229,10 @@
     </span>
     
 </h3>
-<pre><code>  O(1)执行插入操作
+<pre><code>   O(1)执行插入操作
 
-  O(N)执行删除最小元
+   O(N)执行删除最小元
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">使用有序表
     <div id="使用有序表" class="anchor"></div>
@@ -1250,12 +1243,10 @@
     </span>
     
 </h3>
-<pre><code>  O(N)执行插入操作
+<pre><code>   O(N)执行插入操作
 
-  O(1)执行删除最小元
+   O(1)执行删除最小元
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">使用二叉查找树
     <div id="使用二叉查找树" class="anchor"></div>
@@ -1266,13 +1257,12 @@
     </span>
     
 </h3>
-<pre><code>  两者操作平均运行时间均为O(logN)
+<pre><code>   两者操作平均运行时间均为O(logN)
 
-  通过使用平衡树可以避免退化成链表
+   通过使用平衡树可以避免退化成链表
 
-  有许多冗余操作
+   有许多冗余操作
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">二叉堆(binary heap)
     <div id="二叉堆binary-heap" class="anchor"></div>
@@ -1283,7 +1273,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">结构性质
     <div id="结构性质" class="anchor"></div>
@@ -1294,16 +1283,14 @@
     </span>
     
 </h3>
-<pre><code>  堆是一颗完全二叉树，非底层全填满，底层元素从左到右填入
+<pre><code>   堆是一颗完全二叉树，非底层全填满，底层元素从左到右填入
 
-  为节点从1依次编号，完全二叉树可以由一个数组来表示
+   为节点从1依次编号，完全二叉树可以由一个数组来表示
 
-  对节点i，其左子节点为2i，右子节点为2i+1，父节点为\[i/2\]
+   对节点i，其左子节点为2i，右子节点为2i+1，父节点为\[i/2\]
 
-  若使用数组，最大的堆大小需要事先估计
+   若使用数组，最大的堆大小需要事先估计
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">堆序性质
     <div id="堆序性质" class="anchor"></div>
@@ -1314,12 +1301,10 @@
     </span>
     
 </h3>
-<pre><code>  堆序性是使操作被快速执行的性质，也即最小元应该在根上
+<pre><code>   堆序性是使操作被快速执行的性质，也即最小元应该在根上
 
-  考虑任意子树也应该是堆，任意节点应该小于所有后裔
+   考虑任意子树也应该是堆，任意节点应该小于所有后裔
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">基础操作的实现
     <div id="基础操作的实现" class="anchor"></div>
@@ -1330,20 +1315,18 @@
     </span>
     
 </h3>
-<pre><code>  Insert( ) 采取(新元素)上浮
+<pre><code>   Insert( ) 采取(新元素)上浮
 
-      新元素加入堆末尾，与父节点比较并交换直到大于父节点
+       新元素加入堆末尾，与父节点比较并交换直到大于父节点
 
-  DeleteMin( ) 采取(末元素)下沉
+   DeleteMin( ) 采取(末元素)下沉
 
-      删除根节点后，堆末元素填入空穴
+       删除根节点后，堆末元素填入空穴
 
-      与子节点比较，若比子节点小，则与更小子节点交换
+       与子节点比较，若比子节点小，则与更小子节点交换
 
-      直到比两个子节点都小停止
+       直到比两个子节点都小停止
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">其他堆操作的实现
     <div id="其他堆操作的实现" class="anchor"></div>
@@ -1354,13 +1337,12 @@
     </span>
     
 </h3>
-<pre><code>  DcreaseKey( ) 采取上浮操作
+<pre><code>   DcreaseKey( ) 采取上浮操作
 
-  IncreaseKey( ) 采取下沉操作
+   IncreaseKey( ) 采取下沉操作
 
-  其余操作同树的实现类似
+   其余操作同树的实现类似
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">d-堆
     <div id="d-堆" class="anchor"></div>
@@ -1371,14 +1353,12 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  d-堆是二叉堆的简单推广，所有的节点都有d个儿子
+<pre><code>   d-堆是二叉堆的简单推广，所有的节点都有d个儿子
 
-  若d不为2的幂，则使用数组储存后运行时间大幅增加
+   若d不为2的幂，则使用数组储存后运行时间大幅增加
 
-  在插入次数比删除次数多得多时以及二叉堆太大时d-堆较为实用
+   在插入次数比删除次数多得多时以及二叉堆太大时d-堆较为实用
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">左式堆(leftist heap)
     <div id="左式堆leftist-heap" class="anchor"></div>
@@ -1389,11 +1369,8 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  具有一定二叉堆特性的同时高效支持合并操作
+<pre><code>   具有一定二叉堆特性的同时高效支持合并操作
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">左式堆的性质
     <div id="左式堆的性质" class="anchor"></div>
@@ -1404,24 +1381,22 @@
     </span>
     
 </h3>
-<pre><code>  零路径长(null path length NPL)
+<pre><code>   零路径长(null path length NPL)
 
-      节点到没有两个子节点的节点的最短路径长
+       节点到没有两个子节点的节点的最短路径长
 
-      具有0或1个子节点的节点Npl为0，Npl(NULL)=-1
+       具有0或1个子节点的节点Npl为0，Npl(NULL)=-1
 
-  左式堆结构性
+   左式堆结构性
 
-      堆中每一个节点，左子节点零路径长\&gt;=右子节点零路径长
+       堆中每一个节点，左子节点零路径长\=右子节点零路径长
 
-      在右路径上右r个节点的左式堆至少有2^r^-1个节点
+       在右路径上右r个节点的左式堆至少有2^r^-1个节点
 
-  左式堆堆序性
+   左式堆堆序性
 
-      与二叉堆相同
+       与二叉堆相同
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">左式堆的操作
     <div id="左式堆的操作" class="anchor"></div>
@@ -1432,23 +1407,22 @@
     </span>
     
 </h3>
-<pre><code>  左式堆的操作的一般思路式将所有工作放在右路径进行
+<pre><code>   左式堆的操作的一般思路式将所有工作放在右路径进行
 
-  基本操作(合并Merge)
+   基本操作(合并Merge)
 
-      插入可以看作单节点堆与大堆合并
+       插入可以看作单节点堆与大堆合并
 
-      递归形成
+       递归形成
 
-      基准情形 如果两堆有一个是空的，则返回非空的
+       基准情形 如果两堆有一个是空的，则返回非空的
 
-      不断演进(假设root(H1)\&lt;root(H2))
+       不断演进(假设root(H1)\&lt;root(H2))
 
-          H1右子堆加入H2右子堆，新H2作为H1新右子堆
+           H1右子堆加入H2右子堆，新H2作为H1新右子堆
 
-          若H1左右子堆不满足堆序则交换，然后更新零路径长
+           若H1左右子堆不满足堆序则交换，然后更新零路径长
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">斜堆(skew heap)
     <div id="斜堆skew-heap" class="anchor"></div>
@@ -1459,14 +1433,12 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  斜堆具有堆序但不存在对树的结构限制
+<pre><code>   斜堆具有堆序但不存在对树的结构限制
 
-  任意M次连续操作，总最坏情形运行时间是O(MlogN)
+   任意M次连续操作，总最坏情形运行时间是O(MlogN)
 
-  除右路径上所有节点最大者不交换外，其他节点无条件交换左右子堆
+   除右路径上所有节点最大者不交换外，其他节点无条件交换左右子堆
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">二项队列(binomial queue)
     <div id="二项队列binomial-queue" class="anchor"></div>
@@ -1477,7 +1449,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">二项队列结构
     <div id="二项队列结构" class="anchor"></div>
@@ -1488,14 +1459,12 @@
     </span>
     
 </h3>
-<pre><code>  二项队列是堆序树的集合，是森林
+<pre><code>   二项队列是堆序树的集合，是森林
 
-  堆序树中的每一颗都是二项树(节点数为2的幂)
+   堆序树中的每一颗都是二项树(节点数为2的幂)
 
-  高度为k的二项树恰好有2^K^个节点，深度为d的节点数是二项系数(k/d)
+   高度为k的二项树恰好有2^K^个节点，深度为d的节点数是二项系数(k/d)
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">二项队列操作
     <div id="二项队列操作" class="anchor"></div>
@@ -1506,10 +1475,8 @@
     </span>
     
 </h3>
-<pre><code>  二项队列合并可以类比二进制数的加法
+<pre><code>   二项队列合并可以类比二进制数的加法
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">二项队列实现
     <div id="二项队列实现" class="anchor"></div>
@@ -1520,11 +1487,10 @@
     </span>
     
 </h3>
-<pre><code>  每个节点的子节点都存在一个链表中
+<pre><code>   每个节点的子节点都存在一个链表中
 
-  每个节点都有指向第一个子节点的指针
+   每个节点都有指向第一个子节点的指针
 </code></pre>
-</blockquote>
           
           
           

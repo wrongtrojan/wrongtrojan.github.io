@@ -1191,7 +1191,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">顶点
     <div id="顶点" class="anchor"></div>
@@ -1202,10 +1201,8 @@
     </span>
     
 </h3>
-<pre><code>  又称节点，可以有自己名字称为键，也可以带有附加信息&quot;有效载荷&quot;
+<pre><code>   又称节点，可以有自己名字称为键，也可以带有附加信息&quot;有效载荷&quot;
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">边
     <div id="边" class="anchor"></div>
@@ -1216,12 +1213,10 @@
     </span>
     
 </h3>
-<pre><code>  两顶点由边相连表示存在关系，既可以单向也可以双向
+<pre><code>   两顶点由边相连表示存在关系，既可以单向也可以双向
 
-  若图的所有边都单向称为有向图
+   若图的所有边都单向称为有向图
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">权重
     <div id="权重" class="anchor"></div>
@@ -1232,10 +1227,8 @@
     </span>
     
 </h3>
-<pre><code>  边可以带权重，表示从一个顶点到另一个顶点的成本
+<pre><code>   边可以带权重，表示从一个顶点到另一个顶点的成本
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">路径
     <div id="路径" class="anchor"></div>
@@ -1246,10 +1239,8 @@
     </span>
     
 </h3>
-<pre><code>  由边连接的顶点组成的序列，无权重路径长度是边数，有权重长度权重之和
+<pre><code>   由边连接的顶点组成的序列，无权重路径长度是边数，有权重长度权重之和
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">环
     <div id="环" class="anchor"></div>
@@ -1260,12 +1251,10 @@
     </span>
     
 </h3>
-<pre><code>  有向图中起点和终点同一个顶点的路径，没有环的图称为无环图
+<pre><code>   有向图中起点和终点同一个顶点的路径，没有环的图称为无环图
 
-  没有环的有向图称为有向无环图，简称DAG
+   没有环的有向图称为有向无环图，简称DAG
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">强连通
     <div id="强连通" class="anchor"></div>
@@ -1276,10 +1265,8 @@
     </span>
     
 </h3>
-<pre><code>  有向图从每一个顶点到其他顶点都存在一条路径
+<pre><code>   有向图从每一个顶点到其他顶点都存在一条路径
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">弱连通
     <div id="弱连通" class="anchor"></div>
@@ -1290,10 +1277,8 @@
     </span>
     
 </h3>
-<pre><code>   有向图不是强连通，但基础图(忽略方向)是联通的
+<pre><code>    有向图不是强连通，但基础图(忽略方向)是联通的
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">完全图
     <div id="完全图" class="anchor"></div>
@@ -1304,9 +1289,8 @@
     </span>
     
 </h3>
-<pre><code>   每一对顶点间都存在一条边的图
+<pre><code>    每一对顶点间都存在一条边的图
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">图模型
     <div id="图模型" class="anchor"></div>
@@ -1317,20 +1301,18 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  addVertex(vert) 向图中添加一个顶点实例
+<pre><code>   addVertex(vert) 向图中添加一个顶点实例
 
-  addEdge(fromVert, toVert) 向图中添加一条有向边连接顶点
+   addEdge(fromVert, toVert) 向图中添加一条有向边连接顶点
 
-  addEdge(fromVert,toVert,weight) 向图中添加一条带权重的有向边连接顶点
+   addEdge(fromVert,toVert,weight) 向图中添加一条带权重的有向边连接顶点
 
-  getVertex(vertKey) 在图中找到名为vertkey的顶点
+   getVertex(vertKey) 在图中找到名为vertkey的顶点
 
-  getVertices( ) 返回图中所有顶点
+   getVertices( ) 返回图中所有顶点
 
-  in(python中) 顶点存在时返回true，否则返回false
+   in(python中) 顶点存在时返回true，否则返回false
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">图的实现
     <div id="图的实现" class="anchor"></div>
@@ -1341,7 +1323,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">邻接矩阵(adjacency matrix)
     <div id="邻接矩阵adjacency-matrix" class="anchor"></div>
@@ -1352,16 +1333,14 @@
     </span>
     
 </h3>
-<pre><code>  实现图最简单的方式是使用二维矩阵，每一行每一列都表示图中一顶点
+<pre><code>   实现图最简单的方式是使用二维矩阵，每一行每一列都表示图中一顶点
 
-  第v行和w列交叉的格子中的值表示从顶点v到顶点w的边的权重
+   第v行和w列交叉的格子中的值表示从顶点v到顶点w的边的权重
 
-  如果图是稠密的(dense)\|E\|=Θ(\|V\|^2^)，则邻接矩阵是合适的表示方法
+   如果图是稠密的(dense)\|E\|=Θ(\|V\|^2^)，则邻接矩阵是合适的表示方法
 
-  但在大部分应用中，图是稀疏的(sparse)
+   但在大部分应用中，图是稀疏的(sparse)
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">邻接表(adjacency list)
     <div id="邻接表adjacency-list" class="anchor"></div>
@@ -1372,13 +1351,12 @@
     </span>
     
 </h3>
-<pre><code>  对每一个顶点，我们使用一个表存放所有邻接的顶点
+<pre><code>   对每一个顶点，我们使用一个表存放所有邻接的顶点
 
-  最左边的结构只是头单元(header cell)
+   最左边的结构只是头单元(header cell)
 
-  这种方法空间需求为O(|E|+|V|)
+   这种方法空间需求为O(|E|+|V|)
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">宽度优先搜索(BFS)
     <div id="宽度优先搜索bfs" class="anchor"></div>
@@ -1389,7 +1367,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">宽度优先
     <div id="宽度优先" class="anchor"></div>
@@ -1400,10 +1377,8 @@
     </span>
     
 </h3>
-<pre><code>  它会访问完所有与s相距k的顶点后再去访问与s相距k+1的顶点
+<pre><code>   它会访问完所有与s相距k的顶点后再去访问与s相距k+1的顶点
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">颜色标记
     <div id="颜色标记" class="anchor"></div>
@@ -1414,14 +1389,12 @@
     </span>
     
 </h3>
-<pre><code>  为记录进度，BFS会将顶点标记为白色、灰色或黑色
+<pre><code>   为记录进度，BFS会将顶点标记为白色、灰色或黑色
 
-  顶点没被访问时为白色，第一次被访问时标记为灰色，完成访问后标记为黑色
+   顶点没被访问时为白色，第一次被访问时标记为灰色，完成访问后标记为黑色
 
-  一旦顶点变为黑色，没有白色顶点与之相连
+   一旦顶点变为黑色，没有白色顶点与之相连
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">队列处理
     <div id="队列处理" class="anchor"></div>
@@ -1432,12 +1405,10 @@
     </span>
     
 </h3>
-<pre><code>  初次访问顶点入队，顶点被访问完全后出队
+<pre><code>   初次访问顶点入队，顶点被访问完全后出队
 
-  队列为空时所有可达顶点都被处理
+   队列为空时所有可达顶点都被处理
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">性能
     <div id="性能" class="anchor"></div>
@@ -1448,10 +1419,8 @@
     </span>
     
 </h3>
-<pre><code>   O(|V|+|E|)
+<pre><code>    O(|V|+|E|)
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">应用
     <div id="应用" class="anchor"></div>
@@ -1462,9 +1431,8 @@
     </span>
     
 </h3>
-<pre><code>   词梯问题
+<pre><code>    词梯问题
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">深度优先搜索(DFS)
     <div id="深度优先搜索dfs" class="anchor"></div>
@@ -1475,7 +1443,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">深度优先
     <div id="深度优先" class="anchor"></div>
@@ -1486,10 +1453,8 @@
     </span>
     
 </h3>
-<pre><code>  DFS通过尽可能地探索分支来构建搜索树
+<pre><code>   DFS通过尽可能地探索分支来构建搜索树
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">颜色标记
     <div id="颜色标记-1" class="anchor"></div>
@@ -1500,10 +1465,8 @@
     </span>
     
 </h3>
-<pre><code>  未访问的顶点是白色的，已访问的是灰色的
+<pre><code>   未访问的顶点是白色的，已访问的是灰色的
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">栈处理
     <div id="栈处理" class="anchor"></div>
@@ -1514,12 +1477,10 @@
     </span>
     
 </h3>
-<pre><code>  当递归做DFS遇到死路时必须回溯
+<pre><code>   当递归做DFS遇到死路时必须回溯
 
-  通过栈回溯到上一个被访问节点
+   通过栈回溯到上一个被访问节点
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">通用深度优先搜索(General DFS)
     <div id="通用深度优先搜索general-dfs" class="anchor"></div>
@@ -1530,14 +1491,12 @@
     </span>
     
 </h3>
-<pre><code>  前驱节点 构建深度优先搜索树，一次多颗称为深度优先森林
+<pre><code>   前驱节点 构建深度优先搜索树，一次多颗称为深度优先森林
 
-  颜色标记 增加访问完成的黑色标记
+   颜色标记 增加访问完成的黑色标记
 
-  时序记录 第一次访问与结束顶点访问的步数
+   时序记录 第一次访问与结束顶点访问的步数
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">性能
     <div id="性能-1" class="anchor"></div>
@@ -1548,10 +1507,8 @@
     </span>
     
 </h3>
-<pre><code>  O(|V|+|E|)
+<pre><code>   O(|V|+|E|)
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">应用
     <div id="应用-1" class="anchor"></div>
@@ -1562,9 +1519,8 @@
     </span>
     
 </h3>
-<pre><code>  骑士周游问题
+<pre><code>   骑士周游问题
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">拓扑排序
     <div id="拓扑排序" class="anchor"></div>
@@ -1575,14 +1531,12 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  对图调用深度优先搜索算法，计算每一个顶点的结束时间
+<pre><code>   对图调用深度优先搜索算法，计算每一个顶点的结束时间
 
-  基于结束时间，将顶点按照递减顺序存储在有序表中
+   基于结束时间，将顶点按照递减顺序存储在有序表中
 
-  将有序表作为拓扑排序结果返回
+   将有序表作为拓扑排序结果返回
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">强连通单元
     <div id="强连通单元" class="anchor"></div>
@@ -1593,16 +1547,14 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  对图G调用深度优先搜索算法，计算每一个顶点的结束时间
+<pre><code>   对图G调用深度优先搜索算法，计算每一个顶点的结束时间
 
-  对图G做转置得到G^T
+   对图G做转置得到G^T
 
-  对G^T调用深度优先搜索算法，按照结束时间的递减顺序访问顶点
+   对G^T调用深度优先搜索算法，按照结束时间的递减顺序访问顶点
 
-  得到的深度优先森林中的每一棵树都是一个强连通单元
+   得到的深度优先森林中的每一棵树都是一个强连通单元
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">最短路径问题
     <div id="最短路径问题" class="anchor"></div>
@@ -1613,7 +1565,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">Dijkstra算法
     <div id="dijkstra算法" class="anchor"></div>
@@ -1624,8 +1575,6 @@
     </span>
     
 </h3>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">Prim算法
     <div id="prim算法" class="anchor"></div>
@@ -1636,7 +1585,6 @@
     </span>
     
 </h3>
-</blockquote>
           
           
           

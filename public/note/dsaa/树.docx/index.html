@@ -1209,7 +1209,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">节点
     <div id="节点" class="anchor"></div>
@@ -1220,20 +1219,18 @@
     </span>
     
 </h3>
-<pre><code>  节点可以有自己的名字&quot;键&quot;，也可以附带信息称作&quot;有效载荷&quot;
+<pre><code>   节点可以有自己的名字&quot;键&quot;，也可以附带信息称作&quot;有效载荷&quot;
 
-  根节点 唯一没有入边的节点
+   根节点 唯一没有入边的节点
 
-  子节点 一个节点通过边与子节点相连
+   子节点 一个节点通过边与子节点相连
 
-  父节点 一个节点时所有子节点的父节点
+   父节点 一个节点时所有子节点的父节点
 
-  兄弟节点 具有同一个父节点的节点互称为兄弟节点
+   兄弟节点 具有同一个父节点的节点互称为兄弟节点
 
-  叶节点 叶节点没有子节点
+   叶节点 叶节点没有子节点
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">边
     <div id="边" class="anchor"></div>
@@ -1244,12 +1241,10 @@
     </span>
     
 </h3>
-<pre><code>  两个节点通过一条边相连，表示它们之间存在关系
+<pre><code>   两个节点通过一条边相连，表示它们之间存在关系
 
-  除根节点外其他每个节点仅有一条入边，出边则可能有多条
+   除根节点外其他每个节点仅有一条入边，出边则可能有多条
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">路径
     <div id="路径" class="anchor"></div>
@@ -1260,10 +1255,8 @@
     </span>
     
 </h3>
-<pre><code>  由边连接的有序节点列表
+<pre><code>   由边连接的有序节点列表
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">子树
     <div id="子树" class="anchor"></div>
@@ -1274,10 +1267,8 @@
     </span>
     
 </h3>
-<pre><code>  一个父节点以及其所有后代的节点和边构成一颗子树
+<pre><code>   一个父节点以及其所有后代的节点和边构成一颗子树
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">层数
     <div id="层数" class="anchor"></div>
@@ -1288,10 +1279,8 @@
     </span>
     
 </h3>
-<pre><code>  节点n的层数是根节点到n的唯一路径长度
+<pre><code>   节点n的层数是根节点到n的唯一路径长度
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">高度
     <div id="高度" class="anchor"></div>
@@ -1302,9 +1291,8 @@
     </span>
     
 </h3>
-<pre><code>  树的高度是其中节点层数的最大值
+<pre><code>   树的高度是其中节点层数的最大值
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">树的定义
     <div id="树的定义" class="anchor"></div>
@@ -1315,7 +1303,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">节点与边
     <div id="节点与边" class="anchor"></div>
@@ -1326,16 +1313,14 @@
     </span>
     
 </h3>
-<pre><code>  有一个根节点
+<pre><code>   有一个根节点
 
-  除根节点外其他每个节点由与唯一的父节点相连
+   除根节点外其他每个节点由与唯一的父节点相连
 
-  从根节点到其他每个节点都有且只有一条路径
+   从根节点到其他每个节点都有且只有一条路径
 
-  如果每个节点最多有两个子节点，称之为二叉树
+   如果每个节点最多有两个子节点，称之为二叉树
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">递归定义
     <div id="递归定义" class="anchor"></div>
@@ -1346,11 +1331,10 @@
     </span>
     
 </h3>
-<pre><code>  一棵树要么为空要么由一个根节点和零棵或多颗子树构成
+<pre><code>   一棵树要么为空要么由一个根节点和零棵或多颗子树构成
 
-  每颗子树的根节点通过一条边连到父树的根节点
+   每颗子树的根节点通过一条边连到父树的根节点
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">树的实现
     <div id="树的实现" class="anchor"></div>
@@ -1361,7 +1345,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">嵌套列表(python)
     <div id="嵌套列表python" class="anchor"></div>
@@ -1372,8 +1355,6 @@
     </span>
     
 </h3>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">节点与指针
     <div id="节点与指针" class="anchor"></div>
@@ -1384,11 +1365,10 @@
     </span>
     
 </h3>
-<pre><code>  每个节点的所有子节点放在树节点的链表中
+<pre><code>   每个节点的所有子节点放在树节点的链表中
 
-  节点的指针可以指向兄弟或儿子
+   节点的指针可以指向兄弟或儿子
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">树的遍历
     <div id="树的遍历" class="anchor"></div>
@@ -1399,7 +1379,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">前序遍历
     <div id="前序遍历" class="anchor"></div>
@@ -1410,10 +1389,8 @@
     </span>
     
 </h3>
-<pre><code>  先访问根节点，然后递归地前序遍历左子树，最后递归地前序遍历右子树
+<pre><code>   先访问根节点，然后递归地前序遍历左子树，最后递归地前序遍历右子树
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">中序遍历
     <div id="中序遍历" class="anchor"></div>
@@ -1424,10 +1401,8 @@
     </span>
     
 </h3>
-<pre><code>  先递归地中序地遍历左子树，然后访问根节点，最后递归地中序遍历右子树
+<pre><code>   先递归地中序地遍历左子树，然后访问根节点，最后递归地中序遍历右子树
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">后序遍历
     <div id="后序遍历" class="anchor"></div>
@@ -1438,9 +1413,8 @@
     </span>
     
 </h3>
-<pre><code>  先递归的后续遍历右子树，然后递归地后序遍历左子树，最后访问根节点
+<pre><code>   先递归的后续遍历右子树，然后递归地后序遍历左子树，最后访问根节点
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">二叉树的操作
     <div id="二叉树的操作" class="anchor"></div>
@@ -1451,20 +1425,18 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  getLeftChild( ) 返回当前节点的左子节点对应二叉树
+<pre><code>   getLeftChild( ) 返回当前节点的左子节点对应二叉树
 
-  getRightChild( ) 返回当前节点的右子节点对应二叉树
+   getRightChild( ) 返回当前节点的右子节点对应二叉树
 
-  setRootVal(val) 在当前节点储存val对象
+   setRootVal(val) 在当前节点储存val对象
 
-  getRootVal( ) 返回当前节点存储的对象
+   getRootVal( ) 返回当前节点存储的对象
 
-  insertLeft(val) 新建当前节点的左子节点
+   insertLeft(val) 新建当前节点的左子节点
 
-  insertRight(val) 新建当前节点的右子节点
+   insertRight(val) 新建当前节点的右子节点
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">二叉搜索树(binary tree)
     <div id="二叉搜索树binary-tree" class="anchor"></div>
@@ -1475,11 +1447,8 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  *依赖于二叉搜索性：所有小于父节点键在左子树，所有大于父节点键在右子树
+<pre><code>   *依赖于二叉搜索性：所有小于父节点键在左子树，所有大于父节点键在右子树
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">搜索树的操作
     <div id="搜索树的操作" class="anchor"></div>
@@ -1490,20 +1459,18 @@
     </span>
     
 </h3>
-<pre><code>  Map( ) 新建一个空映射
+<pre><code>   Map( ) 新建一个空映射
 
-  put(key,val) 往映射中加入新键值对
+   put(key,val) 往映射中加入新键值对
 
-  get(key) 返回key对应的值，如果key不存在返回None
+   get(key) 返回key对应的值，如果key不存在返回None
 
-  del 从映射中删除键值对
+   del 从映射中删除键值对
 
-  len( ) 返回映射中储存的键值对数目
+   len( ) 返回映射中储存的键值对数目
 
-  in 在键存在时返回True，否则返回False
+   in 在键存在时返回True，否则返回False
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">搜索树的实现
     <div id="搜索树的实现" class="anchor"></div>
@@ -1514,12 +1481,10 @@
     </span>
     
 </h3>
-<pre><code>  通过TreeNode类提供辅助函数简化BinarySearchTree类的工作
+<pre><code>   通过TreeNode类提供辅助函数简化BinarySearchTree类的工作
 
-  TreeNode类显式地将每个节点的父节点记录为它的属性
+   TreeNode类显式地将每个节点的父节点记录为它的属性
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">搜索树的分析
     <div id="搜索树的分析" class="anchor"></div>
@@ -1530,11 +1495,10 @@
     </span>
     
 </h3>
-<pre><code>  如果键的插入顺序时随机的，则为O(logN)时间复杂度
+<pre><code>   如果键的插入顺序时随机的，则为O(logN)时间复杂度
 
-  但若按顺序插入键，会使搜索树退化成链表，时间复杂度为O(N)
+   但若按顺序插入键，会使搜索树退化成链表，时间复杂度为O(N)
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">平衡二叉搜索树(AVL树)
     <div id="平衡二叉搜索树avl树" class="anchor"></div>
@@ -1545,15 +1509,12 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  *带有平衡条件的二叉查找树，保证树的高度是O(logN)
+<pre><code>   *带有平衡条件的二叉查找树，保证树的高度是O(logN)
 
-  每个节点的左子树和右子树的高度最多差一的二叉查找树
+   每个节点的左子树和右子树的高度最多差一的二叉查找树
 
-  插入一个节点可能破坏AVL树的特性，需要通过旋转来修正
+   插入一个节点可能破坏AVL树的特性，需要通过旋转来修正
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">单旋转
     <div id="单旋转" class="anchor"></div>
@@ -1564,14 +1525,12 @@
     </span>
     
 </h3>
-<pre><code>  当插入发生在外侧(左-左，右-右)时通过对树做一次单旋转来调整
+<pre><code>   当插入发生在外侧(左-左，右-右)时通过对树做一次单旋转来调整
 
-  左子树更高时进行右旋转，右子树更高时进行左旋转
+   左子树更高时进行右旋转，右子树更高时进行左旋转
 
-  旋转轴是失衡节点导致失衡一侧的子节点
+   旋转轴是失衡节点导致失衡一侧的子节点
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">双旋转
     <div id="双旋转" class="anchor"></div>
@@ -1582,11 +1541,10 @@
     </span>
     
 </h3>
-<pre><code>  当插入发生内测(左-右，右-左)时通过对树做一次双旋转来调整
+<pre><code>   当插入发生内测(左-右，右-左)时通过对树做一次双旋转来调整
 
-  绕失衡节点失衡一侧孙子节点做失衡方向单旋转，再绕同节点做反方向单旋转
+   绕失衡节点失衡一侧孙子节点做失衡方向单旋转，再绕同节点做反方向单旋转
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">伸展树(splay tree)
     <div id="伸展树splay-tree" class="anchor"></div>
@@ -1597,13 +1555,10 @@
     </span>
     
 </h2>
-<blockquote>
-<pre><code>  保证从空树开始任意连续M次对树的操作最多花费O(MlogN)时间
+<pre><code>   保证从空树开始任意连续M次对树的操作最多花费O(MlogN)时间
 
-  伸展树的基本想法是：当节点被访问后，就经历一系列旋转放到根上
+   伸展树的基本想法是：当节点被访问后，就经历一系列旋转放到根上
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">简单想法
     <div id="简单想法" class="anchor"></div>
@@ -1614,12 +1569,10 @@
     </span>
     
 </h3>
-<pre><code>  通过不断做单旋转将访问的节点推向根节点
+<pre><code>   通过不断做单旋转将访问的节点推向根节点
 
-  这个策略没有明显地改变访问路径其他节点状况
+   这个策略没有明显地改变访问路径其他节点状况
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">展开(splaying)
     <div id="展开splaying" class="anchor"></div>
@@ -1630,21 +1583,20 @@
     </span>
     
 </h3>
-<pre><code>  若访问节点x只有父节点无祖节点，则x-父节点单旋转
+<pre><code>   若访问节点x只有父节点无祖节点，则x-父节点单旋转
 
-  &quot;之&quot;字形(zig-zag/zag-zig)
+   &quot;之&quot;字形(zig-zag/zag-zig)
 
-      x-父节点单旋转
+       x-父节点单旋转
 
-      x-原祖节点单旋转
+       x-原祖节点单旋转
 
-  &quot;一&quot;字形(zig-zig/zag-zag)
+   &quot;一&quot;字形(zig-zig/zag-zag)
 
-      父节点-祖节点单旋转
+       父节点-祖节点单旋转
 
-      x-父节点单旋转
+       x-父节点单旋转
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">B-树
     <div id="b-树" class="anchor"></div>
@@ -1655,7 +1607,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">b-树的结构特性(M阶)
     <div id="b-树的结构特性m阶" class="anchor"></div>
@@ -1666,16 +1617,14 @@
     </span>
     
 </h3>
-<pre><code>  树的根或树叶或其子节点数在2和M之间
+<pre><code>   树的根或树叶或其子节点数在2和M之间
 
-  除根外，所有非树叶节点的子节点数在\[M/2\]和M之间
+   除根外，所有非树叶节点的子节点数在\[M/2\]和M之间
 
-  所有的树叶都在相同的深度上
+   所有的树叶都在相同的深度上
 
-  (b-树有多种定义，有些次要细节不尽相同)
+   (b-树有多种定义，有些次要细节不尽相同)
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">b-树应用
     <div id="b-树应用" class="anchor"></div>
@@ -1686,9 +1635,8 @@
     </span>
     
 </h3>
-<pre><code>  b-树一般用于数据系统
+<pre><code>   b-树一般用于数据系统
 </code></pre>
-</blockquote>
           
           
           

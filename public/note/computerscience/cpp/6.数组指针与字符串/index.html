@@ -1,0 +1,2064 @@
+<!doctype html>
+<html
+  lang="zh-cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-cn">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>6.数组、指针与字符串 &middot; 个人博客</title>
+    <meta name="title" content="6.数组、指针与字符串 &middot; 个人博客">
+  
+
+  
+  
+    <meta name="description" content="My personal blog">
+  
+  
+    <meta name="keywords" content="Cpp,数组,指针,字符串,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/note/computerscience/cpp/6.%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+  
+
+  
+  
+    <meta name="author" content="木马">
+  
+  
+    
+      
+        
+          <link href="https://github.com/wrongtrojan" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/note/computerscience/cpp/6.%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+  <meta property="og:site_name" content="个人博客">
+  <meta property="og:title" content="6.数组、指针与字符串">
+  <meta property="og:description" content="My personal blog">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="note">
+    <meta property="article:published_time" content="2025-11-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-11-24T00:00:00+00:00">
+    <meta property="article:tag" content="Cpp">
+    <meta property="article:tag" content="数组">
+    <meta property="article:tag" content="指针">
+    <meta property="article:tag" content="字符串">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="6.数组、指针与字符串">
+  <meta name="twitter:description" content="My personal blog">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.39b2b72cb1187e8a119efd4db44b21dee736dc64f705a4ca37fc0e5fe991b88ddf384bc0ee3e5eefb169205ec963ef484a63f723317257724989ad7eb345b678.css"
+    integrity="sha512-ObK3LLEYfooRnv1NtEsh3uc23GT3BaTKN/wOX&#43;mRuI3fOEvA7j5e77FpIF7JY&#43;9ISmP3IzFyV3JJia1&#43;s0W2eA==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.b4b722fcb5d42f34f52b30a92f3521b69f403ca9d96d0d6179eb537cb870f5d83fdf1fe836688d95d5c99fefbda4170487711006e56051fa67ea00da10521721.js" integrity="sha512-tLci/LXULzT1KzCpLzUhtp9APKnZbQ1heetTfLhw9dg/3x/oNmiNldXJn&#43;&#43;9pBcEh3EQBuVgUfpn6gDaEFIXIQ=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.e3d337dd3f18427eb20aa355839d583ef6382bc42e34cfe789adb9358d463ef51f53691e32f524259380d4d3add49162f522426784990f3a5dbd39c33c6ed05a.js"
+      integrity="sha512-49M33T8YQn6yCqNVg51YPvY4K8QuNM/nia25NY1GPvUfU2keMvUkJZOA1NOt1JFi9SJCZ4SZDzpdvTnDPG7QWg=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "笔记",
+    "name": "6.数组、指针与字符串",
+    "headline": "6.数组、指针与字符串",
+    
+    
+    "inLanguage": "zh-cn",
+    "url" : "http://localhost:1313/note/computerscience/cpp/6.%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2/",
+    "author" : {
+      "@type": "Person",
+      "name": "木马"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-11-24T00:00:00\u002b00:00",
+    "datePublished": "2025-11-24T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-11-24T00:00:00\u002b00:00",
+    
+    "keywords": ["Cpp","数组","指针","字符串"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "3685"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          个人博客
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="首页"
+  title="个人博客">
+  
+  
+    <p class="text-base font-medium">
+      首页
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/about/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="关于"
+  title="关于">
+  
+  
+    <p class="text-base font-medium">
+      关于
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a
+      
+        href="/note/"
+        
+      
+      aria-label="笔记"
+      class="text-base font-medium hover:text-primary-600 dark:hover:text-primary-400"
+      title="笔记">
+      <p>
+        笔记
+      </p>
+    </a>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+          <a
+            href="/note/computerscience/"
+            
+            aria-label="计算机科学"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="计算机科学">
+              计算机科学
+            </p>
+          </a>
+        
+          <a
+            href="/note/mathematics/"
+            
+            aria-label="数学"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="数学">
+              数学
+            </p>
+          </a>
+        
+          <a
+            href="/note/others/"
+            
+            aria-label="其他"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="其他">
+              其他
+            </p>
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      
+        
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a
+      
+        href="/create/"
+        
+      
+      aria-label="创作"
+      class="text-base font-medium hover:text-primary-600 dark:hover:text-primary-400"
+      title="创作">
+      <p>
+        创作
+      </p>
+    </a>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+          <a
+            href="/create/novel/"
+            
+            aria-label="小说"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="小说">
+              小说
+            </p>
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="搜索 (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="搜索 (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="首页"
+    title="个人博客">
+    
+    
+      <p class="text-bg font-bg">
+        首页
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/about/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="关于"
+    title="关于">
+    
+    
+      <p class="text-bg font-bg">
+        关于
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/note/"
+    aria-label="笔记"
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="笔记">
+      笔记
+    </p>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </a>
+</li>
+
+  <li class="mt-1">
+    <a
+      href="/note/computerscience/"
+      
+      aria-label="计算机科学"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="计算机科学">
+        计算机科学
+      </p>
+    </a>
+  </li>
+
+  <li class="mt-1">
+    <a
+      href="/note/mathematics/"
+      
+      aria-label="数学"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="数学">
+        数学
+      </p>
+    </a>
+  </li>
+
+  <li class="mt-1">
+    <a
+      href="/note/others/"
+      
+      aria-label="其他"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="其他">
+        其他
+      </p>
+    </a>
+  </li>
+
+<li class="mb-2"></li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/create/"
+    aria-label="创作"
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="创作">
+      创作
+    </p>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </a>
+</li>
+
+  <li class="mt-1">
+    <a
+      href="/create/novel/"
+      
+      aria-label="小说"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="小说">
+        小说
+      </p>
+    </a>
+  </li>
+
+<li class="mb-2"></li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+  
+  
+    
+    
+  
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/defaultBackgroundImage_hu_a4dab90c6724ce91.jpg"
+      alt="6.数组、指针与字符串"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+      >
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div>
+    <div
+      class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div>
+  </div>
+
+  
+    <div
+      id="background-blur"
+      class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/background-blur.min.00a57c73ea12f2cab2980c3c3d649e89f6d82f190f74bbe2b67f2f5e39ab7d032ece47086400ca05396758aace13299da49aca43ea643d2625e62c506267a169.js"
+      integrity="sha512-AKV8c&#43;oS8sqymAw8PWSeifbYLxkPdLvitn8vXjmrfQMuzkcIZADKBTlnWKrOEymdpJrKQ&#43;pkPSYl5ixQYmehaQ=="
+      data-blur-id="background-blur"
+      data-image-id="background-image"
+      data-image-url="/defaultBackgroundImage_hu_a4dab90c6724ce91.jpg"></script>
+  
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        6.数组、指针与字符串
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>3685 字</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/cpp/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Cpp
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E6%95%B0%E7%BB%84/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    数组
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E6%8C%87%E9%92%88/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    指针
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    字符串
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="木马"
+        src="/author_hu_b32b149bc35b336c.jpg"
+        data-zoom-src="/author_hu_7803839ca98ef477.jpg">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        作者
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        木马
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/wrongtrojan"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#数组">数组</a>
+      <ul>
+        <li><a href="#数组的声明">数组的声明</a></li>
+        <li><a href="#数组的使用">数组的使用</a></li>
+        <li><a href="#数组的存储">数组的存储</a></li>
+        <li><a href="#数组的初始化">数组的初始化</a></li>
+        <li><a href="#数组作为函数参数">数组作为函数参数</a></li>
+        <li><a href="#对象数组">对象数组</a></li>
+      </ul>
+    </li>
+    <li><a href="#指针">指针</a>
+      <ul>
+        <li><a href="#内存空间的访问方式">内存空间的访问方式</a></li>
+        <li><a href="#指针变量的声明">指针变量的声明</a></li>
+        <li><a href="#与地址相关的运算--and-">与地址相关的运算 &ldquo;*&rdquo; and &ldquo;&amp;&rdquo;</a></li>
+        <li><a href="#指针的赋值">指针的赋值</a></li>
+        <li><a href="#指针运算">指针运算</a></li>
+        <li><a href="#用指针处理数组元素">用指针处理数组元素</a></li>
+        <li><a href="#指针数组">指针数组</a></li>
+        <li><a href="#指针作为函数参数">指针作为函数参数</a></li>
+        <li><a href="#指针型函数">指针型函数</a></li>
+        <li><a href="#指向函数的指针">指向函数的指针</a></li>
+        <li><a href="#对象指针">对象指针</a></li>
+      </ul>
+    </li>
+    <li><a href="#动态内存分配">动态内存分配</a>
+      <ul>
+        <li><a href="#new运算符">new运算符</a></li>
+        <li><a href="#delete运算符">delete运算符</a></li>
+      </ul>
+    </li>
+    <li><a href="#vector创建数组">vector创建数组</a></li>
+    <li><a href="#深层复制与浅层复制">深层复制与浅层复制</a>
+      <ul>
+        <li><a href="#浅层复制">浅层复制</a></li>
+        <li><a href="#深层复制">深层复制</a></li>
+      </ul>
+    </li>
+    <li><a href="#字符串">字符串</a>
+      <ul>
+        <li><a href="#用字符数组存储和处理字符串">用字符数组存储和处理字符串</a></li>
+        <li><a href="#string类">string类</a></li>
+      </ul>
+    </li>
+    <li><a href="#指针与引用">*指针与引用</a></li>
+    <li><a href="#reinterpret_cast">*reinterpret_cast</a></li>
+    <li><a href="#const_cast">*const_cast</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#数组">数组</a>
+      <ul>
+        <li><a href="#数组的声明">数组的声明</a></li>
+        <li><a href="#数组的使用">数组的使用</a></li>
+        <li><a href="#数组的存储">数组的存储</a></li>
+        <li><a href="#数组的初始化">数组的初始化</a></li>
+        <li><a href="#数组作为函数参数">数组作为函数参数</a></li>
+        <li><a href="#对象数组">对象数组</a></li>
+      </ul>
+    </li>
+    <li><a href="#指针">指针</a>
+      <ul>
+        <li><a href="#内存空间的访问方式">内存空间的访问方式</a></li>
+        <li><a href="#指针变量的声明">指针变量的声明</a></li>
+        <li><a href="#与地址相关的运算--and-">与地址相关的运算 &ldquo;*&rdquo; and &ldquo;&amp;&rdquo;</a></li>
+        <li><a href="#指针的赋值">指针的赋值</a></li>
+        <li><a href="#指针运算">指针运算</a></li>
+        <li><a href="#用指针处理数组元素">用指针处理数组元素</a></li>
+        <li><a href="#指针数组">指针数组</a></li>
+        <li><a href="#指针作为函数参数">指针作为函数参数</a></li>
+        <li><a href="#指针型函数">指针型函数</a></li>
+        <li><a href="#指向函数的指针">指向函数的指针</a></li>
+        <li><a href="#对象指针">对象指针</a></li>
+      </ul>
+    </li>
+    <li><a href="#动态内存分配">动态内存分配</a>
+      <ul>
+        <li><a href="#new运算符">new运算符</a></li>
+        <li><a href="#delete运算符">delete运算符</a></li>
+      </ul>
+    </li>
+    <li><a href="#vector创建数组">vector创建数组</a></li>
+    <li><a href="#深层复制与浅层复制">深层复制与浅层复制</a>
+      <ul>
+        <li><a href="#浅层复制">浅层复制</a></li>
+        <li><a href="#深层复制">深层复制</a></li>
+      </ul>
+    </li>
+    <li><a href="#字符串">字符串</a>
+      <ul>
+        <li><a href="#用字符数组存储和处理字符串">用字符数组存储和处理字符串</a></li>
+        <li><a href="#string类">string类</a></li>
+      </ul>
+    </li>
+    <li><a href="#指针与引用">*指针与引用</a></li>
+    <li><a href="#reinterpret_cast">*reinterpret_cast</a></li>
+    <li><a href="#const_cast">*const_cast</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <h2 class="relative group">数组
+    <div id="数组" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e7%bb%84" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<pre><code>   具有一定顺序关系的对象集合体，组成数组的对象是数组的元素
+
+   每个元素有n个下标的数组称为n维数组
+</code></pre>
+
+<h3 class="relative group">数组的声明
+    <div id="数组的声明" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e7%bb%84%e7%9a%84%e5%a3%b0%e6%98%8e" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 数据类型 标识符[][]...[];
+</code></pre>
+
+<h3 class="relative group">数组的使用
+    <div id="数组的使用" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e7%bb%84%e7%9a%84%e4%bd%bf%e7%94%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 通过下标来访问数组中的元素(下标必须为整数且不得越界)
+</code></pre>
+
+<h3 class="relative group">数组的存储
+    <div id="数组的存储" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e7%bb%84%e7%9a%84%e5%ad%98%e5%82%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 数组元素在内存中是顺序、连续存储的(包括多维数组)
+</code></pre>
+
+<h3 class="relative group">数组的初始化
+    <div id="数组的初始化" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e7%bb%84%e7%9a%84%e5%88%9d%e5%a7%8b%e5%8c%96" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 在声明数组时给部分或全部元素赋初值
+
+ 如果列出全部元素初值，可以不做元素个数说明
+
+ 多维数组可以按第一维进行分组，用括号将每一组括起来
+
+ 数组也可以被声明为常量
+</code></pre>
+
+<h3 class="relative group">数组作为函数参数
+    <div id="数组作为函数参数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e7%bb%84%e4%bd%9c%e4%b8%ba%e5%87%bd%e6%95%b0%e5%8f%82%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 使用数组名传递数据时，传递的是地址
+
+ 形参数组和实参数组的首地址重合，后面元素各自对应
+</code></pre>
+
+<h3 class="relative group">对象数组
+    <div id="对象数组" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%af%b9%e8%b1%a1%e6%95%b0%e7%bb%84" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 数组的元素也可以是自定义类型
+
+ 通过对象数组[下标].member可以访问公共成员
+</code></pre>
+
+<h2 class="relative group">指针
+    <div id="指针" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8c%87%e9%92%88" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">内存空间的访问方式
+    <div id="内存空间的访问方式" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%86%85%e5%ad%98%e7%a9%ba%e9%97%b4%e7%9a%84%e8%ae%bf%e9%97%ae%e6%96%b9%e5%bc%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 计算机的内存储器被划分为存储单元按一定规则编号，即为地址
+
+ 地址编码的最基本单位是字节，每字节由8个二进制位组成
+
+ Cpp程序中通过变量名和地址利用内存单元存取数据
+
+ 不传递变量的值，只传递变量得地址可以减小系统开销
+</code></pre>
+
+<h3 class="relative group">指针变量的声明
+    <div id="指针变量的声明" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8c%87%e9%92%88%e5%8f%98%e9%87%8f%e7%9a%84%e5%a3%b0%e6%98%8e" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 指针变量是用于存放内存单元地址的
+
+ 数据类型 *标识符(这里的*表征声明指针);
+
+ 指针可以指向各种类型，包括基本类型、数组(数组元素)、函数、对象、指针
+</code></pre>
+
+<h3 class="relative group">与地址相关的运算 &ldquo;*&rdquo; and &ldquo;&amp;&rdquo;
+    <div id="与地址相关的运算--and-" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%8e%e5%9c%b0%e5%9d%80%e7%9b%b8%e5%85%b3%e7%9a%84%e8%bf%90%e7%ae%97--and-" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> &quot;*&quot; 指针运算符(解析运算符)
+
+   表示获取指针所指向的变量的值，是一元操作符
+
+ &quot;&amp;&quot; 取地址运算符
+
+   得到一个对象的地址，也是一元运算符
+
+ * &quot;&amp;&quot;出现在变量声明左边时，表示声明引用；
+
+   出现在等号右边或执行语句时表示取地址
+</code></pre>
+
+<h3 class="relative group">指针的赋值
+    <div id="指针的赋值" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8c%87%e9%92%88%e7%9a%84%e8%b5%8b%e5%80%bc" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 定义指针时进行初始化赋值，或者定义后单独使用赋值语句
+
+ 多个指针可以指向同一个变量，一个指针只能指向一个变量
+
+ 数组名称实际上是一个不能赋值的指针常量
+
+ 指向常量的指针
+
+   const 类型 \*p;
+
+   指针指向的值不能通过指针改变，但指针本身可以改变指向另一个对象
+
+ 指针类型的常量
+
+   类型 \* const p;
+
+   指针本身的值不能改变，指向某个固定的对象
+
+   一般指针的值只能赋给同类型指针，但void类型可以储存任何类型对象地址
+
+   void指针一般只在指针指向对象不确定时使用
+</code></pre>
+
+<h3 class="relative group">指针运算
+    <div id="指针运算" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8c%87%e9%92%88%e8%bf%90%e7%ae%97" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 指针是一种数据类型，可以参与部分运算(算术运算、关系运算和赋值运算)
+
+ 算术运算
+
+   指针可以和整数做加减法运算，表达指针指向位置后移或前移
+
+   如(pl+nl)(或pl\[nl\])表示pl指向位置后移nl个数(nl\*typebyte个字节)
+
+   一般指针的算术运算和数组使用相联系，避免破坏地址数据或代码
+
+ 关系运算
+
+   指向相同类型数据的指针之间进行的关系运算
+
+   两个指针相等，表示两个指针指向同一个地址
+
+   指针变量可以和整数0进行比较，0专用于表示空指针
+
+   空指针不指向任何有效地址
+</code></pre>
+
+<h3 class="relative group">用指针处理数组元素
+    <div id="用指针处理数组元素" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%94%a8%e6%8c%87%e9%92%88%e5%a4%84%e7%90%86%e6%95%b0%e7%bb%84%e5%85%83%e7%b4%a0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> begin和end
+
+   begin返回指向数组首元素的指针
+
+   end返回返回指向数组尾元素下一元素的指针
+
+   这两个函数定义在iterator头文件
+</code></pre>
+
+<h3 class="relative group">指针数组
+    <div id="指针数组" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8c%87%e9%92%88%e6%95%b0%e7%bb%84" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 元素都是指针变量的数组，每个元素必须是同一类型的指针
+
+ 数据类型 \*pa\[下标\]；
+
+ 可以用数组初始化指针数组，元素为数组首地址
+</code></pre>
+
+<h3 class="relative group">指针作为函数参数
+    <div id="指针作为函数参数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8c%87%e9%92%88%e4%bd%9c%e4%b8%ba%e5%87%bd%e6%95%b0%e5%8f%82%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 在不同函数之间传递大量数据时程序开销非常大
+
+ 如果传递数据存放在连续内存区域中，可以只传递数据的起始地址
+
+ 指针作为函数的形参有三个作用
+
+   使实参与形参指向共同内存空间，达到参数双向传递
+
+   减少函数调用时数据传递的开销(一般会使用引用，部分使用指针)
+
+   通过指向函数的指针传递函数代码的首地址
+</code></pre>
+
+<h3 class="relative group">指针型函数
+    <div id="指针型函数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8c%87%e9%92%88%e5%9e%8b%e5%87%bd%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 指针也可以是函数的返回值，返回值为指针的函数即为指针型函数
+
+ 在函数结束时把大量的数据从被调函数返回到主调函数中
+
+ 数据类型 *函数名(参数表){函数体}；
+
+ 函数返回数组指针
+
+   eg.1 typedef int arr[ ]; arr * fun( int i );
+
+   eg.2 int ( *fun ( int i ) )[ ];
+
+   eg.3 auto fun( int i ) -&gt; int( * )[ ]; //尾置返回类型
+
+   eg.4 decltype( a ) *fun( int ); //返回值类型和a数组相同
+</code></pre>
+
+<h3 class="relative group">指向函数的指针
+    <div id="指向函数的指针" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8c%87%e5%90%91%e5%87%bd%e6%95%b0%e7%9a%84%e6%8c%87%e9%92%88" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 执行程序的代码也会被调入内存并占据一定的空间
+
+ 函数名就表示函数的代码在内存中的起始地址
+
+ 调用函数的通常形式的实质就是函数代码首地址
+
+ 函数指针
+
+   函数指针是专门用来存放函数代码首地址的变量
+
+   数据类型 ( * 函数指针名) (形参表)；
+
+   函数指针使用前需要赋值，指向一个存在的函数代码起始地址
+</code></pre>
+
+<h3 class="relative group">对象指针
+    <div id="对象指针" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%af%b9%e8%b1%a1%e6%8c%87%e9%92%88" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code>   每个对象在初始化之后都会在内存中占有一定的空间
+
+   对象指针就是用于存放对象地址的变量
+
+   一般的对象指针
+
+     声明的语法形式 类名 *对象指针名；
+
+     对象指针可以方便地访问对象的成员
+
+     对象指针名 -&gt; 成员名
+
+     ( * 对象指针名).成员名
+
+   this指针(类似python中self)
+
+     隐含于类非静态成员函数的特殊指针，是常量型指针
+
+     this指针指向正被成员函数操作的对象
+
+     this指针是成员函数的一个隐含形参
+
+   指向类非静态成员的指针
+
+     类的成员自身也可以被存放道一个指针变量中，进而通过指针访问成员
+
+     数据成员 类型说明符 类名 :: *指针名;
+
+     函数成员 类型说明符 (类名 :: *指针名)(参数表);
+
+     对类中成员取地址时也需要遵循访问权限约定(&amp;类名::成员名)
+
+     通过指针访问类的成员
+
+       对象名.*数据成员指针名/(对象名.*函数成员指针名)(参数表)
+
+       对象指针名-&gt;*数据成员指针名/(对象指针名-&gt;函数成员指针名)(参数表)
+
+     指向类静态成员的指针
+
+       对类静态成员的访问不依赖对象，可以用普通指针
+</code></pre>
+
+<h2 class="relative group">动态内存分配
+    <div id="动态内存分配" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8a%a8%e6%80%81%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<pre><code>   动态内存分配即在运行过程中按照实际申请适量内存，试用结束后释放
+
+   这种在程序运行过程中申请和释放的存储单元也称为堆对象
+
+   申请和释放过程一般称为建立和删除，使用new和delete运算符
+</code></pre>
+
+<h3 class="relative group">new运算符
+    <div id="new运算符" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#new%e8%bf%90%e7%ae%97%e7%ac%a6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 动态创建堆对象 new 数据类型(初始化参数列表)
+
+ 如果内存申请成功，new运算便返回一个指向新分配内存首地址的指针
+
+ 如果申请失败会抛出异常
+
+ 建立基本类型对象
+
+   初始化过程即为赋值 int *p=new int(2)
+
+   如果不希望设定初始值可以省去括号 int *p=new int
+
+   如果保留括号但不写值，默认用0初始化
+
+ 建立类的实例对象
+
+   根据初始化参数列表(参数类型和个数)调用类的构造函数
+
+   若类存在用户定义的默认构造函数，则new T和new T()等效
+
+   若用户未定义，则new T()会默认为基本类型和指针类型成员赋0值
+</code></pre>
+
+<h3 class="relative group">delete运算符
+    <div id="delete运算符" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#delete%e8%bf%90%e7%ae%97%e7%ac%a6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 用来删除由new建立的对象，释放指针所指向的内存空间 delete 指针名;
+
+ 如果被删除的是实例对象，对象的析构函数将被调用
+
+ new建立的对象只能使用delete一次，多次删除会导致错误
+
+ 用new分配的内存必须用delete释放，否则会导致&quot;内存泄露&quot;
+</code></pre>
+
+<h2 class="relative group">vector创建数组
+    <div id="vector创建数组" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vector%e5%88%9b%e5%bb%ba%e6%95%b0%e7%bb%84" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<pre><code>   静态数组和new动态创建数组难以检测下标越界的错误
+
+   Cpp标准库提供了被封装的动态数组------vector，它是一个类模板
+
+   *vector\&lt;元素类型\&gt;数组对象名(数组长度,元素初值)；//数组长度可含变量
+
+   vector定义的数组对象所有元素都会被初始化，若无元素初值默认赋0
+
+   vector数组对象是分装数组类的实例，用下标访问元素，但对象名不为首地址
+
+   数组对象数组对象名.size( ) 可返回数组大小
+
+   更多特性在类模板一章中介绍
+</code></pre>
+
+<h2 class="relative group">深层复制与浅层复制
+    <div id="深层复制与浅层复制" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b7%b1%e5%b1%82%e5%a4%8d%e5%88%b6%e4%b8%8e%e6%b5%85%e5%b1%82%e5%a4%8d%e5%88%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">浅层复制
+    <div id="浅层复制" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b5%85%e5%b1%82%e5%a4%8d%e5%88%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 实现数据项的复制(值复制)，指针变量也会指向同一地址
+
+ 在释放动态内存空间时可能会delete一处地址多次
+</code></pre>
+
+<h3 class="relative group">深层复制
+    <div id="深层复制" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b7%b1%e5%b1%82%e5%a4%8d%e5%88%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 编写构造函数使得指针指向新地址，形成真正的副本
+</code></pre>
+
+<h2 class="relative group">字符串
+    <div id="字符串" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ad%97%e7%ac%a6%e4%b8%b2" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">用字符数组存储和处理字符串
+    <div id="用字符数组存储和处理字符串" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%94%a8%e5%ad%97%e7%ac%a6%e6%95%b0%e7%bb%84%e5%ad%98%e5%82%a8%e5%92%8c%e5%a4%84%e7%90%86%e5%ad%97%e7%ac%a6%e4%b8%b2" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> 字符串常量是一个隐含创建的char数组，字符串常量表示数组的首地址
+
+ 可以将字符串常量赋给常量字符串指针
+
+ 字符串变量也可以用类似方式来表示，将元素放入char数组，末尾放置一个 '\0'
+
+ char数组需使用strcpy(复制)，strcmp(排序)，strcat(拼接)等函数处理字符串
+</code></pre>
+
+<h3 class="relative group">string类
+    <div id="string类" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#string%e7%b1%bb" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<pre><code> Cpp中预定义了字符串类，提供了对字符串进行处理所需要的操作
+
+ 使用string类需要包含头文件string，封装了串的属性和一系列访问属性的函数
+
+ 构造函数
+
+   string( ) //建立长度为0的串
+
+   string(const string &amp;rhs) //复制构造函数
+
+   string(const char *s) //用指针s指向的字符串常量初始化string对象
+
+   string(const string &amp;rhs ,unsigned int pos ,unsigned int);
+
+     //将对象rhs中的字符串从pos往后取n个字符初始化string对象
+
+   string(const char *s ,unsigned int n);
+
+     //用指针s指向的字符串前n个字符初始化string对象
+
+   string(unsigned int n ,char c); //将c字符重复你次初始化string对象
+
+ string类的操作符
+
+   方便地完成字符串复制、字符串链接、字符串比较等功能
+
+   字符串比较是按照字典序比较
+
+ 常用成员函数功能
+
+   append(const char *s); //将字符串s添加在本串尾
+
+   assign(const chae *s); //将s指向的字符串赋值给本对象
+
+   compare(const string &amp;str) ; //比较本串与str串大小，小于负数大于正数
+
+   insert(unsigned int pos ,const char *s); //将s指向的字符串插在pos之前
+
+   substr(unsigned int pos ,unsigned int n) ; //取本串pos后的n个字符做子串
+
+   find(const basic_string &amp;str); //查找并返回str在本串第一次出现的位置
+
+   length( ); //返回串的长度(字符个数)
+
+   swap(string &amp; str); //将本串与str中的字符串进行交换
+</code></pre>
+
+<h2 class="relative group">*指针与引用
+    <div id="指针与引用" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8c%87%e9%92%88%e4%b8%8e%e5%bc%95%e7%94%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<pre><code>   引用和指针常量使用形式的对比
+
+   引用运行的实现机制最终不得不借助地址，二者殊途同归
+
+   *引用只能在初始化时指定被引用的对象，类似于指针常量
+
+   *引用不可以再被取地址*，引用一经定义本身占据的空间被完全隐藏
+
+   引用可以更加方便安全地实现数据双向传递等简单需求
+</code></pre>
+
+<h2 class="relative group">*reinterpret_cast
+    <div id="reinterpret_cast" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#reinterpret_cast" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<pre><code>   *可以将一种类型的指针转换成另一种类型的指针
+
+   可以在不同类型对象、函数，类函数、数据成员成员之间转换
+
+   *有很大的危险性和不确定性
+</code></pre>
+
+<h2 class="relative group">*const_cast
+    <div id="const_cast" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#const_cast" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<pre><code>   *将数据类型中const属性去除
+
+   在某些固定场合适当地使用它可以是安全的
+</code></pre>
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_note\ComputerScience\Cpp\6.数组、指针与字符串.md"
+          data-oid-likes="likes_note\ComputerScience\Cpp\6.数组、指针与字符串.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+      
+      
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/note/computerscience/cpp/5.%E6%95%B0%E6%8D%AE%E7%9A%84%E5%85%B1%E4%BA%AB%E4%B8%8E%E4%BF%9D%E6%8A%A4/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;5.数据的共享与保护
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/note/computerscience/cpp/7.%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF/">
+              <span class="leading-6">
+                7.类的继承&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+          
+          
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 ">
+        <ul class="flex list-none flex-col sm:flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/tags/"
+                title="Tags">
+                
+                Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="https://github.com/wrongtrojan/wrongtrojan.github.io"
+                title="">
+                
+                  <span >
+                    <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span>
+                  </span>
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          @2025木马
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

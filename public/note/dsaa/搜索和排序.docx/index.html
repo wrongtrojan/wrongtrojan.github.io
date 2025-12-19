@@ -226,7 +226,7 @@
     "keywords": ["算法"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "855"
+    "wordCount": "853"
   }]
   </script>
 
@@ -920,7 +920,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>855 字</span>
+      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>853 字</span>
     
 
     
@@ -1074,7 +1074,7 @@
         <li><a href="#插入排序on2">插入排序O(N^2)</a></li>
         <li><a href="#希尔排序可以到达on32">希尔排序[可以到达O(N^3/2)]</a></li>
         <li><a href="#归并排序">归并排序</a></li>
-        <li><a href="#快速排序onlogn">快速排序O(NlogN)</a></li>
+        <li><a href="#快速排序onlogn有可能退化">快速排序O(NlogN)[有可能退化]</a></li>
       </ul>
     </li>
   </ul>
@@ -1104,7 +1104,7 @@
         <li><a href="#插入排序on2">插入排序O(N^2)</a></li>
         <li><a href="#希尔排序可以到达on32">希尔排序[可以到达O(N^3/2)]</a></li>
         <li><a href="#归并排序">归并排序</a></li>
-        <li><a href="#快速排序onlogn">快速排序O(NlogN)</a></li>
+        <li><a href="#快速排序onlogn有可能退化">快速排序O(NlogN)[有可能退化]</a></li>
       </ul>
     </li>
   </ul>
@@ -1133,7 +1133,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">顺序搜索
     <div id="顺序搜索" class="anchor"></div>
@@ -1144,10 +1143,8 @@
     </span>
     
 </h3>
-<pre><code>  顺序搜索算法的时间复杂度为O(N^2)
+<pre><code>   顺序搜索算法的时间复杂度为O(N^2)
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">二分搜素
     <div id="二分搜素" class="anchor"></div>
@@ -1158,12 +1155,10 @@
     </span>
     
 </h3>
-<pre><code>  如果列表有序可采用二分搜索
+<pre><code>   如果列表有序可采用二分搜索
 
-  二分搜索算法的时间复杂度为O(logN)
+   二分搜索算法的时间复杂度为O(logN)
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">散列
     <div id="散列" class="anchor"></div>
@@ -1174,63 +1169,62 @@
     </span>
     
 </h3>
-<pre><code>  散列表
+<pre><code>   散列表
 
-      元素集合，储存在槽中便于查找
+       元素集合，储存在槽中便于查找
 
-  载荷因子
+   载荷因子
 
-      槽的占用率称为载荷因子
+       槽的占用率称为载荷因子
 
-  散列函数
+   散列函数
 
-      散列函数将散列表中的元素与其所属位置对应起来，常常是取余函数
+       散列函数将散列表中的元素与其所属位置对应起来，常常是取余函数
 
-      完美散列函数
+       完美散列函数
 
-          给定一个元素集合将每个元素映射到不同的槽
+           给定一个元素集合将每个元素映射到不同的槽
 
-      扩展取余函数的方法
+       扩展取余函数的方法
 
-          折叠法
+           折叠法
 
-              将元素切成等长的部分然后相加再求散列值
+               将元素切成等长的部分然后相加再求散列值
 
-          平方取中法
+           平方取中法
 
-              先将元素取平方，然后提取中间几位数求散列值
+               先将元素取平方，然后提取中间几位数求散列值
 
-      散列函数一定要高效，避免成为存储和搜索的负担
+       散列函数一定要高效，避免成为存储和搜索的负担
 
-  冲突
+   冲突
 
-      散列函数将两个元素都放入同一个槽
+       散列函数将两个元素都放入同一个槽
 
-      处理冲突
+       处理冲突
 
-          通过系统化方法在散列表中安置冲突的第二个元素
+           通过系统化方法在散列表中安置冲突的第二个元素
 
-          开放地址法
+           开放地址法
 
-              线性探测
+               线性探测
 
-                  在散列表寻找下一个空槽或地址
+                   在散列表寻找下一个空槽或地址
 
-                  容易造成散列表元素出现聚集现象
+                   容易造成散列表元素出现聚集现象
 
-              平方探测
+               平方探测
 
-                  线性探测的变体，不采用固定的跨步大小
+                   线性探测的变体，不采用固定的跨步大小
 
-          链接法
+           链接法
 
-              允许散列表中的同一个元素上存在多个元素。
+               允许散列表中的同一个元素上存在多个元素。
 
-              发生冲突时元素仍然被插入其散列值对应的槽中。
+               发生冲突时元素仍然被插入其散列值对应的槽中。
 
-              随着同一个位置上的元素越来越多，搜索变得越来越困难
+               随着同一个位置上的元素越来越多，搜索变得越来越困难
 </code></pre>
-</blockquote>
 
 <h2 class="relative group">排序
     <div id="排序" class="anchor"></div>
@@ -1241,7 +1235,6 @@
     </span>
     
 </h2>
-<blockquote>
 
 <h3 class="relative group">冒泡排序O(N^2)
     <div id="冒泡排序on2" class="anchor"></div>
@@ -1252,12 +1245,10 @@
     </span>
     
 </h3>
-<pre><code>  每一轮遍历都将下一个最大值放到正确的位置上
+<pre><code>   每一轮遍历都将下一个最大值放到正确的位置上
 
-  如果在一轮遍历中没有发生元素交换，就可以确定已经有序，使其提前终止
+   如果在一轮遍历中没有发生元素交换，就可以确定已经有序，使其提前终止
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">选择排序O(N^2)
     <div id="选择排序on2" class="anchor"></div>
@@ -1268,10 +1259,8 @@
     </span>
     
 </h3>
-<pre><code>  每次遍历列表时只做一次交换，每次遍历只交换一次
+<pre><code>   每次遍历列表时只做一次交换，每次遍历只交换一次
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">插入排序O(N^2)
     <div id="插入排序on2" class="anchor"></div>
@@ -1282,10 +1271,8 @@
     </span>
     
 </h3>
-<pre><code>  在列表较低的一端维护有序的子列表，并逐个将每个新元素&quot;插入&quot;子列表
+<pre><code>   在列表较低的一端维护有序的子列表，并逐个将每个新元素&quot;插入&quot;子列表
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">希尔排序[可以到达O(N^3/2)]
     <div id="希尔排序可以到达on32" class="anchor"></div>
@@ -1296,12 +1283,10 @@
     </span>
     
 </h3>
-<pre><code>  将列表分成数个子列表，并对每一个子列表应用插入排序
+<pre><code>   将列表分成数个子列表，并对每一个子列表应用插入排序
 
-  切分列表是希尔排序的关键，并非连续切分，使用增量i切分列表
+   切分列表是希尔排序的关键，并非连续切分，使用增量i切分列表
 </code></pre>
-</blockquote>
-<blockquote>
 
 <h3 class="relative group">归并排序
     <div id="归并排序" class="anchor"></div>
@@ -1312,41 +1297,38 @@
     </span>
     
 </h3>
-<pre><code>  分支策略改进排序算法，归并排序是递归算法
+<pre><code>   分支策略改进排序算法，归并排序是递归算法
 
-  基准情形 如果列表为空或者只有一个元素，那么有序
+   基准情形 如果列表为空或者只有一个元素，那么有序
 
-  不断演进 列表一分为二两部分递归调用分别排序
+   不断演进 列表一分为二两部分递归调用分别排序
 </code></pre>
-</blockquote>
-<blockquote>
 
-<h3 class="relative group">快速排序O(NlogN)\[有可能退化\]
-    <div id="快速排序onlogn" class="anchor"></div>
+<h3 class="relative group">快速排序O(NlogN)[有可能退化]
+    <div id="快速排序onlogn有可能退化" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%bf%ab%e9%80%9f%e6%8e%92%e5%ba%8fonlogn" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%bf%ab%e9%80%9f%e6%8e%92%e5%ba%8fonlogn%e6%9c%89%e5%8f%af%e8%83%bd%e9%80%80%e5%8c%96" aria-label="锚点">#</a>
     </span>
     
 </h3>
-<pre><code>  也采用分治策略，但不使用额外的存储空间
+<pre><code>   也采用分治策略，但不使用额外的存储空间
 
-  首先选出基准值（多种方法，尽量均匀分割）
+   首先选出基准值（多种方法，尽量均匀分割）
 
-      帮助切分列表，基准值的最终的位置是分割点
+       帮助切分列表，基准值的最终的位置是分割点
 
-  接着进行分区（若左小右大）
+   接着进行分区（若左小右大）
 
-      左指针找到比基准大的，右指针找到比基准小的，两者交换
+       左指针找到比基准大的，右指针找到比基准小的，两者交换
 
-  若右指针小于左指针
+   若右指针小于左指针
 
-      右指针即为分割点
+       右指针即为分割点
 
-  递归调用该过程
+   递归调用该过程
 </code></pre>
-</blockquote>
           
           
           

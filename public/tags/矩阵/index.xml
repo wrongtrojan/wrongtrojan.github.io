@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>矩阵 on 个人博客</title>
+    <link>http://localhost:1313/tags/%E7%9F%A9%E9%98%B5/</link>
+    <description>Recent content in 矩阵 on 个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>wrongtrojan0.@gmail (木马)</managingEditor>
+    <webMaster>wrongtrojan0.@gmail (木马)</webMaster>
+    <copyright>@2025木马</copyright>
+    <lastBuildDate>Fri, 19 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%9F%A9%E9%98%B5/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>核心知识点梳理</title>
+      <link>http://localhost:1313/note/mathematics/linearalgebra/%E6%A2%B3%E7%90%86/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/note/mathematics/linearalgebra/%E6%A2%B3%E7%90%86/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>转置/逆/伴随</title>
+      <link>http://localhost:1313/note/mathematics/linearalgebra/%E8%BD%AC%E7%BD%AE-%E9%80%86-%E4%BC%B4%E9%9A%8F/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/note/mathematics/linearalgebra/%E8%BD%AC%E7%BD%AE-%E9%80%86-%E4%BC%B4%E9%9A%8F/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>分块矩阵不等式</title>
+      <link>http://localhost:1313/note/mathematics/linearalgebra/%E5%88%86%E5%9D%97%E7%9F%A9%E9%98%B5%E4%B8%8D%E7%AD%89%E5%BC%8F/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/note/mathematics/linearalgebra/%E5%88%86%E5%9D%97%E7%9F%A9%E9%98%B5%E4%B8%8D%E7%AD%89%E5%BC%8F/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
