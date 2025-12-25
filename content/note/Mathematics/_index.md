@@ -1,4 +1,4 @@
 ---
 title: "数学"     
-description: "所数学笔记"  
+description: "所有数学笔记"  
 ---

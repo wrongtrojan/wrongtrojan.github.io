@@ -226,7 +226,7 @@
     "keywords": ["算法"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1061"
+    "wordCount": "1158"
   }]
   </script>
 
@@ -896,7 +896,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>1061 字</span>
+      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>1158 字</span>
     
 
     
@@ -1045,8 +1045,11 @@
     <li><a href="#核心运算实现以非负整数为例">核心运算实现（以非负整数为例）</a>
       <ul>
         <li><a href="#高精度加法ab">高精度加法(A+B)</a></li>
+        <li><a href="#代码实现">代码实现</a></li>
         <li><a href="#高精度减法a-b需ab">高精度减法（A-B，需A=B）</a></li>
+        <li><a href="#代码实现-1">代码实现</a></li>
         <li><a href="#高精度乘法ab">高精度乘法（A*B）</a></li>
+        <li><a href="#代码实现-2">代码实现</a></li>
         <li><a href="#高精度除法ab">高精度除法（A/B）</a></li>
         <li><a href="#处理正负号">处理正负号</a></li>
       </ul>
@@ -1073,8 +1076,11 @@
     <li><a href="#核心运算实现以非负整数为例">核心运算实现（以非负整数为例）</a>
       <ul>
         <li><a href="#高精度加法ab">高精度加法(A+B)</a></li>
+        <li><a href="#代码实现">代码实现</a></li>
         <li><a href="#高精度减法a-b需ab">高精度减法（A-B，需A=B）</a></li>
+        <li><a href="#代码实现-1">代码实现</a></li>
         <li><a href="#高精度乘法ab">高精度乘法（A*B）</a></li>
+        <li><a href="#代码实现-2">代码实现</a></li>
         <li><a href="#高精度除法ab">高精度除法（A/B）</a></li>
         <li><a href="#处理正负号">处理正负号</a></li>
       </ul>
@@ -1120,15 +1126,28 @@
     
 </h2>
 <pre><code>   高精度计算的核心是用字符串或数组存储大整数,两种方式各有优势
-
- -----------------------------------------------------------------------
- 存储方式         优势                    适用场景
-
- 字符串           直接输入，便于输出       输入输出频繁、需直接处理字符的场景
-
- 动态数组         访问效率高，便于运算     运算密集型场景（如乘法、除法）
- ------------------------------------------------------------------------
 </code></pre>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">存储方式</th>
+          <th style="text-align: left">优势</th>
+          <th style="text-align: left">适用场景</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">字符串</td>
+          <td style="text-align: left">直接输入，便于输出</td>
+          <td style="text-align: left">输入输出频繁、需直接处理字符的场景</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">动态数组</td>
+          <td style="text-align: left">访问效率高，便于运算</td>
+          <td style="text-align: left">运算密集型场景（如乘法、除法）</td>
+      </tr>
+  </tbody>
+</table>
 
 <h3 class="relative group">存储细节
     <div id="存储细节" class="anchor"></div>
@@ -1184,6 +1203,37 @@
    反转结果，得到最终答案
 </code></pre>
 
+<h3 class="relative group">代码实现
+    <div id="代码实现" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%a3%e7%a0%81%e5%ae%9e%e7%8e%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl">  <span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">string</span> <span class="n">add</span><span class="p">(</span><span class="n">string</span> <span class="n">a</span><span class="p">;</span><span class="n">string</span> <span class="n">b</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reverse</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">a</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reverse</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">b</span><span class="p">,</span><span class="n">end</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="n">string</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">carry</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">||</span><span class="n">i</span><span class="o">&lt;</span><span class="n">b</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">||</span><span class="n">carry</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">      <span class="kt">int</span> <span class="n">sum</span><span class="o">=</span><span class="n">carry</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sum</span><span class="o">+=</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;0&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">b</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sum</span><span class="o">+=</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;0&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="n">res</span><span class="p">.</span><span class="n">push_back</span><span class="p">((</span><span class="n">sum</span><span class="o">%</span><span class="mi">10</span><span class="p">)</span><span class="o">+</span><span class="sc">&#39;0&#39;</span><span class="p">);</span><span class="n">carry</span><span class="o">=</span><span class="n">sum</span><span class="o">/</span><span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="n">reverse</span><span class="p">(</span><span class="n">res</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">res</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">reverse</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span></code></pre></div>
 <h3 class="relative group">高精度减法（A-B，需A=B）
     <div id="高精度减法a-b需ab" class="anchor"></div>
     
@@ -1210,6 +1260,53 @@
      反转结果，去除前导零。
 </code></pre>
 
+<h3 class="relative group">代码实现
+    <div id="代码实现-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%a3%e7%a0%81%e5%ae%9e%e7%8e%b0-1" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl">  <span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">bool</span> <span class="nf">GreaterOrEqual</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">!=</span><span class="n">b</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">&gt;</span><span class="n">b</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">a</span><span class="o">&gt;=</span><span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="n">string</span> <span class="n">substract</span><span class="p">(</span><span class="n">string</span> <span class="n">a</span><span class="p">,</span><span class="n">string</span> <span class="n">b</span><span class="p">;){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">GreaterOrEqual</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s">&#34;0&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reverse</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">a</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reverse</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">b</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="n">string</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">borrow</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">digitSize</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">digit</span><span class="o">&lt;</span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
+</span></span><span class="line"><span class="cl">      <span class="kt">int</span> <span class="n">digitA</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="kt">int</span> <span class="n">digitB</span><span class="o">=</span><span class="p">(</span><span class="n">digitSize</span><span class="o">&lt;</span><span class="n">b</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="o">?</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;0&#39;</span><span class="p">)</span><span class="o">:</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">digitA</span><span class="o">-=</span><span class="n">borrow</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">borrow</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span><span class="p">(</span><span class="n">digitA</span><span class="o">&lt;</span><span class="n">digitB</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">digitA</span><span class="o">+=</span><span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">borrow</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="n">res</span><span class="p">.</span><span class="n">push_back</span><span class="p">((</span><span class="n">digitA</span><span class="o">-</span><span class="n">digitB</span><span class="p">)</span><span class="o">+</span><span class="sc">&#39;0&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="n">digitSize</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reverse</span><span class="p">(</span><span class="n">res</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">res</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">start</span><span class="o">&lt;</span><span class="n">res</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">&amp;&amp;</span><span class="n">res</span><span class="p">[</span><span class="n">start</span><span class="p">]</span><span class="o">==</span><span class="sc">&#39;0&#39;</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">      <span class="n">start</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">(</span><span class="n">start</span><span class="o">==</span><span class="n">res</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="o">?</span><span class="s">&#34;0&#34;</span><span class="o">:</span><span class="n">res</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">start</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span></code></pre></div>
 <h3 class="relative group">高精度乘法（A*B）
     <div id="高精度乘法ab" class="anchor"></div>
     
@@ -1223,21 +1320,63 @@
 
    步骤
 
-     若A或B为&quot;0&quot;，直接返回&quot;0&quot;
-
      初始化结果数组resArr(长度为A.size()+B.size())
 
      遍历A的每一位和B的每一位（从低位到高位）
 
        乘积 = A[i]的数值*B[j]的数值
 
-       累加至resArr[i+j+1](当前位),并将进位累加到resArr[i+j]
+       累加至resArr[i+j](当前位)
 
-       处理数组中的进位（每一位超过 10 则向高位进位）
+     遍历处理数组中的进位（每一位超过 10 则向高位进位）
 
      将数组转换为字符串，去除前导零。
 </code></pre>
 
+<h3 class="relative group">代码实现
+    <div id="代码实现-2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%a3%e7%a0%81%e5%ae%9e%e7%8e%b0-2" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl">  <span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">string</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">string</span> <span class="n">a</span><span class="p">,</span><span class="n">string</span> <span class="n">b</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="s">&#34;0&#34;</span><span class="o">||</span><span class="n">b</span><span class="o">==</span><span class="s">&#34;0&#34;</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="s">&#34;0&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">lenA</span><span class="o">=</span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">lenB</span><span class="o">=</span><span class="n">b</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reverse</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">a</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reverse</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">b</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">resArr</span><span class="p">(</span><span class="n">lenA</span><span class="o">+</span><span class="n">lenB</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">lenA</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">      <span class="kt">int</span> <span class="n">digitA</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">lenB</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">digitB</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">resArr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">]</span><span class="o">+=</span><span class="n">digitA</span><span class="o">*</span><span class="n">digitB</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">k</span><span class="o">&lt;</span><span class="p">(</span><span class="n">lenA</span><span class="o">+</span><span class="n">lenB</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">k</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">      <span class="n">resArr</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">+=</span><span class="n">resArr</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">/</span><span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">resArr</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">%=</span><span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">start</span><span class="o">=</span><span class="n">lenA</span><span class="o">+</span><span class="n">lenB</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">resArr</span><span class="p">[</span><span class="n">start</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="o">&amp;&amp;</span><span class="n">start</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">      <span class="n">start</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">string</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">start</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">      <span class="n">res</span><span class="o">+=</span><span class="p">(</span><span class="n">resArr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="sc">&#39;0&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span></code></pre></div>
 <h3 class="relative group">高精度除法（A/B）
     <div id="高精度除法ab" class="anchor"></div>
     
@@ -1247,16 +1386,29 @@
     </span>
     
 </h3>
-<pre><code> 高精度除法分两种场景，实现难度差异较大：
-
- ---------------------------------------------------
- 场景             难度       核心逻辑
-
- 高精度/低精度     简单       从高到低逐位试商，保留余数
-
- 高精度/高精度     复杂       用减法模拟除法或二分法
- ----------------------------------------------------
+<pre><code>  高精度除法分两种场景，实现难度差异较大：
 </code></pre>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">场景</th>
+          <th style="text-align: left">难度</th>
+          <th style="text-align: left">核心逻辑</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">高精度/低精度</td>
+          <td style="text-align: left">简单</td>
+          <td style="text-align: left">从高到低逐位试商，保留余数</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">高精度/高精度</td>
+          <td style="text-align: left">复杂</td>
+          <td style="text-align: left">用减法模拟除法或二分法</td>
+      </tr>
+  </tbody>
+</table>
 
 <h3 class="relative group">处理正负号
     <div id="处理正负号" class="anchor"></div>

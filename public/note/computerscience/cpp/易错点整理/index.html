@@ -226,7 +226,7 @@
     "keywords": ["Cpp"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2731"
+    "wordCount": "3510"
   }]
   </script>
 
@@ -896,7 +896,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-12-18T00:00:00&#43;00:00">2025年12月18日</time><span class="px-2 text-primary-500">&middot;</span><span>2731 字</span>
+      <time datetime="2025-12-18T00:00:00&#43;00:00">2025年12月18日</time><span class="px-2 text-primary-500">&middot;</span><span>3510 字</span>
     
 
     
@@ -1038,6 +1038,7 @@
   <ul>
     <li>
       <ul>
+        <li><a href="#程序编写">程序编写</a></li>
         <li><a href="#关键字">关键字</a></li>
         <li><a href="#运算符">运算符</a></li>
         <li><a href="#函数参数">函数参数</a></li>
@@ -1050,7 +1051,7 @@
         <li><a href="#友元">友元</a></li>
         <li><a href="#数组初始化">数组初始化</a></li>
         <li><a href="#指针">指针</a></li>
-        <li><a href="#string类">string类</a></li>
+        <li><a href="#字符串">字符串</a></li>
         <li><a href="#类的继承与多态">类的继承与多态</a></li>
         <li><a href="#运算符重载">运算符重载</a></li>
       </ul>
@@ -1070,6 +1071,7 @@
   <ul>
     <li>
       <ul>
+        <li><a href="#程序编写">程序编写</a></li>
         <li><a href="#关键字">关键字</a></li>
         <li><a href="#运算符">运算符</a></li>
         <li><a href="#函数参数">函数参数</a></li>
@@ -1082,7 +1084,7 @@
         <li><a href="#友元">友元</a></li>
         <li><a href="#数组初始化">数组初始化</a></li>
         <li><a href="#指针">指针</a></li>
-        <li><a href="#string类">string类</a></li>
+        <li><a href="#字符串">字符串</a></li>
         <li><a href="#类的继承与多态">类的继承与多态</a></li>
         <li><a href="#运算符重载">运算符重载</a></li>
       </ul>
@@ -1104,7 +1106,33 @@
         
 
         <div class="article-content max-w-prose mb-20">
-          <h3 class="relative group">关键字
+          <h3 class="relative group">程序编写
+    <div id="程序编写" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%a8%8b%e5%ba%8f%e7%bc%96%e5%86%99" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>
+<p>程序编写步骤</p>
+<ol>
+<li><strong>编辑</strong>：使用编辑器编写C++源码，生成<code>.cpp</code>源文件</li>
+<li><strong>编译</strong>：编译器将源文件转换为机器语言<code>.obj</code>目标文件,同时检查语法错误</li>
+<li><strong>链接</strong>:链接器将目标文件与系统库\其他模块结合,生成<code>.exe</code>可执行文件</li>
+<li><strong>调试</strong>:运行可执行文件,检查并修复错误
+<br></li>
+</ol>
+</li>
+<li>
+<p>C++程序的基本单位/模块是函数
+<br></p>
+</li>
+</ul>
+
+<h3 class="relative group">关键字
     <div id="关键字" class="anchor"></div>
     
     <span
@@ -1277,7 +1305,27 @@
   </tbody>
 </table>
 </li>
+<li>
+<p><strong>逗号运算符</strong>规则:从左往右计算表达式,返回最后一个的值</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Func</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">){</span><span class="k">return</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">a</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span> <span class="c1">//输出为b,即10
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="n">func</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">));</span> <span class="c1">//调用func传入2和5两个参数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>模除运算的符号同号取正异号取负</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl">   <span class="n">cout</span><span class="o">&lt;&lt;-</span><span class="mi">3</span><span class="o">%</span><span class="mi">2</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span> <span class="c1">//输出-1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="n">cout</span><span class="o">&lt;&lt;-</span><span class="mi">3</span><span class="o">%-</span><span class="mi">2</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span> <span class="c1">//输出-1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="mi">3</span><span class="o">%</span><span class="mi">2</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span> <span class="c1">//输出1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="mi">3</span><span class="o">%-</span><span class="mi">2</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span> <span class="c1">//输出1
+</span></span></span></code></pre></div></li>
 </ul>
+<br>
 
 <h3 class="relative group">函数参数
     <div id="函数参数" class="anchor"></div>
@@ -1379,7 +1427,7 @@
 </h3>
 <ul>
 <li>
-<p>让编译器直到&quot;实体存在&quot;,但不知道<strong>大小</strong>,<strong>成员</strong>,<strong>实现</strong>
+<p>让编译器知到&quot;实体存在&quot;,但不知道<strong>大小</strong>,<strong>成员</strong>,<strong>实现</strong>
 <br></p>
 </li>
 <li>
@@ -1586,6 +1634,10 @@
 </ol>
 </li>
 <li>
+<p>常量只能由常量指针来指向,由常引用来引用
+<br></p>
+</li>
+<li>
 <p>const与函数</p>
 <ol>
 <li>参数中的<code>const</code>引用/指针限制函数修改实参</li>
@@ -1662,9 +1714,27 @@
     
 </h3>
 <ul>
-<li><code>int arr[N]={n}</code>则第一个元素被初始化为n,其余元素初始化为0
-<br></li>
+<li>
+<p><code>int arr[N]={n}</code>则第一个元素被初始化为n,其余元素初始化为0
+<br></p>
+</li>
+<li>
+<p>多维数组初始化,第一维可由初始化列表推断,其他维必须显式指定</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="c1">//以二维数组为例
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">!</span> <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">5</span><span class="p">][];</span> <span class="c1">//错误:第二维必须显式指定大小
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">!</span> <span class="kt">int</span> <span class="n">a</span><span class="p">[][</span><span class="mi">5</span><span class="p">];</span> <span class="c1">//错误:第一维没有提供初始化列表
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">a</span><span class="p">[][</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="p">{{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">},{</span><span class="mi">2</span><span class="p">}};</span> <span class="c1">//合法
+</span></span></span></code></pre></div></li>
 </ul>
+<br>
+<ul>
+<li>数组命本质是常量指针,不可更改本身的值
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="o">*</span><span class="p">(</span><span class="n">arr</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="c1">//合法,做指针运算但没改变arr本身值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">!</span> <span class="o">*++</span><span class="n">arr</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="c1">//错误!前置++会修改arr本身的值
+</span></span></span></code></pre></div></li>
+</ul>
+<br>
 
 <h3 class="relative group">指针
     <div id="指针" class="anchor"></div>
@@ -1681,15 +1751,39 @@
 <br></p>
 </li>
 <li>
-<p>**野指针:**指针定义时没有初始化,随机指向内存中某个位置
+<p><strong>野指针:</strong> 指针定义时没有初始化,随机指向内存中某个位置
 <br></p>
 </li>
 <li>
-<p><code>int **ptr</code>不等同于<code>int arr[N][N]</code><br><code>int **ptr</code>通常指向指针数组,每个元素再指向不同内存块
-<br></p>
+<p><code>int **ptr</code>与<code>int arr[N][N]</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="cm">/*右侧返回一个指向[指针数组的首地址]的指针(指针的地址),
+</span></span></span><span class="line"><span class="cl"><span class="cm">由二级指针接收*/</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="o">**</span><span class="n">ptr1</span><span class="o">=</span><span class="k">new</span> <span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)[</span><span class="mi">10</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/*右侧返回一个指向[含20个元素的一维数组]的指针
+</span></span></span><span class="line"><span class="cl"><span class="cm">由数组指针来接收*/</span> 
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">ptr2</span><span class="p">)[</span><span class="mi">20</span><span class="p">]</span><span class="o">=</span><span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">20</span><span class="p">]</span>
+</span></span></code></pre></div></li>
+</ul>
+<br>
+<ul>
+<li><strong><code>void*</code>指针</strong>不可以直接赋给(隐式转换)非<code>void</code>指针
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="kt">void</span> <span class="o">*</span><span class="n">void_ptr</span><span class="o">=</span><span class="k">new</span> <span class="kt">int</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="o">!</span> <span class="kt">int</span> <span class="o">*</span><span class="n">int_ptr</span><span class="o">=</span><span class="n">void_tpr</span><span class="p">;</span> <span class="c1">//错误!
+</span></span></span></code></pre></div></li>
+</ul>
+<br>
+<ul>
+<li>
+<p><strong><code>char*</code>指针</strong></p>
+<ol>
+<li><code>char*</code>指针可以指向字符串字面量,其他类型不可以指向字面量</li>
+<li><code>cout</code>默认输出<code>char*</code>指针指向的字符串内容,若要输出地址值需显示转换成<code>void*</code>指针
+<br></li>
+</ol>
 </li>
 <li>
-<p>**指针运算的单位:**指针运算以指向类型的大小为单位
+<p><strong>指针运算的单位:</strong> 指针运算以指向类型的大小为单位
 <br></p>
 </li>
 <li>
@@ -1698,22 +1792,80 @@
 </li>
 </ul>
 
-<h3 class="relative group">string类
-    <div id="string类" class="anchor"></div>
+<h3 class="relative group">字符串
+    <div id="字符串" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#string%e7%b1%bb" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ad%97%e7%ac%a6%e4%b8%b2" aria-label="锚点">#</a>
     </span>
     
 </h3>
 <ul>
-<li>不可用字符串字面量拼接
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="o">!</span> <span class="n">string</span> <span class="n">s</span><span class="o">=</span><span class="s">&#34;hello&#34;</span><span class="o">+</span><span class="s">&#34;world&#34;</span><span class="p">;</span> <span class="c1">//错误!字面量是const char*指针,不允许指针相加
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">string</span> <span class="n">s</span><span class="o">=</span><span class="n">string</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">)</span><span class="o">+</span><span class="s">&#34;world&#34;</span><span class="p">;</span> <span class="c1">//合法
+<li>字符数组(C风格)
+<ol>
+<li>
+<p>常见操作函数</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">函数</th>
+          <th style="text-align: left">功能</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>strlen</code></td>
+          <td style="text-align: left">字符串长度(不含<code>\0</code>)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>strcpy</code></td>
+          <td style="text-align: left">字符串拷贝</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>strcat</code></td>
+          <td style="text-align: left">字符串拼接</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>strcmp</code></td>
+          <td style="text-align: left">字符串比较</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>strchr</code></td>
+          <td style="text-align: left">查找字符首次出现位置</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>strstr</code></td>
+          <td style="text-align: left">查找子串首次出现位置</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+<li>
+<p>给字符数组赋初值时末位<code>\0</code>需占位</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="o">!</span> <span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="s">&#34;abc&#34;</span> <span class="c1">//错误,末位&#39;\0&#39;占位需4个连续地址
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">=</span><span class="s">&#34;abc&#34;</span> <span class="c1">//合法
 </span></span></span></code></pre></div></li>
+</ol>
+</li>
 </ul>
 <br>
+<ul>
+<li>
+<p><strong>string类</strong></p>
+<ol>
+<li>不可用字符串字面量拼接
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="o">!</span> <span class="n">string</span> <span class="n">s</span><span class="o">=</span><span class="s">&#34;hello&#34;</span><span class="o">+</span><span class="s">&#34;world&#34;</span><span class="p">;</span> <span class="c1">//错误!字面量是常指针,不允许指针相加
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">string</span> <span class="n">s</span><span class="o">=</span><span class="n">string</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">)</span><span class="o">+</span><span class="s">&#34;world&#34;</span><span class="p">;</span> <span class="c1">//合法
+</span></span></span></code></pre></div></li>
+</ol>
+<br>
+<ol start="2">
+<li>字符串长度计算中转义字符(如<code>\n</code>)只占1个字符位,末位<code>\0</code>不计入计算
+<br></li>
+</ol>
+</li>
+</ul>
 
 <h3 class="relative group">类的继承与多态
     <div id="类的继承与多态" class="anchor"></div>
@@ -1725,6 +1877,45 @@
     
 </h3>
 <ul>
+<li>
+<p>继承方式</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">基类成员属性</th>
+          <th style="text-align: left">公有继承</th>
+          <th style="text-align: left">保护继承</th>
+          <th style="text-align: left">私有继承</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">公有</td>
+          <td style="text-align: left">公有</td>
+          <td style="text-align: left">保护</td>
+          <td style="text-align: left">私有</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">保护</td>
+          <td style="text-align: left">保护</td>
+          <td style="text-align: left">保护</td>
+          <td style="text-align: left">私有</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">私有</td>
+          <td style="text-align: left">不可见</td>
+          <td style="text-align: left">不可见</td>
+          <td style="text-align: left">不可见</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><br></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+</li>
 <li>
 <p>虚函数<br>构造函数不能是虚函数,析构函数一般是虚函数
 <br></p>
