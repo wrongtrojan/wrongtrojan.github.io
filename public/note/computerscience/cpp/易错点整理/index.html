@@ -226,7 +226,7 @@
     "keywords": ["Cpp"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "3510"
+    "wordCount": "4029"
   }]
   </script>
 
@@ -896,7 +896,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-12-18T00:00:00&#43;00:00">2025年12月18日</time><span class="px-2 text-primary-500">&middot;</span><span>3510 字</span>
+      <time datetime="2025-12-18T00:00:00&#43;00:00">2025年12月18日</time><span class="px-2 text-primary-500">&middot;</span><span>4029 字</span>
     
 
     
@@ -1036,24 +1036,40 @@
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#设计基础">设计基础</a>
       <ul>
         <li><a href="#程序编写">程序编写</a></li>
+      </ul>
+    </li>
+    <li><a href="#语法基础">语法基础</a>
+      <ul>
         <li><a href="#关键字">关键字</a></li>
         <li><a href="#运算符">运算符</a></li>
-        <li><a href="#函数参数">函数参数</a></li>
-        <li><a href="#复制构造函数实现深层拷贝">复制构造函数实现深层拷贝</a></li>
+        <li><a href="#左值与右值">左值与右值</a></li>
+        <li><a href="#函数">函数</a></li>
+      </ul>
+    </li>
+    <li><a href="#数组指针字符串">数组,指针,字符串</a>
+      <ul>
+        <li><a href="#数组">数组</a></li>
+        <li><a href="#指针">指针</a></li>
+        <li><a href="#字符串">字符串</a></li>
+      </ul>
+    </li>
+    <li><a href="#类与对象">类与对象</a>
+      <ul>
         <li><a href="#类成员的初始化">类成员的初始化</a></li>
         <li><a href="#前向引用声明">前向引用声明</a></li>
-        <li><a href="#左值与右值">左值与右值</a></li>
+        <li><a href="#复制构造函数实现深层拷贝">复制构造函数实现深层拷贝</a></li>
+        <li><a href="#类的继承与多态">类的继承与多态</a></li>
+        <li><a href="#运算符重载">运算符重载</a></li>
+      </ul>
+    </li>
+    <li><a href="#数据访问控制">数据访问控制</a>
+      <ul>
         <li><a href="#static">static</a></li>
         <li><a href="#const">const</a></li>
         <li><a href="#友元">友元</a></li>
-        <li><a href="#数组初始化">数组初始化</a></li>
-        <li><a href="#指针">指针</a></li>
-        <li><a href="#字符串">字符串</a></li>
-        <li><a href="#类的继承与多态">类的继承与多态</a></li>
-        <li><a href="#运算符重载">运算符重载</a></li>
       </ul>
     </li>
   </ul>
@@ -1069,24 +1085,40 @@
     class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#设计基础">设计基础</a>
       <ul>
         <li><a href="#程序编写">程序编写</a></li>
+      </ul>
+    </li>
+    <li><a href="#语法基础">语法基础</a>
+      <ul>
         <li><a href="#关键字">关键字</a></li>
         <li><a href="#运算符">运算符</a></li>
-        <li><a href="#函数参数">函数参数</a></li>
-        <li><a href="#复制构造函数实现深层拷贝">复制构造函数实现深层拷贝</a></li>
+        <li><a href="#左值与右值">左值与右值</a></li>
+        <li><a href="#函数">函数</a></li>
+      </ul>
+    </li>
+    <li><a href="#数组指针字符串">数组,指针,字符串</a>
+      <ul>
+        <li><a href="#数组">数组</a></li>
+        <li><a href="#指针">指针</a></li>
+        <li><a href="#字符串">字符串</a></li>
+      </ul>
+    </li>
+    <li><a href="#类与对象">类与对象</a>
+      <ul>
         <li><a href="#类成员的初始化">类成员的初始化</a></li>
         <li><a href="#前向引用声明">前向引用声明</a></li>
-        <li><a href="#左值与右值">左值与右值</a></li>
+        <li><a href="#复制构造函数实现深层拷贝">复制构造函数实现深层拷贝</a></li>
+        <li><a href="#类的继承与多态">类的继承与多态</a></li>
+        <li><a href="#运算符重载">运算符重载</a></li>
+      </ul>
+    </li>
+    <li><a href="#数据访问控制">数据访问控制</a>
+      <ul>
         <li><a href="#static">static</a></li>
         <li><a href="#const">const</a></li>
         <li><a href="#友元">友元</a></li>
-        <li><a href="#数组初始化">数组初始化</a></li>
-        <li><a href="#指针">指针</a></li>
-        <li><a href="#字符串">字符串</a></li>
-        <li><a href="#类的继承与多态">类的继承与多态</a></li>
-        <li><a href="#运算符重载">运算符重载</a></li>
       </ul>
     </li>
   </ul>
@@ -1106,7 +1138,17 @@
         
 
         <div class="article-content max-w-prose mb-20">
-          <h3 class="relative group">程序编写
+          <h2 class="relative group">设计基础
+    <div id="设计基础" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%ae%be%e8%ae%a1%e5%9f%ba%e7%a1%80" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">程序编写
     <div id="程序编写" class="anchor"></div>
     
     <span
@@ -1132,6 +1174,16 @@
 </li>
 </ul>
 
+<h2 class="relative group">语法基础
+    <div id="语法基础" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%af%ad%e6%b3%95%e5%9f%ba%e7%a1%80" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
 <h3 class="relative group">关键字
     <div id="关键字" class="anchor"></div>
     
@@ -1150,7 +1202,8 @@
 <p><strong>不是关键字的标识符</strong></p>
 <ol>
 <li>
-<p>自定义标识符:自行命名的变量,函数,命名空间等</p>
+<p>自定义标识符:自行命名的变量,函数,命名空间等
+<br></p>
 </li>
 <li>
 <p>标准库相关的标识符:C++标准库中的类,函数,命名空间,宏等</p>
@@ -1182,11 +1235,16 @@
           <td style="text-align: left">算法/工具</td>
           <td style="text-align: left"><code>sort</code> <code>find</code> <code>make_pair</code></td>
       </tr>
+      <tr>
+          <td style="text-align: left"><br></td>
+          <td></td>
+      </tr>
   </tbody>
 </table>
 </li>
 <li>
-<p>编译器扩展:各编译器的扩展语法不是标准C++关键字<br>(各种预编译指令如<code>include</code> <code>define</code>)</p>
+<p>编译器扩展:各编译器的扩展语法不是标准C++关键字<br>(各种预编译指令如<code>include</code> <code>define</code>)
+<br></p>
 </li>
 <li>
 <p>字面量,常量(true/false/nullptr除外)
@@ -1210,10 +1268,6 @@
     
 </h3>
 <ul>
-<li>
-<p><code>||</code>和<code>&amp;&amp;</code>有短路效应
-<br></p>
-</li>
 <li>
 <p><strong>运算符优先级</strong></p>
 <table>
@@ -1272,6 +1326,9 @@
 </table>
 </li>
 <li>
+<p>几类运算符特性</p>
+<ol>
+<li>
 <p><strong>位移运算补零</strong></p>
 <table>
   <thead>
@@ -1317,162 +1374,21 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div></li>
-<li>
-<p>模除运算的符号同号取正异号取负</p>
+</ol>
+ <br>
+<ol start="3">
+<li><strong>模除运算</strong>的符号同号取正异号取负
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl">   <span class="n">cout</span><span class="o">&lt;&lt;-</span><span class="mi">3</span><span class="o">%</span><span class="mi">2</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span> <span class="c1">//输出-1
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="n">cout</span><span class="o">&lt;&lt;-</span><span class="mi">3</span><span class="o">%-</span><span class="mi">2</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span> <span class="c1">//输出-1
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="mi">3</span><span class="o">%</span><span class="mi">2</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span> <span class="c1">//输出1
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="mi">3</span><span class="o">%-</span><span class="mi">2</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span> <span class="c1">//输出1
 </span></span></span></code></pre></div></li>
-</ul>
-<br>
-
-<h3 class="relative group">函数参数
-    <div id="函数参数" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%87%bd%e6%95%b0%e5%8f%82%e6%95%b0" aria-label="锚点">#</a>
-    </span>
-    
-</h3>
-<ul>
-<li>函数原型声明时可以省略形参名只保留参数类型
+</ol>
+ <br>
+<ol start="4">
+<li><strong>逻辑运算符</strong>:<code>||</code>和<code>&amp;&amp;</code>有短路效应
 <br></li>
-<li>默认形参可以出现在函数声明和定义中
-<br></li>
-</ul>
-
-<h3 class="relative group">复制构造函数实现深层拷贝
-    <div id="复制构造函数实现深层拷贝" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%8d%e5%88%b6%e6%9e%84%e9%80%a0%e5%87%bd%e6%95%b0%e5%ae%9e%e7%8e%b0%e6%b7%b1%e5%b1%82%e6%8b%b7%e8%b4%9d" aria-label="锚点">#</a>
-    </span>
-    
-</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span><span class="k">typename</span> <span class="n">T2</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Example</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">   <span class="n">T1</span> <span class="n">data</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">   <span class="n">T2</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">   <span class="n">Example</span><span class="p">()</span> <span class="o">:</span> <span class="n">data</span><span class="p">(</span><span class="n">T1</span><span class="p">()),</span> <span class="n">pr</span><span class="p">(</span><span class="k">nullptr</span><span class="p">)</span> <span class="p">{}</span>
-</span></span><span class="line"><span class="cl">   <span class="n">Example</span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span><span class="o">&amp;</span> <span class="n">d</span><span class="p">,</span> <span class="k">const</span> <span class="n">T2</span> <span class="o">&amp;</span> <span class="n">p_val</span><span class="p">)</span> <span class="o">:</span> <span class="n">data</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">ptr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">T2</span><span class="p">(</span><span class="n">p_val</span><span class="p">);</span> <span class="c1">//分配内存并初始化
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
-</span></span><span class="line"><span class="cl">   <span class="n">Example</span><span class="p">(</span><span class="k">const</span> <span class="n">Example</span> <span class="o">&amp;</span><span class="n">E</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">      <span class="n">data</span><span class="o">=</span><span class="n">E</span><span class="p">.</span><span class="n">data</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="n">E</span><span class="p">.</span><span class="n">ptr</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//空指针判断，避免解引用空指针
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">ptr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">T2</span><span class="p">(</span><span class="o">*</span><span class="n">E</span><span class="p">.</span><span class="n">ptr</span><span class="p">);</span> <span class="c1">//分配新内存，用源对象pr指向的内容初始化
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">}</span><span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">ptr</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">         <span class="p">}</span>
-</span></span><span class="line"><span class="cl">   <span class="p">}</span>
-</span></span><span class="line"><span class="cl">   <span class="o">~</span><span class="n">Example</span><span class="p">(){</span>
-</span></span><span class="line"><span class="cl">      <span class="k">delete</span> <span class="n">ptr</span><span class="p">;</span> <span class="c1">//释放pr指向的内存
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="n">ptr</span><span class="o">=</span><span class="n">nullpr</span><span class="p">;</span> <span class="c1">//置空避免野指针
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>   
-</span></span></code></pre></div><br>
-
-<h3 class="relative group">类成员的初始化
-    <div id="类成员的初始化" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%b1%bb%e6%88%90%e5%91%98%e7%9a%84%e5%88%9d%e5%a7%8b%e5%8c%96" aria-label="锚点">#</a>
-    </span>
-    
-</h3>
-<ul>
-<li>成员的初始化顺序由类中成员声明顺序决定
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Example</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="n">x</span><span class="p">;</span> <span class="c1">// 声明顺序1
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="kt">int</span> <span class="n">y</span><span class="p">;</span> <span class="c1">// 声明顺序2
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">   <span class="n">Example</span><span class="p">()</span><span class="o">:</span> <span class="n">y</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">x</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> 
-</span></span><span class="line"><span class="cl">     <span class="c1">//实际顺序:先初始化x(y,随机值),再初始化y(值1)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">x</span><span class="o">&lt;&lt;</span><span class="s">&#34; &#34;</span><span class="o">&lt;&lt;</span><span class="n">y</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span> <span class="c1">//输出:随机值 1
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></div></li>
-</ul>
-<br>
-<ul>
-<li>成员列表初始化在构造体赋值之前
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Example</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>       <span class="c1">//普通成员
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="k">const</span> <span class="kt">int</span> <span class="n">b</span><span class="p">;</span> <span class="c1">//const成员(只能初始化,不能赋值)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">c</span><span class="p">;</span>      <span class="c1">//引用成员(只能初始化,不能赋值)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl"><span class="n">Example</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">ref</span><span class="p">)</span> <span class="o">:</span> <span class="n">a</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">b</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">c</span><span class="p">(</span><span class="n">ref</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="n">a</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span> <span class="c1">//覆盖a的初始值(x→x*2)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">!</span>    <span class="n">b</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">;</span> <span class="c1">//错误!const成员已初始化,无法赋值
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">!</span>    <span class="n">c</span> <span class="o">=</span> <span class="n">ref</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="c1">//错误!引用已绑定,无法赋值
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></div></li>
-</ul>
-<br>
-
-<h3 class="relative group">前向引用声明
-    <div id="前向引用声明" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%89%8d%e5%90%91%e5%bc%95%e7%94%a8%e5%a3%b0%e6%98%8e" aria-label="锚点">#</a>
-    </span>
-    
-</h3>
-<ul>
-<li>
-<p>让编译器知到&quot;实体存在&quot;,但不知道<strong>大小</strong>,<strong>成员</strong>,<strong>实现</strong>
-<br></p>
-</li>
-<li>
-<p><strong>对成员声明的使用限制</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="cp">#pragma once
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">class</span> <span class="nc">ExampleB</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">ExampleC</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">ExampleA</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">   <span class="n">ExampleB</span> <span class="o">*</span><span class="n">bptr1</span><span class="p">;</span> <span class="c1">//声明指针
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="n">ExampleB</span> <span class="o">&amp;</span><span class="n">bptr2</span><span class="p">;</span> <span class="c1">//声明引用
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">   <span class="n">ExampleC</span> <span class="n">FunC</span><span class="p">(</span><span class="n">ExampleC</span> <span class="o">&amp;</span><span class="n">C</span><span class="p">);</span> <span class="c1">//声明函数参数/返回值
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
-</span></span></code></pre></div></li>
-</ul>
-<br>
-<ul>
-<li>
-<table>
-  <thead>
-      <tr>
-          <th style="text-align: left"><strong>禁止做的操作</strong></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left">实例化该类型对象(<code>Example E;</code>编译器需知道大小)</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">使用<code>sizeof(Example)</code>/<code>alignof(Example)</code>(编译器需知道大小)</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">访问该类型成员(<code>E.&lt;menber&gt;</code>),编译器需知道成员</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">继承该类型(<code>class Example1:public Example2{};</code>编译器需知道布局)</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">调用该类型函数(编译器需知道函数实现)</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><br></td>
-      </tr>
-  </tbody>
-</table>
+</ol>
 </li>
 </ul>
 
@@ -1486,11 +1402,9 @@
     
 </h3>
 <ul>
-<li>
-<p>左值有持久的内存地址，右值是临时的无持久地址</p>
-</li>
-<li>
-<p>函数表达式<code>func()</code>作为左右值</p>
+<li>左值有持久的内存地址，右值是临时的无持久地址
+<br></li>
+<li>函数表达式<code>func()</code>作为左右值
 <table>
   <thead>
       <tr>
@@ -1525,195 +1439,49 @@
 </li>
 </ul>
 
-<h3 class="relative group">static
-    <div id="static" class="anchor"></div>
+<h3 class="relative group">函数
+    <div id="函数" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#static" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%87%bd%e6%95%b0" aria-label="锚点">#</a>
     </span>
     
 </h3>
 <ul>
-<li>类内static变量必须在外部定义
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Example</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">   <span class="k">static</span> <span class="kt">int</span> <span class="n">val</span><span class="p">;</span> <span class="c1">//仅声明不定义
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="c1">//必须在类外定义且不能用static修饰
-</span></span></span><span class="line"><span class="cl"><span class="c1">//注意:定义与访问是独立的规则
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">Example</span><span class="o">::</span><span class="n">val</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
-</span></span></code></pre></div></li>
-</ul>
-<br>
-<ul>
-<li>静态方法不能直接访问非静态成员<br>静态方法无<code>this</code>指针,无法直接访问非静态成员
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Example</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">   <span class="k">static</span> <span class="kt">int</span> <span class="n">val1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">val2</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">   <span class="k">static</span> <span class="kt">void</span> <span class="n">func</span><span class="p">(){</span>
-</span></span><span class="line"><span class="cl">   <span class="o">!</span>  <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">val1</span><span class="o">&lt;&lt;</span><span class="n">endl</span> <span class="c1">//合法
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">val2</span><span class="o">&lt;&lt;</span><span class="n">endl</span> <span class="c1">//错误!不能直接访问非静态成员
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="c1">//必须在类外定义且不能用static修饰
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">Example</span><span class="o">::</span><span class="n">val1</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
-</span></span></code></pre></div></li>
-</ul>
-<br>
-
-<h3 class="relative group">const
-    <div id="const" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#const" aria-label="锚点">#</a>
-    </span>
-    
-</h3>
-<ul>
-<li>
-<p>const与指针</p>
-<table>
-  <thead>
-      <tr>
-          <th style="text-align: left">写法</th>
-          <th style="text-align: left">不可修改对象</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left"><code>const int *ptr</code><br><code>int const *ptr</code></td>
-          <td style="text-align: left">不可修改指向的对象(<code>*p</code>)</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><code>int * const ptr</code></td>
-          <td style="text-align: left">不可修改ptr的指向(<code>ptr</code>)</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><code>const int* const p</code></td>
-          <td style="text-align: left">指向合指向对象均不可修改</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><br></td>
-          <td></td>
-      </tr>
-  </tbody>
-</table>
-</li>
-<li>
-<p>const与引用</p>
+<li>参数
 <ol>
-<li><code>const</code>引用可以绑定任意对象,绑定后无法通过引用修改</li>
-<li><code>const</code>引用支持隐式转换,非<code>const</code>引用不行
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="kt">double</span> <span class="n">d</span><span class="o">=</span><span class="mf">3.14</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">ref1</span><span class="o">=</span><span class="n">d</span><span class="p">;</span> <span class="c1">//合法
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">!</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">ref2</span><span class="o">=</span><span class="n">d</span><span class="p">;</span> <span class="c1">//错误!非const引用不能绑定临时对象
-</span></span></span></code></pre></div></li>
-</ol>
-</li>
-</ul>
-<br>
-<ul>
-<li>
-<p>const与类</p>
-<ol>
-<li><code>const</code>成员变量只能在构造函数初始化列表中初始化
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Example</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl"> <span class="k">const</span> <span class="kt">int</span> <span class="n">val</span><span class="p">;</span> <span class="c1">//const成员变量
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl"><span class="o">!</span> <span class="n">Example</span><span class="p">()</span> <span class="p">{</span> 
-</span></span><span class="line"><span class="cl">     <span class="n">val</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">//错误!此时val已初始化,无法修改
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="n">Example</span><span class="p">()</span> <span class="o">:</span> <span class="n">val</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="p">{}</span> <span class="c1">//仅初始化列表能初始化const成员
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
-</span></span></code></pre></div></li>
-<li><code>const</code>成员函数const修饰在参数列表后<br>例如<code>void func() const{return}</code></li>
-<li><code>const</code>对象只能调用<code>const</code>成员函数,非<code>const</code>对象任意调用
+<li>函数原型声明时可以省略形参名只保留参数类型
 <br></li>
-</ol>
-</li>
-<li>
-<p>常量只能由常量指针来指向,由常引用来引用
-<br></p>
-</li>
-<li>
-<p>const与函数</p>
-<ol>
-<li>参数中的<code>const</code>引用/指针限制函数修改实参</li>
-<li>返回值中的<code>const</code>引用/指针限制调用方修改原对象
+<li>默认形参可以出现在函数声明和定义中
 <br></li>
 </ol>
 </li>
 </ul>
 
-<h3 class="relative group">友元
-    <div id="友元" class="anchor"></div>
+<h2 class="relative group">数组,指针,字符串
+    <div id="数组指针字符串" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8f%8b%e5%85%83" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e7%bb%84%e6%8c%87%e9%92%88%e5%ad%97%e7%ac%a6%e4%b8%b2" aria-label="锚点">#</a>
     </span>
     
-</h3>
-<ul>
-<li>在类型A中声明<code>friend class B</code>是A授权<strong>允许B访问A的私有成员</strong>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">B</span><span class="p">;</span> <span class="c1">//前置声明
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">A</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">valA</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">   <span class="k">friend</span> <span class="k">class</span> <span class="nc">B</span><span class="p">;</span> <span class="c1">//A授权B访问自己的私有成员
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">   <span class="kt">void</span> <span class="n">accessB</span><span class="p">(</span><span class="n">B</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">   <span class="o">!</span>  <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">b</span><span class="p">.</span><span class="n">valB</span><span class="p">;</span> <span class="c1">//错误!A不是B的友元，无法访问B的私有成员 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">B</span><span class="p">{</span>   
-</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="n">valB</span><span class="o">=</span><span class="mi">20</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">   <span class="kt">void</span> <span class="n">accessA</span><span class="p">(</span><span class="n">A</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">     <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span><span class="n">a</span><span class="p">.</span><span class="n">valA</span><span class="p">;</span> <span class="c1">//合法:B是A的友元
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></div></li>
-</ul>
-<br>
-<ul>
-<li>
-<p>友元关系不可继承不可传递
-<br></p>
-</li>
-<li>
-<p>友元函数在类内声明但不是该类的成员函数<br>本质是授权<strong>允许函数访问类的私有成员</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Example</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="k">private</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">val</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">   <span class="k">friend</span> <span class="kt">void</span> <span class="nf">friendfunc</span><span class="p">(</span><span class="n">Example</span> <span class="o">&amp;</span><span class="n">obj</span><span class="p">);</span> <span class="c1">//声明友元函数全局函数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">   <span class="kt">void</span> <span class="n">func</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">   <span class="o">!</span>  <span class="k">this</span><span class="o">-&gt;</span><span class="n">friendfunc</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">);</span><span class="c1">// 错误!friendfunc不是成员函数，不能用this调用 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">friendfunc</span><span class="p">(</span><span class="n">Example</span> <span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">   <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">obj</span><span class="p">.</span><span class="n">val</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div></li>
-</ul>
-<br>
-<ul>
-<li>友元函数仅针对特定重载版本,不覆盖所有重载
-<br></li>
-</ul>
+</h2>
 
-<h3 class="relative group">数组初始化
-    <div id="数组初始化" class="anchor"></div>
+<h3 class="relative group">数组
+    <div id="数组" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e7%bb%84%e5%88%9d%e5%a7%8b%e5%8c%96" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e7%bb%84" aria-label="锚点">#</a>
     </span>
     
 </h3>
 <ul>
+<li>
+<p>初始化</p>
+<ol>
 <li>
 <p><code>int arr[N]={n}</code>则第一个元素被初始化为n,其余元素初始化为0
 <br></p>
@@ -1725,14 +1493,19 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">!</span> <span class="kt">int</span> <span class="n">a</span><span class="p">[][</span><span class="mi">5</span><span class="p">];</span> <span class="c1">//错误:第一维没有提供初始化列表
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">a</span><span class="p">[][</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="p">{{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">},{</span><span class="mi">2</span><span class="p">}};</span> <span class="c1">//合法
 </span></span></span></code></pre></div></li>
-</ul>
+</ol>
 <br>
-<ul>
-<li>数组命本质是常量指针,不可更改本身的值
+</li>
+<li>
+<p>数组名</p>
+<ol>
+<li>数组名本质是常量指针,不可更改本身的值
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 </span></span><span class="line"><span class="cl"><span class="o">*</span><span class="p">(</span><span class="n">arr</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="c1">//合法,做指针运算但没改变arr本身值
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">!</span> <span class="o">*++</span><span class="n">arr</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="c1">//错误!前置++会修改arr本身的值
 </span></span></span></code></pre></div></li>
+</ol>
+</li>
 </ul>
 <br>
 
@@ -1747,6 +1520,9 @@
 </h3>
 <ul>
 <li>
+<p>指针&quot;错误&quot;类型</p>
+<ol>
+<li>
 <p><strong>悬挂指针:</strong><code>delete</code>指针指向内存后未将指针置为<code>nullptr</code>
 <br></p>
 </li>
@@ -1754,8 +1530,40 @@
 <p><strong>野指针:</strong> 指针定义时没有初始化,随机指向内存中某个位置
 <br></p>
 </li>
+</ol>
+</li>
 <li>
-<p><code>int **ptr</code>与<code>int arr[N][N]</code></p>
+<p>几类指针特性</p>
+<ol>
+<li><strong><code>void*</code>指针</strong>不可以直接赋给(隐式转换)非<code>void</code>指针
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="kt">void</span> <span class="o">*</span><span class="n">void_ptr</span><span class="o">=</span><span class="k">new</span> <span class="kt">int</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="o">!</span> <span class="kt">int</span> <span class="o">*</span><span class="n">int_ptr</span><span class="o">=</span><span class="n">void_tpr</span><span class="p">;</span> <span class="c1">//错误!
+</span></span></span></code></pre></div></li>
+</ol>
+<br>
+<ol start="2">
+<li><strong><code>char*</code>指针</strong>
+<ol>
+<li><code>char*</code>指针可以指向字符串字面量,其他类型不可以指向字面量</li>
+<li><code>cout</code>默认输出<code>char*</code>指针指向的字符串内容,若要输出地址值需显示转换成<code>void*</code>指针
+<br></li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>指针与数组</p>
+<ol>
+<li><code>(int*) p[]</code>与<code>int *p[]</code>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span> <span class="n">p</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">=</span><span class="n">arr</span><span class="p">;</span><span class="c1">//指向数组的指针
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="o">*</span><span class="n">num</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="o">*</span><span class="n">p</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="n">num</span><span class="p">};</span><span class="c1">//元素是指针的数组
+</span></span></span></code></pre></div></li>
+</ol>
+ <br>
+<ol start="2">
+<li><code>int **ptr</code>与<code>int arr[N][N]</code>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="cm">/*右侧返回一个指向[指针数组的首地址]的指针(指针的地址),
 </span></span></span><span class="line"><span class="cl"><span class="cm">由二级指针接收*/</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="o">**</span><span class="n">ptr1</span><span class="o">=</span><span class="k">new</span> <span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)[</span><span class="mi">10</span><span class="p">];</span>
@@ -1764,30 +1572,15 @@
 </span></span></span><span class="line"><span class="cl"><span class="cm">由数组指针来接收*/</span> 
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">ptr2</span><span class="p">)[</span><span class="mi">20</span><span class="p">]</span><span class="o">=</span><span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">20</span><span class="p">]</span>
 </span></span></code></pre></div></li>
-</ul>
-<br>
-<ul>
-<li><strong><code>void*</code>指针</strong>不可以直接赋给(隐式转换)非<code>void</code>指针
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="kt">void</span> <span class="o">*</span><span class="n">void_ptr</span><span class="o">=</span><span class="k">new</span> <span class="kt">int</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="o">!</span> <span class="kt">int</span> <span class="o">*</span><span class="n">int_ptr</span><span class="o">=</span><span class="n">void_tpr</span><span class="p">;</span> <span class="c1">//错误!
-</span></span></span></code></pre></div></li>
-</ul>
-<br>
-<ul>
-<li>
-<p><strong><code>char*</code>指针</strong></p>
-<ol>
-<li><code>char*</code>指针可以指向字符串字面量,其他类型不可以指向字面量</li>
-<li><code>cout</code>默认输出<code>char*</code>指针指向的字符串内容,若要输出地址值需显示转换成<code>void*</code>指针
-<br></li>
 </ol>
+<br>
 </li>
 <li>
 <p><strong>指针运算的单位:</strong> 指针运算以指向类型的大小为单位
 <br></p>
 </li>
 <li>
-<p>函数不可返回局部变量指针,若有需求使用<code>new</code>向堆区申请
+<p>指针与函数:函数不可返回<strong>局部变量指针</strong>,常使用<code>new</code>向堆区申请
 <br></p>
 </li>
 </ul>
@@ -1838,6 +1631,10 @@
           <td style="text-align: left"><code>strstr</code></td>
           <td style="text-align: left">查找子串首次出现位置</td>
       </tr>
+      <tr>
+          <td style="text-align: left"><br></td>
+          <td></td>
+      </tr>
   </tbody>
 </table>
 </li>
@@ -1867,6 +1664,158 @@
 </li>
 </ul>
 
+<h2 class="relative group">类与对象
+    <div id="类与对象" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%b1%bb%e4%b8%8e%e5%af%b9%e8%b1%a1" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">类成员的初始化
+    <div id="类成员的初始化" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%b1%bb%e6%88%90%e5%91%98%e7%9a%84%e5%88%9d%e5%a7%8b%e5%8c%96" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>
+<p>初始化顺序</p>
+<ol>
+<li>成员的初始化顺序由类中成员声明顺序决定
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Example</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">x</span><span class="p">;</span> <span class="c1">// 声明顺序1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">y</span><span class="p">;</span> <span class="c1">// 声明顺序2
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Example</span><span class="p">()</span><span class="o">:</span> <span class="n">y</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">x</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">      <span class="c1">//实际顺序:先初始化x(y,随机值),再初始化y(值1)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">x</span><span class="o">&lt;&lt;</span><span class="s">&#34; &#34;</span><span class="o">&lt;&lt;</span><span class="n">y</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span> <span class="c1">//输出:随机值 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div></li>
+</ol>
+ <br>
+<ol start="2">
+<li>成员列表初始化在构造体赋值之前
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Example</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>       <span class="c1">//普通成员
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="k">const</span> <span class="kt">int</span> <span class="n">b</span><span class="p">;</span> <span class="c1">//const成员(只能初始化,不能赋值)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="kt">int</span><span class="o">&amp;</span> <span class="n">c</span><span class="p">;</span>      <span class="c1">//引用成员(只能初始化,不能赋值)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl"><span class="n">Example</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">ref</span><span class="p">)</span> <span class="o">:</span> <span class="n">a</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">b</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">c</span><span class="p">(</span><span class="n">ref</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">a</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span> <span class="c1">//覆盖a的初始值(x→x*2)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">!</span>    <span class="n">b</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">;</span> <span class="c1">//错误!const成员已初始化,无法赋值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">!</span>    <span class="n">c</span> <span class="o">=</span> <span class="n">ref</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="c1">//错误!引用已绑定,无法赋值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div></li>
+</ol>
+</li>
+</ul>
+<br>
+<ul>
+<li>类的<strong>引用成员</strong>与<strong>常量成员</strong>应在初始化列表中完成初始化
+<br></li>
+</ul>
+
+<h3 class="relative group">前向引用声明
+    <div id="前向引用声明" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%89%8d%e5%90%91%e5%bc%95%e7%94%a8%e5%a3%b0%e6%98%8e" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>
+<p>让编译器知到&quot;实体存在&quot;,但不知道<strong>大小</strong>,<strong>成员</strong>,<strong>实现</strong>
+<br></p>
+</li>
+<li>
+<p><strong>成员的声明具有限制</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="cp">#pragma once
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">class</span> <span class="nc">ExampleB</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">ExampleC</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">ExampleA</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="n">ExampleB</span> <span class="o">*</span><span class="n">bptr1</span><span class="p">;</span> <span class="c1">//声明指针
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="n">ExampleB</span> <span class="o">&amp;</span><span class="n">bptr2</span><span class="p">;</span> <span class="c1">//声明引用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">   <span class="n">ExampleC</span> <span class="n">FunC</span><span class="p">(</span><span class="n">ExampleC</span> <span class="o">&amp;</span><span class="n">C</span><span class="p">);</span> <span class="c1">//声明函数参数/返回值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span></code></pre></div></li>
+</ul>
+<br>
+<ul>
+<li>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left"><strong>禁止的操作</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">实例化该类型对象(<code>Example E;</code>编译器需知道大小)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">使用<code>sizeof(Example)</code>/<code>alignof(Example)</code>(编译器需知道大小)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">访问该类型成员(<code>E.&lt;menber&gt;</code>),编译器需知道成员</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">继承该类型(<code>class Example1:public Example2{};</code>编译器需知道布局)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">调用该类型函数(编译器需知道函数实现)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><br></td>
+      </tr>
+  </tbody>
+</table>
+</li>
+</ul>
+
+<h3 class="relative group">复制构造函数实现深层拷贝
+    <div id="复制构造函数实现深层拷贝" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%8d%e5%88%b6%e6%9e%84%e9%80%a0%e5%87%bd%e6%95%b0%e5%ae%9e%e7%8e%b0%e6%b7%b1%e5%b1%82%e6%8b%b7%e8%b4%9d" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span><span class="k">typename</span> <span class="n">T2</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Example</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="n">T1</span> <span class="n">data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   <span class="n">T2</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Example</span><span class="p">()</span> <span class="o">:</span> <span class="n">data</span><span class="p">(</span><span class="n">T1</span><span class="p">()),</span> <span class="n">pr</span><span class="p">(</span><span class="k">nullptr</span><span class="p">)</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Example</span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span><span class="o">&amp;</span> <span class="n">d</span><span class="p">,</span> <span class="k">const</span> <span class="n">T2</span> <span class="o">&amp;</span> <span class="n">p_val</span><span class="p">)</span> <span class="o">:</span> <span class="n">data</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ptr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">T2</span><span class="p">(</span><span class="n">p_val</span><span class="p">);</span> <span class="c1">//分配内存并初始化
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Example</span><span class="p">(</span><span class="k">const</span> <span class="n">Example</span> <span class="o">&amp;</span><span class="n">E</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">      <span class="n">data</span><span class="o">=</span><span class="n">E</span><span class="p">.</span><span class="n">data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="n">E</span><span class="p">.</span><span class="n">ptr</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//空指针判断，避免解引用空指针
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">ptr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">T2</span><span class="p">(</span><span class="o">*</span><span class="n">E</span><span class="p">.</span><span class="n">ptr</span><span class="p">);</span> <span class="c1">//分配新内存，用源对象pr指向的内容初始化
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ptr</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="o">~</span><span class="n">Example</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">      <span class="k">delete</span> <span class="n">ptr</span><span class="p">;</span> <span class="c1">//释放pr指向的内存
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="n">ptr</span><span class="o">=</span><span class="n">nullpr</span><span class="p">;</span> <span class="c1">//置空避免野指针
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>   
+</span></span></code></pre></div><br>
+
 <h3 class="relative group">类的继承与多态
     <div id="类的继承与多态" class="anchor"></div>
     
@@ -1877,6 +1826,8 @@
     
 </h3>
 <ul>
+<li>类的继承
+<ol>
 <li>
 <p>继承方式</p>
 <table>
@@ -1885,7 +1836,7 @@
           <th style="text-align: left">基类成员属性</th>
           <th style="text-align: left">公有继承</th>
           <th style="text-align: left">保护继承</th>
-          <th style="text-align: left">私有继承</th>
+          <th style="text-align: left">私有继承(默认)</th>
       </tr>
   </thead>
   <tbody>
@@ -1907,53 +1858,32 @@
           <td style="text-align: left">不可见</td>
           <td style="text-align: left">不可见</td>
       </tr>
-      <tr>
-          <td style="text-align: left"><br></td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
   </tbody>
 </table>
 </li>
 <li>
-<p>虚函数<br>构造函数不能是虚函数,析构函数一般是虚函数
-<br></p>
-</li>
-<li>
-<p>虚继承的语法格式</p>
+<p><strong>虚继承</strong>的语法格式(解决<strong>菱形继承</strong>问题)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Derived</span> <span class="o">:</span> <span class="k">virtual</span> <span class="k">public</span> <span class="n">Base</span><span class="p">{};</span>
 </span></span><span class="line"><span class="cl"><span class="c1">//等价于
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">Derived</span> <span class="o">:</span> <span class="k">public</span> <span class="k">virtual</span> <span class="n">Base</span><span class="p">{};</span>
-</span></span></code></pre></div></li>
-</ul>
-<br>
-<ul>
-<li>纯虚函数与抽象类
-<ol>
-<li>语法形式如 <code>virtual void func()=0</code></li>
-<li>只实现部分纯虚函数的派生类依旧是抽象类</li>
-<li>纯虚析构函数必须在类外提供函数体(定义),否则链接报错
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Base</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">   <span class="k">virtual</span> <span class="o">~</span><span class="n">Base</span><span class="p">()</span><span class="o">=</span><span class="mi">0</span> <span class="c1">//声明纯虚析构函数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="n">Base</span><span class="o">::~</span><span class="n">Base</span><span class="p">(){</span>
-</span></span><span class="line"><span class="cl">   <span class="c1">//所有子类共有的清理工作
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Derived</span><span class="o">:</span> <span class="k">public</span> <span class="n">Base</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">   <span class="o">~</span><span class="n">Derived</span><span class="p">(){</span>
-</span></span><span class="line"><span class="cl">      <span class="c1">//执行派生类的析构函数体,执行结束后会调用~Base()
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div></li>
 </ol>
 </li>
 </ul>
 <br>
 <ul>
-<li>在派生类中写基类同名函数
+<li>类的多态
+<ol>
+<li>
+<p><strong>虚函数</strong>:构造函数不能是虚函数,析构函数一般是虚函数
+<br></p>
+</li>
+<li>
+<p><strong>基类</strong>指针/引用可以指向<strong>派生类</strong>对象,但只能调用从<strong>基类继承的成员</strong>
+<br></p>
+</li>
+<li>
+<p>在派生类中写基类同名函数</p>
 <table>
   <thead>
       <tr>
@@ -1985,7 +1915,32 @@
   </tbody>
 </table>
 </li>
+<li>
+<p>纯虚函数与抽象类</p>
+<ol>
+<li>语法形式如 <code>virtual void func()=0</code></li>
+<li>只实现部分纯虚函数的派生类依旧是抽象类</li>
+<li>纯虚析构函数必须在类外提供函数体(定义),否则链接报错
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Base</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">   <span class="k">virtual</span> <span class="o">~</span><span class="n">Base</span><span class="p">()</span><span class="o">=</span><span class="mi">0</span> <span class="c1">//声明纯虚析构函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">Base</span><span class="o">::~</span><span class="n">Base</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">   <span class="c1">//所有子类共有的清理工作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Derived</span><span class="o">:</span> <span class="k">public</span> <span class="n">Base</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">   <span class="o">~</span><span class="n">Derived</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">//执行派生类的析构函数体,执行结束后会调用~Base()
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+</ol>
+</li>
+</ol>
+</li>
 </ul>
+<br>
 
 <h3 class="relative group">运算符重载
     <div id="运算符重载" class="anchor"></div>
@@ -1997,7 +1952,16 @@
     
 </h3>
 <ul>
-<li>前置<code>++</code>与后置<code>++</code><br>前置<code>++</code>:没有参数,返回引用 <code>Type&amp; operator ++();</code>
+<li>
+<p>只能重载为成员函数的运算符: <code>=</code> <code>-&gt;</code> <code>[]</code> <code>()</code>
+<br></p>
+</li>
+<li>
+<p>不能重载的运算符: <code>.</code> <code>.*</code> <code>::</code> <code>?:</code> <code>sizeof</code> <code>typeid</code>
+<br></p>
+</li>
+<li>
+<p>前置<code>++</code>与后置<code>++</code><br>前置<code>++</code>:没有参数,返回引用 <code>Type&amp; operator ++();</code></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nf">Example</span><span class="p">(){</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"> <span class="k">public</span><span class="o">:</span>
@@ -2008,7 +1972,7 @@
 </span></span><span class="line"><span class="cl">       <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div>后置<code>++</code>:有<strong>哑元参数</strong><code>int</code>,返回<strong>旧值拷贝</strong> <code>Type operator++(int);</code>
+</span></span></code></pre></div><p>后置<code>++</code>:有<strong>哑元参数</strong><code>int</code>,返回<strong>旧值拷贝</strong> <code>Type operator++(int);</code></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nf">Example</span><span class="p">(){</span>
 </span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
@@ -2021,6 +1985,268 @@
 </span></span><span class="line"><span class="cl">   <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div></li>
+</ul>
+<br>
+<ul>
+<li>
+<p>赋值运算<code>=</code>实现连续赋值<code>m1=m2=m3</code>:</p>
+<ol>
+<li>
+<p>返回值需是<strong>对象引用</strong>:<code>m1=(m2=m3)</code>,<code>m2=m3</code>需返回<code>m2</code>的引用才能继续赋值
+<br></p>
+</li>
+<li>
+<p>参数是对象的引用:避免不必要的拷贝,通常使用<code>const M&amp;</code>
+<br></p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl">   <span class="c1">//函数原型一般为
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="n">M</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">M</span><span class="o">&amp;</span><span class="p">);</span>
+</span></span></code></pre></div></li>
+</ul>
+<br>
+<ul>
+<li>插入运算符<code>&lt;&lt;</code>
+<ol>
+<li>
+<p>左端为输入流,且访问类私有属性,则一般声明为类友元函数
+<br></p>
+</li>
+<li>
+<p>返回值类型为<code>ostream&amp;</code>支持连续链式输出
+<br></p>
+</li>
+<li>
+<p>函数参数为<code>ostream&amp;</code>与类对象常引用,避免不必要拷贝</p>
+</li>
+</ol>
+</li>
+</ul>
+
+<h2 class="relative group">数据访问控制
+    <div id="数据访问控制" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e6%8d%ae%e8%ae%bf%e9%97%ae%e6%8e%a7%e5%88%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">static
+    <div id="static" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#static" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>
+<p>static与类</p>
+<ol>
+<li>类内static变量必须在外部定义
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Example</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="k">static</span> <span class="kt">int</span> <span class="n">val</span><span class="p">;</span> <span class="c1">//仅声明不定义
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//必须在类外定义且不能用static修饰
+</span></span></span><span class="line"><span class="cl"><span class="c1">//注意:定义与访问是独立的规则
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">Example</span><span class="o">::</span><span class="n">val</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
+</span></span></code></pre></div></li>
+</ol>
+ <br>
+<ol start="2">
+<li>静态方法不能直接访问非静态成员<br>静态方法无<code>this</code>指针,无法直接访问非静态成员
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Example</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="k">static</span> <span class="kt">int</span> <span class="n">val1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">val2</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">   <span class="k">static</span> <span class="kt">void</span> <span class="n">func</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">   <span class="o">!</span>  <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">val1</span><span class="o">&lt;&lt;</span><span class="n">endl</span> <span class="c1">//合法
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">val2</span><span class="o">&lt;&lt;</span><span class="n">endl</span> <span class="c1">//错误!不能直接访问非静态成员
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//必须在类外定义且不能用static修饰
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">Example</span><span class="o">::</span><span class="n">val1</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
+</span></span></code></pre></div></li>
+</ol>
+ <br>
+<ol start="3">
+<li>类的静态成员函数属于整个继承体系
+<br></li>
+</ol>
+</li>
+<li>
+<p>static与函数</p>
+<ol>
+<li>函数中的static局部变量只在第一次调用时初始化
+<br></li>
+</ol>
+</li>
+</ul>
+
+<h3 class="relative group">const
+    <div id="const" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#const" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>
+<p>const与指针</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">写法</th>
+          <th style="text-align: left">不可修改对象</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>const int *ptr</code><br><code>int const *ptr</code></td>
+          <td style="text-align: left">不可修改指向的对象(<code>*p</code>)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>int * const ptr</code></td>
+          <td style="text-align: left">不可修改ptr的指向(<code>ptr</code>)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>const int* const p</code></td>
+          <td style="text-align: left">指向合指向对象均不可修改</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><br></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+</li>
+<li>
+<p>const引用</p>
+<ol>
+<li><code>const</code>引用可以绑定任意对象,绑定后无法通过引用修改
+<br></li>
+<li><code>const</code>引用支持隐式转换,非<code>const</code>引用不行
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="kt">double</span> <span class="n">d</span><span class="o">=</span><span class="mf">3.14</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">ref1</span><span class="o">=</span><span class="n">d</span><span class="p">;</span> <span class="c1">//合法
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">!</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">ref2</span><span class="o">=</span><span class="n">d</span><span class="p">;</span> <span class="c1">//错误!非const引用不能绑定临时对象
+</span></span></span></code></pre></div></li>
+</ol>
+</li>
+</ul>
+<br>
+<ul>
+<li>
+<p>const与类</p>
+<ol>
+<li><code>const</code>成员变量只能在构造函数初始化列表中初始化
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Example</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="k">const</span> <span class="kt">int</span> <span class="n">val</span><span class="p">;</span> <span class="c1">//const成员变量
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">!</span> <span class="n">Example</span><span class="p">()</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">     <span class="n">val</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">//错误!此时val已初始化,无法修改
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">Example</span><span class="p">()</span> <span class="o">:</span> <span class="n">val</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="p">{}</span> <span class="c1">//仅初始化列表能初始化const成员
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span></code></pre></div></li>
+</ol>
+ <br>
+<ol start="2">
+<li>
+<p><code>const</code>成员函数const修饰在参数列表后<br>例如<code>void func() const{return}</code>
+<br></p>
+</li>
+<li>
+<p><code>const</code>对象只能调用<code>const</code>成员函数,非<code>const</code>对象任意调用
+<br></p>
+</li>
+</ol>
+</li>
+<li>
+<p>const与函数</p>
+<ol>
+<li>
+<p>参数中的<code>const</code>引用/指针限制函数修改实参
+<br></p>
+</li>
+<li>
+<p>返回值中的<code>const</code>引用/指针限制调用方修改原对象
+<br></p>
+</li>
+</ol>
+</li>
+<li>
+<p>常量只能由常量指针来指向,由常引用来引用
+<br></p>
+</li>
+</ul>
+
+<h3 class="relative group">友元
+    <div id="友元" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8f%8b%e5%85%83" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>
+<p>友元类</p>
+<ol>
+<li>在类型A中声明<code>friend class B</code>是A授权<strong>允许B访问A的私有成员</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">B</span><span class="p">;</span> <span class="c1">//前置声明
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">A</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">valA</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   <span class="k">friend</span> <span class="k">class</span> <span class="nc">B</span><span class="p">;</span> <span class="c1">//A授权B访问自己的私有成员
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">   <span class="kt">void</span> <span class="n">accessB</span><span class="p">(</span><span class="n">B</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">   <span class="o">!</span>  <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">b</span><span class="p">.</span><span class="n">valB</span><span class="p">;</span> <span class="c1">//错误!A不是B的友元，无法访问B的私有成员 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">B</span><span class="p">{</span>   
+</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="n">valB</span><span class="o">=</span><span class="mi">20</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">   <span class="kt">void</span> <span class="n">accessA</span><span class="p">(</span><span class="n">A</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">     <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span><span class="n">a</span><span class="p">.</span><span class="n">valA</span><span class="p">;</span> <span class="c1">//合法:B是A的友元
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div></li>
+</ol>
+ <br>
+<ol start="2">
+<li>友元关系不可继承不可传递
+<br></li>
+</ol>
+</li>
+<li>
+<p>友元函数</p>
+<ol>
+<li>友元函数在类内声明但不是该类的成员函数<br>本质是授权<strong>允许函数访问类的私有成员</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Example</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">val</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   <span class="k">friend</span> <span class="kt">void</span> <span class="nf">friendfunc</span><span class="p">(</span><span class="n">Example</span> <span class="o">&amp;</span><span class="n">obj</span><span class="p">);</span> <span class="c1">//声明友元函数全局函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">   <span class="kt">void</span> <span class="n">func</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="o">!</span>  <span class="k">this</span><span class="o">-&gt;</span><span class="n">friendfunc</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">);</span><span class="c1">// 错误!friendfunc不是成员函数，不能用this调用 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">friendfunc</span><span class="p">(</span><span class="n">Example</span> <span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">obj</span><span class="p">.</span><span class="n">val</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+</ol>
+<br>
+<ol start="2">
+<li>将重载函数声明为友元函数,只会针对特定重载版本,而非所有
+<br></li>
+</ol>
+</li>
 </ul>
           
           
