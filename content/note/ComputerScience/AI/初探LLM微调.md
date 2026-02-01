@@ -33,7 +33,7 @@ tags=["LLM","fine-tune"]
 
 > 为了让模型高效学习，将零散的文本整理成结构化的数据集(JSONL格式)
 
-- 技术栈: JONL格式转换
+- 技术栈: JSONL格式转换
 
 - 任务清单：
 [文本清洗] 去除HTML标签,表情符,乱码,保留核心内容
@@ -223,15 +223,15 @@ pip install -e ".[metrics,bitsandbytes,qlora]"
 ## 训练过程
 
 **训练5分钟**:
-![训练5分钟左右](https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/images/5min.png)
+![训练5分钟左右](https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/LLM/5min.png)
 **训练35分钟**:
-![训练35分钟左右](https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/images/35min.png)
+![训练35分钟左右](https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/LLM/35min.png)
 **训练65分钟**:
-![训练65分钟左右](https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/images/65min.png)
+![训练65分钟左右](https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/LLM/65min.png)
 **训练100分钟**:
-![训练100分钟左右](https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/images/100min.png)
+![训练100分钟左右](https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/LLM/100min.png)
 **训练125分钟**
-![训练125分钟左右](https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/images/125min.png)
+![训练125分钟左右](https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/LLM/125min.png)
 
 ---
 
@@ -241,7 +241,7 @@ pip install -e ".[metrics,bitsandbytes,qlora]"
 
 * **语言风格**上有较高相似度,但**逻辑能力**不足
 
-![对话](https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/images/dialogue.png)
+![对话](https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/LLM/dialogue.png)
 
 > 原因分析:
 

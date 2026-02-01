@@ -105,6 +105,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/note/computerscience/git/gittools/</loc>
+    <lastmod>2025-01-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/create/novel/%E5%B1%B1/</loc>
     <lastmod>2025-12-06T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
