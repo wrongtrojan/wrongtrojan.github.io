@@ -29,7 +29,7 @@ enableEmoji = true
   tag = "tags"
   #category = "categories"
   #author = "authors"
-  #series = "series"
+  series = "series"
 
 [sitemap]
   changefreq = 'daily'

@@ -4,6 +4,8 @@ weight=2
 date = 2025-12-18
 draft = false
 tags=["Git"]
+series=["Git"]
+series_order=2
 +++
 ### `git branch`
 

@@ -4,6 +4,8 @@ weight=3
 date = 2025-01-18
 draft = false
 tags=["Git"]
+series=["Git"]
+series_order=3
 +++
 ### `git reflog`
 

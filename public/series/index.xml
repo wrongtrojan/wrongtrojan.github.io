@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on 个人博客</title>
+    <link>http://localhost:1313/series/</link>
+    <description>Recent content in Series on 个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>wrongtrojan0.@gmail (木马)</managingEditor>
+    <webMaster>wrongtrojan0.@gmail (木马)</webMaster>
+    <copyright>@2025木马</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>数学分析</title>
+      <link>http://localhost:1313/series/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/</link>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/series/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>FreeBSD</title>
+      <link>http://localhost:1313/series/freebsd/</link>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/series/freebsd/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>CSAPP</title>
+      <link>http://localhost:1313/series/csapp/</link>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/series/csapp/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>DSA</title>
+      <link>http://localhost:1313/series/dsa/</link>
+      <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/series/dsa/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>高等代数</title>
+      <link>http://localhost:1313/series/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/series/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Cpp程序设计</title>
+      <link>http://localhost:1313/series/cpp%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/series/cpp%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>http://localhost:1313/series/git/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/series/git/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

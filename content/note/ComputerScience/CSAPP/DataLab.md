@@ -4,6 +4,8 @@ weight= 1
 date = 2026-03-14
 draft = false
 tags=["CSAPP"]
+series=["CSAPP"]
+series_order=1
 +++
 <!--more-->
 

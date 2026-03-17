@@ -1,0 +1,2176 @@
+<!doctype html>
+<html
+  lang="zh-cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-cn">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>多元函数的微积分 &middot; 个人博客</title>
+    <meta name="title" content="多元函数的微积分 &middot; 个人博客">
+  
+
+  
+  
+    <meta name="description" content="My personal blog">
+  
+  
+    <meta name="keywords" content="函数,极限,偏导数,全微分,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/note/mathematics/analysis/%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E7%9A%84%E5%BE%AE%E7%A7%AF%E5%88%86/">
+  
+
+  
+  
+    <meta name="author" content="木马">
+  
+  
+    
+      
+        
+          <link href="https://github.com/wrongtrojan" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/note/mathematics/analysis/%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E7%9A%84%E5%BE%AE%E7%A7%AF%E5%88%86/">
+  <meta property="og:site_name" content="个人博客">
+  <meta property="og:title" content="多元函数的微积分">
+  <meta property="og:description" content="My personal blog">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="note">
+    <meta property="article:published_time" content="2026-03-17T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-03-17T00:00:00+00:00">
+    <meta property="article:tag" content="函数">
+    <meta property="article:tag" content="极限">
+    <meta property="article:tag" content="偏导数">
+    <meta property="article:tag" content="全微分">
+      <meta property="og:see_also" content="http://localhost:1313/note/mathematics/analysis/%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E7%9A%84%E5%BE%AE%E7%A7%AF%E5%88%86/">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="多元函数的微积分">
+  <meta name="twitter:description" content="My personal blog">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.41da72e7ee17b68a590fb1fa53a7f28961b6b0b232613864b23d38fdd42151573587b7a9f73b7a03a07a1a02a695c89fbfa851d2b9c2c091bf6373ff61aa9057.css"
+    integrity="sha512-Qdpy5&#43;4XtopZD7H6U6fyiWG2sLIyYThksj04/dQhUVc1h7ep9zt6A6B6GgKmlcifv6hR0rnCwJG/Y3P/YaqQVw==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.b4b722fcb5d42f34f52b30a92f3521b69f403ca9d96d0d6179eb537cb870f5d83fdf1fe836688d95d5c99fefbda4170487711006e56051fa67ea00da10521721.js" integrity="sha512-tLci/LXULzT1KzCpLzUhtp9APKnZbQ1heetTfLhw9dg/3x/oNmiNldXJn&#43;&#43;9pBcEh3EQBuVgUfpn6gDaEFIXIQ=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.f16cf48651044bc66625c8008eb5605cc702530530daa081ce7e495e50adf778bef6cd0747382983caf5e5cc745c819dd7a969e17e545119dff14346f4fcb977.js"
+      integrity="sha512-8Wz0hlEES8ZmJcgAjrVgXMcCUwUw2qCBzn5JXlCt93i&#43;9s0HRzgpg8r15cx0XIGd16lp4X5UURnf8UNG9Py5dw=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/lib/katex/katex.min.a6685279faabcd7302505c0f7c7a823623dd89d8308daf0a3f5224bb9cd05fd3cb0532a8632863d2e6cd756eeb781596788fe96eb562f82e4ed4c43d3d2056a2.css"
+    integrity="sha512-pmhSefqrzXMCUFwPfHqCNiPdidgwja8KP1Iku5zQX9PLBTKoYyhj0ubNdW7reBWWeI/pbrVi&#43;C5O1MQ9PSBWog==">
+  
+  
+  
+  <script
+    defer
+    type="text/javascript"
+    src="/js/katex.bundle.a10a4a0655682a978b0422e48a40f3515d4d96c8e600a48e3dad34029a55cc00b128b89a908855227d1c07897ce09cdfe9f0d57decb148cb73f17dbb8a0a715c.js"
+    integrity="sha512-oQpKBlVoKpeLBCLkikDzUV1NlsjmAKSOPa00AppVzACxKLiakIhVIn0cB4l84Jzf6fDVfeyxSMtz8X27igpxXA=="
+    id="katex-render"></script>
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "笔记",
+    "name": "多元函数的微积分",
+    "headline": "多元函数的微积分",
+    
+    
+    "inLanguage": "zh-cn",
+    "url" : "http://localhost:1313/note/mathematics/analysis/%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E7%9A%84%E5%BE%AE%E7%A7%AF%E5%88%86/",
+    "author" : {
+      "@type": "Person",
+      "name": "木马"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-03-17T00:00:00\u002b00:00",
+    "datePublished": "2026-03-17T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-03-17T00:00:00\u002b00:00",
+    
+    "keywords": ["函数","极限","偏导数","全微分"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "758"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          个人博客
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="首页"
+  title="个人博客">
+  
+  
+    <p class="text-base font-medium">
+      首页
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/about/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="关于"
+  title="关于">
+  
+  
+    <p class="text-base font-medium">
+      关于
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a
+      
+        href="/note/"
+        
+      
+      aria-label="笔记"
+      class="text-base font-medium hover:text-primary-600 dark:hover:text-primary-400"
+      title="笔记">
+      <p>
+        笔记
+      </p>
+    </a>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+          <a
+            href="/note/computerscience/"
+            
+            aria-label="计算机科学"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="计算机科学">
+              计算机科学
+            </p>
+          </a>
+        
+          <a
+            href="/note/mathematics/"
+            
+            aria-label="数学"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="数学">
+              数学
+            </p>
+          </a>
+        
+          <a
+            href="/note/others/"
+            
+            aria-label="其他"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="其他">
+              其他
+            </p>
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      
+        
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a
+      
+        href="/create/"
+        
+      
+      aria-label="创作"
+      class="text-base font-medium hover:text-primary-600 dark:hover:text-primary-400"
+      title="创作">
+      <p>
+        创作
+      </p>
+    </a>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+          <a
+            href="/create/novel/"
+            
+            aria-label="小说"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="小说">
+              小说
+            </p>
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="搜索 (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="搜索 (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="首页"
+    title="个人博客">
+    
+    
+      <p class="text-bg font-bg">
+        首页
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/about/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="关于"
+    title="关于">
+    
+    
+      <p class="text-bg font-bg">
+        关于
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/note/"
+    aria-label="笔记"
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="笔记">
+      笔记
+    </p>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </a>
+</li>
+
+  <li class="mt-1">
+    <a
+      href="/note/computerscience/"
+      
+      aria-label="计算机科学"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="计算机科学">
+        计算机科学
+      </p>
+    </a>
+  </li>
+
+  <li class="mt-1">
+    <a
+      href="/note/mathematics/"
+      
+      aria-label="数学"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="数学">
+        数学
+      </p>
+    </a>
+  </li>
+
+  <li class="mt-1">
+    <a
+      href="/note/others/"
+      
+      aria-label="其他"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="其他">
+        其他
+      </p>
+    </a>
+  </li>
+
+<li class="mb-2"></li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/create/"
+    aria-label="创作"
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="创作">
+      创作
+    </p>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </a>
+</li>
+
+  <li class="mt-1">
+    <a
+      href="/create/novel/"
+      
+      aria-label="小说"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="小说">
+        小说
+      </p>
+    </a>
+  </li>
+
+<li class="mb-2"></li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+  
+  
+    
+    
+  
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/defaultBackgroundImage_hu_1af0b07417697dfe.png"
+      alt="多元函数的微积分"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+      >
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div>
+    <div
+      class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div>
+  </div>
+
+  
+    <div
+      id="background-blur"
+      class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/background-blur.min.00a57c73ea12f2cab2980c3c3d649e89f6d82f190f74bbe2b67f2f5e39ab7d032ece47086400ca05396758aace13299da49aca43ea643d2625e62c506267a169.js"
+      integrity="sha512-AKV8c&#43;oS8sqymAw8PWSeifbYLxkPdLvitn8vXjmrfQMuzkcIZADKBTlnWKrOEymdpJrKQ&#43;pkPSYl5ixQYmehaQ=="
+      data-blur-id="background-blur"
+      data-image-id="background-image"
+      data-image-url="/defaultBackgroundImage_hu_1af0b07417697dfe.png"></script>
+  
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        多元函数的微积分
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-03-17T00:00:00&#43;00:00">2026年3月17日</time><span class="px-2 text-primary-500">&middot;</span><span>758 字</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E5%87%BD%E6%95%B0/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    函数
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E6%9E%81%E9%99%90/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    极限
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E5%81%8F%E5%AF%BC%E6%95%B0/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    偏导数
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E5%85%A8%E5%BE%AE%E5%88%86/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    全微分
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="木马"
+        src="/author_hu_b32b149bc35b336c.jpg"
+        data-zoom-src="/author_hu_7803839ca98ef477.jpg">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        作者
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        木马
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/wrongtrojan"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#n维euclid空间">n维Euclid空间</a></li>
+    <li><a href="#点列极限">点列极限</a></li>
+    <li><a href="#集合概念">集合概念</a>
+      <ul>
+        <li><a href="#内部外部边界">内部,外部,边界</a></li>
+        <li><a href="#聚点与孤立点">聚点与孤立点</a></li>
+        <li><a href="#开集与闭集">开集与闭集</a></li>
+        <li><a href="#区域">区域</a></li>
+      </ul>
+    </li>
+    <li><a href="#多元函数的极限与连续性">多元函数的极限与连续性</a></li>
+    <li><a href="#多元数量值函数的导数与微分">多元数量值函数的导数与微分</a>
+      <ul>
+        <li><a href="#全微分与偏导数">全微分与偏导数</a>
+          <ul>
+            <li><a href="#全微分">全微分</a></li>
+            <li><a href="#偏导数">偏导数</a></li>
+          </ul>
+        </li>
+        <li><a href="#可微的条件">可微的条件</a>
+          <ul>
+            <li><a href="#必要条件">必要条件</a></li>
+            <li><a href="#充分条件">充分条件</a></li>
+          </ul>
+        </li>
+        <li><a href="#全微分的有理运算法则">全微分的有理运算法则</a></li>
+        <li><a href="#复合函数的全微分与偏导">复合函数的全微分与偏导</a></li>
+        <li><a href="#梯度与方向函数">梯度与方向函数</a></li>
+        <li><a href="#高阶偏导数和全微分">高阶偏导数和全微分</a></li>
+        <li><a href="#隐函数微分">隐函数微分</a></li>
+        <li><a href="#关于算符">关于算符:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#n维euclid空间">n维Euclid空间</a></li>
+    <li><a href="#点列极限">点列极限</a></li>
+    <li><a href="#集合概念">集合概念</a>
+      <ul>
+        <li><a href="#内部外部边界">内部,外部,边界</a></li>
+        <li><a href="#聚点与孤立点">聚点与孤立点</a></li>
+        <li><a href="#开集与闭集">开集与闭集</a></li>
+        <li><a href="#区域">区域</a></li>
+      </ul>
+    </li>
+    <li><a href="#多元函数的极限与连续性">多元函数的极限与连续性</a></li>
+    <li><a href="#多元数量值函数的导数与微分">多元数量值函数的导数与微分</a>
+      <ul>
+        <li><a href="#全微分与偏导数">全微分与偏导数</a>
+          <ul>
+            <li><a href="#全微分">全微分</a></li>
+            <li><a href="#偏导数">偏导数</a></li>
+          </ul>
+        </li>
+        <li><a href="#可微的条件">可微的条件</a>
+          <ul>
+            <li><a href="#必要条件">必要条件</a></li>
+            <li><a href="#充分条件">充分条件</a></li>
+          </ul>
+        </li>
+        <li><a href="#全微分的有理运算法则">全微分的有理运算法则</a></li>
+        <li><a href="#复合函数的全微分与偏导">复合函数的全微分与偏导</a></li>
+        <li><a href="#梯度与方向函数">梯度与方向函数</a></li>
+        <li><a href="#高阶偏导数和全微分">高阶偏导数和全微分</a></li>
+        <li><a href="#隐函数微分">隐函数微分</a></li>
+        <li><a href="#关于算符">关于算符:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+    let isJumpingToAnchor = false
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      if (isJumpingToAnchor) {
+        for (let i = 0; i < anchors.length; i++) {
+          const anchor = anchors[i]
+          if (!tocIds.has(anchor.id)) continue
+          const top = anchor.getBoundingClientRect().top + window.scrollY
+          if (Math.abs(window.scrollY - top) < 100) {
+            return anchor.id
+          }
+        }
+      }
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          isJumpingToAnchor = true
+        })
+      })
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+  <details
+    class="mt-2 mb-5 overflow-hidden rounded-lg ms-0 ps-5"
+    >
+    
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 -ms-5 ps-5 dark:bg-primary-800 dark:text-neutral-100">
+    数学分析 -
+    这篇文章属于一个选集。
+  </summary>
+  
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/note/mathematics/analysis/%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E7%9A%84%E5%BE%AE%E7%A7%AF%E5%88%86/">
+          § 1:
+          一元函数的微积分
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        § 2:
+        本文
+      </div>
+    
+  
+
+
+  </details>
+
+
+        <div class="article-content max-w-prose mb-20">
+          
+
+
+<h2 class="relative group">n维Euclid空间
+    <div id="n维euclid空间" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#n%e7%bb%b4euclid%e7%a9%ba%e9%97%b4" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+<p>研究对象所处空间</p>
+</blockquote>
+<ol>
+<li>
+<p>向量 \((\alpha_1,\alpha2,...,\alpha_n)\)</p>
+</li>
+<li>
+<p>向量加法 \((\alpha_1,\alpha2,...,\alpha_n)+(\beta_1,\beta_2,...,\beta_n)=(\alpha_1+\beta_1,\alpha_2+\beta2,...,\alpha_n+\beta_n)\)</p>
+</li>
+<li>
+<p>向量数乘 \(k(\alpha_1,\alpha2,...,\alpha_n)=(k\alpha_1,k\alpha2,...,k\alpha_n)\)</p>
+</li>
+<li>
+<p>向量内积 \((\alpha_1,\alpha2,...,\alpha_n)\cdot(\beta_1,\beta_2,...,\beta_n)=\sum_{i=1}^{n}\alpha_i\beta_i\)</p>
+</li>
+</ol>
+
+<h2 class="relative group">点列极限
+    <div id="点列极限" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%82%b9%e5%88%97%e6%9e%81%e9%99%90" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+<p>离散的点列的极限</p>
+</blockquote>
+<ol>
+<li>
+<p>定义: \(\forall\epsilon>0,\exist N\in N_{+},\forall k>N,\|x_{k}-a\|<\epsilon\)</p>
+</li>
+<li>
+<p>点列收敛于\(P_0 \iff\)点列的的各分量组成数列收敛于\(P_0\)的各分量</p>
+</li>
+<li>
+<p>唯一性,有界性,线性</p>
+</li>
+<li>
+<p>Bolzano-Weierstrass定理: 有界点列必有收敛子列</p>
+</li>
+<li>
+<p>Cauchy收敛原理:<br>
+\(\forall \epsilon>0,\exist N\in N_{+},\forall k>N\)及\(p\in N_{+}\),有\(\|x_{k+p}-x_{k}\|<\epsilon\),则称\(x_{k}\)为Cauchy点列<br>
+点列\(x_{k}\)收敛于\(R^{n}\)中某点\(\iff{x_{k}}\)为Cuchy点列</p>
+</li>
+</ol>
+
+<h2 class="relative group">集合概念
+    <div id="集合概念" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%9b%86%e5%90%88%e6%a6%82%e5%bf%b5" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+<p>对点构成的集合的讨论(以集合A为例)</p>
+</blockquote>
+
+<h3 class="relative group">内部,外部,边界
+    <div id="内部外部边界" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%86%85%e9%83%a8%e5%a4%96%e9%83%a8%e8%be%b9%e7%95%8c" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p>内点与内部: \(\exist\delta>0,U(P_{0},\delta)\subseteq A\)则称点\(P_0\)是内点,所有内点构成内部,记为\(intA\)</p>
+</li>
+<li>
+<p>外点与外部: \(\exist\delta>0,U(P_{0},\delta)\subseteq A^{c}\)则称点\(P_0\)是外点,所有内点构成外部,记为\(extA\)</p>
+</li>
+<li>
+<p>边界点与边界: \(\forall\delta>0,\exist P_{1},P_{2}\in U(P_{0},\delta),P_{1}\in A,P_{2}\in A^{c}\)则称点\(P_0\)是边界点,所有边界点构成边界,记为\(\partial A\)</p>
+</li>
+</ol>
+
+<h3 class="relative group">聚点与孤立点
+    <div id="聚点与孤立点" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%81%9a%e7%82%b9%e4%b8%8e%e5%ad%a4%e7%ab%8b%e7%82%b9" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p>聚点: \(\exist\{x_{k}\},x_k\neq a,有x_k\to a(k\to \infty)\),则称a为A的聚点<br>
+a为A的聚点\(\iff \forall \epsilon>0,\mathring{U}(a,\epsilon)\cap A\neq\emptyset\)</p>
+</li>
+<li>
+<p>导集与闭包: 所有聚点构成的集合为导集,记为\(A^{'}\),闭包是A与A的导集的并集,即 \(\overline{A}=A\cup A^{'}\)</p>
+</li>
+<li>
+<p>孤立点: \(a\in A,a\notin A^{'}\)</p>
+</li>
+</ol>
+
+<h3 class="relative group">开集与闭集
+    <div id="开集与闭集" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%bc%80%e9%9b%86%e4%b8%8e%e9%97%ad%e9%9b%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p>开集: A中所有的点都是A的内点,即\(A\subseteq intA\)</p>
+</li>
+<li>
+<p>闭集: A的所有聚点都属于A,即\(A^{'}\subseteq A\)</p>
+</li>
+<li>
+<p>Euclid空间中的开集性质</p>
+<ol>
+<li>\(\emptyset,R^{n}\)是开集</li>
+<li>任意多开集的并是开集</li>
+<li>有限多个开集的交是开集</li>
+</ol>
+</li>
+<li>
+<p>Euclid空间中的闭集性质</p>
+<ol>
+<li>\(\emptyset,R^{n}\)是闭集</li>
+<li>任意多闭集的交是闭集</li>
+<li>有限多个闭集的并是闭集</li>
+</ol>
+</li>
+</ol>
+
+<h3 class="relative group">区域
+    <div id="区域" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8c%ba%e5%9f%9f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p>有界集/无界集: \(\forall x\in A,\|x\|<M\),则A为有界集,否则为无界集</p>
+</li>
+<li>
+<p>紧集: 有界的闭集</p>
+</li>
+<li>
+<p>连通集与凸集:<br>
+A中任意两点x,y能用完全属于A的有限个线段联结,则集合为连通集<br>
+若任意两点直接相连的线段都属于A,则集合为凸集</p>
+</li>
+<li>
+<p>开区域与闭区域: 连通的开集是开区域,开区域与其边界的并是闭区域</p>
+</li>
+</ol>
+
+<h2 class="relative group">多元函数的极限与连续性
+    <div id="多元函数的极限与连续性" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%9a%e5%85%83%e5%87%bd%e6%95%b0%e7%9a%84%e6%9e%81%e9%99%90%e4%b8%8e%e8%bf%9e%e7%bb%ad%e6%80%a7" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+<p>推广一元函数的极限与连续性</p>
+</blockquote>
+<ol>
+<li>
+<p>数量值函数与向量值函数:<br>
+n元数量值函数: \(f(X)=f(x_1,x_2,...,x_n)\)<br>
+n元向量值函数: \(Y=F(X),Y=(y_1,y_2,...y_n),F=(f_1,f_2,...f_n)\)</p>
+</li>
+<li>
+<p>多元函数的极限(以二元函数为例)<br>
+二重极限: \(\forall\epsilon>0,\exist\delta>0,\forall P_0\in\mathring{U}(P_0,\delta)\cap A,\|f(P_0)-a\|<\epsilon\),记为\(\lim\limits_{(x,y)\to(x_0,y_0)}f(x,y)=a\)<br>
+累次极限: \(\lim\limits_{x\to x_0}\lim\limits_{y\to y_0}f(x,y)\)</p>
+</li>
+<li>
+<p>连续性: 若\(f(x,y)\)在\(U((x_0,y_0))\)内有\(\lim\limits_{(x,y)\to(x_0,y_0)}f(x,y)=f(x_0,y_0)\),则\(f(x,y)\)在\((x_0,y_0)\)处连续</p>
+</li>
+<li>
+<p>有界闭区域上多元连续函数的性质</p>
+<ol>
+<li>有界性</li>
+<li>最值存在定理</li>
+<li>介质定理</li>
+<li>一致连续性</li>
+</ol>
+</li>
+</ol>
+
+<h2 class="relative group">多元数量值函数的导数与微分
+    <div id="多元数量值函数的导数与微分" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%9a%e5%85%83%e6%95%b0%e9%87%8f%e5%80%bc%e5%87%bd%e6%95%b0%e7%9a%84%e5%af%bc%e6%95%b0%e4%b8%8e%e5%be%ae%e5%88%86" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">全微分与偏导数
+    <div id="全微分与偏导数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%85%a8%e5%be%ae%e5%88%86%e4%b8%8e%e5%81%8f%e5%af%bc%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">全微分
+    <div id="全微分" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%85%a8%e5%be%ae%e5%88%86" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<blockquote>
+<p>一元函数微分的直接推广</p>
+</blockquote>
+<p>若\(\Delta u=f(X_0+\Delta X)-f(X_0)=A\Delta x+B\Delta y+o(\rho)\),则称\(A\Delta x+B\Delta y\)是\(f(x,y)\)在\(X_0\)的全微分</p>
+
+<h4 class="relative group">偏导数
+    <div id="偏导数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%81%8f%e5%af%bc%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<blockquote>
+<p>令\(\Delta x\)或\(\Delta y\)为0(以\(\Delta y=0\)为例)</p>
+</blockquote>
+<ol>
+<li>
+<p>\(f(x_0+\Delta x,y_0)-f(x_0,y_0)=A\Delta x+o(\rho)\)</p>
+<p>\(\lim\limits_{\Delta x\to 0}\frac{f(x_0+\Delta x,y_0)-f(x_0,y_0)}{\Delta x}=A\),记为\(f_x(x_0,y_0)\)</p>
+</li>
+<li>
+<p>偏导数的几何意义: \(z=f(x,y)\)与\(y=y_0\)的交线\(z=f(x,y_0)\)在\(x=x_0\)处的斜率</p>
+</li>
+<li>
+<p>\(\Delta u=f_x\Delta x+f_y\Delta y+o(\rho)\),即\(df=f_xdx+f_ydy\)</p>
+</li>
+</ol>
+
+<h3 class="relative group">可微的条件
+    <div id="可微的条件" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8f%af%e5%be%ae%e7%9a%84%e6%9d%a1%e4%bb%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">必要条件
+    <div id="必要条件" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%bf%85%e8%a6%81%e6%9d%a1%e4%bb%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>(1) \(f\)在\((x_0,y_0)\)连续<br>
+(2) \(f\)在\((x_0,y_0)\)的两个偏导均存在</p>
+
+<h4 class="relative group">充分条件
+    <div id="充分条件" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%85%85%e5%88%86%e6%9d%a1%e4%bb%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ol>
+<li>
+<p>\(f\)在\((x_0,y_0)\)的两个偏导均连续</p>
+</li>
+<li>
+<p>\(f_x\)在\(x_0,y_0\)处连续,且\(f_y(x_0,y_0)\)</p>
+</li>
+</ol>
+
+<h3 class="relative group">全微分的有理运算法则
+    <div id="全微分的有理运算法则" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%85%a8%e5%be%ae%e5%88%86%e7%9a%84%e6%9c%89%e7%90%86%e8%bf%90%e7%ae%97%e6%b3%95%e5%88%99" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<blockquote>
+<p>与一元函数具有相同形式</p>
+</blockquote>
+<ol>
+<li>
+<p>\(d(u\pm v)=du\pm dv\)</p>
+</li>
+<li>
+<p>\(d(uv)=vdu+udv\)</p>
+</li>
+<li>
+<p>\(d(\frac{u}{v})=\frac{vdu-udv}{v^{2}}\)</p>
+</li>
+</ol>
+
+<h3 class="relative group">复合函数的全微分与偏导
+    <div id="复合函数的全微分与偏导" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%8d%e5%90%88%e5%87%bd%e6%95%b0%e7%9a%84%e5%85%a8%e5%be%ae%e5%88%86%e4%b8%8e%e5%81%8f%e5%af%bc" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<blockquote>
+<p>链式法则</p>
+</blockquote>
+<ol>
+<li>
+<p>\(f(u,v),u=u(x,y),v=v(x,y)\)</p>
+<ol>
+<li>\(df=(f_1\frac{\partial u}{\partial x}+f_2\frac{\partial v}{\partial x})dx+(f_1\frac{\partial u}{\partial y}+f_2\frac{\partial v}{\partial y})dy\)</li>
+<li>\(f_x=f_1\frac{\partial u}{\partial x}+f_2\frac{\partial v}{\partial x},f_y=f_1\frac{\partial u}{\partial y}+f_2\frac{\partial v}{\partial y}\)</li>
+</ol>
+</li>
+<li>
+<p>\(f(r),r=f(x,y)\)</p>
+<ol>
+<li>\(df=f^{'}(r)\frac{\partial r}{\partial x}dx+f^{'}(r)\frac{\partial r}{\partial y}dy\)</li>
+<li>\(f_x=f^{'}(r)\frac{\partial r}{\partial x},f_y=f^{'}(r)\frac{\partial r}{\partial y}\)</li>
+</ol>
+</li>
+<li>
+<p>\(f(x,y),x=x(t),y=y(t)\)</p>
+<ol>
+<li>\(df=\frac{\partial f}{\partial x}x^{'}(t)+\frac{\partial f}{\partial y}y^{'}(t)\)</li>
+</ol>
+</li>
+</ol>
+
+<h3 class="relative group">梯度与方向函数
+    <div id="梯度与方向函数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a2%af%e5%ba%a6%e4%b8%8e%e6%96%b9%e5%90%91%e5%87%bd%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<blockquote>
+<p>描述函数在某方向上的变化</p>
+</blockquote>
+<ol>
+<li>方向导数: \(\lim\limits_{t \to 0}\frac{f(X_0+te_1)-f(X_0)}{t}\)</li>
+</ol>
+<p>\(\lim\limits_{t \to 0}\frac{f(x_0+t\cos\theta,y_0+t\sin\theta)-f(x_0,y_0)}{t}=\lim\limits_{t \to 0}\frac{f_xt\cos\theta+f_yt\sin\theta+o(\rho)}{t}=f_x\cos\theta+f_y\sin\theta\)</p>
+<ol start="2">
+<li>梯度</li>
+</ol>
+<p>向量方向描述函数增长最快方向,向量大小描述函数增长最快速度</p>
+<p>\(\nabla f=(f_x,f_y)=(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y})\)   \(\nabla=(\frac{\partial}{\partial x},\frac{\partial}{\partial y})\)</p>
+
+<h3 class="relative group">高阶偏导数和全微分
+    <div id="高阶偏导数和全微分" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%ab%98%e9%98%b6%e5%81%8f%e5%af%bc%e6%95%b0%e5%92%8c%e5%85%a8%e5%be%ae%e5%88%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p>高阶偏导数</p>
+<ul>
+<li>\(\frac{\partial^2z}{(\partial x)^2}\),\(\frac{\partial^2z}{(\partial y)^2}\)</li>
+<li>\(\frac{\partial^2z}{(\partial x)(\partial y)}=\frac{\partial^2z}{(\partial y)(\partial x)}\),当\(f_{xy},f_{yx}\)在点\(P\)均连续时</li>
+</ul>
+</li>
+<li>
+<p>高阶全微分</p>
+<ul>
+<li>\(du=\langle\nabla,\Delta X\rangle=\frac{\partial f}{\partial x}dx+\frac{\partial f}{\partial y}dy\)</li>
+<li>\(d^2u=\frac{\partial^2u}{(\partial x)^2}d^2x+2\frac{\partial^2u}{(\partial x)(\partial y)}dxdy+\frac{\partial^2u}{(\partial y)^2}d^2y=(\frac{\partial}{\partial x}dx+\frac{\partial}{\partial y}dy)^2u\)</li>
+</ul>
+</li>
+</ol>
+
+<h3 class="relative group">隐函数微分
+    <div id="隐函数微分" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%9a%90%e5%87%bd%e6%95%b0%e5%be%ae%e5%88%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>一元隐函数</li>
+</ol>
+<ul>
+<li>
+<p>隐函数存在唯一定理:
+(1)\(F\)在\((x_0,y_0)\)某一领域连续<br>
+(2)\(F(x_0,y_0)=0\)<br>
+(3)\(F_{y}\)在\((x_0,y_0)\)附近连续,且\(F_y(x_0,y_0)\neq0\)<br>
+(4)\(F_{x}\)在\((x_0,y_0)\)附近连续</p>
+</li>
+<li>
+<p>若满足(1)~(3),则隐函数存在且唯一<br>
+若还满足(4),则隐函数可微,且有\(\frac{dy}{dx}=-\frac{F_x}{F_y}\)</p>
+</li>
+</ul>
+<ol start="2">
+<li>多元隐函数(以二元为例)</li>
+</ol>
+<ul>
+<li>\(F(x,y,z)=0\)<br>
+\(\frac{\partial z}{\partial x}=-\frac{F_x}{F_z},\frac{\partial z}{\partial y}=-\frac{F_y}{F_z}\)</li>
+</ul>
+
+<h3 class="relative group">关于\(\partial\)算符:\(\frac{\partial}{\partial x}\)
+    <div id="关于算符" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%85%b3%e4%ba%8e%e7%ae%97%e7%ac%a6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p>线性性质: \(\frac{\partial}{\partial x}(af+bg)=a\frac{\partial f}{\partial x}+b\frac{\partial g}{\partial x}\)</p>
+</li>
+<li>
+<p>形式代数运算</p>
+<ol>
+<li>\(\frac{\partial^2z}{(\partial x)(\partial y)}=(\frac{\partial }{\partial x})(\frac{\partial }{\partial y})u\)</li>
+<li>\(d^2u=(\frac{\partial}{\partial x}dx+\frac{\partial}{\partial y}dy)^2u\)</li>
+</ol>
+</li>
+<li>
+<p>坐标变换(以\((x,y)\to(\zeta,\eta)\)为例)</p>
+<ul>
+<li>\(du=\frac{\partial u}{\partial x}dx+\frac{\partial u}{\partial y}dy=\frac{\partial u}{\partial \zeta}d\zeta+\frac{\partial u}{\partial \eta}d\eta\)&hellip;(1)</li>
+<li>\(d\zeta=\frac{\partial \zeta}{\partial x}dx+\frac{\partial \zeta}{\partial y}dy\),\(d\eta=\frac{\partial \eta}{\partial x}dx+\frac{\partial \eta}{\partial y}dy\)&hellip;(3)</li>
+<li>将(2)带入(1),有\(\frac{\partial }{\partial x}=\frac{\partial }{\partial \zeta}\cdot\frac{\partial \zeta}{\partial x}+\frac{\partial }{\partial \eta}\cdot\frac{\partial \eta}{\partial x}\),\(\frac{\partial }{\partial y}=\frac{\partial }{\partial \zeta}\cdot\frac{\partial \zeta}{\partial y}+\frac{\partial }{\partial \eta}\cdot\frac{\partial \eta}{\partial y}\)</li>
+</ul>
+</li>
+</ol>
+
+          
+          
+          
+        </div>
+        
+        
+  <details class="mt-2 mb-5 overflow-hidden rounded-lg ms-0 ps-5">
+    
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 -ms-5 ps-5 dark:bg-primary-800 dark:text-neutral-100">
+    数学分析 -
+    这篇文章属于一个选集。
+  </summary>
+  
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/note/mathematics/analysis/%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E7%9A%84%E5%BE%AE%E7%A7%AF%E5%88%86/">
+          § 1:
+          一元函数的微积分
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        § 2:
+        本文
+      </div>
+    
+  
+
+
+  </details>
+
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_note\Mathematics\Analysis\多元函数的微积分.md"
+          data-oid-likes="likes_note\Mathematics\Analysis\多元函数的微积分.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+      
+      
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/note/mathematics/analysis/%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E7%9A%84%E5%BE%AE%E7%A7%AF%E5%88%86/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;一元函数的微积分
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-12-26T00:00:00&#43;00:00">2025年12月26日</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+          
+          
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 ">
+        <ul class="flex list-none flex-col sm:flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/tags/"
+                title="Tags">
+                
+                Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="https://github.com/wrongtrojan/wrongtrojan.github.io"
+                title="">
+                
+                  <span >
+                    <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span>
+                  </span>
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          @2025木马
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

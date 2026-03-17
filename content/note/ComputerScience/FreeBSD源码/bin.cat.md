@@ -4,6 +4,8 @@ weight= 1
 date = 2026-03-16
 draft = false
 tags=["FreeBSD","Bin"]
+series=["FreeBSD"]
+series_order=1
 +++
 <!--more-->
 ```C

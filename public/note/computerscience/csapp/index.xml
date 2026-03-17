@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>深入理解计算机系统 on 个人博客</title>
+    <link>http://localhost:1313/note/computerscience/csapp/</link>
+    <description>Recent content in 深入理解计算机系统 on 个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>wrongtrojan0.@gmail (木马)</managingEditor>
+    <webMaster>wrongtrojan0.@gmail (木马)</webMaster>
+    <copyright>@2025木马</copyright>
+    <lastBuildDate>Sat, 14 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/note/computerscience/csapp/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>DataLab</title>
+      <link>http://localhost:1313/note/computerscience/csapp/datalab/</link>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/note/computerscience/csapp/datalab/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

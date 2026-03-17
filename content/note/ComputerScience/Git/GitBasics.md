@@ -4,6 +4,8 @@ weight=1
 date = 2025-12-13
 draft = false
 tags=["Git"]
+series=["Git"]
+series_order=1
 +++
 
 ### `git config`
