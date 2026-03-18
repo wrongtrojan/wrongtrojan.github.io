@@ -63,8 +63,8 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [article]
   showDate = true
-  showViews = false
-  showLikes = false
+  # showViews = true
+  # showLikes = true
   showDateOnlyInArticle = false
   showDateUpdated = false
   showAuthor = true
@@ -90,6 +90,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showCategoryOnly = false # use showTaxonomies OR showCategoryOnly, not both
   showAuthorsBadges = false
   showWordCount = true
+  showComments = true
   # sharingLinks = [ "linkedin", "twitter", "bluesky", "mastodon", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram", "line"]
   showZenMode = false
 
@@ -100,8 +101,8 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
   showBreadcrumbs = false
   showSummary = false
-  showViews = false
-  showLikes = false
+  # showViews = true
+  # showLikes = true
   showTableOfContents = false
   showCards = true
   orderByWeight = true
@@ -118,8 +119,8 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showHero = true
   heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   showBreadcrumbs = false
-  showViews = false
-  showLikes = false
+  # showViews = true
+  # showLikes = true
   showTableOfContents = false
   cardView = true
 
@@ -127,21 +128,21 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showHero = true
   heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   showBreadcrumbs = false
-  showViews = false
-  showLikes = false
+  # showViews = true
+  # showLikes = true
   showTableOfContents = true
   groupByYear = false
   cardView = false
   cardViewScreenWidth = false
 
 [firebase]
-  # apiKey = "XXXXXX"
-  # authDomain = "XXXXXX"
-  # projectId = "XXXXXX"
-  # storageBucket = "XXXXXX"
-  # messagingSenderId = "XXXXXX"
-  # appId = "XXXXXX"
-  # measurementId = "XXXXXX"
+  # apiKey = "AIzaSyAKJrG3DM05Qfha2q4S8SLDI-TGQa10IWk"
+  # authDomain = "personalblog-wrongtrojan.firebaseapp.com"
+  # projectId = "personalblog-wrongtrojan"
+  # storageBucket = "personalblog-wrongtrojan.firebasestorage.app"
+  # messagingSenderId = "3381712658"
+  # appId = "1:3381712658:web:3bf2c8d601c8f3302ec5cb"
+  # measurementId = "G-VGGCLTRY4P"
 
 [fathomAnalytics]
   # site = "ABC12345"

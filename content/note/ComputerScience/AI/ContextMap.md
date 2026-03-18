@@ -7,15 +7,6 @@ tags=["Agent","Multi-Modal"]
 +++
 <!--more-->
 
-<p>
-    <a href="#"><img src="https://img.shields.io/badge/python-3.9+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"></a>
-    <a href="http://choosealicense.com/licenses/mit/"><img src="https://img.shields.io/badge/license-MIT-2E7D32?style=flat-square&logo=bookstack&logoColor=white" alt="License"></a>
-    <a href="#"><img src="https://img.shields.io/badge/AI--Agent-ContextMap-008080?style=flat-square&logo=openai&logoColor=white" alt="AI-Agent"></a>
-    <a href="#"><img src="https://img.shields.io/badge/Linux-Ubuntu-333333?style=flat-square&logo=linux&logoColor=white" alt="Linux"></a>
-    <a href="#"><img src="https://img.shields.io/badge/Shell-Bash-E34C26?style=flat-square&logo=gnu-bash&logoColor=white" alt="Shell"></a>
-    <a href="#"><img src="https://img.shields.io/badge/Container-Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"></a>
-</p>
-
 *一个多模态解析资料 (PDF/视频), 生成结构化大纲, 溯源证据并进行增强验证 (调用科学沙盒/视觉推理) 的Agent.*
 
 ---
@@ -126,4 +117,8 @@ npm install | npm run bulid | npm run start
   howpublished = {\url{[https://github.com/wrongtrojan/ContextMap](https://github.com/wrongtrojan/ContextMap)}}
 }
 ```
-[GitHub项目链接](https://github.com/wrongtrojan/ContextMap)
+---
+
+## 🌐 Link
+
+{{< github repo="wrongtrojan/ContextMap" >}}

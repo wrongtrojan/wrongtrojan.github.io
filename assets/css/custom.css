@@ -30,3 +30,33 @@
   /* 颜色顺序：滑块颜色 轨道颜色 */
   scrollbar-color: rgb(var(--color-neutral-400)) rgb(var(--color-neutral-700));
 }
+
+/* 1. 声明本地字体 */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; /* 优化加载体验 */
+}
+
+/* 2. 系统化全局设置（解决中文问题） */
+html {
+    /* 顺序极其重要：英文字体在前，中文字体在后 */
+    font-family: 
+        'JetBrains Mono',          /* 1. 优先英文 */
+        'PingFang SC',             /* 2. Mac/iOS 中文 */
+        'Hiragino Sans GB',        /* 3. 旧版 Mac 中文 */
+        'Microsoft YaHei',         /* 4. Windows 中文 */
+        'sans-serif';              /* 5. 保底 */
+}
+
+/* 3. 系统化代码块设置 */
+code, pre, .mono {
+    font-family: 
+        'JetBrains Mono', 
+        'Consolas',                /* Windows 代码字体备份 */
+        'Monaco',                  /* Mac 代码字体备份 */
+        'Microsoft YaHei',         /* 代码里的中文注释 */
+        monospace !important;
+}

@@ -1,0 +1,31 @@
+/* static/css/giscus-dracula.css */
+main {
+  /* 1. 整体背景：保持与你的代码块背景一致，或者稍微浅一点点以示区分 */
+  --color-canvas-default: rgb(40, 42, 54);    /* 对应你的 Neutral-700 */
+  
+  /* 2. 输入框内部背景：稍微深一点，增加内凹感 */
+  --color-canvas-subtle: rgb(33, 34, 44);     /* 对应你的 Neutral-800 */
+  
+  /* 3. 边框颜色：一定要显眼，建议使用你的 Comment 色 */
+  --color-border-default: rgb(98, 114, 164);  /* 对应你的 Neutral-400 */
+  --color-border-muted: rgb(71, 75, 100);     /* 对应你的 Neutral-500 */
+
+  /* 4. 文字颜色 */
+  --color-fg-default: rgb(248, 248, 242);     /* 对应你的 Neutral 主文字 */
+  --color-fg-muted: rgb(190, 195, 215);       /* 辅助文字 */
+
+  /* 5. 按钮与高亮：使用你的 Primary 紫色 */
+  --color-accent-fg: rgb(189, 147, 249);      /* 链接颜色 */
+  --color-btn-primary-bg: rgb(189, 147, 249); /* “评论”按钮背景 */
+  --color-btn-primary-text: rgb(40, 42, 54);  /* 按钮文字 */
+  --color-btn-primary-border: rgb(189, 147, 249);
+}
+
+/* 强制修饰：让输入框边缘更锐利一点 */
+.form-control {
+  border: 1px solid rgb(98, 114, 164) !important;
+}
+/* 强制等宽字体 */
+.giscus-browser {
+  font-family: 'JetBrains Mono', monospace !important;
+}
