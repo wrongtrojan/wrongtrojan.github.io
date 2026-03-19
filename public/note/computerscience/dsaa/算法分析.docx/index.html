@@ -113,8 +113,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.1c0d03e3f74eba5776f3f67d18f695d4dfcb2cfb3c4d6c9ca50a9bdd3b9c8cb6ca5da9084a1f29e0bc211badbda0173c3338411348aeb0a7f26201eaed9b2b1c.css"
-    integrity="sha512-HA0D4/dOuld28/Z9GPaV1N/LLPs8TWycpQqb3TucjLbKXakISh8p4LwhG629oBc8MzhBE0iusKfyYgHq7ZsrHA==">
+    href="/css/main.bundle.min.cb5212541db2451949da8ffbd82a7a588ae283055c68f65fe40b19bc27f68cde472ef0998784f363742bd188e50d8ad7221cad23ccb8f23ada8b043e3e2d633c.css"
+    integrity="sha512-y1ISVB2yRRlJ2o/72Cp6WIrigwVcaPZf5AsZvCf2jN5HLvCZh4TzY3Qr0YjlDYrXIhytI8y48jraiwQ&#43;Pi1jPA==">
 
   
   
@@ -236,7 +236,7 @@
     "keywords": ["算法"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "349"
+    "wordCount": "347"
   }]
   </script>
 
@@ -906,7 +906,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>349 字</span>
+      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>347 字</span>
     
 
     
@@ -1327,7 +1327,9 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          <p>算法 为求解一个问题需要遵循的、被清楚地指定的简单指令的集合</p>
+          <ul>
+<li>算法 为求解一个问题需要遵循的、被清楚地指定的简单指令的集合</li>
+</ul>
 
 <h2 class="relative group">数学基础
     <div id="数学基础" class="anchor"></div>
@@ -1348,14 +1350,20 @@
     </span>
     
 </h3>
-<pre><code>   大O符号 描述算法时间/空间复杂度的上界（最坏情况）
-
-   大Ω符号 描述算法复杂度的下界（最好情况）
-
-   大Θ符号 描述算法复杂度的精确阶
-
-   小o符号 描述增长速度严格低于
-</code></pre>
+<ul>
+<li>
+<p>大O符号 描述算法时间/空间复杂度的上界（最坏情况）</p>
+</li>
+<li>
+<p>大Ω符号 描述算法复杂度的下界（最好情况）</p>
+</li>
+<li>
+<p>大Θ符号 描述算法复杂度的精确阶</p>
+</li>
+<li>
+<p>小o符号 描述增长速度严格低于</p>
+</li>
+</ul>
 
 <h3 class="relative group">相关结论
     <div id="相关结论" class="anchor"></div>
@@ -1366,16 +1374,25 @@
     </span>
     
 </h3>
-<pre><code>   T1(N)=O(f(N)),T2(N)=O(g(N))
-
-       T1(N)+T2(N)=max{O(f(N)),O(g(N))}
-
-       T1(N)*T2(N)=O(f(N)*g(N))
-
-   T(N)为k次多项式 ，则T(N)=Θ(N^k^)
-
-   log~k~N=O(N)，对数增长非常缓慢
-</code></pre>
+<ul>
+<li>
+<p>T1(N)=O(f(N)),T2(N)=O(g(N))</p>
+<ul>
+<li>
+<p>T1(N)+T2(N)=max{O(f(N)),O(g(N))}</p>
+</li>
+<li>
+<p>T1(N)*T2(N)=O(f(N)*g(N))</p>
+</li>
+</ul>
+</li>
+<li>
+<p>T(N)为k次多项式 ，则T(N)=Θ(N^k^)</p>
+</li>
+<li>
+<p>log<del>k</del>N=O(N)，对数增长非常缓慢</p>
+</li>
+</ul>
 
 <h2 class="relative group">模型
     <div id="模型" class="anchor"></div>
@@ -1386,10 +1403,14 @@
     </span>
     
 </h2>
-<pre><code>   做任何一件简单工作都恰好花费一个时间单元
-
-   还假设模型机有无限的内存
-</code></pre>
+<ul>
+<li>
+<p>做任何一件简单工作都恰好花费一个时间单元</p>
+</li>
+<li>
+<p>还假设模型机有无限的内存</p>
+</li>
+</ul>
 
 <h2 class="relative group">分析的问题
     <div id="分析的问题" class="anchor"></div>
@@ -1400,8 +1421,9 @@
     </span>
     
 </h2>
-<pre><code>   所使用的算法和对该算法的输入
-</code></pre>
+<ul>
+<li>所使用的算法和对该算法的输入</li>
+</ul>
 
 <h2 class="relative group">运行时间计算
     <div id="运行时间计算" class="anchor"></div>
@@ -1422,14 +1444,20 @@
     </span>
     
 </h3>
-<pre><code>   法则1 for循环的运行时间至多是改循环内语句的运行时间乘以迭代次数
-
-   法则2 嵌套的for循环一条语句总运行时间为为该语句时间乘以所有循环
-
-   法则3 顺序语句运行时间求和即可
-
-   法则4 if-else语句运行时间不超过判断加代码块运行长者总的运行时间
-</code></pre>
+<ul>
+<li>
+<p>法则1 for循环的运行时间至多是改循环内语句的运行时间乘以迭代次数</p>
+</li>
+<li>
+<p>法则2 嵌套的for循环一条语句总运行时间为为该语句时间乘以所有循环</p>
+</li>
+<li>
+<p>法则3 顺序语句运行时间求和即可</p>
+</li>
+<li>
+<p>法则4 if-else语句运行时间不超过判断加代码块运行长者总的运行时间</p>
+</li>
+</ul>
           
           
           
@@ -1750,6 +1778,16 @@
                 title="Tags">
                 
                 Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/series/"
+                title="Series">
+                
+                Series
               </a>
             </li>
           

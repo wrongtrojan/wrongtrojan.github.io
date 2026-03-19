@@ -113,8 +113,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.1c0d03e3f74eba5776f3f67d18f695d4dfcb2cfb3c4d6c9ca50a9bdd3b9c8cb6ca5da9084a1f29e0bc211badbda0173c3338411348aeb0a7f26201eaed9b2b1c.css"
-    integrity="sha512-HA0D4/dOuld28/Z9GPaV1N/LLPs8TWycpQqb3TucjLbKXakISh8p4LwhG629oBc8MzhBE0iusKfyYgHq7ZsrHA==">
+    href="/css/main.bundle.min.cb5212541db2451949da8ffbd82a7a588ae283055c68f65fe40b19bc27f68cde472ef0998784f363742bd188e50d8ad7221cad23ccb8f23ada8b043e3e2d633c.css"
+    integrity="sha512-y1ISVB2yRRlJ2o/72Cp6WIrigwVcaPZf5AsZvCf2jN5HLvCZh4TzY3Qr0YjlDYrXIhytI8y48jraiwQ&#43;Pi1jPA==">
 
   
   
@@ -236,7 +236,7 @@
     "keywords": ["ADT"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1205"
+    "wordCount": "1197"
   }]
   </script>
 
@@ -906,7 +906,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>1205 字</span>
+      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>1197 字</span>
     
 
     
@@ -1392,10 +1392,14 @@
     </span>
     
 </h3>
-<pre><code>   Insert( ) 插入元素
-
-   DeleteMIn( ) 找出、返回和删除优先队列的最小元素
-</code></pre>
+<ul>
+<li>
+<p>Insert( ) 插入元素</p>
+</li>
+<li>
+<p>DeleteMIn( ) 找出、返回和删除优先队列的最小元素</p>
+</li>
+</ul>
 
 <h3 class="relative group">其他扩展操作
     <div id="其他扩展操作" class="anchor"></div>
@@ -1406,20 +1410,29 @@
     </span>
     
 </h3>
-<pre><code>   FindMIn( ) 返回最小元素，元素留在堆中
-
-   isEmpty( ) 判断堆是否为空
-
-   size( ) 返回堆中元素个数
-
-   buildHeap() 根据关键字创建堆
-
-   *若能直到关键字的具体位置
-
-   DecreaseKey( ) 降低关键字的值
-
-   IncreaseKey( ) 增加关键字的值
-</code></pre>
+<ul>
+<li>
+<p>FindMIn( ) 返回最小元素，元素留在堆中</p>
+</li>
+<li>
+<p>isEmpty( ) 判断堆是否为空</p>
+</li>
+<li>
+<p>size( ) 返回堆中元素个数</p>
+</li>
+<li>
+<p>buildHeap() 根据关键字创建堆</p>
+</li>
+<li>
+<p>*若能直到关键字的具体位置</p>
+</li>
+<li>
+<p>DecreaseKey( ) 降低关键字的值</p>
+</li>
+<li>
+<p>IncreaseKey( ) 增加关键字的值</p>
+</li>
+</ul>
 
 <h2 class="relative group">简单实现
     <div id="简单实现" class="anchor"></div>
@@ -1440,10 +1453,14 @@
     </span>
     
 </h3>
-<pre><code>   O(1)执行插入操作
-
-   O(N)执行删除最小元
-</code></pre>
+<ul>
+<li>
+<p>O(1)执行插入操作</p>
+</li>
+<li>
+<p>O(N)执行删除最小元</p>
+</li>
+</ul>
 
 <h3 class="relative group">使用有序表
     <div id="使用有序表" class="anchor"></div>
@@ -1454,10 +1471,14 @@
     </span>
     
 </h3>
-<pre><code>   O(N)执行插入操作
-
-   O(1)执行删除最小元
-</code></pre>
+<ul>
+<li>
+<p>O(N)执行插入操作</p>
+</li>
+<li>
+<p>O(1)执行删除最小元</p>
+</li>
+</ul>
 
 <h3 class="relative group">使用二叉查找树
     <div id="使用二叉查找树" class="anchor"></div>
@@ -1468,12 +1489,17 @@
     </span>
     
 </h3>
-<pre><code>   两者操作平均运行时间均为O(logN)
-
-   通过使用平衡树可以避免退化成链表
-
-   有许多冗余操作
-</code></pre>
+<ul>
+<li>
+<p>两者操作平均运行时间均为O(logN)</p>
+</li>
+<li>
+<p>通过使用平衡树可以避免退化成链表</p>
+</li>
+<li>
+<p>有许多冗余操作</p>
+</li>
+</ul>
 
 <h2 class="relative group">二叉堆(binary heap)
     <div id="二叉堆binary-heap" class="anchor"></div>
@@ -1494,14 +1520,20 @@
     </span>
     
 </h3>
-<pre><code>   堆是一颗完全二叉树，非底层全填满，底层元素从左到右填入
-
-   为节点从1依次编号，完全二叉树可以由一个数组来表示
-
-   对节点i，其左子节点为2i，右子节点为2i+1，父节点为\[i/2\]
-
-   若使用数组，最大的堆大小需要事先估计
-</code></pre>
+<ul>
+<li>
+<p>堆是一颗完全二叉树，非底层全填满，底层元素从左到右填入</p>
+</li>
+<li>
+<p>为节点从1依次编号，完全二叉树可以由一个数组来表示</p>
+</li>
+<li>
+<p>对节点i，其左子节点为2i，右子节点为2i+1，父节点为</p>
+\[i/2\]</li>
+<li>
+<p>若使用数组，最大的堆大小需要事先估计</p>
+</li>
+</ul>
 
 <h3 class="relative group">堆序性质
     <div id="堆序性质" class="anchor"></div>
@@ -1512,10 +1544,14 @@
     </span>
     
 </h3>
-<pre><code>   堆序性是使操作被快速执行的性质，也即最小元应该在根上
-
-   考虑任意子树也应该是堆，任意节点应该小于所有后裔
-</code></pre>
+<ul>
+<li>
+<p>堆序性是使操作被快速执行的性质，也即最小元应该在根上</p>
+</li>
+<li>
+<p>考虑任意子树也应该是堆，任意节点应该小于所有后裔</p>
+</li>
+</ul>
 
 <h3 class="relative group">基础操作的实现
     <div id="基础操作的实现" class="anchor"></div>
@@ -1526,18 +1562,28 @@
     </span>
     
 </h3>
-<pre><code>   Insert( ) 采取(新元素)上浮
-
-       新元素加入堆末尾，与父节点比较并交换直到大于父节点
-
-   DeleteMin( ) 采取(末元素)下沉
-
-       删除根节点后，堆末元素填入空穴
-
-       与子节点比较，若比子节点小，则与更小子节点交换
-
-       直到比两个子节点都小停止
-</code></pre>
+<ul>
+<li>
+<p>Insert( ) 采取(新元素)上浮</p>
+<ul>
+<li>新元素加入堆末尾，与父节点比较并交换直到大于父节点</li>
+</ul>
+</li>
+<li>
+<p>DeleteMin( ) 采取(末元素)下沉</p>
+<ul>
+<li>
+<p>删除根节点后，堆末元素填入空穴</p>
+</li>
+<li>
+<p>与子节点比较，若比子节点小，则与更小子节点交换</p>
+</li>
+<li>
+<p>直到比两个子节点都小停止</p>
+</li>
+</ul>
+</li>
+</ul>
 
 <h3 class="relative group">其他堆操作的实现
     <div id="其他堆操作的实现" class="anchor"></div>
@@ -1548,12 +1594,17 @@
     </span>
     
 </h3>
-<pre><code>   DcreaseKey( ) 采取上浮操作
-
-   IncreaseKey( ) 采取下沉操作
-
-   其余操作同树的实现类似
-</code></pre>
+<ul>
+<li>
+<p>DcreaseKey( ) 采取上浮操作</p>
+</li>
+<li>
+<p>IncreaseKey( ) 采取下沉操作</p>
+</li>
+<li>
+<p>其余操作同树的实现类似</p>
+</li>
+</ul>
 
 <h2 class="relative group">d-堆
     <div id="d-堆" class="anchor"></div>
@@ -1564,12 +1615,17 @@
     </span>
     
 </h2>
-<pre><code>   d-堆是二叉堆的简单推广，所有的节点都有d个儿子
-
-   若d不为2的幂，则使用数组储存后运行时间大幅增加
-
-   在插入次数比删除次数多得多时以及二叉堆太大时d-堆较为实用
-</code></pre>
+<ul>
+<li>
+<p>d-堆是二叉堆的简单推广，所有的节点都有d个儿子</p>
+</li>
+<li>
+<p>若d不为2的幂，则使用数组储存后运行时间大幅增加</p>
+</li>
+<li>
+<p>在插入次数比删除次数多得多时以及二叉堆太大时d-堆较为实用</p>
+</li>
+</ul>
 
 <h2 class="relative group">左式堆(leftist heap)
     <div id="左式堆leftist-heap" class="anchor"></div>
@@ -1580,8 +1636,9 @@
     </span>
     
 </h2>
-<pre><code>   具有一定二叉堆特性的同时高效支持合并操作
-</code></pre>
+<ul>
+<li>具有一定二叉堆特性的同时高效支持合并操作</li>
+</ul>
 
 <h3 class="relative group">左式堆的性质
     <div id="左式堆的性质" class="anchor"></div>
@@ -1592,22 +1649,36 @@
     </span>
     
 </h3>
-<pre><code>   零路径长(null path length NPL)
-
-       节点到没有两个子节点的节点的最短路径长
-
-       具有0或1个子节点的节点Npl为0，Npl(NULL)=-1
-
-   左式堆结构性
-
-       堆中每一个节点，左子节点零路径长\=右子节点零路径长
-
-       在右路径上右r个节点的左式堆至少有2^r^-1个节点
-
-   左式堆堆序性
-
-       与二叉堆相同
-</code></pre>
+<ul>
+<li>
+<p>零路径长(null path length NPL)</p>
+<ul>
+<li>
+<p>节点到没有两个子节点的节点的最短路径长</p>
+</li>
+<li>
+<p>具有0或1个子节点的节点Npl为0，Npl(NULL)=-1</p>
+</li>
+</ul>
+</li>
+<li>
+<p>左式堆结构性</p>
+<ul>
+<li>
+<p>堆中每一个节点，左子节点零路径长=右子节点零路径长</p>
+</li>
+<li>
+<p>在右路径上右r个节点的左式堆至少有2^r^-1个节点</p>
+</li>
+</ul>
+</li>
+<li>
+<p>左式堆堆序性</p>
+<ul>
+<li>与二叉堆相同</li>
+</ul>
+</li>
+</ul>
 
 <h3 class="relative group">左式堆的操作
     <div id="左式堆的操作" class="anchor"></div>
@@ -1618,22 +1689,36 @@
     </span>
     
 </h3>
-<pre><code>   左式堆的操作的一般思路式将所有工作放在右路径进行
-
-   基本操作(合并Merge)
-
-       插入可以看作单节点堆与大堆合并
-
-       递归形成
-
-       基准情形 如果两堆有一个是空的，则返回非空的
-
-       不断演进(假设root(H1)\&lt;root(H2))
-
-           H1右子堆加入H2右子堆，新H2作为H1新右子堆
-
-           若H1左右子堆不满足堆序则交换，然后更新零路径长
-</code></pre>
+<ul>
+<li>
+<p>左式堆的操作的一般思路式将所有工作放在右路径进行</p>
+</li>
+<li>
+<p>基本操作(合并Merge)</p>
+<ul>
+<li>
+<p>插入可以看作单节点堆与大堆合并</p>
+</li>
+<li>
+<p>递归形成</p>
+</li>
+<li>
+<p>基准情形 如果两堆有一个是空的，则返回非空的</p>
+</li>
+<li>
+<p>不断演进(假设root(H1)&lt;root(H2))</p>
+<ul>
+<li>
+<p>H1右子堆加入H2右子堆，新H2作为H1新右子堆</p>
+</li>
+<li>
+<p>若H1左右子堆不满足堆序则交换，然后更新零路径长</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
 <h2 class="relative group">斜堆(skew heap)
     <div id="斜堆skew-heap" class="anchor"></div>
@@ -1644,12 +1729,17 @@
     </span>
     
 </h2>
-<pre><code>   斜堆具有堆序但不存在对树的结构限制
-
-   任意M次连续操作，总最坏情形运行时间是O(MlogN)
-
-   除右路径上所有节点最大者不交换外，其他节点无条件交换左右子堆
-</code></pre>
+<ul>
+<li>
+<p>斜堆具有堆序但不存在对树的结构限制</p>
+</li>
+<li>
+<p>任意M次连续操作，总最坏情形运行时间是O(MlogN)</p>
+</li>
+<li>
+<p>除右路径上所有节点最大者不交换外，其他节点无条件交换左右子堆</p>
+</li>
+</ul>
 
 <h2 class="relative group">二项队列(binomial queue)
     <div id="二项队列binomial-queue" class="anchor"></div>
@@ -1670,12 +1760,17 @@
     </span>
     
 </h3>
-<pre><code>   二项队列是堆序树的集合，是森林
-
-   堆序树中的每一颗都是二项树(节点数为2的幂)
-
-   高度为k的二项树恰好有2^K^个节点，深度为d的节点数是二项系数(k/d)
-</code></pre>
+<ul>
+<li>
+<p>二项队列是堆序树的集合，是森林</p>
+</li>
+<li>
+<p>堆序树中的每一颗都是二项树(节点数为2的幂)</p>
+</li>
+<li>
+<p>高度为k的二项树恰好有2^K^个节点，深度为d的节点数是二项系数(k/d)</p>
+</li>
+</ul>
 
 <h3 class="relative group">二项队列操作
     <div id="二项队列操作" class="anchor"></div>
@@ -1686,8 +1781,9 @@
     </span>
     
 </h3>
-<pre><code>   二项队列合并可以类比二进制数的加法
-</code></pre>
+<ul>
+<li>二项队列合并可以类比二进制数的加法</li>
+</ul>
 
 <h3 class="relative group">二项队列实现
     <div id="二项队列实现" class="anchor"></div>
@@ -1698,10 +1794,14 @@
     </span>
     
 </h3>
-<pre><code>   每个节点的子节点都存在一个链表中
-
-   每个节点都有指向第一个子节点的指针
-</code></pre>
+<ul>
+<li>
+<p>每个节点的子节点都存在一个链表中</p>
+</li>
+<li>
+<p>每个节点都有指向第一个子节点的指针</p>
+</li>
+</ul>
           
           
           
@@ -2022,6 +2122,16 @@
                 title="Tags">
                 
                 Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/series/"
+                title="Series">
+                
+                Series
               </a>
             </li>
           

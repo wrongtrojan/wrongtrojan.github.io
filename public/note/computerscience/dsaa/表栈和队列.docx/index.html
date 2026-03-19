@@ -113,8 +113,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.1c0d03e3f74eba5776f3f67d18f695d4dfcb2cfb3c4d6c9ca50a9bdd3b9c8cb6ca5da9084a1f29e0bc211badbda0173c3338411348aeb0a7f26201eaed9b2b1c.css"
-    integrity="sha512-HA0D4/dOuld28/Z9GPaV1N/LLPs8TWycpQqb3TucjLbKXakISh8p4LwhG629oBc8MzhBE0iusKfyYgHq7ZsrHA==">
+    href="/css/main.bundle.min.cb5212541db2451949da8ffbd82a7a588ae283055c68f65fe40b19bc27f68cde472ef0998784f363742bd188e50d8ad7221cad23ccb8f23ada8b043e3e2d633c.css"
+    integrity="sha512-y1ISVB2yRRlJ2o/72Cp6WIrigwVcaPZf5AsZvCf2jN5HLvCZh4TzY3Qr0YjlDYrXIhytI8y48jraiwQ&#43;Pi1jPA==">
 
   
   
@@ -236,7 +236,7 @@
     "keywords": ["ADT"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "681"
+    "wordCount": "679"
   }]
   </script>
 
@@ -906,7 +906,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>681 字</span>
+      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>679 字</span>
     
 
     
@@ -1364,8 +1364,9 @@
     </span>
     
 </h2>
-<pre><code>   ADT是一些操作的集合，可以有诸如并、交、测定大小、取余、查找等操作
-</code></pre>
+<ul>
+<li>ADT是一些操作的集合，可以有诸如并、交、测定大小、取余、查找等操作</li>
+</ul>
 
 <h2 class="relative group">列表(List)ADT
     <div id="列表listadt" class="anchor"></div>
@@ -1386,12 +1387,22 @@
     </span>
     
 </h3>
-<pre><code>   元素的集合，每一个元素有其相对位置
-
-   支持操作 add() remove() search isEmpty() length() index()
-
-           append() insert(pos,item) pop() pop(pos)
-</code></pre>
+<ul>
+<li>
+<p>元素的集合，每一个元素有其相对位置</p>
+</li>
+<li>
+<p>支持操作</p>
+<ul>
+<li>
+<p>add() remove() search isEmpty() length() index()</p>
+</li>
+<li>
+<p>append() insert(pos,item) pop() pop(pos)</p>
+</li>
+</ul>
+</li>
+</ul>
 
 <h3 class="relative group">列表的数组实现
     <div id="列表的数组实现" class="anchor"></div>
@@ -1402,8 +1413,9 @@
     </span>
     
 </h3>
-<pre><code>   插入和删除的运行时间复杂度高，表的大小必须事先已知
-</code></pre>
+<ul>
+<li>插入和删除的运行时间复杂度高，表的大小必须事先已知</li>
+</ul>
 
 <h3 class="relative group">链表(linked list)（允许表不连续存储）
     <div id="链表linked-list允许表不连续存储" class="anchor"></div>
@@ -1414,14 +1426,20 @@
     </span>
     
 </h3>
-<pre><code>   链表的每个节点均含有数据域和指向后继节点的指针域（Next指针）
-
-   最后一个节点的Next指针指向NULL（0）
-
-   留出一个标志节点，称为表头(header)或哑结点(dummy node)
-
-   Delete可以通过修改指向待删除节点指针，使之指向下一节点实现
-</code></pre>
+<ul>
+<li>
+<p>链表的每个节点均含有数据域和指向后继节点的指针域（Next指针）</p>
+</li>
+<li>
+<p>最后一个节点的Next指针指向NULL（0）</p>
+</li>
+<li>
+<p>留出一个标志节点，称为表头(header)或哑结点(dummy node)</p>
+</li>
+<li>
+<p>Delete可以通过修改指向待删除节点指针，使之指向下一节点实现</p>
+</li>
+</ul>
 
 <h3 class="relative group">双链表(double linked list)（允许双向扫描链表）
     <div id="双链表double-linked-list允许双向扫描链表" class="anchor"></div>
@@ -1432,10 +1450,14 @@
     </span>
     
 </h3>
-<pre><code>   在链表节点结构上附加一个域，使节点包含指向上一个节点的指针
-
-   增加了空间需求，使插入和删除的开销增加一倍，但简化了删除操作
-</code></pre>
+<ul>
+<li>
+<p>在链表节点结构上附加一个域，使节点包含指向上一个节点的指针</p>
+</li>
+<li>
+<p>增加了空间需求，使插入和删除的开销增加一倍，但简化了删除操作</p>
+</li>
+</ul>
 
 <h3 class="relative group">循环链表
     <div id="循环链表" class="anchor"></div>
@@ -1446,8 +1468,9 @@
     </span>
     
 </h3>
-<pre><code>   最后节点反过来直指第一个节点
-</code></pre>
+<ul>
+<li>最后节点反过来直指第一个节点</li>
+</ul>
 
 <h3 class="relative group">链表的应用
     <div id="链表的应用" class="anchor"></div>
@@ -1458,8 +1481,9 @@
     </span>
     
 </h3>
-<pre><code>   基数排序(radix sort)
-</code></pre>
+<ul>
+<li>基数排序(radix sort)</li>
+</ul>
 
 <h2 class="relative group">栈(stack)ADT
     <div id="栈stackadt" class="anchor"></div>
@@ -1480,10 +1504,14 @@
     </span>
     
 </h3>
-<pre><code>   限制插入（进栈）和删除（出栈）只在栈顶进行的表，又称为FILO表
-
-   支持操作 push() pop() peak()~（返回栈顶）~ isEmpty() size()
-</code></pre>
+<ul>
+<li>
+<p>限制插入（进栈）和删除（出栈）只在栈顶进行的表，又称为FILO表</p>
+</li>
+<li>
+<p>支持操作 push() pop() peak()<del>（返回栈顶）</del> isEmpty() size()</p>
+</li>
+</ul>
 
 <h3 class="relative group">栈的链表实现
     <div id="栈的链表实现" class="anchor"></div>
@@ -1494,8 +1522,9 @@
     </span>
     
 </h3>
-<pre><code>   操作指针的例程开销昂贵
-</code></pre>
+<ul>
+<li>操作指针的例程开销昂贵</li>
+</ul>
 
 <h3 class="relative group">栈的数组实现
     <div id="栈的数组实现" class="anchor"></div>
@@ -1516,12 +1545,17 @@
     </span>
     
 </h3>
-<pre><code>   匹配括号
-
-   进制转化
-
-   前、中、后序表达式转化
-</code></pre>
+<ul>
+<li>
+<p>匹配括号</p>
+</li>
+<li>
+<p>进制转化</p>
+</li>
+<li>
+<p>前、中、后序表达式转化</p>
+</li>
+</ul>
 
 <h2 class="relative group">队列(queue)ADT
     <div id="队列queueadt" class="anchor"></div>
@@ -1542,10 +1576,14 @@
     </span>
     
 </h3>
-<pre><code>   在队尾(rear)插入（入队），在队头(front)删除（出队）的表，又称FIFO表
-
-   支持操作 enqueue() dequeue() isEmpty() size()
-</code></pre>
+<ul>
+<li>
+<p>在队尾(rear)插入（入队），在队头(front)删除（出队）的表，又称FIFO表</p>
+</li>
+<li>
+<p>支持操作 enqueue() dequeue() isEmpty() size()</p>
+</li>
+</ul>
 
 <h3 class="relative group">队列的数组实现
     <div id="队列的数组实现" class="anchor"></div>
@@ -1556,8 +1594,9 @@
     </span>
     
 </h3>
-<pre><code>   通过循环数组(circular array)实现
-</code></pre>
+<ul>
+<li>通过循环数组(circular array)实现</li>
+</ul>
 
 <h3 class="relative group">队列的应用
     <div id="队列的应用" class="anchor"></div>
@@ -1568,10 +1607,14 @@
     </span>
     
 </h3>
-<pre><code>   模拟：约瑟夫问题
-
-   模拟：打印任务
-</code></pre>
+<ul>
+<li>
+<p>模拟：约瑟夫问题</p>
+</li>
+<li>
+<p>模拟：打印任务</p>
+</li>
+</ul>
 
 <h2 class="relative group">双端队列(deque)ADT
     <div id="双端队列dequeadt" class="anchor"></div>
@@ -1582,12 +1625,17 @@
     </span>
     
 </h2>
-<pre><code>   同时具备栈和队列的特性
-
-   双端队列的应用
-
-       回文检测器
-</code></pre>
+<ul>
+<li>
+<p>同时具备栈和队列的特性</p>
+</li>
+<li>
+<p>双端队列的应用</p>
+<ul>
+<li>回文检测器</li>
+</ul>
+</li>
+</ul>
           
           
           
@@ -1908,6 +1956,16 @@
                 title="Tags">
                 
                 Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/series/"
+                title="Series">
+                
+                Series
               </a>
             </li>
           

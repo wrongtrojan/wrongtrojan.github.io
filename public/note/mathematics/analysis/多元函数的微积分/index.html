@@ -111,8 +111,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.1c0d03e3f74eba5776f3f67d18f695d4dfcb2cfb3c4d6c9ca50a9bdd3b9c8cb6ca5da9084a1f29e0bc211badbda0173c3338411348aeb0a7f26201eaed9b2b1c.css"
-    integrity="sha512-HA0D4/dOuld28/Z9GPaV1N/LLPs8TWycpQqb3TucjLbKXakISh8p4LwhG629oBc8MzhBE0iusKfyYgHq7ZsrHA==">
+    href="/css/main.bundle.min.cb5212541db2451949da8ffbd82a7a588ae283055c68f65fe40b19bc27f68cde472ef0998784f363742bd188e50d8ad7221cad23ccb8f23ada8b043e3e2d633c.css"
+    integrity="sha512-y1ISVB2yRRlJ2o/72Cp6WIrigwVcaPZf5AsZvCf2jN5HLvCZh4TzY3Qr0YjlDYrXIhytI8y48jraiwQ&#43;Pi1jPA==">
 
   
   
@@ -373,7 +373,7 @@
     "keywords": ["函数","极限","偏导数","全微分"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2209"
+    "wordCount": "758"
   }]
   </script>
 
@@ -1043,7 +1043,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-03-17T00:00:00&#43;00:00">2026年3月17日</time><span class="px-2 text-primary-500">&middot;</span><span>2209 字</span>
+      <time datetime="2026-03-17T00:00:00&#43;00:00">2026年3月17日</time><span class="px-2 text-primary-500">&middot;</span><span>758 字</span>
     
 
     
@@ -1248,6 +1248,13 @@
         <li><a href="#关于算符">关于算符:</a></li>
       </ul>
     </li>
+    <li><a href="#多元函数的taylor公式与极值">多元函数的Taylor公式与极值</a>
+      <ul>
+        <li><a href="#多元函数的taylor公式">多元函数的Taylor公式</a></li>
+        <li><a href="#无约束极值与最值">无约束极值与最值</a></li>
+        <li><a href="#有约束极值">有约束极值</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -1292,6 +1299,13 @@
         <li><a href="#高阶偏导数和全微分">高阶偏导数和全微分</a></li>
         <li><a href="#隐函数微分">隐函数微分</a></li>
         <li><a href="#关于算符">关于算符:</a></li>
+      </ul>
+    </li>
+    <li><a href="#多元函数的taylor公式与极值">多元函数的Taylor公式与极值</a>
+      <ul>
+        <li><a href="#多元函数的taylor公式">多元函数的Taylor公式</a></li>
+        <li><a href="#无约束极值与最值">无约束极值与最值</a></li>
+        <li><a href="#有约束极值">有约束极值</a></li>
       </ul>
     </li>
   </ul>
@@ -1488,7 +1502,7 @@
 </blockquote>
 <ol>
 <li>
-<p>定义: \(\forall\epsilon>0,\exist N\in N_{+},\forall k>N,\|x_{k}-a\|<\epsilon \)</p>
+<p>定义: \(\forall\epsilon>0,\exist N\in N_{+},\forall k>N,\|x_{k}-a\|<\epsilon\)</p>
 </li>
 <li>
 <p>点列收敛于\(P_0 \iff\)点列的的各分量组成数列收敛于\(P_0\)的各分量</p>
@@ -1607,7 +1621,7 @@ a为A的聚点\(\iff \forall \epsilon>0,\mathring{U}(a,\epsilon)\cap A\neq\empty
 </h3>
 <ol>
 <li>
-<p>有界集/无界集: \(\forall x\in A,\|x\|<\ M\),则A为有界集,否则为无界集</p>
+<p>有界集/无界集: \(\forall x\in A,\|x\|<M\),则A为有界集,否则为无界集</p>
 </li>
 <li>
 <p>紧集: 有界的闭集</p>
@@ -1886,7 +1900,7 @@ n元向量值函数: \(Y=F(X),Y=(y_1,y_2,...y_n),F=(f_1,f_2,...f_n)\)</p>
 (4)\(F_{x}\)在\((x_0,y_0)\)附近连续</p>
 </li>
 <li>
-<p>若满足(1)~(3),则隐函数存在且唯一<br>
+<p>若满足(1)~(3),则隐函数<strong>存在且唯一</strong><br>
 若还满足(4),则隐函数可微,且有\(\frac{dy}{dx}=-\frac{F_x}{F_y}\)</p>
 </li>
 </ul>
@@ -1927,6 +1941,98 @@ n元向量值函数: \(Y=F(X),Y=(y_1,y_2,...y_n),F=(f_1,f_2,...f_n)\)</p>
 </ul>
 </li>
 </ol>
+
+<h2 class="relative group">多元函数的Taylor公式与极值
+    <div id="多元函数的taylor公式与极值" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%9a%e5%85%83%e5%87%bd%e6%95%b0%e7%9a%84taylor%e5%85%ac%e5%bc%8f%e4%b8%8e%e6%9e%81%e5%80%bc" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">多元函数的Taylor公式
+    <div id="多元函数的taylor公式" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%9a%e5%85%83%e5%87%bd%e6%95%b0%e7%9a%84taylor%e5%85%ac%e5%bc%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<blockquote>
+<p>由一元函数Taylor公式推广</p>
+</blockquote>
+<ul>
+<li>一阶Lagrange余项:</li>
+</ul>
+$$f(X_0+\Delta X)=f(X_0)+\langle\nabla f \Delta X\rangle+R_1$$<p>其中</p>
+$$R_1=\frac{1}{2!}\Delta X^TH_f(X_0+\theta\Delta X)\Delta X$$<p>注:</p>
+$$H_f=\begin{bmatrix} f_{xx} \  f_{xy} \\ f_{xy} \ f_{yy}\end{bmatrix}$$<ul>
+<li>二阶Peano余项:</li>
+</ul>
+$$f(X_0+\Delta X)=f(X_0)+\langle\nabla f \Delta X\rangle+\frac{1}{2!}\Delta X^TH_f(X_0)\Delta X+o\|\Delta X\|^2$$
+<h3 class="relative group">无约束极值与最值
+    <div id="无约束极值与最值" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%97%a0%e7%ba%a6%e6%9d%9f%e6%9e%81%e5%80%bc%e4%b8%8e%e6%9c%80%e5%80%bc" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>无约束极值</li>
+</ol>
+<ul>
+<li>
+<p>定义: \(\forall X\in U(X_0),f(X)\leq f(X_0)(f(X)\geq f(X_0))\)恒成立,则\(f\)在\(X_0\)处取到无约束极大值(极小值)</p>
+</li>
+<li>
+<p>必要条件:</p>
+<ul>
+<li>函数\(f\)在\(X_0\)的一阶偏导数存在,若\(f\)在\(X_0\)取到极值,则\(\nabla f(X_0)=0\)</li>
+<li>证明:\(\forall X_i\),考虑\(\varphi (t)=f(x_1,x_2,...,x_i+th,...x_n)\),若\(f\)在\(X_0\)取到极值,则\(\varphi (t)\)在\(t=0\)取到极值,则有\(\varphi^{'}(0)=0\),即\(f_{x_i}(X_0)=0\)</li>
+<li>若\(\nabla f(X_0)=0\),\(X_0\)称为\(f\)的<strong>驻点</strong></li>
+</ul>
+</li>
+<li>
+<p>充分条件</p>
+<ul>
+<li>\(f\in C^{(2)}(U(X_0)),\nabla f(X_0)=0\),若\(H_f(X_0)\)正定/负定/不定/半定,则\(f(X_0)\)为\(f\)的极小值/为\(f\)的极大值/不为极值/需要进一步讨论</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>最值</li>
+</ol>
+<ul>
+<li>
+<p>对于有界闭域,分别求出<strong>驻点</strong>,<strong>偏导数不存在点</strong>,<strong>边界点</strong>处函数值作比较</p>
+</li>
+<li>
+<p>对于非闭域,取边界附近(-\(\delta\))处的点做函数值大小判断</p>
+</li>
+</ul>
+
+<h3 class="relative group">有约束极值
+    <div id="有约束极值" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%9c%89%e7%ba%a6%e6%9d%9f%e6%9e%81%e5%80%bc" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>
+<p>定义: 对目标函数在限制条件求极值的问题</p>
+</li>
+<li>
+<p>Lagrange乘数法</p>
+</li>
+</ul>
 
           
           
@@ -2020,6 +2126,19 @@ n元向量值函数: \(Y=F(X),Y=(y_1,y_2,...y_n),F=(f_1,f_2,...f_n)\)</p>
           
         </span>
         <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/note/mathematics/analysis/%E5%87%BD%E6%95%B0%E5%8F%AF%E5%BE%AE%E6%80%A7%E4%B8%8E%E8%BF%9E%E7%BB%AD%E6%80%A7%E5%85%B8%E4%BE%8B/">
+              <span class="leading-6">
+                函数可微性与连续性典例&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-03-19T00:00:00&#43;00:00">2026年3月19日</time>
+              </span>
+            
           
         </span>
       </div>
@@ -2145,6 +2264,16 @@ n元向量值函数: \(Y=F(X),Y=(y_1,y_2,...y_n),F=(f_1,f_2,...f_n)\)</p>
                 title="Tags">
                 
                 Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/series/"
+                title="Series">
+                
+                Series
               </a>
             </li>
           

@@ -113,8 +113,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.1c0d03e3f74eba5776f3f67d18f695d4dfcb2cfb3c4d6c9ca50a9bdd3b9c8cb6ca5da9084a1f29e0bc211badbda0173c3338411348aeb0a7f26201eaed9b2b1c.css"
-    integrity="sha512-HA0D4/dOuld28/Z9GPaV1N/LLPs8TWycpQqb3TucjLbKXakISh8p4LwhG629oBc8MzhBE0iusKfyYgHq7ZsrHA==">
+    href="/css/main.bundle.min.cb5212541db2451949da8ffbd82a7a588ae283055c68f65fe40b19bc27f68cde472ef0998784f363742bd188e50d8ad7221cad23ccb8f23ada8b043e3e2d633c.css"
+    integrity="sha512-y1ISVB2yRRlJ2o/72Cp6WIrigwVcaPZf5AsZvCf2jN5HLvCZh4TzY3Qr0YjlDYrXIhytI8y48jraiwQ&#43;Pi1jPA==">
 
   
   
@@ -1354,8 +1354,9 @@
     </span>
     
 </h3>
-<pre><code>   顺序搜索算法的时间复杂度为O(N^2)
-</code></pre>
+<ul>
+<li>顺序搜索算法的时间复杂度为O(N^2)</li>
+</ul>
 
 <h3 class="relative group">二分搜素
     <div id="二分搜素" class="anchor"></div>
@@ -1366,10 +1367,14 @@
     </span>
     
 </h3>
-<pre><code>   如果列表有序可采用二分搜索
-
-   二分搜索算法的时间复杂度为O(logN)
-</code></pre>
+<ul>
+<li>
+<p>如果列表有序可采用二分搜索</p>
+</li>
+<li>
+<p>二分搜索算法的时间复杂度为O(logN)</p>
+</li>
+</ul>
 
 <h3 class="relative group">散列
     <div id="散列" class="anchor"></div>
@@ -1380,62 +1385,106 @@
     </span>
     
 </h3>
-<pre><code>   散列表
-
-       元素集合，储存在槽中便于查找
-
-   载荷因子
-
-       槽的占用率称为载荷因子
-
-   散列函数
-
-       散列函数将散列表中的元素与其所属位置对应起来，常常是取余函数
-
-       完美散列函数
-
-           给定一个元素集合将每个元素映射到不同的槽
-
-       扩展取余函数的方法
-
-           折叠法
-
-               将元素切成等长的部分然后相加再求散列值
-
-           平方取中法
-
-               先将元素取平方，然后提取中间几位数求散列值
-
-       散列函数一定要高效，避免成为存储和搜索的负担
-
-   冲突
-
-       散列函数将两个元素都放入同一个槽
-
-       处理冲突
-
-           通过系统化方法在散列表中安置冲突的第二个元素
-
-           开放地址法
-
-               线性探测
-
-                   在散列表寻找下一个空槽或地址
-
-                   容易造成散列表元素出现聚集现象
-
-               平方探测
-
-                   线性探测的变体，不采用固定的跨步大小
-
-           链接法
-
-               允许散列表中的同一个元素上存在多个元素。
-
-               发生冲突时元素仍然被插入其散列值对应的槽中。
-
-               随着同一个位置上的元素越来越多，搜索变得越来越困难
-</code></pre>
+<ul>
+<li>
+<p>散列表</p>
+<ul>
+<li>元素集合，储存在槽中便于查找</li>
+</ul>
+</li>
+<li>
+<p>载荷因子</p>
+<ul>
+<li>槽的占用率称为载荷因子</li>
+</ul>
+</li>
+<li>
+<p>散列函数</p>
+<ul>
+<li>
+<p>散列函数将散列表中的元素与其所属位置对应起来，常常是取余函数</p>
+</li>
+<li>
+<p>完美散列函数</p>
+<ul>
+<li>给定一个元素集合将每个元素映射到不同的槽</li>
+</ul>
+</li>
+<li>
+<p>扩展取余函数的方法</p>
+<ul>
+<li>
+<p>折叠法</p>
+<ul>
+<li>将元素切成等长的部分然后相加再求散列值</li>
+</ul>
+</li>
+<li>
+<p>平方取中法</p>
+<ul>
+<li>先将元素取平方，然后提取中间几位数求散列值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>散列函数一定要高效，避免成为存储和搜索的负担</p>
+</li>
+</ul>
+</li>
+<li>
+<p>冲突</p>
+<ul>
+<li>
+<p>散列函数将两个元素都放入同一个槽</p>
+</li>
+<li>
+<p>处理冲突</p>
+<ul>
+<li>
+<p>通过系统化方法在散列表中安置冲突的第二个元素</p>
+</li>
+<li>
+<p>开放地址法</p>
+<ul>
+<li>
+<p>线性探测</p>
+<ul>
+<li>
+<p>在散列表寻找下一个空槽或地址</p>
+</li>
+<li>
+<p>容易造成散列表元素出现聚集现象</p>
+</li>
+</ul>
+</li>
+<li>
+<p>平方探测</p>
+<ul>
+<li>线性探测的变体，不采用固定的跨步大小</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>链接法</p>
+<ul>
+<li>
+<p>允许散列表中的同一个元素上存在多个元素。</p>
+</li>
+<li>
+<p>发生冲突时元素仍然被插入其散列值对应的槽中。</p>
+</li>
+<li>
+<p>随着同一个位置上的元素越来越多，搜索变得越来越困难</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
 <h2 class="relative group">排序
     <div id="排序" class="anchor"></div>
@@ -1456,10 +1505,14 @@
     </span>
     
 </h3>
-<pre><code>   每一轮遍历都将下一个最大值放到正确的位置上
-
-   如果在一轮遍历中没有发生元素交换，就可以确定已经有序，使其提前终止
-</code></pre>
+<ul>
+<li>
+<p>每一轮遍历都将下一个最大值放到正确的位置上</p>
+</li>
+<li>
+<p>如果在一轮遍历中没有发生元素交换，就可以确定已经有序，使其提前终止</p>
+</li>
+</ul>
 
 <h3 class="relative group">选择排序O(N^2)
     <div id="选择排序on2" class="anchor"></div>
@@ -1470,8 +1523,9 @@
     </span>
     
 </h3>
-<pre><code>   每次遍历列表时只做一次交换，每次遍历只交换一次
-</code></pre>
+<ul>
+<li>每次遍历列表时只做一次交换，每次遍历只交换一次</li>
+</ul>
 
 <h3 class="relative group">插入排序O(N^2)
     <div id="插入排序on2" class="anchor"></div>
@@ -1482,8 +1536,9 @@
     </span>
     
 </h3>
-<pre><code>   在列表较低的一端维护有序的子列表，并逐个将每个新元素&quot;插入&quot;子列表
-</code></pre>
+<ul>
+<li>在列表较低的一端维护有序的子列表，并逐个将每个新元素&quot;插入&quot;子列表</li>
+</ul>
 
 <h3 class="relative group">希尔排序[可以到达O(N^3/2)]
     <div id="希尔排序可以到达on32" class="anchor"></div>
@@ -1494,10 +1549,14 @@
     </span>
     
 </h3>
-<pre><code>   将列表分成数个子列表，并对每一个子列表应用插入排序
-
-   切分列表是希尔排序的关键，并非连续切分，使用增量i切分列表
-</code></pre>
+<ul>
+<li>
+<p>将列表分成数个子列表，并对每一个子列表应用插入排序</p>
+</li>
+<li>
+<p>切分列表是希尔排序的关键，并非连续切分，使用增量i切分列表</p>
+</li>
+</ul>
 
 <h3 class="relative group">归并排序
     <div id="归并排序" class="anchor"></div>
@@ -1508,12 +1567,17 @@
     </span>
     
 </h3>
-<pre><code>   分支策略改进排序算法，归并排序是递归算法
-
-   基准情形 如果列表为空或者只有一个元素，那么有序
-
-   不断演进 列表一分为二两部分递归调用分别排序
-</code></pre>
+<ul>
+<li>
+<p>分支策略改进排序算法，归并排序是递归算法</p>
+</li>
+<li>
+<p>基准情形 如果列表为空或者只有一个元素，那么有序</p>
+</li>
+<li>
+<p>不断演进 列表一分为二两部分递归调用分别排序</p>
+</li>
+</ul>
 
 <h3 class="relative group">快速排序O(NlogN)[有可能退化]
     <div id="快速排序onlogn有可能退化" class="anchor"></div>
@@ -1524,22 +1588,32 @@
     </span>
     
 </h3>
-<pre><code>   也采用分治策略，但不使用额外的存储空间
-
-   首先选出基准值（多种方法，尽量均匀分割）
-
-       帮助切分列表，基准值的最终的位置是分割点
-
-   接着进行分区（若左小右大）
-
-       左指针找到比基准大的，右指针找到比基准小的，两者交换
-
-   若右指针小于左指针
-
-       右指针即为分割点
-
-   递归调用该过程
-</code></pre>
+<ul>
+<li>
+<p>也采用分治策略，但不使用额外的存储空间</p>
+</li>
+<li>
+<p>首先选出基准值（多种方法，尽量均匀分割）</p>
+<ul>
+<li>帮助切分列表，基准值的最终的位置是分割点</li>
+</ul>
+</li>
+<li>
+<p>接着进行分区（若左小右大）</p>
+<ul>
+<li>左指针找到比基准大的，右指针找到比基准小的，两者交换</li>
+</ul>
+</li>
+<li>
+<p>若右指针小于左指针</p>
+<ul>
+<li>右指针即为分割点</li>
+</ul>
+</li>
+<li>
+<p>递归调用该过程</p>
+</li>
+</ul>
           
           
           
@@ -1860,6 +1934,16 @@
                 title="Tags">
                 
                 Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/series/"
+                title="Series">
+                
+                Series
               </a>
             </li>
           

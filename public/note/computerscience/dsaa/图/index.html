@@ -114,8 +114,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.1c0d03e3f74eba5776f3f67d18f695d4dfcb2cfb3c4d6c9ca50a9bdd3b9c8cb6ca5da9084a1f29e0bc211badbda0173c3338411348aeb0a7f26201eaed9b2b1c.css"
-    integrity="sha512-HA0D4/dOuld28/Z9GPaV1N/LLPs8TWycpQqb3TucjLbKXakISh8p4LwhG629oBc8MzhBE0iusKfyYgHq7ZsrHA==">
+    href="/css/main.bundle.min.cb5212541db2451949da8ffbd82a7a588ae283055c68f65fe40b19bc27f68cde472ef0998784f363742bd188e50d8ad7221cad23ccb8f23ada8b043e3e2d633c.css"
+    integrity="sha512-y1ISVB2yRRlJ2o/72Cp6WIrigwVcaPZf5AsZvCf2jN5HLvCZh4TzY3Qr0YjlDYrXIhytI8y48jraiwQ&#43;Pi1jPA==">
 
   
   
@@ -237,7 +237,7 @@
     "keywords": ["ADT"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1158"
+    "wordCount": "1424"
   }]
   </script>
 
@@ -907,7 +907,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>1158 字</span>
+      <time datetime="2025-11-24T00:00:00&#43;00:00">2025年11月24日</time><span class="px-2 text-primary-500">&middot;</span><span>1424 字</span>
     
 
     
@@ -1413,8 +1413,9 @@
     </span>
     
 </h3>
-<pre><code>   又称节点，可以有自己名字称为键，也可以带有附加信息&quot;有效载荷&quot;
-</code></pre>
+<ul>
+<li>又称节点，可以有自己名字称为键，也可以带有附加信息&quot;有效载荷&quot;</li>
+</ul>
 
 <h3 class="relative group">边
     <div id="边" class="anchor"></div>
@@ -1425,10 +1426,14 @@
     </span>
     
 </h3>
-<pre><code>   两顶点由边相连表示存在关系，既可以单向也可以双向
-
-   若图的所有边都单向称为有向图
-</code></pre>
+<ul>
+<li>
+<p>两顶点由边相连表示存在关系，既可以单向也可以双向</p>
+</li>
+<li>
+<p>若图的所有边都单向称为有向图</p>
+</li>
+</ul>
 
 <h3 class="relative group">权重
     <div id="权重" class="anchor"></div>
@@ -1439,8 +1444,9 @@
     </span>
     
 </h3>
-<pre><code>   边可以带权重，表示从一个顶点到另一个顶点的成本
-</code></pre>
+<ul>
+<li>边可以带权重，表示从一个顶点到另一个顶点的成本</li>
+</ul>
 
 <h3 class="relative group">路径
     <div id="路径" class="anchor"></div>
@@ -1451,8 +1457,9 @@
     </span>
     
 </h3>
-<pre><code>   由边连接的顶点组成的序列，无权重路径长度是边数，有权重长度权重之和
-</code></pre>
+<ul>
+<li>由边连接的顶点组成的序列，无权重路径长度是边数，有权重长度权重之和</li>
+</ul>
 
 <h3 class="relative group">环
     <div id="环" class="anchor"></div>
@@ -1463,10 +1470,14 @@
     </span>
     
 </h3>
-<pre><code>   有向图中起点和终点同一个顶点的路径，没有环的图称为无环图
-
-   没有环的有向图称为有向无环图，简称DAG
-</code></pre>
+<ul>
+<li>
+<p>有向图中起点和终点同一个顶点的路径，没有环的图称为无环图</p>
+</li>
+<li>
+<p>没有环的有向图称为有向无环图，简称DAG</p>
+</li>
+</ul>
 
 <h3 class="relative group">强连通
     <div id="强连通" class="anchor"></div>
@@ -1477,8 +1488,9 @@
     </span>
     
 </h3>
-<pre><code>   有向图从每一个顶点到其他顶点都存在一条路径
-</code></pre>
+<ul>
+<li>有向图从每一个顶点到其他顶点都存在一条路径</li>
+</ul>
 
 <h3 class="relative group">弱连通
     <div id="弱连通" class="anchor"></div>
@@ -1489,8 +1501,9 @@
     </span>
     
 </h3>
-<pre><code>    有向图不是强连通，但基础图(忽略方向)是联通的
-</code></pre>
+<ul>
+<li>有向图不是强连通，但基础图(忽略方向)是联通的</li>
+</ul>
 
 <h3 class="relative group">完全图
     <div id="完全图" class="anchor"></div>
@@ -1501,8 +1514,9 @@
     </span>
     
 </h3>
-<pre><code>    每一对顶点间都存在一条边的图
-</code></pre>
+<ul>
+<li>每一对顶点间都存在一条边的图</li>
+</ul>
 
 <h2 class="relative group">图模型
     <div id="图模型" class="anchor"></div>
@@ -1513,18 +1527,26 @@
     </span>
     
 </h2>
-<pre><code>   addVertex(vert) 向图中添加一个顶点实例
-
-   addEdge(fromVert, toVert) 向图中添加一条有向边连接顶点
-
-   addEdge(fromVert,toVert,weight) 向图中添加一条带权重的有向边连接顶点
-
-   getVertex(vertKey) 在图中找到名为vertkey的顶点
-
-   getVertices( ) 返回图中所有顶点
-
-   in(python中) 顶点存在时返回true，否则返回false
-</code></pre>
+<ul>
+<li>
+<p>addVertex(vert) 向图中添加一个顶点实例</p>
+</li>
+<li>
+<p>addEdge(fromVert, toVert) 向图中添加一条有向边连接顶点</p>
+</li>
+<li>
+<p>addEdge(fromVert,toVert,weight) 向图中添加一条带权重的有向边连接顶点</p>
+</li>
+<li>
+<p>getVertex(vertKey) 在图中找到名为vertkey的顶点</p>
+</li>
+<li>
+<p>getVertices( ) 返回图中所有顶点</p>
+</li>
+<li>
+<p>in(python中) 顶点存在时返回true，否则返回false</p>
+</li>
+</ul>
 
 <h2 class="relative group">图的实现
     <div id="图的实现" class="anchor"></div>
@@ -1545,14 +1567,20 @@
     </span>
     
 </h3>
-<pre><code>   实现图最简单的方式是使用二维矩阵，每一行每一列都表示图中一顶点
-
-   第v行和w列交叉的格子中的值表示从顶点v到顶点w的边的权重
-
-   如果图是稠密的(dense)|E|=Θ(|V|^2^)，则邻接矩阵是合适的表示方法
-
-   但在大部分应用中，图是稀疏的(sparse)
-</code></pre>
+<ul>
+<li>
+<p>实现图最简单的方式是使用二维矩阵，每一行每一列都表示图中一顶点</p>
+</li>
+<li>
+<p>第v行和w列交叉的格子中的值表示从顶点v到顶点w的边的权重</p>
+</li>
+<li>
+<p>如果图是稠密的(dense)|E|=Θ(|V|^2^)，则邻接矩阵是合适的表示方法</p>
+</li>
+<li>
+<p>但在大部分应用中，图是稀疏的(sparse)</p>
+</li>
+</ul>
 
 <h3 class="relative group">邻接表(adjacency list)
     <div id="邻接表adjacency-list" class="anchor"></div>
@@ -1563,12 +1591,17 @@
     </span>
     
 </h3>
-<pre><code>   对每一个顶点，我们使用一个表存放所有邻接的顶点
-
-   最左边的结构只是头单元(header cell)
-
-   这种方法空间需求为O(|E|+|V|)
-</code></pre>
+<ul>
+<li>
+<p>对每一个顶点，我们使用一个表存放所有邻接的顶点</p>
+</li>
+<li>
+<p>最左边的结构只是头单元(header cell)</p>
+</li>
+<li>
+<p>这种方法空间需求为O(|E|+|V|)</p>
+</li>
+</ul>
 
 <h2 class="relative group">宽度优先搜索(BFS)
     <div id="宽度优先搜索bfs" class="anchor"></div>
@@ -1589,8 +1622,9 @@
     </span>
     
 </h3>
-<pre><code>   它会访问完所有与s相距k的顶点后再去访问与s相距k+1的顶点
-</code></pre>
+<ul>
+<li>它会访问完所有与s相距k的顶点后再去访问与s相距k+1的顶点</li>
+</ul>
 
 <h3 class="relative group">颜色标记
     <div id="颜色标记" class="anchor"></div>
@@ -1601,12 +1635,17 @@
     </span>
     
 </h3>
-<pre><code>   为记录进度，BFS会将顶点标记为白色、灰色或黑色
-
-   顶点没被访问时为白色，第一次被访问时标记为灰色，完成访问后标记为黑色
-
-   一旦顶点变为黑色，没有白色顶点与之相连
-</code></pre>
+<ul>
+<li>
+<p>为记录进度，BFS会将顶点标记为白色、灰色或黑色</p>
+</li>
+<li>
+<p>顶点没被访问时为白色，第一次被访问时标记为灰色，完成访问后标记为黑色</p>
+</li>
+<li>
+<p>一旦顶点变为黑色，没有白色顶点与之相连</p>
+</li>
+</ul>
 
 <h3 class="relative group">队列处理
     <div id="队列处理" class="anchor"></div>
@@ -1617,10 +1656,14 @@
     </span>
     
 </h3>
-<pre><code>   初次访问顶点入队，顶点被访问完全后出队
-
-   队列为空时所有可达顶点都被处理
-</code></pre>
+<ul>
+<li>
+<p>初次访问顶点入队，顶点被访问完全后出队</p>
+</li>
+<li>
+<p>队列为空时所有可达顶点都被处理</p>
+</li>
+</ul>
 
 <h3 class="relative group">性能
     <div id="性能" class="anchor"></div>
@@ -1631,8 +1674,9 @@
     </span>
     
 </h3>
-<pre><code>    O(|V|+|E|)
-</code></pre>
+<ul>
+<li>O(|V|+|E|)</li>
+</ul>
 
 <h3 class="relative group">应用
     <div id="应用" class="anchor"></div>
@@ -1643,8 +1687,9 @@
     </span>
     
 </h3>
-<pre><code>    词梯问题
-</code></pre>
+<ul>
+<li>词梯问题</li>
+</ul>
 
 <h2 class="relative group">深度优先搜索(DFS)
     <div id="深度优先搜索dfs" class="anchor"></div>
@@ -1665,8 +1710,9 @@
     </span>
     
 </h3>
-<pre><code>   DFS通过尽可能地探索分支来构建搜索树
-</code></pre>
+<ul>
+<li>DFS通过尽可能地探索分支来构建搜索树</li>
+</ul>
 
 <h3 class="relative group">颜色标记
     <div id="颜色标记-1" class="anchor"></div>
@@ -1677,8 +1723,9 @@
     </span>
     
 </h3>
-<pre><code>   未访问的顶点是白色的，已访问的是灰色的
-</code></pre>
+<ul>
+<li>未访问的顶点是白色的，已访问的是灰色的</li>
+</ul>
 
 <h3 class="relative group">栈处理
     <div id="栈处理" class="anchor"></div>
@@ -1689,10 +1736,14 @@
     </span>
     
 </h3>
-<pre><code>   当递归做DFS遇到死路时必须回溯
-
-   通过栈回溯到上一个被访问节点
-</code></pre>
+<ul>
+<li>
+<p>当递归做DFS遇到死路时必须回溯</p>
+</li>
+<li>
+<p>通过栈回溯到上一个被访问节点</p>
+</li>
+</ul>
 
 <h3 class="relative group">通用深度优先搜索(General DFS)
     <div id="通用深度优先搜索general-dfs" class="anchor"></div>
@@ -1703,12 +1754,17 @@
     </span>
     
 </h3>
-<pre><code>   前驱节点 构建深度优先搜索树，一次多颗称为深度优先森林
-
-   颜色标记 增加访问完成的黑色标记
-
-   时序记录 第一次访问与结束顶点访问的步数
-</code></pre>
+<ul>
+<li>
+<p>前驱节点 构建深度优先搜索树，一次多颗称为深度优先森林</p>
+</li>
+<li>
+<p>颜色标记 增加访问完成的黑色标记</p>
+</li>
+<li>
+<p>时序记录 第一次访问与结束顶点访问的步数</p>
+</li>
+</ul>
 
 <h3 class="relative group">性能
     <div id="性能-1" class="anchor"></div>
@@ -1719,8 +1775,9 @@
     </span>
     
 </h3>
-<pre><code>   O(|V|+|E|)
-</code></pre>
+<ul>
+<li>O(|V|+|E|)</li>
+</ul>
 
 <h3 class="relative group">应用
     <div id="应用-1" class="anchor"></div>
@@ -1731,8 +1788,9 @@
     </span>
     
 </h3>
-<pre><code>   骑士周游问题
-</code></pre>
+<ul>
+<li>骑士周游问题</li>
+</ul>
 
 <h2 class="relative group">拓扑排序
     <div id="拓扑排序" class="anchor"></div>
@@ -1743,12 +1801,17 @@
     </span>
     
 </h2>
-<pre><code>   对图调用深度优先搜索算法，计算每一个顶点的结束时间
-
-   基于结束时间，将顶点按照递减顺序存储在有序表中
-
-   将有序表作为拓扑排序结果返回
-</code></pre>
+<ul>
+<li>
+<p>对图调用深度优先搜索算法，计算每一个顶点的结束时间</p>
+</li>
+<li>
+<p>基于结束时间，将顶点按照递减顺序存储在有序表中</p>
+</li>
+<li>
+<p>将有序表作为拓扑排序结果返回</p>
+</li>
+</ul>
 
 <h2 class="relative group">强连通单元
     <div id="强连通单元" class="anchor"></div>
@@ -1759,14 +1822,20 @@
     </span>
     
 </h2>
-<pre><code>   对图G调用深度优先搜索算法，计算每一个顶点的结束时间
-
-   对图G做转置得到G^T
-
-   对G^T调用深度优先搜索算法，按照结束时间的递减顺序访问顶点
-
-   得到的深度优先森林中的每一棵树都是一个强连通单元
-</code></pre>
+<ul>
+<li>
+<p>对图G调用深度优先搜索算法，计算每一个顶点的结束时间</p>
+</li>
+<li>
+<p>对图G做转置得到G^T</p>
+</li>
+<li>
+<p>对G^T调用深度优先搜索算法，按照结束时间的递减顺序访问顶点</p>
+</li>
+<li>
+<p>得到的深度优先森林中的每一棵树都是一个强连通单元</p>
+</li>
+</ul>
 
 <h2 class="relative group">最短路径问题
     <div id="最短路径问题" class="anchor"></div>
@@ -1787,6 +1856,18 @@
     </span>
     
 </h3>
+<blockquote>
+<p>适用于简单正权图$G=&lt;V,E,W&gt;$中两点最短路径问题</p>
+</blockquote>
+<ul>
+<li>将$V$划分为$P:{x|x为确定点}$,$T:{x|x为未确定点}$</li>
+<li>每次只从$T$集合中找到一个未确定点转换为确定点加入到$P$集合</li>
+<li>第一次将初始点加入$P$集合,标记为(0,$\lambda$)</li>
+<li>每次只从$P$集合中的点出发向$T$集合进行标记($l_{i}$,$v_{i}$)</li>
+<li>标记时取前一次标记与后一次标记中$l_{i}$更小的,若不可达$l_{i}$计为$\infty$</li>
+<li>每次标数完成后选取离初始点最近的未确定点加入$P$集合</li>
+<li>循环上述操作知道所有点加入$P$集合</li>
+</ul>
 
 <h3 class="relative group">Prim算法
     <div id="prim算法" class="anchor"></div>
@@ -2117,6 +2198,16 @@
                 title="Tags">
                 
                 Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/series/"
+                title="Series">
+                
+                Series
               </a>
             </li>
           

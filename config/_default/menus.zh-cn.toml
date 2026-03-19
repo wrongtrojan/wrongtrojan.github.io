@@ -109,19 +109,19 @@
 # the copyright notice. Configure as per the main menu above.
 
 
- [[footer]]
-   name = "Tags"
-   pageRef = "tags"
-   weight = 1
+[[footer]]
+  name = "Tags"
+  pageRef = "tags"
+  weight = 1
 
-# [[footer]]
-#   name = "Categories"
-#   pageRef = "categories"
-#   weight = 2
+[[footer]]
+  name = "Series"
+  pageRef = "series"
+  weight = 2
 
 [[footer]]
   #name = "Github"
   pre = "github"
   url ="https://github.com/wrongtrojan/wrongtrojan.github.io"
   pageRef = "categories/awesome"
-  weight = 2
+  weight = 3
