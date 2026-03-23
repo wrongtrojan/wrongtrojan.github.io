@@ -1,19 +1,20 @@
 /* 1. 基础容器设置与 Firefox 兼容 */
 .highlight pre,
 .katex-display,
-#search-modal section.overflow-auto {
+#search-modal section.overflow-auto,
+.riscv-container {
   scrollbar-width: thin;
   scrollbar-color: rgb(var(--color-neutral-400)) rgb(var(--color-neutral-700));
   /* 确保溢出时显示滚动条 */
   overflow: auto; 
 }
-
 /* 2. Webkit 浏览器 (Chrome/Safari/Edge) 样式定义 */
 
 /* 滚动条整体尺寸 */
 .highlight pre::-webkit-scrollbar,
 .katex-display::-webkit-scrollbar,
-#search-modal section.overflow-auto::-webkit-scrollbar {
+#search-modal section.overflow-auto::-webkit-scrollbar,
+.riscv-container::-webkit-scrollbar {
   width: 8px;
   height: 8px; /* 同时定义横向和纵向滚动条高度 */
 }
@@ -21,7 +22,8 @@
 /* 滚动条轨道 (Track) */
 .highlight pre::-webkit-scrollbar-track,
 .katex-display::-webkit-scrollbar-track,
-#search-modal section.overflow-auto::-webkit-scrollbar-track {
+#search-modal section.overflow-auto::-webkit-scrollbar-track,
+.riscv-container::-webkit-scrollbar-track {
   background: rgb(var(--color-neutral-700));
   border-radius: 4px;
 }
@@ -29,7 +31,8 @@
 /* 滚动条滑块 (Thumb) */
 .highlight pre::-webkit-scrollbar-thumb,
 .katex-display::-webkit-scrollbar-thumb,
-#search-modal section.overflow-auto::-webkit-scrollbar-thumb {
+#search-modal section.overflow-auto::-webkit-scrollbar-thumb,
+.riscv-container::-webkit-scrollbar-thumb {
   background: rgb(var(--color-neutral-400));
   border-radius: 4px;
   /* 增加边框实现“内缩”效果，让滑块看起来更精致 */
@@ -40,9 +43,12 @@
 /* 鼠标悬停滑块颜色 (使用 Dracula 风格的主色调) */
 .highlight pre::-webkit-scrollbar-thumb:hover,
 .katex-display::-webkit-scrollbar-thumb:hover,
-#search-modal section.overflow-auto::-webkit-scrollbar-thumb:hover {
+#search-modal section.overflow-auto::-webkit-scrollbar-thumb:hover,
+.riscv-container::-webkit-scrollbar-thumb:hover {
   background: rgb(var(--color-primary-300));
 }
+
+
 
 /* 1. 声明本地字体 */
 @font-face {
@@ -72,4 +78,114 @@ code, pre, .mono {
         'Monaco',                  /* Mac 代码字体备份 */
         'Microsoft YaHei',         /* 代码里的中文注释 */
         monospace !important;
+}
+
+/*RISC-V*/
+/* RISC-V 指令格式容器 */
+/* 容器：允许横向滚动 */
+.riscv-container {
+    overflow-x: auto;
+    padding: 1.5rem 0.5rem;
+    scrollbar-width: thin;
+}
+
+.riscv-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    min-width: 900px; /* 设定最小宽度，确保在窄屏下触发滚动条而非挤压 */
+}
+
+.riscv-type-label {
+    width: 120px;
+    font-weight: 800;
+    color: rgb(var(--color-secondary-100));
+    font-family: 'JetBrains Mono', monospace;
+    flex-shrink: 0;
+}
+
+.riscv-bits-group {
+    display: flex;
+    flex: 1;
+    height: 50px;
+    border: 1px solid rgb(var(--color-neutral-500));
+    border-radius: 10px; 
+    overflow: visible; 
+    background: rgb(var(--color-neutral-700));
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 1px rgb(var(--color-neutral-500)),
+                inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.bit-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgba(var(--color-neutral-500), 0.2);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); 
+    background-clip: padding-box;
+    cursor: default;
+    position: relative;
+    z-index: 1;
+}
+
+.bit-field:first-child { border-top-left-radius: 9px; border-bottom-left-radius: 9px; }
+.bit-field:last-child { border-top-right-radius: 9px; border-bottom-right-radius: 9px; border-right: none; }
+
+.bit-field:hover {
+    filter: brightness(1.2); 
+    background-color: rgba(var(--color-primary-300), 0.25) !important;
+    border-radius: 8px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4),
+                0 0 0 2px rgb(var(--color-primary-300));
+    border-right-color: transparent;
+    z-index: 50;
+    transform: translateY(-2px) scale(1.02); 
+}
+
+.bit-field:last-child { border-right: none; }
+
+.w-1  { flex: 1; }
+.w-3  { flex: 3; }
+.w-5  { flex: 5; }
+.w-7  { flex: 7; }
+.w-8  { flex: 8; }
+.w-10 { flex: 10; }
+.w-12 { flex: 12; }
+.w-20 { flex: 20; }
+
+
+.bf-opcode { 
+    background: rgba(var(--color-primary-300), 0.25); 
+    color: rgb(var(--color-primary-50)); 
+    border-left: 1px solid rgb(var(--color-primary-300));
+}
+
+.bf-rd, .bf-rs { 
+    background: rgba(var(--color-secondary-100), 0.15); 
+    color: rgb(var(--color-secondary-50)); 
+}
+
+.bf-funct { 
+    background: rgba(var(--color-neutral-400), 0.2); 
+    color: rgb(var(--color-neutral-100)); 
+}
+
+.bf-imm { 
+    background: rgba(255, 184, 108, 0.25); 
+    color: #ffb86c; 
+    font-weight: bold;
+}
+.bit-size {
+    font-size: 0.65rem;
+    margin-top: 4px;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
 }

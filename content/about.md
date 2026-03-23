@@ -8,7 +8,7 @@ title = '关于'
 
 >你好！欢迎来到这个网站。
 >
->这个是我使用 Hugo 和 GitHub Pages 搭建的个人博客，用于记录个人学习和生活
+>这是使用 Hugo 和 GitHub Pages 搭建的个人博客，用于记录个人学习和生活
 
 ## 📚 博客内容
 
@@ -26,7 +26,7 @@ title = '关于'
 >很高兴能与你交流！你可以通过以下方式找到我：
 - **邮箱**：wrongtrojan0@gmail or 2405170138@qq.com
 
-- **GitHub**：试试点击**作者**下方的Github图标😀
+- **GitHub**：试试点击**作者**下方的Github图标
 
 <br>
 <br>

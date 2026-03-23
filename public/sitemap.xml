@@ -63,6 +63,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/note/computerscience/csapp/riscvis/</loc>
+    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/note/mathematics/analysis/%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E7%9A%84%E5%BE%AE%E7%A7%AF%E5%88%86/</loc>
     <lastmod>2026-03-17T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
@@ -316,13 +322,25 @@
   </url>
   <url>
     <loc>http://localhost:1313/note/</loc>
-    <lastmod>2026-03-19T00:00:00+00:00</lastmod>
+    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-03-19T00:00:00+00:00</lastmod>
+    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/note/computerscience/</loc>
+    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/note/computerscience/csapp/</loc>
+    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -341,18 +359,6 @@
   <url>
     <loc>http://localhost:1313/note/computerscience/freebsd%E6%BA%90%E7%A0%81/</loc>
     <lastmod>2026-03-16T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/note/computerscience/</loc>
-    <lastmod>2026-03-16T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/note/computerscience/csapp/</loc>
-    <lastmod>2026-03-14T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

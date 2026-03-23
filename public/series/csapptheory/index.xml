@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CSAPPTheory on 个人博客</title>
+    <link>http://localhost:1313/series/csapptheory/</link>
+    <description>Recent content in CSAPPTheory on 个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>wrongtrojan0.@gmail (木马)</managingEditor>
+    <webMaster>wrongtrojan0.@gmail (木马)</webMaster>
+    <copyright>@2025木马</copyright>
+    <lastBuildDate>Mon, 23 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/series/csapptheory/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Instruction Set(RISC-V)</title>
+      <link>http://localhost:1313/note/computerscience/csapp/riscvis/</link>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/note/computerscience/csapp/riscvis/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
