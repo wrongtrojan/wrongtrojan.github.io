@@ -10,38 +10,34 @@
 # overridden by providing a weight value. The menu will then be
 # ordered by weight from lowest to highest.
 
-[[main]]
-  name = "首页"
-  pageRef = "/"
-  weight = 1
 
 [[main]]
   name = "关于"
   pageRef = "about"
-  weight = 2
+  weight = 1
 
 [[main]]
   name = "笔记"
   pageRef = "note"
-  weight = 3
+  weight = 2
 
 [[main]]
   name = "计算机科学"
   parent="笔记"
   pageRef = "note/ComputerScience"
-  weight = 1
+  weight = 10
 
 [[main]]
   name = "数学"
   parent="笔记"
   pageRef = "note/Mathematics"
-  weight = 2
+  weight = 20
 
 [[main]]
   name = "其他"
   parent="笔记"
   pageRef = "note/Others"
-  weight = 3
+  weight = 30
 
 #[[main]]
 #  name = "Cpp程序设计"
@@ -70,7 +66,7 @@
 [[main]]
   name = "创作"
   pageRef = "create"
-  weight = 4
+  weight = 3
 
 [[main]]
   name = "小说"

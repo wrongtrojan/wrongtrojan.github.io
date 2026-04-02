@@ -63,6 +63,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/note/computerscience/freebsd%E6%BA%90%E7%A0%81/bin.chmod/</loc>
+    <lastmod>2026-03-26T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/note/computerscience/csapp/riscvis/</loc>
     <lastmod>2026-03-23T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
@@ -321,20 +327,26 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/note/</loc>
-    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-03-26T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/note/computerscience/freebsd%E6%BA%90%E7%A0%81/</loc>
+    <lastmod>2026-03-26T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/note/</loc>
+    <lastmod>2026-03-26T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/note/computerscience/</loc>
-    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
+    <lastmod>2026-03-26T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -353,12 +365,6 @@
   <url>
     <loc>http://localhost:1313/note/mathematics/analysis/</loc>
     <lastmod>2026-03-19T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/note/computerscience/freebsd%E6%BA%90%E7%A0%81/</loc>
-    <lastmod>2026-03-16T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>字符串 on 个人博客</title>
+    <title>字符串 on Blog</title>
     <link>http://localhost:1313/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
-    <description>Recent content in 字符串 on 个人博客</description>
+    <description>Recent content in 字符串 on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>wrongtrojan0.@gmail (木马)</managingEditor>

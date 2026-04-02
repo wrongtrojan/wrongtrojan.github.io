@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>第一人称 on 个人博客</title>
+    <title>第一人称 on Blog</title>
     <link>http://localhost:1313/tags/%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0/</link>
-    <description>Recent content in 第一人称 on 个人博客</description>
+    <description>Recent content in 第一人称 on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>wrongtrojan0.@gmail (木马)</managingEditor>

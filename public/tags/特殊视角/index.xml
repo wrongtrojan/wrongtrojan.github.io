@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>特殊视角 on 个人博客</title>
+    <title>特殊视角 on Blog</title>
     <link>http://localhost:1313/tags/%E7%89%B9%E6%AE%8A%E8%A7%86%E8%A7%92/</link>
-    <description>Recent content in 特殊视角 on 个人博客</description>
+    <description>Recent content in 特殊视角 on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>wrongtrojan0.@gmail (木马)</managingEditor>

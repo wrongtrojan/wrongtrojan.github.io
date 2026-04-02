@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>意识流 on 个人博客</title>
+    <title>意识流 on Blog</title>
     <link>http://localhost:1313/tags/%E6%84%8F%E8%AF%86%E6%B5%81/</link>
-    <description>Recent content in 意识流 on 个人博客</description>
+    <description>Recent content in 意识流 on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>wrongtrojan0.@gmail (木马)</managingEditor>

@@ -1,5 +1,5 @@
 +++
-title = "bin/cat.c"
+title = "bin/chmod.c"
 weight= 2
 date = 2026-03-26
 draft = false

@@ -48,7 +48,18 @@
   background: rgb(var(--color-primary-300));
 }
 
+/* 强制修改自动生成的图表颜色 */
+.featured-image svg rect, 
+.featured-image svg path {
+    fill: rgba(var(--color-primary-500), 0.1) !important;
+    stroke: rgba(var(--color-primary-300), 0.3) !important;
+    stroke-width: 0.5px;
+}
 
+/* 让封面图带有一点霓虹感 */
+.featured-image {
+    filter: drop-shadow(0 0 10px rgba(189, 147, 249, 0.1));
+}
 
 /* 1. 声明本地字体 */
 @font-face {
@@ -189,3 +200,5 @@ code, pre, .mono {
     opacity: 0.5;
     transition: opacity 0.2s ease;
 }
+/*RISC-V*/
+
