@@ -9,7 +9,7 @@
     <managingEditor>wrongtrojan0.@gmail (木马)</managingEditor>
     <webMaster>wrongtrojan0.@gmail (木马)</webMaster>
     <copyright>@2025木马</copyright>
-    <lastBuildDate>Thu, 26 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>bin/cat.c</title>
@@ -197,6 +197,16 @@
       <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
       <author>wrongtrojan0.@gmail (木马)</author>
       <guid>http://localhost:1313/note/computerscience/dsaa/%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95.docx/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>CPU(RISC-V)</title>
+      <link>http://localhost:1313/note/computerscience/csapp/cpu/</link>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+      <author>wrongtrojan0.@gmail (木马)</author>
+      <guid>http://localhost:1313/note/computerscience/csapp/cpu/</guid>
       <description></description>
       
     </item>

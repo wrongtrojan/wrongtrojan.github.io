@@ -117,6 +117,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/note/computerscience/csapp/cpu/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/note/mathematics/analysis/%E5%87%BD%E6%95%B0%E5%8F%AF%E5%BE%AE%E6%80%A7%E4%B8%8E%E8%BF%9E%E7%BB%AD%E6%80%A7%E5%85%B8%E4%BE%8B/</loc>
     <lastmod>2026-03-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
@@ -328,31 +334,31 @@
   </url>
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-03-26T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/note/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/note/computerscience/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/note/computerscience/csapp/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/note/computerscience/freebsd%E6%BA%90%E7%A0%81/</loc>
     <lastmod>2026-03-26T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/note/</loc>
-    <lastmod>2026-03-26T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/note/computerscience/</loc>
-    <lastmod>2026-03-26T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/note/computerscience/csapp/</loc>
-    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
