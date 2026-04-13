@@ -1,0 +1,2434 @@
+<!doctype html>
+<html
+  lang="zh-cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-cn">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>PDF Native Viewer Integration Guide &middot; Blog</title>
+    <meta name="title" content="PDF Native Viewer Integration Guide &middot; Blog">
+  
+
+  
+  
+    <meta name="description" content="My personal blog">
+  
+  
+    <meta name="keywords" content="Hugo,PDF,Frontend,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/note/computerscience/csapp/pdf-native-viewer-guide/">
+  
+
+  
+  
+    <meta name="author" content="木马">
+  
+  
+    
+      
+        
+          <link href="https://github.com/wrongtrojan" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/note/computerscience/csapp/pdf-native-viewer-guide/">
+  <meta property="og:site_name" content="Blog">
+  <meta property="og:title" content="PDF Native Viewer Integration Guide">
+  <meta property="og:description" content="My personal blog">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="note">
+    <meta property="article:published_time" content="2026-04-13T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-04-13T00:00:00+00:00">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="PDF">
+    <meta property="article:tag" content="Frontend">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PDF Native Viewer Integration Guide">
+  <meta name="twitter:description" content="My personal blog">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.d17fe4c4a89c56eac71117e9466fd18367ea520c84f199b00ceb3846a7977f33ab8b59c4d99a32533b73cc807575e44c550acda797a66385ef6c2978c39cc465.css"
+    integrity="sha512-0X/kxKicVurHERfpRm/Rg2fqUgyE8ZmwDOs4RqeXfzOri1nE2ZoyUztzzIB1deRMVQrNp5emY4XvbCl4w5zEZQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.b4b722fcb5d42f34f52b30a92f3521b69f403ca9d96d0d6179eb537cb870f5d83fdf1fe836688d95d5c99fefbda4170487711006e56051fa67ea00da10521721.js" integrity="sha512-tLci/LXULzT1KzCpLzUhtp9APKnZbQ1heetTfLhw9dg/3x/oNmiNldXJn&#43;&#43;9pBcEh3EQBuVgUfpn6gDaEFIXIQ=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.f16cf48651044bc66625c8008eb5605cc702530530daa081ce7e495e50adf778bef6cd0747382983caf5e5cc745c819dd7a969e17e545119dff14346f4fcb977.js"
+      integrity="sha512-8Wz0hlEES8ZmJcgAjrVgXMcCUwUw2qCBzn5JXlCt93i&#43;9s0HRzgpg8r15cx0XIGd16lp4X5UURnf8UNG9Py5dw=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "笔记",
+    "name": "PDF Native Viewer Integration Guide",
+    "headline": "PDF Native Viewer Integration Guide",
+    
+    
+    "inLanguage": "zh-cn",
+    "url" : "http://localhost:1313/note/computerscience/csapp/pdf-native-viewer-guide/",
+    "author" : {
+      "@type": "Person",
+      "name": "木马"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-04-13T00:00:00\u002b00:00",
+    "datePublished": "2026-04-13T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-04-13T00:00:00\u002b00:00",
+    
+    "keywords": ["Hugo","PDF","Frontend"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1851"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          Blog
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/about/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="关于"
+  title="关于">
+  
+  
+    <p class="text-base font-medium">
+      关于
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a
+      
+        href="/note/"
+        
+      
+      aria-label="笔记"
+      class="text-base font-medium hover:text-primary-600 dark:hover:text-primary-400"
+      title="笔记">
+      <p>
+        笔记
+      </p>
+    </a>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+          <a
+            href="/note/computerscience/"
+            
+            aria-label="计算机科学"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="计算机科学">
+              计算机科学
+            </p>
+          </a>
+        
+          <a
+            href="/note/mathematics/"
+            
+            aria-label="数学"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="数学">
+              数学
+            </p>
+          </a>
+        
+          <a
+            href="/note/others/"
+            
+            aria-label="其他"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="其他">
+              其他
+            </p>
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      
+        
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a
+      
+        href="/create/"
+        
+      
+      aria-label="创作"
+      class="text-base font-medium hover:text-primary-600 dark:hover:text-primary-400"
+      title="创作">
+      <p>
+        创作
+      </p>
+    </a>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+          <a
+            href="/create/novel/"
+            
+            aria-label="小说"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="小说">
+              小说
+            </p>
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="搜索 (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="搜索 (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/about/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="关于"
+    title="关于">
+    
+    
+      <p class="text-bg font-bg">
+        关于
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/note/"
+    aria-label="笔记"
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="笔记">
+      笔记
+    </p>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </a>
+</li>
+
+  <li class="mt-1">
+    <a
+      href="/note/computerscience/"
+      
+      aria-label="计算机科学"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="计算机科学">
+        计算机科学
+      </p>
+    </a>
+  </li>
+
+  <li class="mt-1">
+    <a
+      href="/note/mathematics/"
+      
+      aria-label="数学"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="数学">
+        数学
+      </p>
+    </a>
+  </li>
+
+  <li class="mt-1">
+    <a
+      href="/note/others/"
+      
+      aria-label="其他"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="其他">
+        其他
+      </p>
+    </a>
+  </li>
+
+<li class="mb-2"></li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/create/"
+    aria-label="创作"
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="创作">
+      创作
+    </p>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </a>
+</li>
+
+  <li class="mt-1">
+    <a
+      href="/create/novel/"
+      
+      aria-label="小说"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="小说">
+        小说
+      </p>
+    </a>
+  </li>
+
+<li class="mb-2"></li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+  
+  
+    
+    
+  
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/defaultBackgroundImage_hu_1af0b07417697dfe.png"
+      alt="PDF Native Viewer Integration Guide"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+      >
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div>
+    <div
+      class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div>
+  </div>
+
+  
+    <div
+      id="background-blur"
+      class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/background-blur.min.00a57c73ea12f2cab2980c3c3d649e89f6d82f190f74bbe2b67f2f5e39ab7d032ece47086400ca05396758aace13299da49aca43ea643d2625e62c506267a169.js"
+      integrity="sha512-AKV8c&#43;oS8sqymAw8PWSeifbYLxkPdLvitn8vXjmrfQMuzkcIZADKBTlnWKrOEymdpJrKQ&#43;pkPSYl5ixQYmehaQ=="
+      data-blur-id="background-blur"
+      data-image-id="background-image"
+      data-image-url="/defaultBackgroundImage_hu_1af0b07417697dfe.png"></script>
+  
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        PDF Native Viewer Integration Guide
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-04-13T00:00:00&#43;00:00">2026年4月13日</time><span class="px-2 text-primary-500">&middot;</span><span>1851 字</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/hugo/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Hugo
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/pdf/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    PDF
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/frontend/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Frontend
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="木马"
+        src="/author_hu_b32b149bc35b336c.jpg"
+        data-zoom-src="/author_hu_7803839ca98ef477.jpg">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        作者
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        木马
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/wrongtrojan"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-方案目标">1. 方案目标</a></li>
+    <li><a href="#2-目录结构当前实现">2. 目录结构（当前实现）</a></li>
+    <li><a href="#3-内容页调用方式">3. 内容页调用方式</a></li>
+    <li><a href="#4-shortcode-完整源码真实可用">4. Shortcode 完整源码（真实可用）</a></li>
+    <li><a href="#5-css-完整源码pdf-相关块">5. CSS 完整源码（PDF 相关块）</a></li>
+    <li><a href="#6-关键机制说明为什么这样做">6. 关键机制说明（为什么这样做）</a>
+      <ul>
+        <li><a href="#61-原生-viewer-翻页触发">6.1 原生 viewer 翻页触发</a></li>
+        <li><a href="#62-自动总页数">6.2 自动总页数</a></li>
+        <li><a href="#63-切页遮掩">6.3 切页遮掩</a></li>
+        <li><a href="#64-滚动条遮掩">6.4 滚动条遮掩</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-可复用步骤新页面接入">7. 可复用步骤（新页面接入）</a></li>
+    <li><a href="#8-已知边界">8. 已知边界</a></li>
+    <li><a href="#9-当前版本建议保留参数">9. 当前版本建议保留参数</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-方案目标">1. 方案目标</a></li>
+    <li><a href="#2-目录结构当前实现">2. 目录结构（当前实现）</a></li>
+    <li><a href="#3-内容页调用方式">3. 内容页调用方式</a></li>
+    <li><a href="#4-shortcode-完整源码真实可用">4. Shortcode 完整源码（真实可用）</a></li>
+    <li><a href="#5-css-完整源码pdf-相关块">5. CSS 完整源码（PDF 相关块）</a></li>
+    <li><a href="#6-关键机制说明为什么这样做">6. 关键机制说明（为什么这样做）</a>
+      <ul>
+        <li><a href="#61-原生-viewer-翻页触发">6.1 原生 viewer 翻页触发</a></li>
+        <li><a href="#62-自动总页数">6.2 自动总页数</a></li>
+        <li><a href="#63-切页遮掩">6.3 切页遮掩</a></li>
+        <li><a href="#64-滚动条遮掩">6.4 滚动条遮掩</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-可复用步骤新页面接入">7. 可复用步骤（新页面接入）</a></li>
+    <li><a href="#8-已知边界">8. 已知边界</a></li>
+    <li><a href="#9-当前版本建议保留参数">9. 当前版本建议保留参数</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+    let isJumpingToAnchor = false
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      if (isJumpingToAnchor) {
+        for (let i = 0; i < anchors.length; i++) {
+          const anchor = anchors[i]
+          if (!tocIds.has(anchor.id)) continue
+          const top = anchor.getBoundingClientRect().top + window.scrollY
+          if (Math.abs(window.scrollY - top) < 100) {
+            return anchor.id
+          }
+        }
+      }
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          isJumpingToAnchor = true
+        })
+      })
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h1 class="relative group">PDF 借助浏览器原生 Viewer 展示方案（完整可复用）
+    <div id="pdf-借助浏览器原生-viewer-展示方案完整可复用" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pdf-%e5%80%9f%e5%8a%a9%e6%b5%8f%e8%a7%88%e5%99%a8%e5%8e%9f%e7%94%9f-viewer-%e5%b1%95%e7%a4%ba%e6%96%b9%e6%a1%88%e5%ae%8c%e6%95%b4%e5%8f%af%e5%a4%8d%e7%94%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h1>
+<p>这份文档总结当前项目里已经跑通的方案：<br>
+在 Hugo 页面中使用浏览器原生 PDF viewer（<code>iframe</code>），并在外层做 UI 控制、翻页、页数探测和加载遮掩。</p>
+<hr>
+
+<h2 class="relative group">1. 方案目标
+    <div id="1-方案目标" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e6%96%b9%e6%a1%88%e7%9b%ae%e6%a0%87" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>使用浏览器内置 PDF 渲染能力，不引入完整自绘 Viewer</li>
+<li>页面内按钮手动翻页（上一页/下一页）</li>
+<li>支持自动探测总页数（失败时也不锁死翻页）</li>
+<li>减少切页时内置 viewer 的抖动和闪烁</li>
+<li>保持 Dracula 风格的加载遮罩视觉</li>
+</ul>
+<hr>
+
+<h2 class="relative group">2. 目录结构（当前实现）
+    <div id="2-目录结构当前实现" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84%e5%bd%93%e5%89%8d%e5%ae%9e%e7%8e%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">layouts/shortcodes/pdfviewer.html
+</span></span><span class="line"><span class="cl">assets/css/custom.css
+</span></span><span class="line"><span class="cl">static/assets/DataPath.pdf
+</span></span><span class="line"><span class="cl">static/lib/pdfjs/pdf.min.js
+</span></span><span class="line"><span class="cl">static/lib/pdfjs/pdf.worker.min.js
+</span></span><span class="line"><span class="cl">content/note/ComputerScience/CSAPP/CPU.md
+</span></span></code></pre></div><p>说明：</p>
+<ul>
+<li><code>static/assets/*.pdf</code> 是 PDF 静态资源</li>
+<li><code>static/lib/pdfjs/*</code> 仅用于读取总页数（<code>pdfjsLib.getDocument</code>），不用于主渲染</li>
+</ul>
+<hr>
+
+<h2 class="relative group">3. 内容页调用方式
+    <div id="3-内容页调用方式" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-%e5%86%85%e5%ae%b9%e9%a1%b5%e8%b0%83%e7%94%a8%e6%96%b9%e5%bc%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>在 Markdown 中插入：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl"><div
+  class="pdf-lite"
+  data-url="/assets/DataPath.pdf"
+  data-page="1"
+  data-max="0"
+>
+  <div class="pdf-stage">
+    <div class="pdf-toolbar">
+      <button class="pdf-prev" type="button" aria-label="Previous page">◀</button>
+      <span class="pdf-page-label">1 / --</span>
+      <button class="pdf-next" type="button" aria-label="Next page">▶</button>
+    </div>
+    <iframe
+      class="pdf-frame"
+      title="PDF"
+      src="/assets/DataPath.pdf#page=1&view=Fit&toolbar=0&navpanes=0&scrollbar=0"
+    ></iframe>
+    <div class="pdf-loading-mask" aria-hidden="true"></div>
+    <div class="pdf-wheel-mask" aria-hidden="true"></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const root = document.currentScript?.previousElementSibling;
+  if (!root || !root.classList.contains('pdf-lite')) return;
+
+  const url = root.dataset.url;
+  let max = Number(root.dataset.max || 0);
+  let page = Number(root.dataset.page || 1);
+
+  const frame = root.querySelector('.pdf-frame');
+  const stage = root.querySelector('.pdf-stage');
+  const prev = root.querySelector('.pdf-prev');
+  const next = root.querySelector('.pdf-next');
+  const label = root.querySelector('.pdf-page-label');
+  const mask = root.querySelector('.pdf-wheel-mask');
+  const loadingMask = root.querySelector('.pdf-loading-mask');
+  let loadingTimer = null;
+  let loadingStartedAt = 0;
+
+  const setLoading = (loading) => {
+    if (!loadingMask) return;
+    if (loading) loadingStartedAt = Date.now();
+    loadingMask.classList.toggle('is-active', loading);
+    stage?.classList.toggle('is-loading', loading);
+  };
+
+  const clearLoadingWithMinDuration = () => {
+    const minVisibleMs = 420;
+    const elapsed = Date.now() - loadingStartedAt;
+    const wait = Math.max(0, minVisibleMs - elapsed);
+    if (loadingTimer) clearTimeout(loadingTimer);
+    loadingTimer = setTimeout(() => {
+      setLoading(false);
+      loadingTimer = null;
+    }, wait);
+  };
+
+  frame?.addEventListener('load', () => {
+    clearLoadingWithMinDuration();
+  });
+
+  const ensurePdfJs = async () => {
+    if (window.pdfjsLib) return window.pdfjsLib;
+    await new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = '/lib/pdfjs/pdf.min.js';
+      script.async = true;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+    if (!window.pdfjsLib) throw new Error('pdfjs not loaded');
+    window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+      '/lib/pdfjs/pdf.worker.min.js';
+    return window.pdfjsLib;
+  };
+
+  const resolveTotalPages = async () => {
+    if (max > 0) return;
+    try {
+      const pdfjsLib = await ensurePdfJs();
+      const doc = await pdfjsLib.getDocument(url).promise;
+      max = doc.numPages || 1;
+      render();
+    } catch (_) {
+      
+      max = 0;
+      render();
+    }
+  };
+
+  const render = (showLoading = true) => {
+    const safeMax = max > 0 ? max : null;
+    if (page < 1) page = 1;
+    if (safeMax && page > safeMax) page = safeMax;
+    const sep = url.includes('?') ? '&' : '?';
+    const nextSrc = `${url}${sep}_pg=${page}#page=${page}&view=Fit&toolbar=0&navpanes=0&scrollbar=0`;
+    if (showLoading) {
+      setLoading(true);
+      if (loadingTimer) clearTimeout(loadingTimer);
+      loadingTimer = setTimeout(() => {
+        setLoading(false);
+        loadingTimer = null;
+      }, 1300);
+    }
+    requestAnimationFrame(() => {
+      try {
+        if (frame.contentWindow) {
+          frame.contentWindow.location.replace(nextSrc);
+        } else {
+          frame.src = nextSrc;
+        }
+      } catch (_) {
+        frame.src = nextSrc;
+      }
+    });
+    label.textContent = safeMax ? `${page} / ${safeMax}` : `${page} / --`;
+    prev.disabled = page <= 1;
+    next.disabled = safeMax ? page >= safeMax : false;
+  };
+
+  prev?.addEventListener('click', () => {
+    if (page > 1) {
+      page--;
+      render();
+    }
+  });
+
+  next?.addEventListener('click', () => {
+    if (max <= 0 || page < max) {
+      page++;
+      render();
+    }
+  });
+
+  
+  mask?.addEventListener('pointerdown', (e) => e.preventDefault());
+
+  render(false);
+  resolveTotalPages();
+})();
+</script>
+</span></span></code></pre></div><p>当前项目里实际调用：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-55:59:content/note/ComputerScience/CSAPP/CPU.md" data-lang="55:59:content/note/ComputerScience/CSAPP/CPU.md"><span class="line"><span class="cl"><span class="gu">### DataPath(for example)
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span>
+</span></span><span class="line"><span class="cl"><div
+  class="pdf-lite"
+  data-url="/assets/DataPath.pdf"
+  data-page="1"
+  data-max="0"
+>
+  <div class="pdf-stage">
+    <div class="pdf-toolbar">
+      <button class="pdf-prev" type="button" aria-label="Previous page">◀</button>
+      <span class="pdf-page-label">1 / --</span>
+      <button class="pdf-next" type="button" aria-label="Next page">▶</button>
+    </div>
+    <iframe
+      class="pdf-frame"
+      title="PDF"
+      src="/assets/DataPath.pdf#page=1&view=Fit&toolbar=0&navpanes=0&scrollbar=0"
+    ></iframe>
+    <div class="pdf-loading-mask" aria-hidden="true"></div>
+    <div class="pdf-wheel-mask" aria-hidden="true"></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const root = document.currentScript?.previousElementSibling;
+  if (!root || !root.classList.contains('pdf-lite')) return;
+
+  const url = root.dataset.url;
+  let max = Number(root.dataset.max || 0);
+  let page = Number(root.dataset.page || 1);
+
+  const frame = root.querySelector('.pdf-frame');
+  const stage = root.querySelector('.pdf-stage');
+  const prev = root.querySelector('.pdf-prev');
+  const next = root.querySelector('.pdf-next');
+  const label = root.querySelector('.pdf-page-label');
+  const mask = root.querySelector('.pdf-wheel-mask');
+  const loadingMask = root.querySelector('.pdf-loading-mask');
+  let loadingTimer = null;
+  let loadingStartedAt = 0;
+
+  const setLoading = (loading) => {
+    if (!loadingMask) return;
+    if (loading) loadingStartedAt = Date.now();
+    loadingMask.classList.toggle('is-active', loading);
+    stage?.classList.toggle('is-loading', loading);
+  };
+
+  const clearLoadingWithMinDuration = () => {
+    const minVisibleMs = 420;
+    const elapsed = Date.now() - loadingStartedAt;
+    const wait = Math.max(0, minVisibleMs - elapsed);
+    if (loadingTimer) clearTimeout(loadingTimer);
+    loadingTimer = setTimeout(() => {
+      setLoading(false);
+      loadingTimer = null;
+    }, wait);
+  };
+
+  frame?.addEventListener('load', () => {
+    clearLoadingWithMinDuration();
+  });
+
+  const ensurePdfJs = async () => {
+    if (window.pdfjsLib) return window.pdfjsLib;
+    await new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = '/lib/pdfjs/pdf.min.js';
+      script.async = true;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+    if (!window.pdfjsLib) throw new Error('pdfjs not loaded');
+    window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+      '/lib/pdfjs/pdf.worker.min.js';
+    return window.pdfjsLib;
+  };
+
+  const resolveTotalPages = async () => {
+    if (max > 0) return;
+    try {
+      const pdfjsLib = await ensurePdfJs();
+      const doc = await pdfjsLib.getDocument(url).promise;
+      max = doc.numPages || 1;
+      render();
+    } catch (_) {
+      
+      max = 0;
+      render();
+    }
+  };
+
+  const render = (showLoading = true) => {
+    const safeMax = max > 0 ? max : null;
+    if (page < 1) page = 1;
+    if (safeMax && page > safeMax) page = safeMax;
+    const sep = url.includes('?') ? '&' : '?';
+    const nextSrc = `${url}${sep}_pg=${page}#page=${page}&view=Fit&toolbar=0&navpanes=0&scrollbar=0`;
+    if (showLoading) {
+      setLoading(true);
+      if (loadingTimer) clearTimeout(loadingTimer);
+      loadingTimer = setTimeout(() => {
+        setLoading(false);
+        loadingTimer = null;
+      }, 1300);
+    }
+    requestAnimationFrame(() => {
+      try {
+        if (frame.contentWindow) {
+          frame.contentWindow.location.replace(nextSrc);
+        } else {
+          frame.src = nextSrc;
+        }
+      } catch (_) {
+        frame.src = nextSrc;
+      }
+    });
+    label.textContent = safeMax ? `${page} / ${safeMax}` : `${page} / --`;
+    prev.disabled = page <= 1;
+    next.disabled = safeMax ? page >= safeMax : false;
+  };
+
+  prev?.addEventListener('click', () => {
+    if (page > 1) {
+      page--;
+      render();
+    }
+  });
+
+  next?.addEventListener('click', () => {
+    if (max <= 0 || page < max) {
+      page++;
+      render();
+    }
+  });
+
+  
+  mask?.addEventListener('pointerdown', (e) => e.preventDefault());
+
+  render(false);
+  resolveTotalPages();
+})();
+</script>
+</span></span></code></pre></div><hr>
+
+<h2 class="relative group">4. Shortcode 完整源码（真实可用）
+    <div id="4-shortcode-完整源码真实可用" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-shortcode-%e5%ae%8c%e6%95%b4%e6%ba%90%e7%a0%81%e7%9c%9f%e5%ae%9e%e5%8f%af%e7%94%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>文件：<code>layouts/shortcodes/pdfviewer.html</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span>
+</span></span><span class="line"><span class="cl">  <span class="na">class</span><span class="o">=</span><span class="s">&#34;pdf-lite&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">data-url</span><span class="o">=</span><span class="s">&#34;{{ .Get `url` | default `/assets/DataPath.pdf` }}&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">data-page</span><span class="o">=</span><span class="s">&#34;{{ .Get `page` | default `1` }}&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">data-max</span><span class="o">=</span><span class="s">&#34;{{ .Get `max` | default `0` }}&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;pdf-stage&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;pdf-toolbar&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;pdf-prev&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Previous page&#34;</span><span class="p">&gt;</span>◀<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;pdf-page-label&#34;</span><span class="p">&gt;</span>1 / --<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;pdf-next&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Next page&#34;</span><span class="p">&gt;</span>▶<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">iframe</span>
+</span></span><span class="line"><span class="cl">      <span class="na">class</span><span class="o">=</span><span class="s">&#34;pdf-frame&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">title</span><span class="o">=</span><span class="s">&#34;PDF&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">src</span><span class="o">=</span><span class="s">&#34;{{ .Get `url` | default `/assets/DataPath.pdf` }}#page={{ .Get `page` | default `1` }}&amp;view=Fit&amp;toolbar=0&amp;navpanes=0&amp;scrollbar=0&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;pdf-loading-mask&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;pdf-wheel-mask&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">currentScript</span><span class="o">?</span><span class="p">.</span><span class="nx">previousElementSibling</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">root</span> <span class="o">||</span> <span class="o">!</span><span class="nx">root</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="s1">&#39;pdf-lite&#39;</span><span class="p">))</span> <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">url</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">max</span> <span class="o">||</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">page</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">page</span> <span class="o">||</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">frame</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.pdf-frame&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">stage</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.pdf-stage&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">prev</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.pdf-prev&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">next</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.pdf-next&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">label</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.pdf-page-label&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">mask</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.pdf-wheel-mask&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">loadingMask</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.pdf-loading-mask&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">loadingTimer</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">loadingStartedAt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">setLoading</span> <span class="o">=</span> <span class="p">(</span><span class="nx">loading</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">loadingMask</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">loading</span><span class="p">)</span> <span class="nx">loadingStartedAt</span> <span class="o">=</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">loadingMask</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s1">&#39;is-active&#39;</span><span class="p">,</span> <span class="nx">loading</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">stage</span><span class="o">?</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s1">&#39;is-loading&#39;</span><span class="p">,</span> <span class="nx">loading</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">clearLoadingWithMinDuration</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">minVisibleMs</span> <span class="o">=</span> <span class="mi">420</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">elapsed</span> <span class="o">=</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">-</span> <span class="nx">loadingStartedAt</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">wait</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">minVisibleMs</span> <span class="o">-</span> <span class="nx">elapsed</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">loadingTimer</span><span class="p">)</span> <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">loadingTimer</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">loadingTimer</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">setLoading</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">loadingTimer</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span> <span class="nx">wait</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">frame</span><span class="o">?</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">clearLoadingWithMinDuration</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">ensurePdfJs</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">pdfjsLib</span><span class="p">)</span> <span class="k">return</span> <span class="nb">window</span><span class="p">.</span><span class="nx">pdfjsLib</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">script</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">script</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;/lib/pdfjs/pdf.min.js&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">script</span><span class="p">.</span><span class="kr">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">script</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="nx">resolve</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">script</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="nx">reject</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">document</span><span class="p">.</span><span class="nx">head</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">window</span><span class="p">.</span><span class="nx">pdfjsLib</span><span class="p">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;pdfjs not loaded&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">window</span><span class="p">.</span><span class="nx">pdfjsLib</span><span class="p">.</span><span class="nx">GlobalWorkerOptions</span><span class="p">.</span><span class="nx">workerSrc</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">      <span class="s1">&#39;/lib/pdfjs/pdf.worker.min.js&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">window</span><span class="p">.</span><span class="nx">pdfjsLib</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">resolveTotalPages</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">max</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">pdfjsLib</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">ensurePdfJs</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">doc</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">pdfjsLib</span><span class="p">.</span><span class="nx">getDocument</span><span class="p">(</span><span class="nx">url</span><span class="p">).</span><span class="nx">promise</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">max</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">numPages</span> <span class="o">||</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">render</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">_</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// Keep unknown total when auto-detection fails; don&#39;t lock paging to 1.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">render</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">render</span> <span class="o">=</span> <span class="p">(</span><span class="nx">showLoading</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">safeMax</span> <span class="o">=</span> <span class="nx">max</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="nx">max</span> <span class="o">:</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">page</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="nx">page</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">safeMax</span> <span class="o">&amp;&amp;</span> <span class="nx">page</span> <span class="o">&gt;</span> <span class="nx">safeMax</span><span class="p">)</span> <span class="nx">page</span> <span class="o">=</span> <span class="nx">safeMax</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">sep</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s1">&#39;?&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39;&amp;&#39;</span> <span class="o">:</span> <span class="s1">&#39;?&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">nextSrc</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nx">url</span><span class="si">}${</span><span class="nx">sep</span><span class="si">}</span><span class="sb">_pg=</span><span class="si">${</span><span class="nx">page</span><span class="si">}</span><span class="sb">#page=</span><span class="si">${</span><span class="nx">page</span><span class="si">}</span><span class="sb">&amp;view=Fit&amp;toolbar=0&amp;navpanes=0&amp;scrollbar=0`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">showLoading</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">setLoading</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">loadingTimer</span><span class="p">)</span> <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">loadingTimer</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">loadingTimer</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">setLoading</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">loadingTimer</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span> <span class="mi">1300</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">requestAnimationFrame</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">frame</span><span class="p">.</span><span class="nx">contentWindow</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">frame</span><span class="p">.</span><span class="nx">contentWindow</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">nextSrc</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">frame</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">nextSrc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">_</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">frame</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">nextSrc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">label</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">safeMax</span> <span class="o">?</span> <span class="sb">`</span><span class="si">${</span><span class="nx">page</span><span class="si">}</span><span class="sb"> / </span><span class="si">${</span><span class="nx">safeMax</span><span class="si">}</span><span class="sb">`</span> <span class="o">:</span> <span class="sb">`</span><span class="si">${</span><span class="nx">page</span><span class="si">}</span><span class="sb"> / --`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">prev</span><span class="p">.</span><span class="nx">disabled</span> <span class="o">=</span> <span class="nx">page</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">next</span><span class="p">.</span><span class="nx">disabled</span> <span class="o">=</span> <span class="nx">safeMax</span> <span class="o">?</span> <span class="nx">page</span> <span class="o">&gt;=</span> <span class="nx">safeMax</span> <span class="o">:</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">prev</span><span class="o">?</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">page</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">page</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">render</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">next</span><span class="o">?</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">max</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">page</span> <span class="o">&lt;</span> <span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">page</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">render</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Let page-level scrolling work while hovering over the PDF area.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">mask</span><span class="o">?</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;pointerdown&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">render</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">resolveTotalPages</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">})();</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><hr>
+
+<h2 class="relative group">5. CSS 完整源码（PDF 相关块）
+    <div id="5-css-完整源码pdf-相关块" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-css-%e5%ae%8c%e6%95%b4%e6%ba%90%e7%a0%81pdf-%e7%9b%b8%e5%85%b3%e5%9d%97" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>文件：<code>assets/css/custom.css</code> 中与 PDF viewer 相关的完整样式块如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-lite</span> <span class="p">{</span> <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-stage</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">height</span><span class="p">:</span> <span class="nf">min</span><span class="p">(</span><span class="mi">92</span><span class="kt">vh</span><span class="p">,</span> <span class="mi">1200</span><span class="kt">px</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background</span><span class="p">:</span> <span class="nb">rgb</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">color</span><span class="o">-</span><span class="n">neutral</span><span class="mi">-800</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="k">overflow-y</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">overflow-x</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">overflow-x</span><span class="p">:</span> <span class="kc">clip</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-frame</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">pointer-events</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">transition</span><span class="p">:</span> <span class="k">opacity</span> <span class="mi">300</span><span class="kt">ms</span> <span class="kc">ease</span><span class="p">,</span> <span class="k">filter</span> <span class="mi">300</span><span class="kt">ms</span> <span class="kc">ease</span><span class="p">,</span> <span class="k">transform</span> <span class="mi">300</span><span class="kt">ms</span> <span class="kc">ease</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">transform-origin</span><span class="p">:</span> <span class="kc">center</span> <span class="kc">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-stage</span><span class="p">.</span><span class="nc">is-loading</span> <span class="p">.</span><span class="nc">pdf-frame</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">opacity</span><span class="p">:</span> <span class="mf">0.02</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">filter</span><span class="p">:</span> <span class="nb">blur</span><span class="p">(</span><span class="mi">2</span><span class="kt">px</span><span class="p">)</span> <span class="nb">saturate</span><span class="p">(</span><span class="mf">0.85</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mf">0.992</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-stage</span><span class="p">::</span><span class="nd">before</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-stage</span><span class="p">::</span><span class="nd">after</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">content</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background</span><span class="p">:</span> <span class="nb">rgb</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">color</span><span class="o">-</span><span class="n">neutral</span><span class="mi">-800</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="n">pointer-events</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-stage</span><span class="p">::</span><span class="nd">before</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">right</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">height</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">z-index</span><span class="p">:</span> <span class="mi">13</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-stage</span><span class="p">::</span><span class="nd">after</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">right</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">z-index</span><span class="p">:</span> <span class="mi">13</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-toolbar</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">right</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">z-index</span><span class="p">:</span> <span class="mi">20</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">pointer-events</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-toolbar</span> <span class="nt">button</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">top</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">transform</span><span class="p">:</span> <span class="nb">translateY</span><span class="p">(</span><span class="mi">-50</span><span class="kt">%</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="nb">rgb</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">color</span><span class="o">-</span><span class="n">neutral</span><span class="mi">-100</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="k">cursor</span><span class="p">:</span> <span class="kc">pointer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="mi">46</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">height</span><span class="p">:</span> <span class="mi">46</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">999</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="nb">rgba</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">color</span><span class="o">-</span><span class="n">neutral</span><span class="mi">-300</span><span class="p">),</span> <span class="mf">0.28</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">backdrop-filter</span><span class="p">:</span> <span class="nb">blur</span><span class="p">(</span><span class="mi">6</span><span class="kt">px</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">18</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.18</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">pointer-events</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">transition</span><span class="p">:</span> <span class="k">background-color</span> <span class="mf">0.2</span><span class="kt">s</span> <span class="kc">ease</span><span class="p">,</span> <span class="k">border-color</span> <span class="mf">0.2</span><span class="kt">s</span> <span class="kc">ease</span><span class="p">,</span> <span class="k">transform</span> <span class="mf">0.2</span><span class="kt">s</span> <span class="kc">ease</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-toolbar</span> <span class="nt">button</span><span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span> <span class="k">left</span><span class="p">:</span> <span class="mi">12</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-toolbar</span> <span class="nt">button</span><span class="p">:</span><span class="nd">last-child</span> <span class="p">{</span> <span class="k">right</span><span class="p">:</span> <span class="mi">12</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-toolbar</span> <span class="nt">button</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">color</span><span class="o">-</span><span class="n">primary</span><span class="mi">-300</span><span class="p">),</span> <span class="mf">0.15</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border-color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">color</span><span class="o">-</span><span class="n">primary</span><span class="mi">-300</span><span class="p">),</span> <span class="mf">0.38</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">transform</span><span class="p">:</span> <span class="nb">translateY</span><span class="p">(</span><span class="mi">-50</span><span class="kt">%</span><span class="p">)</span> <span class="nb">scale</span><span class="p">(</span><span class="mf">1.03</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-toolbar</span> <span class="nt">button</span><span class="p">:</span><span class="nd">disabled</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">0.35</span><span class="p">;</span> <span class="k">cursor</span><span class="p">:</span> <span class="kc">not-allowed</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-page-label</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">top</span><span class="p">:</span> <span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">left</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">transform</span><span class="p">:</span> <span class="nb">translateX</span><span class="p">(</span><span class="mi">-50</span><span class="kt">%</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">min-width</span><span class="p">:</span> <span class="mi">78</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">padding</span><span class="p">:</span> <span class="mf">0.35</span><span class="kt">rem</span> <span class="mf">0.65</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mf">0.78</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="nb">rgb</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">color</span><span class="o">-</span><span class="n">neutral</span><span class="mi">-100</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">999</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mf">0.78</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="nb">rgba</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">color</span><span class="o">-</span><span class="n">neutral</span><span class="mi">-400</span><span class="p">),</span> <span class="mf">0.35</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">backdrop-filter</span><span class="p">:</span> <span class="nb">blur</span><span class="p">(</span><span class="mi">6</span><span class="kt">px</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">pointer-events</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-wheel-mask</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">inset</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">z-index</span><span class="p">:</span> <span class="mi">15</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background</span><span class="p">:</span> <span class="kc">transparent</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">pointer-events</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-loading-mask</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">inset</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">z-index</span><span class="p">:</span> <span class="mi">18</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">pointer-events</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">radial-gradient</span><span class="p">(</span><span class="kc">circle</span> <span class="n">at</span> <span class="mi">50</span><span class="kt">%</span> <span class="mi">45</span><span class="kt">%</span><span class="p">,</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">189</span><span class="p">,</span> <span class="mi">147</span><span class="p">,</span> <span class="mi">249</span><span class="p">,</span> <span class="mf">0.18</span><span class="p">),</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mf">0.86</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">180</span><span class="kt">deg</span><span class="p">,</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">68</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mf">0.72</span><span class="p">),</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="k">transition</span><span class="p">:</span> <span class="k">opacity</span> <span class="mi">300</span><span class="kt">ms</span> <span class="kc">ease</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-loading-mask</span><span class="p">.</span><span class="nc">is-active</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">opacity</span><span class="p">:</span> <span class="mf">0.97</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-loading-mask</span><span class="p">::</span><span class="nd">before</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">content</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">inset</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background-image</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">linear-gradient</span><span class="p">(</span><span class="nb">rgba</span><span class="p">(</span><span class="mi">189</span><span class="p">,</span> <span class="mi">147</span><span class="p">,</span> <span class="mi">249</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">)</span> <span class="mi">1</span><span class="kt">px</span><span class="p">,</span> <span class="kc">transparent</span> <span class="mi">1</span><span class="kt">px</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">90</span><span class="kt">deg</span><span class="p">,</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">139</span><span class="p">,</span> <span class="mi">233</span><span class="p">,</span> <span class="mi">253</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span> <span class="mi">1</span><span class="kt">px</span><span class="p">,</span> <span class="kc">transparent</span> <span class="mi">1</span><span class="kt">px</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background-size</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">mask-image</span><span class="p">:</span> <span class="nb">radial-gradient</span><span class="p">(</span><span class="kc">circle</span> <span class="n">at</span> <span class="kc">center</span><span class="p">,</span> <span class="kc">black</span> <span class="mi">35</span><span class="kt">%</span><span class="p">,</span> <span class="kc">transparent</span> <span class="mi">100</span><span class="kt">%</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">opacity</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">pdf-loading-mask</span><span class="p">::</span><span class="nd">after</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">content</span><span class="p">:</span> <span class="s2">&#34;◈&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">left</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">top</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">transform</span><span class="p">:</span> <span class="nb">translate</span><span class="p">(</span><span class="mi">-50</span><span class="kt">%</span><span class="p">,</span> <span class="mi">-50</span><span class="kt">%</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">248</span><span class="p">,</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mf">0.98</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.3</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">letter-spacing</span><span class="p">:</span> <span class="mf">0.1</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">text-shadow</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">0</span> <span class="mi">0</span> <span class="mi">12</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">189</span><span class="p">,</span> <span class="mi">147</span><span class="p">,</span> <span class="mi">249</span><span class="p">,</span> <span class="mf">0.98</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">0</span> <span class="mi">0</span> <span class="mi">30</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">189</span><span class="p">,</span> <span class="mi">147</span><span class="p">,</span> <span class="mi">249</span><span class="p">,</span> <span class="mf">0.62</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">-190</span><span class="kt">px</span> <span class="mi">-225</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">248</span><span class="p">,</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">-190</span><span class="kt">px</span> <span class="mi">-225</span><span class="kt">px</span> <span class="mi">26</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">189</span><span class="p">,</span> <span class="mi">147</span><span class="p">,</span> <span class="mi">249</span><span class="p">,</span> <span class="mf">0.84</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">190</span><span class="kt">px</span> <span class="mi">-225</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">248</span><span class="p">,</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">190</span><span class="kt">px</span> <span class="mi">-225</span><span class="kt">px</span> <span class="mi">26</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">139</span><span class="p">,</span> <span class="mi">233</span><span class="p">,</span> <span class="mi">253</span><span class="p">,</span> <span class="mf">0.84</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">-190</span><span class="kt">px</span> <span class="mi">225</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">248</span><span class="p">,</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">-190</span><span class="kt">px</span> <span class="mi">225</span><span class="kt">px</span> <span class="mi">26</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mf">0.74</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">190</span><span class="kt">px</span> <span class="mi">225</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">248</span><span class="p">,</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">190</span><span class="kt">px</span> <span class="mi">225</span><span class="kt">px</span> <span class="mi">26</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">184</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">768px</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">pdf-stage</span> <span class="p">{</span> <span class="k">height</span><span class="p">:</span> <span class="mi">72</span><span class="kt">vh</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><hr>
+
+<h2 class="relative group">6. 关键机制说明（为什么这样做）
+    <div id="6-关键机制说明为什么这样做" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-%e5%85%b3%e9%94%ae%e6%9c%ba%e5%88%b6%e8%af%b4%e6%98%8e%e4%b8%ba%e4%bb%80%e4%b9%88%e8%bf%99%e6%a0%b7%e5%81%9a" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">6.1 原生 viewer 翻页触发
+    <div id="61-原生-viewer-翻页触发" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#61-%e5%8e%9f%e7%94%9f-viewer-%e7%bf%bb%e9%a1%b5%e8%a7%a6%e5%8f%91" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>仅改 hash（<code>#page=n</code>）在部分浏览器不稳定</li>
+<li>使用 <code>?_pg=n#page=n...</code> 让 URL 每次变化，触发可靠刷新</li>
+<li>再配合 <code>location.replace</code>/<code>frame.src</code> 回退，提升兼容性</li>
+</ul>
+
+<h3 class="relative group">6.2 自动总页数
+    <div id="62-自动总页数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#62-%e8%87%aa%e5%8a%a8%e6%80%bb%e9%a1%b5%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>使用本地 <code>pdf.js</code> 读取 <code>numPages</code></li>
+<li>若失败，不锁死为 1 页，而是显示 <code>--</code>，并允许继续翻页</li>
+</ul>
+
+<h3 class="relative group">6.3 切页遮掩
+    <div id="63-切页遮掩" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#63-%e5%88%87%e9%a1%b5%e9%81%ae%e6%8e%a9" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><code>is-loading</code> 时降低 iframe 可见度并轻微模糊，掩盖内置 viewer 的缩放抖动</li>
+<li>叠加 Dracula 风格网格和发光点，形成主题化淡入层</li>
+</ul>
+
+<h3 class="relative group">6.4 滚动条遮掩
+    <div id="64-滚动条遮掩" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#64-%e6%bb%9a%e5%8a%a8%e6%9d%a1%e9%81%ae%e6%8e%a9" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>通过容器 <code>overflow-x: hidden/clip</code> 抑制横向闪现</li>
+<li>通过 <code>::before</code>/<code>::after</code> 右侧与底部遮罩条隐藏内置滚动条区域</li>
+</ul>
+<hr>
+
+<h2 class="relative group">7. 可复用步骤（新页面接入）
+    <div id="7-可复用步骤新页面接入" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#7-%e5%8f%af%e5%a4%8d%e7%94%a8%e6%ad%a5%e9%aa%a4%e6%96%b0%e9%a1%b5%e9%9d%a2%e6%8e%a5%e5%85%a5" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<ol>
+<li>把 PDF 放进 <code>static/assets/</code></li>
+<li>在内容页写：
+<ul>
+<li><code><div
+  class="pdf-lite"
+  data-url="/assets/%e4%bd%a0%e7%9a%84%e6%96%87%e4%bb%b6.pdf"
+  data-page="1"
+  data-max="0"
+>
+  <div class="pdf-stage">
+    <div class="pdf-toolbar">
+      <button class="pdf-prev" type="button" aria-label="Previous page">◀</button>
+      <span class="pdf-page-label">1 / --</span>
+      <button class="pdf-next" type="button" aria-label="Next page">▶</button>
+    </div>
+    <iframe
+      class="pdf-frame"
+      title="PDF"
+      src="/assets/%e4%bd%a0%e7%9a%84%e6%96%87%e4%bb%b6.pdf#page=1&view=Fit&toolbar=0&navpanes=0&scrollbar=0"
+    ></iframe>
+    <div class="pdf-loading-mask" aria-hidden="true"></div>
+    <div class="pdf-wheel-mask" aria-hidden="true"></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const root = document.currentScript?.previousElementSibling;
+  if (!root || !root.classList.contains('pdf-lite')) return;
+
+  const url = root.dataset.url;
+  let max = Number(root.dataset.max || 0);
+  let page = Number(root.dataset.page || 1);
+
+  const frame = root.querySelector('.pdf-frame');
+  const stage = root.querySelector('.pdf-stage');
+  const prev = root.querySelector('.pdf-prev');
+  const next = root.querySelector('.pdf-next');
+  const label = root.querySelector('.pdf-page-label');
+  const mask = root.querySelector('.pdf-wheel-mask');
+  const loadingMask = root.querySelector('.pdf-loading-mask');
+  let loadingTimer = null;
+  let loadingStartedAt = 0;
+
+  const setLoading = (loading) => {
+    if (!loadingMask) return;
+    if (loading) loadingStartedAt = Date.now();
+    loadingMask.classList.toggle('is-active', loading);
+    stage?.classList.toggle('is-loading', loading);
+  };
+
+  const clearLoadingWithMinDuration = () => {
+    const minVisibleMs = 420;
+    const elapsed = Date.now() - loadingStartedAt;
+    const wait = Math.max(0, minVisibleMs - elapsed);
+    if (loadingTimer) clearTimeout(loadingTimer);
+    loadingTimer = setTimeout(() => {
+      setLoading(false);
+      loadingTimer = null;
+    }, wait);
+  };
+
+  frame?.addEventListener('load', () => {
+    clearLoadingWithMinDuration();
+  });
+
+  const ensurePdfJs = async () => {
+    if (window.pdfjsLib) return window.pdfjsLib;
+    await new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = '/lib/pdfjs/pdf.min.js';
+      script.async = true;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+    if (!window.pdfjsLib) throw new Error('pdfjs not loaded');
+    window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+      '/lib/pdfjs/pdf.worker.min.js';
+    return window.pdfjsLib;
+  };
+
+  const resolveTotalPages = async () => {
+    if (max > 0) return;
+    try {
+      const pdfjsLib = await ensurePdfJs();
+      const doc = await pdfjsLib.getDocument(url).promise;
+      max = doc.numPages || 1;
+      render();
+    } catch (_) {
+      
+      max = 0;
+      render();
+    }
+  };
+
+  const render = (showLoading = true) => {
+    const safeMax = max > 0 ? max : null;
+    if (page < 1) page = 1;
+    if (safeMax && page > safeMax) page = safeMax;
+    const sep = url.includes('?') ? '&' : '?';
+    const nextSrc = `${url}${sep}_pg=${page}#page=${page}&view=Fit&toolbar=0&navpanes=0&scrollbar=0`;
+    if (showLoading) {
+      setLoading(true);
+      if (loadingTimer) clearTimeout(loadingTimer);
+      loadingTimer = setTimeout(() => {
+        setLoading(false);
+        loadingTimer = null;
+      }, 1300);
+    }
+    requestAnimationFrame(() => {
+      try {
+        if (frame.contentWindow) {
+          frame.contentWindow.location.replace(nextSrc);
+        } else {
+          frame.src = nextSrc;
+        }
+      } catch (_) {
+        frame.src = nextSrc;
+      }
+    });
+    label.textContent = safeMax ? `${page} / ${safeMax}` : `${page} / --`;
+    prev.disabled = page <= 1;
+    next.disabled = safeMax ? page >= safeMax : false;
+  };
+
+  prev?.addEventListener('click', () => {
+    if (page > 1) {
+      page--;
+      render();
+    }
+  });
+
+  next?.addEventListener('click', () => {
+    if (max <= 0 || page < max) {
+      page++;
+      render();
+    }
+  });
+
+  
+  mask?.addEventListener('pointerdown', (e) => e.preventDefault());
+
+  render(false);
+  resolveTotalPages();
+})();
+</script></code></li>
+</ul>
+</li>
+<li>确保以下文件存在：
+<ul>
+<li><code>layouts/shortcodes/pdfviewer.html</code></li>
+<li><code>assets/css/custom.css</code>（含 PDF 样式块）</li>
+<li><code>static/lib/pdfjs/pdf.min.js</code></li>
+<li><code>static/lib/pdfjs/pdf.worker.min.js</code></li>
+</ul>
+</li>
+<li>重新构建 Hugo 站点</li>
+</ol>
+<hr>
+
+<h2 class="relative group">8. 已知边界
+    <div id="8-已知边界" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#8-%e5%b7%b2%e7%9f%a5%e8%be%b9%e7%95%8c" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>这是“原生 viewer + 外层增强”，不是完全自绘 PDF viewer</li>
+<li>各浏览器对 PDF 内核行为仍有细微差异</li>
+<li>若追求完全可控（无重载抖动、精确事件控制），最终仍建议迁移到完整 <code>pdf.js</code> 渲染页方案</li>
+</ul>
+<hr>
+
+<h2 class="relative group">9. 当前版本建议保留参数
+    <div id="9-当前版本建议保留参数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#9-%e5%bd%93%e5%89%8d%e7%89%88%e6%9c%ac%e5%bb%ba%e8%ae%ae%e4%bf%9d%e7%95%99%e5%8f%82%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li><code>view=Fit</code>：更接近整页显示</li>
+<li><code>toolbar=0&amp;navpanes=0&amp;scrollbar=0</code>：减少原生 UI 干扰</li>
+<li>初始 <code>render(false)</code>：全局首次刷新不触发 loading 淡入</li>
+</ul>
+<p>这套配置是当前项目里“视觉和稳定性折中”最好的版本。</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_note\ComputerScience\CSAPP\PDF-Native-Viewer-Guide.md"
+          data-oid-likes="likes_note\ComputerScience\CSAPP\PDF-Native-Viewer-Guide.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+      
+      
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/note/computerscience/csapp/cpu/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;CPU(RISC-V)
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-04-04T00:00:00&#43;00:00">2026年4月4日</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+        
+          <div class="pt-3">
+            <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+            <div class="pt-3">
+              <section class="mt-10">
+  <script src="https://giscus.app/client.js"
+        data-repo="wrongtrojan/wrongtrojan.github.io"
+        data-repo-id="R_kgDOQjuwbg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOQjuwbs4C4pef"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="https://wrongtrojan.github.io/css/giscus-dracula.css" 
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+  </script>
+
+  <script>
+    (function() {
+      
+      
+      const customDarkTheme = "https://wrongtrojan.github.io/css/giscus-dracula.css";
+      const defaultLightTheme = "light"; 
+
+      function getGiscusTheme() {
+        
+        const isDark = document.documentElement.getAttribute("data-theme") === 'dark' || 
+                       document.documentElement.classList.contains('dark');
+        return isDark ? customDarkTheme : defaultLightTheme;
+      }
+
+      function updateGiscus() {
+        const theme = getGiscusTheme();
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+
+        iframe.contentWindow.postMessage(
+          { giscus: { setConfig: { theme: theme } } },
+          'https://giscus.app'
+        );
+      }
+
+      
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'attributes' && (mutation.attributeName === 'data-theme' || mutation.attributeName === 'class')) {
+            updateGiscus();
+          }
+        });
+      });
+
+      observer.observe(document.documentElement, { attributes: true });
+
+      
+      window.addEventListener('message', (event) => {
+        if (event.origin !== 'https://giscus.app') return;
+        if (!(typeof event.data === 'object' && event.data.giscus)) return;
+        updateGiscus();
+      });
+    })();
+  </script>
+</section>
+            </div>
+          </div>
+        
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+          
+          
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 ">
+        <ul class="flex list-none flex-col sm:flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/tags/"
+                title="Tags">
+                
+                Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/series/"
+                title="Series">
+                
+                Series
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="https://github.com/wrongtrojan/wrongtrojan.github.io"
+                title="">
+                
+                  <span >
+                    <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span>
+                  </span>
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          @2025木马
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

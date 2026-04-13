@@ -9,20 +9,51 @@ series_order=2
 +++
 
 
-<style>
-  .my-dark-img { display: none; }
-  .dark .my-dark-img { display: block; }
-  .dark .my-light-img { display: none; }
-</style>
+## One-Cycle CPU
 
-## Multi-Cycle
+### Hardward
 
-<img class="my-light-img" src="https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/Blog/note/computerscience/csapp/datapath.svg" width="100%">
+- `PC`: Program Counter
+- `Memory`: Main Memory
+- `Register File`: three read ports, one write port
+- `ALU`: Arithmetic Logic Unit
+- `Mux`: Multiplexer
 
-<img class="my-dark-img" src="https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/Blog/note/computerscience/csapp/datapathindark.svg" width="100%">
+### Control Signal
 
-## Pipeline
+- `PCSrc`: Program Counter Source
+- `RegWrite`: Register Write
+- `MemWrite`: Memory Write
+- `MemToReg`: Memory to Register
+- `MemRead`: Memory Read
+- `ALUSrc`: ALU Source
+- `ALUOp`: ALU Operation
+- `Branch`: Branch
+- `Jump`: Jump
 
-<img class="my-light-img" src="https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/Blog/note/computerscience/csapp/pipeline.svg" width="100%">
-<img class="my-dark-img" src="https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/Blog/note/computerscience/csapp/pipeline_indark.svg" width="100%">
+## Pipeline CPU
 
+### Pipeline Stages
+
+> the core idea is to made the hardware excute the instruction in parallel.
+
+- `IF`: Instruction Fetch
+- `ID`: Instruction Decode
+- `EX`: Execute
+- `MEM`: Memory
+- `WB`: Write Back
+
+### Hardward (New Registers)
+
+> the core idea is to enable the specific data to follow the specific instruction.
+
+- `IF/ID` Register 
+- `ID/EX` Register 
+- `EX/MEM` Register 
+- `MEM/WB` Register 
+
+### DataPath(for example)
+
+{{< pdfviewer url="/assets/DataPath.pdf" page="1" >}}
+
+(paddening)

@@ -1,0 +1,144 @@
+<div
+  class="pdf-lite"
+  data-url="{{ .Get `url` | default `/assets/DataPath.pdf` }}"
+  data-page="{{ .Get `page` | default `1` }}"
+  data-max="{{ .Get `max` | default `0` }}"
+>
+  <div class="pdf-stage">
+    <div class="pdf-toolbar">
+      <button class="pdf-prev" type="button" aria-label="Previous page">◀</button>
+      <span class="pdf-page-label">1 / --</span>
+      <button class="pdf-next" type="button" aria-label="Next page">▶</button>
+    </div>
+    <iframe
+      class="pdf-frame"
+      title="PDF"
+      src="{{ .Get `url` | default `/assets/DataPath.pdf` }}#page={{ .Get `page` | default `1` }}&view=Fit&toolbar=0&navpanes=0&scrollbar=0"
+    ></iframe>
+    <div class="pdf-loading-mask" aria-hidden="true"></div>
+    <div class="pdf-wheel-mask" aria-hidden="true"></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const root = document.currentScript?.previousElementSibling;
+  if (!root || !root.classList.contains('pdf-lite')) return;
+
+  const url = root.dataset.url;
+  let max = Number(root.dataset.max || 0);
+  let page = Number(root.dataset.page || 1);
+
+  const frame = root.querySelector('.pdf-frame');
+  const stage = root.querySelector('.pdf-stage');
+  const prev = root.querySelector('.pdf-prev');
+  const next = root.querySelector('.pdf-next');
+  const label = root.querySelector('.pdf-page-label');
+  const mask = root.querySelector('.pdf-wheel-mask');
+  const loadingMask = root.querySelector('.pdf-loading-mask');
+  let loadingTimer = null;
+  let loadingStartedAt = 0;
+
+  const setLoading = (loading) => {
+    if (!loadingMask) return;
+    if (loading) loadingStartedAt = Date.now();
+    loadingMask.classList.toggle('is-active', loading);
+    stage?.classList.toggle('is-loading', loading);
+  };
+
+  const clearLoadingWithMinDuration = () => {
+    const minVisibleMs = 420;
+    const elapsed = Date.now() - loadingStartedAt;
+    const wait = Math.max(0, minVisibleMs - elapsed);
+    if (loadingTimer) clearTimeout(loadingTimer);
+    loadingTimer = setTimeout(() => {
+      setLoading(false);
+      loadingTimer = null;
+    }, wait);
+  };
+
+  frame?.addEventListener('load', () => {
+    clearLoadingWithMinDuration();
+  });
+
+  const ensurePdfJs = async () => {
+    if (window.pdfjsLib) return window.pdfjsLib;
+    await new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = '/lib/pdfjs/pdf.min.js';
+      script.async = true;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+    if (!window.pdfjsLib) throw new Error('pdfjs not loaded');
+    window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+      '/lib/pdfjs/pdf.worker.min.js';
+    return window.pdfjsLib;
+  };
+
+  const resolveTotalPages = async () => {
+    if (max > 0) return;
+    try {
+      const pdfjsLib = await ensurePdfJs();
+      const doc = await pdfjsLib.getDocument(url).promise;
+      max = doc.numPages || 1;
+      render();
+    } catch (_) {
+      // Keep unknown total when auto-detection fails; don't lock paging to 1.
+      max = 0;
+      render();
+    }
+  };
+
+  const render = (showLoading = true) => {
+    const safeMax = max > 0 ? max : null;
+    if (page < 1) page = 1;
+    if (safeMax && page > safeMax) page = safeMax;
+    const sep = url.includes('?') ? '&' : '?';
+    const nextSrc = `${url}${sep}_pg=${page}#page=${page}&view=Fit&toolbar=0&navpanes=0&scrollbar=0`;
+    if (showLoading) {
+      setLoading(true);
+      if (loadingTimer) clearTimeout(loadingTimer);
+      loadingTimer = setTimeout(() => {
+        setLoading(false);
+        loadingTimer = null;
+      }, 1300);
+    }
+    requestAnimationFrame(() => {
+      try {
+        if (frame.contentWindow) {
+          frame.contentWindow.location.replace(nextSrc);
+        } else {
+          frame.src = nextSrc;
+        }
+      } catch (_) {
+        frame.src = nextSrc;
+      }
+    });
+    label.textContent = safeMax ? `${page} / ${safeMax}` : `${page} / --`;
+    prev.disabled = page <= 1;
+    next.disabled = safeMax ? page >= safeMax : false;
+  };
+
+  prev?.addEventListener('click', () => {
+    if (page > 1) {
+      page--;
+      render();
+    }
+  });
+
+  next?.addEventListener('click', () => {
+    if (max <= 0 || page < max) {
+      page++;
+      render();
+    }
+  });
+
+  // Let page-level scrolling work while hovering over the PDF area.
+  mask?.addEventListener('pointerdown', (e) => e.preventDefault());
+
+  render(false);
+  resolveTotalPages();
+})();
+</script>

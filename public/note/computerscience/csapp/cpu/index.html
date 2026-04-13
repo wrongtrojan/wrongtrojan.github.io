@@ -108,8 +108,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.512d3fc25ed46c625b1d3b127225f1a136821e876806268c53daa564d811d082082f86ff299050ff3783377ee40b86ef547008431a4c1347b40621ea400382bf.css"
-    integrity="sha512-US0/wl7UbGJbHTsSciXxoTaCHodoBiaMU9qlZNgR0IIIL4b/KZBQ/zeDN37kC4bvVHAIQxpME0e0BiHqQAOCvw==">
+    href="/css/main.bundle.min.d17fe4c4a89c56eac71117e9466fd18367ea520c84f199b00ceb3846a7977f33ab8b59c4d99a32533b73cc807575e44c550acda797a66385ef6c2978c39cc465.css"
+    integrity="sha512-0X/kxKicVurHERfpRm/Rg2fqUgyE8ZmwDOs4RqeXfzOri1nE2ZoyUztzzIB1deRMVQrNp5emY4XvbCl4w5zEZQ==">
 
   
   
@@ -231,7 +231,7 @@
     "keywords": ["CSAPP"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "4"
+    "wordCount": "122"
   }]
   </script>
 
@@ -863,7 +863,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-04-04T00:00:00&#43;00:00">2026年4月4日</time><span class="px-2 text-primary-500">&middot;</span><span>4 字</span>
+      <time datetime="2026-04-04T00:00:00&#43;00:00">2026年4月4日</time><span class="px-2 text-primary-500">&middot;</span><span>122 字</span>
     
 
     
@@ -1005,8 +1005,19 @@
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#multi-cycle">Multi-Cycle</a></li>
-    <li><a href="#pipeline">Pipeline</a></li>
+    <li><a href="#one-cycle-cpu">One-Cycle CPU</a>
+      <ul>
+        <li><a href="#hardward">Hardward</a></li>
+        <li><a href="#control-signal">Control Signal</a></li>
+      </ul>
+    </li>
+    <li><a href="#pipeline-cpu">Pipeline CPU</a>
+      <ul>
+        <li><a href="#pipeline-stages">Pipeline Stages</a></li>
+        <li><a href="#hardward-new-registers">Hardward (New Registers)</a></li>
+        <li><a href="#datapathfor-example">DataPath(for example)</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -1020,8 +1031,19 @@
     class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#multi-cycle">Multi-Cycle</a></li>
-    <li><a href="#pipeline">Pipeline</a></li>
+    <li><a href="#one-cycle-cpu">One-Cycle CPU</a>
+      <ul>
+        <li><a href="#hardward">Hardward</a></li>
+        <li><a href="#control-signal">Control Signal</a></li>
+      </ul>
+    </li>
+    <li><a href="#pipeline-cpu">Pipeline CPU</a>
+      <ul>
+        <li><a href="#pipeline-stages">Pipeline Stages</a></li>
+        <li><a href="#hardward-new-registers">Hardward (New Registers)</a></li>
+        <li><a href="#datapathfor-example">DataPath(for example)</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -1172,35 +1194,258 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          <style>
-  .my-dark-img { display: none; }
-  .dark .my-dark-img { display: block; }
-  .dark .my-light-img { display: none; }
-</style>
-
-<h2 class="relative group">Multi-Cycle
-    <div id="multi-cycle" class="anchor"></div>
+          
+<h2 class="relative group">One-Cycle CPU
+    <div id="one-cycle-cpu" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#multi-cycle" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#one-cycle-cpu" aria-label="锚点">#</a>
     </span>
     
 </h2>
-<img class="my-light-img" src="https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/Blog/note/computerscience/csapp/datapath.svg" width="100%">
-<img class="my-dark-img" src="https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/Blog/note/computerscience/csapp/datapathindark.svg" width="100%">
 
-<h2 class="relative group">Pipeline
-    <div id="pipeline" class="anchor"></div>
+<h3 class="relative group">Hardward
+    <div id="hardward" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pipeline" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#hardward" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><code>PC</code>: Program Counter</li>
+<li><code>Memory</code>: Main Memory</li>
+<li><code>Register File</code>: three read ports, one write port</li>
+<li><code>ALU</code>: Arithmetic Logic Unit</li>
+<li><code>Mux</code>: Multiplexer</li>
+</ul>
+
+<h3 class="relative group">Control Signal
+    <div id="control-signal" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#control-signal" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><code>PCSrc</code>: Program Counter Source</li>
+<li><code>RegWrite</code>: Register Write</li>
+<li><code>MemWrite</code>: Memory Write</li>
+<li><code>MemToReg</code>: Memory to Register</li>
+<li><code>MemRead</code>: Memory Read</li>
+<li><code>ALUSrc</code>: ALU Source</li>
+<li><code>ALUOp</code>: ALU Operation</li>
+<li><code>Branch</code>: Branch</li>
+<li><code>Jump</code>: Jump</li>
+</ul>
+
+<h2 class="relative group">Pipeline CPU
+    <div id="pipeline-cpu" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pipeline-cpu" aria-label="锚点">#</a>
     </span>
     
 </h2>
-<img class="my-light-img" src="https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/Blog/note/computerscience/csapp/pipeline.svg" width="100%">
-<img class="my-dark-img" src="https://cdn.jsdelivr.net/gh/wrongtrojan/bed@main/Blog/note/computerscience/csapp/pipeline_indark.svg" width="100%">
+
+<h3 class="relative group">Pipeline Stages
+    <div id="pipeline-stages" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pipeline-stages" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<blockquote>
+<p>the core idea is to made the hardware excute the instruction in parallel.</p>
+</blockquote>
+<ul>
+<li><code>IF</code>: Instruction Fetch</li>
+<li><code>ID</code>: Instruction Decode</li>
+<li><code>EX</code>: Execute</li>
+<li><code>MEM</code>: Memory</li>
+<li><code>WB</code>: Write Back</li>
+</ul>
+
+<h3 class="relative group">Hardward (New Registers)
+    <div id="hardward-new-registers" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#hardward-new-registers" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<blockquote>
+<p>the core idea is to enable the specific data to follow the specific instruction.</p>
+</blockquote>
+<ul>
+<li><code>IF/ID</code> Register</li>
+<li><code>ID/EX</code> Register</li>
+<li><code>EX/MEM</code> Register</li>
+<li><code>MEM/WB</code> Register</li>
+</ul>
+
+<h3 class="relative group">DataPath(for example)
+    <div id="datapathfor-example" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#datapathfor-example" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<div
+  class="pdf-lite"
+  data-url="/assets/DataPath.pdf"
+  data-page="1"
+  data-max="0"
+>
+  <div class="pdf-stage">
+    <div class="pdf-toolbar">
+      <button class="pdf-prev" type="button" aria-label="Previous page">◀</button>
+      <span class="pdf-page-label">1 / --</span>
+      <button class="pdf-next" type="button" aria-label="Next page">▶</button>
+    </div>
+    <iframe
+      class="pdf-frame"
+      title="PDF"
+      src="/assets/DataPath.pdf#page=1&view=Fit&toolbar=0&navpanes=0&scrollbar=0"
+    ></iframe>
+    <div class="pdf-loading-mask" aria-hidden="true"></div>
+    <div class="pdf-wheel-mask" aria-hidden="true"></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const root = document.currentScript?.previousElementSibling;
+  if (!root || !root.classList.contains('pdf-lite')) return;
+
+  const url = root.dataset.url;
+  let max = Number(root.dataset.max || 0);
+  let page = Number(root.dataset.page || 1);
+
+  const frame = root.querySelector('.pdf-frame');
+  const stage = root.querySelector('.pdf-stage');
+  const prev = root.querySelector('.pdf-prev');
+  const next = root.querySelector('.pdf-next');
+  const label = root.querySelector('.pdf-page-label');
+  const mask = root.querySelector('.pdf-wheel-mask');
+  const loadingMask = root.querySelector('.pdf-loading-mask');
+  let loadingTimer = null;
+  let loadingStartedAt = 0;
+
+  const setLoading = (loading) => {
+    if (!loadingMask) return;
+    if (loading) loadingStartedAt = Date.now();
+    loadingMask.classList.toggle('is-active', loading);
+    stage?.classList.toggle('is-loading', loading);
+  };
+
+  const clearLoadingWithMinDuration = () => {
+    const minVisibleMs = 420;
+    const elapsed = Date.now() - loadingStartedAt;
+    const wait = Math.max(0, minVisibleMs - elapsed);
+    if (loadingTimer) clearTimeout(loadingTimer);
+    loadingTimer = setTimeout(() => {
+      setLoading(false);
+      loadingTimer = null;
+    }, wait);
+  };
+
+  frame?.addEventListener('load', () => {
+    clearLoadingWithMinDuration();
+  });
+
+  const ensurePdfJs = async () => {
+    if (window.pdfjsLib) return window.pdfjsLib;
+    await new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = '/lib/pdfjs/pdf.min.js';
+      script.async = true;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+    if (!window.pdfjsLib) throw new Error('pdfjs not loaded');
+    window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+      '/lib/pdfjs/pdf.worker.min.js';
+    return window.pdfjsLib;
+  };
+
+  const resolveTotalPages = async () => {
+    if (max > 0) return;
+    try {
+      const pdfjsLib = await ensurePdfJs();
+      const doc = await pdfjsLib.getDocument(url).promise;
+      max = doc.numPages || 1;
+      render();
+    } catch (_) {
+      
+      max = 0;
+      render();
+    }
+  };
+
+  const render = (showLoading = true) => {
+    const safeMax = max > 0 ? max : null;
+    if (page < 1) page = 1;
+    if (safeMax && page > safeMax) page = safeMax;
+    const sep = url.includes('?') ? '&' : '?';
+    const nextSrc = `${url}${sep}_pg=${page}#page=${page}&view=Fit&toolbar=0&navpanes=0&scrollbar=0`;
+    if (showLoading) {
+      setLoading(true);
+      if (loadingTimer) clearTimeout(loadingTimer);
+      loadingTimer = setTimeout(() => {
+        setLoading(false);
+        loadingTimer = null;
+      }, 1300);
+    }
+    requestAnimationFrame(() => {
+      try {
+        if (frame.contentWindow) {
+          frame.contentWindow.location.replace(nextSrc);
+        } else {
+          frame.src = nextSrc;
+        }
+      } catch (_) {
+        frame.src = nextSrc;
+      }
+    });
+    label.textContent = safeMax ? `${page} / ${safeMax}` : `${page} / --`;
+    prev.disabled = page <= 1;
+    next.disabled = safeMax ? page >= safeMax : false;
+  };
+
+  prev?.addEventListener('click', () => {
+    if (page > 1) {
+      page--;
+      render();
+    }
+  });
+
+  next?.addEventListener('click', () => {
+    if (max <= 0 || page < max) {
+      page++;
+      render();
+    }
+  });
+
+  
+  mask?.addEventListener('pointerdown', (e) => e.preventDefault());
+
+  render(false);
+  resolveTotalPages();
+})();
+</script>
+<p>(paddening)</p>
 
           
           
