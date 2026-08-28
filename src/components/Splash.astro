@@ -109,24 +109,18 @@ const batFrames = [bat1.src, bat2.src, bat3.src, bat4.src, bat5.src, bat6.src];
     let landFrom: DOMRect | null = null;
     let landTo: DOMRect | null = null;
 
-    const blockScroll = (event: Event) => event.preventDefault();
-
     const finish = () => {
       if (stopped) return;
       stopped = true;
       cancelAnimationFrame(frame);
       html.classList.remove('splash-pending', 'splash-playing', 'splash-avatar-cover');
       document.removeEventListener('keydown', onKey);
-      splash.removeEventListener('wheel', blockScroll);
-      splash.removeEventListener('touchmove', blockScroll);
       try { sessionStorage.setItem('splash-done', '1'); } catch {}
       splash.hidden = true;
       splash.setAttribute('aria-hidden', 'true');
     };
 
     splash.addEventListener('click', finish, { once: true });
-    splash.addEventListener('wheel', blockScroll, { passive: false });
-    splash.addEventListener('touchmove', blockScroll, { passive: false });
     const onKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') finish();
     };
