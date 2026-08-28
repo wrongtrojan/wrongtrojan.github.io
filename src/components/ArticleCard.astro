@@ -1,0 +1,23 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  summary?: string;
+  badge?: string;
+  meta?: string[];
+  transitionName?: string;
+}
+const { href, title, summary, badge, meta = [], transitionName } = Astro.props;
+---
+
+<a class="article-card" href={href}>
+  <span class="ornament-corners" aria-hidden="true"><i></i></span>
+  <span class="article-card-meta">
+    {badge && <span class="article-card-badge">{badge}</span>}
+    {meta.map((item) => <span>{item}</span>)}
+  </span>
+  {transitionName
+    ? <strong transition:name={transitionName}>{title}</strong>
+    : <strong>{title}</strong>}
+  {summary && <span class="article-card-summary">{summary}</span>}
+</a>

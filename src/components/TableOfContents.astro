@@ -1,0 +1,31 @@
+---
+interface Heading { depth: number; slug: string; text: string }
+const { headings = [] } = Astro.props as { headings: Heading[] };
+const visible = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
+---
+
+{visible.length > 0 && (
+  <aside class="side-panel toc" aria-label="文章目录">
+    <div class="side-title">目录</div>
+    <ul class="toc-list">
+      {visible.map((heading) => <li class={`depth-${heading.depth - 2}`}><a href={`#${heading.slug}`}>{heading.text}</a></li>)}
+    </ul>
+  </aside>
+)}
+
+<script>
+  function setupToc() {
+    const links = [...document.querySelectorAll<HTMLAnchorElement>('.toc a')];
+    if (!links.length) return;
+    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      links.forEach((link) => link.classList.toggle('active', link.hash === `#${entry.target.id}`));
+    }), { rootMargin: '-20% 0px -70%' });
+    links.forEach((link) => {
+      const heading = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+      if (heading) observer.observe(heading);
+    });
+  }
+  setupToc();
+  document.addEventListener('astro:page-load', setupToc);
+</script>

@@ -1,0 +1,10 @@
+---
+import { getCollection, render } from 'astro:content';
+import DirectoryView from '../../components/DirectoryView.astro';
+import { isIndex, treeId } from '../../utils/content';
+
+const entries = (await getCollection('create')).filter((item) => !item.data.draft);
+const entry = entries.find((item) => isIndex(item) && !treeId(item))!;
+const rendered = await render(entry);
+---
+<DirectoryView entry={entry} entries={entries} title={entry.data.title} description={entry.data.description} prefix="" Content={rendered.Content} />

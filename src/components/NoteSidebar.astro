@@ -1,0 +1,31 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { entryPath, folderSiblings, isIndex, notesInSeries, treeId } from '../utils/content';
+
+interface Props { entries: CollectionEntry<'note'>[]; currentId: string }
+const { entries, currentId } = Astro.props;
+const currentEntry = entries.find((entry) => entry.id === currentId);
+const seriesName = currentEntry?.data.series[0];
+const visible = currentEntry && seriesName
+  ? notesInSeries(entries, seriesName)
+  : currentEntry
+    ? folderSiblings(currentEntry, entries)
+    : entries.filter((entry) => !entry.data.draft && !isIndex(entry));
+const title = seriesName ? '本系列' : (currentEntry ? treeId(currentEntry).split('/').slice(-2, -1)[0] : '笔记目录');
+---
+
+{visible.length > 0 && (
+  <details class="series-end">
+    <summary>{title}</summary>
+    <ul>
+      {visible.map((entry, index) => (
+        <li>
+          <a class={entry.id === currentId ? 'active' : ''} href={entryPath(entry)}>
+            {seriesName && <span class="series-index">{String(entry.data.series_order || index + 1).padStart(2, '0')}</span>}
+            {entry.data.title}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </details>
+)}

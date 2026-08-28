@@ -1,0 +1,36 @@
+---
+import { getCollection, render } from 'astro:content';
+import ArticleView from '../../components/ArticleView.astro';
+import DirectoryView from '../../components/DirectoryView.astro';
+import { entrySlug, folderSiblings, isIndex, notesInSeries, treeId } from '../../utils/content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('note', ({ data }) => !data.draft);
+  return entries
+    .filter((entry) => treeId(entry))
+    .map((entry) => ({
+      params: { slug: entrySlug(entry) },
+      props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+const notes = await getCollection('note', ({ data }) => !data.draft);
+const index = isIndex(entry);
+const prefix = treeId(entry);
+const rendered = await render(entry);
+let previous;
+let next;
+if (!index) {
+  const seriesName = entry.data.series[0];
+  const ordered = seriesName ? notesInSeries(notes, seriesName) : folderSiblings(entry, notes);
+  const position = ordered.findIndex((item) => item.id === entry.id);
+  previous = ordered[position - 1];
+  next = ordered[position + 1];
+}
+---
+
+{index
+  ? <DirectoryView entry={entry} entries={notes} title={entry.data.title} description={entry.data.description} prefix={prefix} Content={rendered.Content} />
+  : <ArticleView entry={entry} notes={notes} Content={rendered.Content} headings={rendered.headings} previous={previous} next={next} />
+}

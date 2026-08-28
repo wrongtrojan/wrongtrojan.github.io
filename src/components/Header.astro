@@ -1,0 +1,71 @@
+---
+import { nav } from '../data/site';
+import author from '../assets/author.jpg';
+const path = Astro.url.pathname;
+const active = (href: string) => href === '/' ? path === '/' : path.startsWith(href);
+---
+
+<header class="site-header" data-header>
+  <div class="header-inner shell">
+    <a class="brand" href="/" aria-label="木马的首页">
+      <img class="brand-avatar" src={author.src} width="38" height="38" alt="" />
+      <span class="brand-copy"><strong>木马</strong></span>
+    </a>
+    <nav class="desktop-nav" aria-label="主导航">
+      {nav.map((item) => item.children ? (
+        <div class="nav-group">
+          <a href={item.href} aria-current={active(item.href) ? 'page' : undefined}>{item.label} <span aria-hidden="true">⌄</span></a>
+          <div class="nav-dropdown">
+            {item.children.map((child) => <a href={child.href} aria-current={active(child.href) ? 'page' : undefined}>{child.label}</a>)}
+          </div>
+        </div>
+      ) : <a href={item.href} aria-current={active(item.href) ? 'page' : undefined}>{item.label}</a>)}
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button header-action" type="button" data-search-open aria-label="搜索" title="搜索 (Ctrl+K)">⌕</button>
+      <button class="icon-button menu-button" type="button" data-menu aria-expanded="false" aria-controls="mobile-navigation" aria-label="打开导航">☰</button>
+    </div>
+  </div>
+</header>
+<div class="mobile-panel" id="mobile-navigation" data-menu-panel hidden>
+  <nav class="shell" aria-label="移动导航">
+    {nav.map((item) => (
+      <>
+        <a href={item.href} aria-current={active(item.href) ? 'page' : undefined}><span>{item.label}</span><span>↗</span></a>
+        {item.children && (
+          <div class="mobile-subnav">
+            {item.children.map((child) => <a href={child.href}>{child.label}</a>)}
+          </div>
+        )}
+      </>
+    ))}
+  </nav>
+</div>
+
+<script>
+  function setupHeader() {
+    const header = document.querySelector<HTMLElement>('[data-header]');
+    const button = document.querySelector<HTMLButtonElement>('[data-menu]');
+    const panel = document.querySelector<HTMLElement>('[data-menu-panel]');
+    if (!header || header.dataset.ready) return;
+    header.dataset.ready = 'true';
+    const sync = () => header?.classList.toggle('is-scrolled', window.scrollY > 12);
+    const close = () => {
+      button?.setAttribute('aria-expanded', 'false');
+      if (panel) panel.hidden = true;
+      document.body.classList.remove('menu-open');
+    };
+    sync();
+    window.addEventListener('scroll', sync, { passive: true });
+    button?.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') !== 'true';
+      button.setAttribute('aria-expanded', String(open));
+      if (panel) panel.hidden = !open;
+      document.body.classList.toggle('menu-open', open);
+    });
+    panel?.querySelectorAll('a').forEach((link) => link.addEventListener('click', close));
+    document.addEventListener('keydown', (event) => event.key === 'Escape' && close());
+  }
+  setupHeader();
+  document.addEventListener('astro:page-load', setupHeader);
+</script>

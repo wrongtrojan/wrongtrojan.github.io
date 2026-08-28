@@ -1,0 +1,12 @@
+---
+import { getCollection } from 'astro:content';
+import DirectoryView from '../../components/DirectoryView.astro';
+
+export async function getStaticPaths() {
+  const all = [...await getCollection('note'), ...await getCollection('create')].filter((entry) => !entry.data.draft);
+  const tags = [...new Set(all.flatMap((entry) => entry.data.tags))];
+  return tags.map((tag) => ({ params: { tag }, props: { tag, entries: all.filter((entry) => entry.data.tags.includes(tag)) } }));
+}
+const { tag, entries } = Astro.props;
+---
+<DirectoryView entries={entries} title={`#${tag}`} description="" flat />

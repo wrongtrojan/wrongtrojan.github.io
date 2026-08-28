@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import PageBackground from '../../components/PageBackground.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+const all = [...await getCollection('note'), ...await getCollection('create')].filter((entry) => !entry.data.draft);
+const tags = [...new Set(all.flatMap((entry) => entry.data.tags))].sort((a, b) => a.localeCompare(b, 'zh-CN'));
+---
+<Layout title="标签" description="标签">
+  <PageBackground />
+  <header class="page-hero"><div class="shell"><h1>标签</h1></div></header>
+  <section class="listing shell">
+    <div class="article-list">
+      {tags.map((tag) => (
+        <ArticleCard
+          href={`/tags/${encodeURIComponent(tag)}/`}
+          title={`#${tag}`}
+          badge="标签"
+          meta={[`${all.filter((entry) => entry.data.tags.includes(tag)).length} 篇`]}
+        />
+      ))}
+    </div>
+  </section>
+</Layout>

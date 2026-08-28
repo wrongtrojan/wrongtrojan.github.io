@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import author from '../assets/author.jpg';
+import { site } from '../data/site';
+import PageBackground from '../components/PageBackground.astro';
+---
+<Layout title="关于" description="关于">
+  <PageBackground />
+  <div class="article-shell">
+    <div class="article-layout novel-layout">
+      <article class="article article-prose" data-pagefind-body>
+        <a class="author-chip about-avatar" href="/about/">
+          <img src={author.src} width="96" height="96" alt="" />
+          <span>
+            <strong>{site.author}</strong>
+            <small>作者</small>
+          </span>
+        </a>
+        <h2>自我介绍</h2>
+        <blockquote>
+          <p>你好！欢迎来到这个网站。</p>
+          <p>这是使用 Astro 和 GitHub Pages 搭建的个人博客，用于记录个人学习和生活</p>
+        </blockquote>
+        <h2>博客内容</h2>
+        <ul>
+          <li><strong>学习笔记</strong>：主要是数学学习和计算机科学学习</li>
+          <li><strong>个人创作</strong>：偶尔也有个人创作，大多是短篇小说</li>
+        </ul>
+        <h2>教育背景</h2>
+        <ul>
+          <li><strong>学校</strong>：<a href="https://www.whu.edu.cn/">武汉大学</a></li>
+          <li><strong>专业</strong>：<a href="https://sai.whu.edu.cn/">人工智能</a></li>
+          <li><strong>年级</strong>：2025级本科</li>
+        </ul>
+        <h2>与我联系</h2>
+        <blockquote>
+          <p>很高兴能与你交流！你可以通过以下方式找到我：</p>
+        </blockquote>
+        <ul>
+          <li><strong>邮箱</strong>：<a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li><strong>GitHub</strong>：<a href={site.github}>{site.github}</a></li>
+        </ul>
+        <blockquote><em>感谢你的访问！我会持续更新内容。</em></blockquote>
+      </article>
+    </div>
+  </div>
+</Layout>

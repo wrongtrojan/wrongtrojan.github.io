@@ -1,0 +1,131 @@
+/* RISC-V instruction diagrams. */
+
+.riscv-container {
+  overflow-x: auto;
+  padding: 1.5rem 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--color-neutral-400)) rgb(var(--color-neutral-700));
+}
+
+.riscv-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.riscv-container::-webkit-scrollbar-track {
+  background: rgb(var(--color-neutral-700));
+  border-radius: 4px;
+}
+
+.riscv-container::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-neutral-400));
+  border: 2px solid rgb(var(--color-neutral-700));
+  border-radius: 4px;
+  background-clip: content-box;
+}
+
+.riscv-container::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-primary-300));
+}
+
+.katex-display {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--color-neutral-400)) rgb(var(--color-neutral-700));
+}
+
+.riscv-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  min-width: 900px;
+}
+
+.riscv-type-label {
+  width: 120px;
+  flex-shrink: 0;
+  color: rgb(var(--color-secondary-100));
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+}
+
+.riscv-bits-group {
+  position: relative;
+  display: flex;
+  flex: 1;
+  height: 50px;
+  overflow: visible;
+  border: 1px solid rgb(var(--color-neutral-500));
+  border-radius: 10px;
+  background: rgb(var(--color-neutral-700));
+  box-shadow: inset 0 0 0 1px rgb(var(--color-neutral-500)), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.bit-field {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-right: 1px solid rgba(var(--color-neutral-500), 0.2);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-clip: padding-box;
+  cursor: default;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bit-field:first-child { border-top-left-radius: 9px; border-bottom-left-radius: 9px; }
+.bit-field:last-child { border-top-right-radius: 9px; border-bottom-right-radius: 9px; border-right: none; }
+
+.bit-field:hover {
+  z-index: 50;
+  filter: brightness(1.2);
+  background-color: rgba(var(--color-primary-300), 0.25) !important;
+  border-radius: 8px;
+  border-right-color: transparent;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 0 2px rgb(var(--color-primary-300));
+  transform: translateY(-2px) scale(1.02);
+}
+
+.w-1  { flex: 1; }
+.w-3  { flex: 3; }
+.w-5  { flex: 5; }
+.w-7  { flex: 7; }
+.w-8  { flex: 8; }
+.w-10 { flex: 10; }
+.w-12 { flex: 12; }
+.w-20 { flex: 20; }
+
+.bf-opcode {
+  background: rgba(var(--color-primary-300), 0.25);
+  color: rgb(var(--color-primary-50));
+  border-left: 1px solid rgb(var(--color-primary-300));
+}
+
+.bf-rd, .bf-rs {
+  background: rgba(var(--color-secondary-100), 0.15);
+  color: rgb(var(--color-secondary-50));
+}
+
+.bf-funct {
+  background: rgba(var(--color-neutral-400), 0.2);
+  color: rgb(var(--color-neutral-100));
+}
+
+.bf-imm {
+  background: rgba(255, 184, 108, 0.25);
+  color: #ffb86c;
+  font-weight: bold;
+}
+
+.bit-size {
+  margin-top: 4px;
+  opacity: 0.5;
+  font-size: 0.65rem;
+  transition: opacity 0.2s ease;
+}

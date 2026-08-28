@@ -1,0 +1,102 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import NoteSidebar from './NoteSidebar.astro';
+import TableOfContents from './TableOfContents.astro';
+import Comments from './Comments.astro';
+import RiscvDiagram from './RiscvDiagram.astro';
+import PageBackground from './PageBackground.astro';
+import AuthorChip from './AuthorChip.astro';
+import { formatDate, entryPath, notesInSeries, seriesPath } from '../utils/content';
+
+interface Props {
+  entry: CollectionEntry<'note'> | CollectionEntry<'create'>;
+  notes?: CollectionEntry<'note'>[];
+  Content: any;
+  headings: any[];
+  previous?: CollectionEntry<'note'> | CollectionEntry<'create'>;
+  next?: CollectionEntry<'note'> | CollectionEntry<'create'>;
+}
+const { entry, notes = [], Content, headings, previous, next } = Astro.props;
+const fiction = entry.collection === 'create';
+const words = (entry.body || '').replace(/\s/g, '').length;
+const seriesName = !fiction ? entry.data.series[0] : '';
+const seriesNotes = seriesName ? notesInSeries(notes, seriesName) : [];
+const seriesIndex = seriesNotes.findIndex((item) => item.id === entry.id);
+---
+
+<Layout title={entry.data.title} description={entry.data.description}>
+  <PageBackground />
+  <div class="article-shell">
+    <div class:list={['article-layout', fiction && 'novel-layout']}>
+      <article class="article" data-pagefind-body>
+        <header class="article-header">
+          <span class="ornament-corners" aria-hidden="true"><i></i></span>
+          <div class="article-header-top">
+            <span class="article-kicker">{fiction ? '小说' : '笔记'}</span>
+            <AuthorChip />
+          </div>
+          <h1 transition:name={`title-${entry.id}`}>{entry.data.title}</h1>
+          <div class="article-meta">
+            {entry.data.date && <time class="meta-pill" datetime={entry.data.date.toISOString()}>{formatDate(entry.data.date)}</time>}
+            <span class="meta-pill">{words} 字</span>
+            {seriesName && (
+              <a class="tag" href={seriesPath(seriesName)}>
+                {seriesName}{seriesIndex >= 0 ? ` · ${seriesIndex + 1}/${seriesNotes.length}` : ''}
+              </a>
+            )}
+          </div>
+          {entry.data.tags.length > 0 && (
+            <div class="tag-list">
+              {entry.data.tags.map((tag) => <a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>#{tag}</a>)}
+            </div>
+          )}
+        </header>
+        {!fiction && headings.length > 0 && (
+          <details class="mobile-toc">
+            <summary>本文目录</summary>
+            <nav>{headings.filter((heading) => heading.depth === 2 || heading.depth === 3).map((heading) => <a class={`depth-${heading.depth - 2}`} href={`#${heading.slug}`}>{heading.text}</a>)}</nav>
+          </details>
+        )}
+        <div class="article-prose">
+          <Content components={{ RiscvDiagram }} />
+        </div>
+        {!fiction && <NoteSidebar entries={notes} currentId={entry.id} />}
+        <nav class="article-pagination" aria-label="相邻文章">
+          {previous ? (
+            <a href={entryPath(previous)}>
+              <small>上一篇</small>
+              <strong>{previous.data.title}</strong>
+            </a>
+          ) : <span class="article-pagination-slot" aria-hidden="true" />}
+          {next ? (
+            <a class="is-next" href={entryPath(next)}>
+              <small>下一篇</small>
+              <strong>{next.data.title}</strong>
+            </a>
+          ) : <span class="article-pagination-slot" aria-hidden="true" />}
+        </nav>
+        <Comments />
+      </article>
+      {!fiction && <TableOfContents headings={headings} />}
+    </div>
+  </div>
+  <script>
+    function setupCodeCopy() {
+      document.querySelectorAll<HTMLElement>('.article-prose pre:not([data-copy])').forEach((pre) => {
+        pre.dataset.copy = '';
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.textContent = 'COPY';
+        button.className = 'copy-button';
+        button.addEventListener('click', async () => {
+          await navigator.clipboard.writeText(pre.querySelector('code')?.textContent || '');
+          button.textContent = 'COPIED';
+          setTimeout(() => button.textContent = 'COPY', 1200);
+        });
+        pre.appendChild(button);
+      });
+    }
+    document.addEventListener('astro:page-load', setupCodeCopy);
+  </script>
+</Layout>

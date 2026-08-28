@@ -1,0 +1,62 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Search from '../components/Search.astro';
+import Splash from '../components/Splash.astro';
+import { site } from '../data/site';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+const { title = site.title, description = site.description, image = '/android-chrome-512x512.png' } = Astro.props;
+const fullTitle = title === site.title ? site.title : `${title} · ${site.title}`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="zh-CN" class="dark" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#181921" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="alternate" type="application/rss+xml" title="木马的 RSS" href="/rss.xml" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <title>{fullTitle}</title>
+    <ClientRouter />
+    <script is:inline>
+      (function () {
+        try {
+          if (sessionStorage.getItem('splash-done')) return;
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            sessionStorage.setItem('splash-done', '1');
+            return;
+          }
+          var path = location.pathname.replace(/index\.html$/, '');
+          if (path !== '/') return;
+          document.documentElement.classList.add('splash-pending');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <Splash />
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <Header />
+    <main class="site-main" id="main"><slot /></main>
+    <Footer />
+    <Search />
+  </body>
+</html>

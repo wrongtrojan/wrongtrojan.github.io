@@ -1,0 +1,24 @@
+---
+import { site } from '../data/site';
+---
+
+<footer class="site-footer">
+  <div class="footer-grid shell">
+    <div>
+      <div class="footer-brand">{site.author}</div>
+    </div>
+    <div>
+      <div class="footer-label">浏览</div>
+      <nav class="footer-nav" aria-label="内容导航">
+        <a href="/note/">笔记</a><a href="/create/">创作</a>
+      </nav>
+    </div>
+    <div>
+      <div class="footer-label">索引</div>
+      <nav class="footer-nav" aria-label="索引导航">
+        <a href="/tags/">Tags</a><a href="/series/">Series</a><a href={site.github}>GitHub</a>
+      </nav>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="shell">@{new Date().getFullYear()}{site.author}</div></div>
+</footer>

@@ -1,0 +1,53 @@
+<dialog class="search-dialog" data-search-dialog>
+  <div class="search-bar">
+    <span>全文搜索</span>
+    <button class="search-close" type="button" data-search-close aria-label="关闭搜索">ESC</button>
+  </div>
+  <div id="search"></div>
+</dialog>
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+
+<script>
+  declare global { interface Window { PagefindUI?: new (options: Record<string, unknown>) => unknown } }
+  let loaded = false;
+  async function setupSearch() {
+    const dialog = document.querySelector<HTMLDialogElement>('[data-search-dialog]');
+    if (!dialog || dialog.dataset.ready) return;
+    dialog.dataset.ready = 'true';
+    const openers = document.querySelectorAll<HTMLButtonElement>('[data-search-open]');
+    const close = document.querySelector<HTMLButtonElement>('[data-search-close]');
+    const open = async () => {
+      dialog?.showModal();
+      document.body.classList.add('modal-open');
+      if (!loaded) {
+        loaded = true;
+        try {
+          await new Promise<void>((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = '/pagefind/pagefind-ui.js';
+            script.onload = () => resolve();
+            script.onerror = () => reject();
+            document.head.appendChild(script);
+          });
+          if (!window.PagefindUI) throw new Error('Pagefind unavailable');
+          new window.PagefindUI({ element: '#search', showSubResults: true, translations: { placeholder: '搜索…' } });
+        } catch {
+          const root = document.querySelector('#search');
+          if (root) root.textContent = '搜索索引将在生产构建后可用。';
+        }
+      }
+      window.setTimeout(() => dialog?.querySelector<HTMLInputElement>('input')?.focus(), 50);
+    };
+    openers.forEach((button) => button.addEventListener('click', open));
+    close?.addEventListener('click', () => dialog?.close());
+    dialog?.addEventListener('close', () => document.body.classList.remove('modal-open'));
+    window.addEventListener('keydown', (event) => {
+      if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
+        event.preventDefault();
+        open();
+      }
+    });
+  }
+  setupSearch();
+  document.addEventListener('astro:page-load', setupSearch);
+</script>

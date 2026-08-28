@@ -1,0 +1,58 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import PageBackground from './PageBackground.astro';
+import ArticleCard from './ArticleCard.astro';
+import { treeId, entryPath, isIndex, plainSummary, sortBySeries, sortEntries } from '../utils/content';
+
+interface Props {
+  entry?: CollectionEntry<'note'> | CollectionEntry<'create'>;
+  entries: (CollectionEntry<'note'> | CollectionEntry<'create'>)[];
+  title: string;
+  description: string;
+  prefix?: string;
+  flat?: boolean;
+  series?: boolean;
+  Content?: any;
+}
+const { entry, entries, title, description, prefix = '', flat = false, series = false, Content } = Astro.props;
+const filtered = entries.filter((item) => {
+  if (item.data.draft || item.id === entry?.id) return false;
+  if (flat || series) return !isIndex(item);
+  const clean = treeId(item);
+  const parent = clean.includes('/') ? clean.slice(0, clean.lastIndexOf('/')) : '';
+  return parent === prefix;
+});
+const children = series ? sortBySeries(filtered) : sortEntries(filtered);
+---
+
+<Layout title={title} description={description}>
+  <PageBackground />
+  <header class="page-hero">
+    <div class="shell">
+      <h1 transition:name={`title-${entry?.id || title}`}>{title}</h1>
+      {description && <p>{description}</p>}
+      {Content && <div class="section-index-content"><Content /></div>}
+    </div>
+  </header>
+  <section class="listing shell" data-pagefind-ignore>
+    {children.length > 0 ? (
+      <div class="article-list">
+        {children.map((item, index) => (
+          <ArticleCard
+            href={entryPath(item)}
+            title={item.data.title}
+            summary={plainSummary(item.body, item.data.description)}
+            badge={series
+              ? String(item.data.series_order || index + 1).padStart(2, '0')
+              : isIndex(item) ? '目录' : item.collection === 'note' ? '笔记' : '创作'}
+            meta={!isIndex(item) && item.data.date ? [item.data.date.toISOString().slice(0, 10)] : []}
+            transitionName={`title-${item.id}`}
+          />
+        ))}
+      </div>
+    ) : (
+      <p class="listing-empty">还没有写下笔记。</p>
+    )}
+  </section>
+</Layout>

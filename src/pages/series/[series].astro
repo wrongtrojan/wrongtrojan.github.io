@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+import DirectoryView from '../../components/DirectoryView.astro';
+import { notesInSeries } from '../../utils/content';
+
+export async function getStaticPaths() {
+  const notes = (await getCollection('note')).filter((entry) => !entry.data.draft);
+  const series = [...new Set(notes.flatMap((entry) => entry.data.series))];
+  return series.map((name) => ({
+    params: { series: name },
+    props: { name, entries: notesInSeries(notes, name) },
+  }));
+}
+const { name, entries } = Astro.props;
+---
+<DirectoryView entries={entries} title={name} description="" series />

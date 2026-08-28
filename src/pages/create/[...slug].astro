@@ -1,0 +1,25 @@
+---
+import { getCollection, render } from 'astro:content';
+import ArticleView from '../../components/ArticleView.astro';
+import DirectoryView from '../../components/DirectoryView.astro';
+import { entrySlug, isIndex, sortEntries, treeId } from '../../utils/content';
+
+export async function getStaticPaths() {
+  const entries = (await getCollection('create')).filter((item) => !item.data.draft && treeId(item));
+  return entries.map((entry) => ({
+    params: { slug: entrySlug(entry) },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const entries = (await getCollection('create')).filter((item) => !item.data.draft);
+const index = isIndex(entry);
+const ordered = sortEntries(entries.filter((item) => !isIndex(item)));
+const position = ordered.findIndex((item) => item.id === entry.id);
+const rendered = await render(entry);
+---
+{index
+  ? <DirectoryView entry={entry} entries={entries} title={entry.data.title} description={entry.data.description} prefix={treeId(entry)} Content={rendered.Content} />
+  : <ArticleView entry={entry} Content={rendered.Content} headings={rendered.headings} previous={ordered[position - 1]} next={ordered[position + 1]} />
+}

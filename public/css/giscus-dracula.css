@@ -1,31 +1,105 @@
-/* static/css/giscus-dracula.css */
 main {
-  /* 1. 整体背景：保持与你的代码块背景一致，或者稍微浅一点点以示区分 */
-  --color-canvas-default: rgb(40, 42, 54);    /* 对应你的 Neutral-700 */
-  
-  /* 2. 输入框内部背景：稍微深一点，增加内凹感 */
-  --color-canvas-subtle: rgb(33, 34, 44);     /* 对应你的 Neutral-800 */
-  
-  /* 3. 边框颜色：一定要显眼，建议使用你的 Comment 色 */
-  --color-border-default: rgb(98, 114, 164);  /* 对应你的 Neutral-400 */
-  --color-border-muted: rgb(71, 75, 100);     /* 对应你的 Neutral-500 */
+  --color-prettylights-syntax-comment: #6272a4;
+  --color-prettylights-syntax-constant: #bd93f9;
+  --color-prettylights-syntax-entity: #50fa7b;
+  --color-prettylights-syntax-storage-modifier-import: #8be9fd;
+  --color-prettylights-syntax-entity-tag: #8be9fd;
+  --color-prettylights-syntax-keyword: #ff79c6;
+  --color-prettylights-syntax-string: #f1fa8c;
+  --color-prettylights-syntax-variable: #ffb86c;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #ff5555;
+  --color-prettylights-syntax-invalid-illegal-text: #f8f8f2;
+  --color-prettylights-syntax-invalid-illegal-bg: #ff5555;
+  --color-prettylights-syntax-markup-deleted-text: #ff5555;
+  --color-prettylights-syntax-markup-inserted-text: #50fa7b;
+  --color-prettylights-syntax-markup-changed-text: #ffb86c;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #6272a4;
 
-  /* 4. 文字颜色 */
-  --color-fg-default: rgb(248, 248, 242);     /* 对应你的 Neutral 主文字 */
-  --color-fg-muted: rgb(190, 195, 215);       /* 辅助文字 */
+  --color-btn-text: #f8f8f2;
+  --color-btn-bg: #282a36;
+  --color-btn-border: rgba(189, 147, 249, 0.28);
+  --color-btn-shadow: 0 0 transparent;
+  --color-btn-inset-shadow: 0 0 transparent;
+  --color-btn-hover-bg: #343746;
+  --color-btn-hover-border: rgba(189, 147, 249, 0.55);
+  --color-btn-primary-text: #181921;
+  --color-btn-primary-bg: #bd93f9;
+  --color-btn-primary-border: #bd93f9;
+  --color-btn-primary-hover-bg: #caa8ff;
+  --color-btn-primary-hover-border: #caa8ff;
+  --color-btn-primary-selected-bg: #bd93f9;
 
-  /* 5. 按钮与高亮：使用你的 Primary 紫色 */
-  --color-accent-fg: rgb(189, 147, 249);      /* 链接颜色 */
-  --color-btn-primary-bg: rgb(189, 147, 249); /* “评论”按钮背景 */
-  --color-btn-primary-text: rgb(40, 42, 54);  /* 按钮文字 */
-  --color-btn-primary-border: rgb(189, 147, 249);
+  --color-fg-default: #f8f8f2;
+  --color-fg-muted: #aab2d5;
+  --color-fg-subtle: #6272a4;
+
+  --color-canvas-default: #181921;
+  --color-canvas-overlay: #21222c;
+  --color-canvas-inset: #12131a;
+  --color-canvas-subtle: #21222c;
+
+  --color-border-default: rgba(189, 147, 249, 0.22);
+  --color-border-muted: rgba(189, 147, 249, 0.14);
+
+  --color-neutral-muted: rgba(68, 71, 90, 0.5);
+  --color-accent-fg: #bd93f9;
+  --color-accent-emphasis: #bd93f9;
+  --color-accent-muted: rgba(189, 147, 249, 0.28);
+  --color-accent-subtle: rgba(189, 147, 249, 0.1);
+
+  --color-social-reaction-bg-hover: #282a36;
+  --color-social-reaction-bg-reacted-hover: rgba(189, 147, 249, 0.16);
+
+  --color-danger-fg: #ff5555;
+  --color-success-fg: #50fa7b;
+
+  font-family: 'JetBrains Mono', 'PingFang SC', 'Microsoft YaHei', sans-serif !important;
+  background: transparent !important;
 }
 
-/* 强制修饰：让输入框边缘更锐利一点 */
-.form-control {
-  border: 1px solid rgb(98, 114, 164) !important;
+.gsc-main,
+.gsc-comments,
+.gsc-comment-box,
+.gsc-timeline {
+  background: transparent !important;
 }
-/* 强制等宽字体 */
-.giscus-browser {
-  font-family: 'JetBrains Mono', monospace !important;
+
+.form-control,
+.gsc-comment-box-textarea,
+textarea {
+  border: 1px solid rgba(189, 147, 249, 0.22) !important;
+  border-radius: 12px !important;
+  background: #21222c !important;
+  color: #f8f8f2 !important;
+}
+
+.btn-primary,
+.gsc-comment-box-buttons .btn-primary {
+  border-radius: 10px !important;
+}
+
+.gsc-reactions-count,
+.gsc-replies-count {
+  color: #aab2d5 !important;
+}
+
+.gsc-comment .gsc-comment-author {
+  color: #f8f8f2 !important;
+}
+
+a {
+  color: #8be9fd !important;
+}
+
+.gsc-pagination-button {
+  border-color: rgba(189, 147, 249, 0.28) !important;
+}
+
+.gsc-powered-by,
+.gsc-comments > .gsc-header .gsc-left-header .gsc-comments-count-separator {
+  opacity: 0.35;
+}
+
+.gsc-powered-by {
+  font-size: 11px !important;
 }

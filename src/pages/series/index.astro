@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import PageBackground from '../../components/PageBackground.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { isIndex, seriesPath } from '../../utils/content';
+const all = (await getCollection('note')).filter((entry) => !entry.data.draft && !isIndex(entry));
+const series = [...new Set(all.flatMap((entry) => entry.data.series))].sort((a, b) => a.localeCompare(b, 'zh-CN'));
+---
+<Layout title="系列" description="系列">
+  <PageBackground />
+  <header class="page-hero"><div class="shell"><h1>系列</h1></div></header>
+  <section class="listing shell">
+    <div class="article-list">
+      {series.map((name) => (
+        <ArticleCard
+          href={seriesPath(name)}
+          title={name}
+          badge="系列"
+          meta={[`${all.filter((entry) => entry.data.series.includes(name)).length} 篇`]}
+        />
+      ))}
+    </div>
+  </section>
+</Layout>

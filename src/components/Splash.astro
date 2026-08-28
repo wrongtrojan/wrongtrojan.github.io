@@ -1,0 +1,157 @@
+---
+import author from '../assets/author.jpg';
+import batRaw from '../assets/bat.svg?raw';
+import caveRaw from '../assets/cave.svg?raw';
+import hero from '../assets/homepageImage.png';
+
+const paint = (svg: string) => svg
+  .replace(/<\?xml[\s\S]*?\?>/i, '')
+  .replace(/<!DOCTYPE[\s\S]*?>/i, '')
+  .replace(/fill="#0{3,8}"/gi, 'fill="currentColor"')
+  .replace(/<svg\b/, '<svg fill="currentColor"')
+  .replace(/\swidth="[^"]*"/, '')
+  .replace(/\sheight="[^"]*"/, '');
+---
+
+<div class="splash" data-splash data-pagefind-ignore transition:persist="splash" role="dialog" aria-modal="true" aria-label="开场动画，点击跳过">
+  <div class="splash-rings" data-splash-rings style={`--hero:url(${hero.src})`}></div>
+  <div class="splash-veil" data-splash-veil></div>
+  <div class="splash-stage" data-splash-stage>
+    <div class="splash-track" data-splash-track>
+      <div class="splash-bar" data-splash-bar></div>
+      <div class="splash-bat" data-splash-bat aria-hidden="true" set:html={paint(batRaw)}></div>
+      <div class="splash-cave" data-splash-cave aria-hidden="true" set:html={paint(caveRaw)}></div>
+    </div>
+  </div>
+  <img class="splash-avatar" data-splash-avatar src={author.src} width="144" height="144" alt="" />
+</div>
+
+<script>
+  function easeOutCubic(t: number) {
+    return 1 - (1 - t) ** 3;
+  }
+  function easeInOutCubic(t: number) {
+    return t < 0.5 ? 4 * t * t * t : 1 - ((-2 * t + 2) ** 3) / 2;
+  }
+  function clamp(v: number, a: number, b: number) {
+    return Math.max(a, Math.min(b, v));
+  }
+
+  function startSplash() {
+    const html = document.documentElement;
+    const splash = document.querySelector<HTMLElement>('[data-splash]');
+    const stage = document.querySelector<HTMLElement>('[data-splash-stage]');
+    const track = document.querySelector<HTMLElement>('[data-splash-track]');
+    const bar = document.querySelector<HTMLElement>('[data-splash-bar]');
+    const bat = document.querySelector<HTMLElement>('[data-splash-bat]');
+    const avatar = document.querySelector<HTMLImageElement>('[data-splash-avatar]');
+    const rings = document.querySelector<HTMLElement>('[data-splash-rings]');
+    const veil = document.querySelector<HTMLElement>('[data-splash-veil]');
+    if (!splash || !stage || !track || !bar || !bat || !avatar || !rings || !veil) return;
+    if (splash.dataset.started) return;
+    if (!html.classList.contains('splash-pending')) {
+      splash.hidden = true;
+      splash.setAttribute('aria-hidden', 'true');
+      return;
+    }
+
+    splash.dataset.started = 'true';
+    splash.hidden = false;
+    html.classList.add('splash-playing', 'splash-avatar-cover');
+
+    const size = 144;
+    const T_BAR = 2.4;
+    const T_HOLD = 2.75;
+    const T_FADE = 3.2;
+    const T_GROW_END = 3.75;
+    const T_LAND_END = 4.45;
+    const T_VEIL_DUR = 1.05;
+    const T_DONE = 4.55;
+
+    const setAvatarBox = (x: number, y: number, w: number) => {
+      avatar.style.opacity = '1';
+      avatar.style.width = `${w}px`;
+      avatar.style.height = `${w}px`;
+      avatar.style.transform = `translate(${x}px, ${y}px)`;
+    };
+
+    let start = 0;
+    let frame = 0;
+    let stopped = false;
+    let landFrom: DOMRect | null = null;
+    let landTo: DOMRect | null = null;
+
+    const finish = () => {
+      if (stopped) return;
+      stopped = true;
+      cancelAnimationFrame(frame);
+      html.classList.remove('splash-pending', 'splash-playing', 'splash-avatar-cover');
+      document.removeEventListener('keydown', onKey);
+      try { sessionStorage.setItem('splash-done', '1'); } catch {}
+      splash.hidden = true;
+      splash.setAttribute('aria-hidden', 'true');
+    };
+
+    splash.addEventListener('click', finish, { once: true });
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') finish();
+    };
+    document.addEventListener('keydown', onKey);
+    document.querySelector('.skip-link')?.addEventListener('click', finish, { once: true });
+
+    const tick = (now: number) => {
+      if (stopped) return;
+      if (!start) start = now;
+      const t = (now - start) / 1000;
+      const trackW = track.offsetWidth;
+      const batW = bat.offsetWidth || 96;
+      const caveW = 46;
+      const travel = Math.max(0, trackW - batW * 0.4 - caveW);
+
+      if (t < T_FADE) {
+        const p = easeInOutCubic(clamp(t / T_BAR, 0, 1));
+        bar.style.width = `${p * 100}%`;
+        const bob = Math.sin(t * 2.2) * 1.6;
+        bat.style.transform = `translate(${p * travel}px, calc(-72% + ${bob}px))`;
+        stage.style.opacity = t < T_HOLD ? '1' : String(1 - (t - T_HOLD) / (T_FADE - T_HOLD));
+        rings.style.backgroundPosition = 'center, center 42%';
+      } else {
+        stage.style.opacity = '0';
+        const cx = window.innerWidth / 2;
+        const cy = window.innerHeight / 2;
+        const zoom = easeInOutCubic(clamp((t - T_FADE) / (T_LAND_END - T_FADE), 0, 1));
+        rings.style.backgroundPosition = `center, center ${42 * (1 - zoom)}%`;
+        if (t < T_GROW_END) {
+          const k = easeOutCubic(clamp((t - T_FADE) / (T_GROW_END - T_FADE), 0, 1));
+          const box = size * (0.18 + 0.82 * k);
+          setAvatarBox(cx - box / 2, cy - box / 2, box);
+        } else {
+          if (!landFrom) {
+            landFrom = new DOMRect(cx - size / 2, cy - size / 2, size, size);
+            const hero = document.querySelector<HTMLImageElement>('.profile-card img');
+            landTo = hero?.getBoundingClientRect() || null;
+          }
+          if (landTo && landTo.width > 24) {
+            const k = easeInOutCubic(clamp((t - T_GROW_END) / (T_LAND_END - T_GROW_END), 0, 1));
+            setAvatarBox(
+              landFrom.x + (landTo.x - landFrom.x) * k,
+              landFrom.y + (landTo.y - landFrom.y) * k,
+              landFrom.width + (landTo.width - landFrom.width) * k,
+            );
+          } else {
+            setAvatarBox(cx - size / 2, cy - size / 2, size);
+          }
+        }
+        veil.style.opacity = String(1 - clamp((t - T_FADE) / T_VEIL_DUR, 0, 1));
+      }
+
+      if (t >= T_DONE) finish();
+      else frame = requestAnimationFrame(tick);
+    };
+
+    frame = requestAnimationFrame(tick);
+  }
+
+  startSplash();
+  document.addEventListener('astro:page-load', startSplash);
+</script>

@@ -1,0 +1,45 @@
+<section class="comments" data-comments aria-label="评论">
+  <div class="comments-kicker">评论</div>
+</section>
+
+<script>
+  const giscus = {
+    src: 'https://giscus.app/client.js',
+    repo: 'wrongtrojan/wrongtrojan.github.io',
+    repoId: 'R_kgDOQjuwbg',
+    category: 'Announcements',
+    categoryId: 'DIC_kwDOQjuwbs4C4pef',
+    mapping: 'pathname',
+    strict: '0',
+    reactionsEnabled: '1',
+    emitMetadata: '0',
+    inputPosition: 'bottom',
+    theme: 'https://wrongtrojan.github.io/css/giscus-dracula.css',
+    lang: 'zh-CN',
+  };
+
+  function mountGiscus() {
+    const host = document.querySelector('[data-comments]');
+    if (!host) return;
+    host.querySelectorAll('script, .giscus, iframe.giscus-frame').forEach((node) => node.remove());
+    const script = document.createElement('script');
+    script.src = giscus.src;
+    script.async = true;
+    script.crossOrigin = 'anonymous';
+    script.setAttribute('data-repo', giscus.repo);
+    script.setAttribute('data-repo-id', giscus.repoId);
+    script.setAttribute('data-category', giscus.category);
+    script.setAttribute('data-category-id', giscus.categoryId);
+    script.setAttribute('data-mapping', giscus.mapping);
+    script.setAttribute('data-strict', giscus.strict);
+    script.setAttribute('data-reactions-enabled', giscus.reactionsEnabled);
+    script.setAttribute('data-emit-metadata', giscus.emitMetadata);
+    script.setAttribute('data-input-position', giscus.inputPosition);
+    script.setAttribute('data-theme', giscus.theme);
+    script.setAttribute('data-lang', giscus.lang);
+    host.append(script);
+  }
+
+  mountGiscus();
+  document.addEventListener('astro:page-load', mountGiscus);
+</script>

@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.astro/
+.screenshots/
+.artifacts/
+.idea/
+.DS_Store

@@ -1,0 +1,39 @@
+{
+  "name": "personalblog",
+  "version": "1.0.0",
+  "description": "木马的个人笔记与创作",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && pagefind --site dist",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wrongtrojan/wrongtrojan.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wrongtrojan/wrongtrojan.github.io/issues"
+  },
+  "homepage": "https://github.com/wrongtrojan/wrongtrojan.github.io#readme",
+  "dependencies": {
+    "@astrojs/mdx": "^7.0.8",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.2.8",
+    "katex": "^0.18.4",
+    "pagefind": "^1.5.2",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "playwright": "^1.62.1",
+    "typescript": "^6.0.3"
+  }
+}

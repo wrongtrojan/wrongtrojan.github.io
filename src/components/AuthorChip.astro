@@ -1,0 +1,12 @@
+---
+import authorImage from '../assets/author.jpg';
+import { site } from '../data/site';
+---
+
+<a class="author-chip" href="/about/">
+  <img src={authorImage.src} width="44" height="44" alt="" />
+  <span>
+    <strong>{site.author}</strong>
+    <small>作者</small>
+  </span>
+</a>

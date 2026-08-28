@@ -1,0 +1,23 @@
+---
+const rows = [
+  ['(R)egister', [['funct7', 7, 'funct'], ['rs2', 5, 'rs'], ['rs1', 5, 'rs'], ['f3', 3, 'funct'], ['rd', 5, 'rd'], ['opcode', 7, 'opcode']]],
+  ['(I)mmediate', [['imm[11:0]', 12, 'imm'], ['rs1', 5, 'rs'], ['f3', 3, 'funct'], ['rd', 5, 'rd'], ['opcode', 7, 'opcode']]],
+  ['(S)tore', [['imm[11:5]', 7, 'imm'], ['rs2', 5, 'rs'], ['rs1', 5, 'rs'], ['f3', 3, 'funct'], ['imm[4:0]', 5, 'imm'], ['opcode', 7, 'opcode']]],
+  ['(B)ranch', [['imm[12|10:5]', 7, 'imm'], ['rs2', 5, 'rs'], ['rs1', 5, 'rs'], ['f3', 3, 'funct'], ['imm[4:1|11]', 5, 'imm'], ['opcode', 7, 'opcode']]],
+  ['(U)pper', [['imm[31:12]', 20, 'imm'], ['rd', 5, 'rd'], ['opcode', 7, 'opcode']]],
+  ['(J)ump', [['imm[20|10:1|11|19:12]', 20, 'imm'], ['rd', 5, 'rd'], ['opcode', 7, 'opcode']]],
+] as const;
+---
+
+<div class="riscv-container" role="img" aria-label="RISC-V 指令编码格式">
+  {rows.map(([label, fields]) => (
+    <div class="riscv-row">
+      <div class="riscv-type-label">{label}</div>
+      <div class="riscv-bits-group">
+        {fields.map(([name, width, kind]) => (
+          <div class:list={['bit-field', `bf-${kind}`, `w-${width}`]}>{name}<span class="bit-size">{width}</span></div>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
