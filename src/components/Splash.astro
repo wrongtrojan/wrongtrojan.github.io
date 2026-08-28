@@ -1,8 +1,13 @@
 ---
 import author from '../assets/author.jpg';
-import batRaw from '../assets/bat.svg?raw';
 import caveRaw from '../assets/cave.svg?raw';
 import hero from '../assets/homepageImage.png';
+import bat1 from '../assets/bat1.png';
+import bat2 from '../assets/bat2.png';
+import bat3 from '../assets/bat3.png';
+import bat4 from '../assets/bat4.png';
+import bat5 from '../assets/bat5.png';
+import bat6 from '../assets/bat6.png';
 
 const paint = (svg: string) => svg
   .replace(/<\?xml[\s\S]*?\?>/i, '')
@@ -11,6 +16,8 @@ const paint = (svg: string) => svg
   .replace(/<svg\b/, '<svg fill="currentColor"')
   .replace(/\swidth="[^"]*"/, '')
   .replace(/\sheight="[^"]*"/, '');
+
+const batFrames = [bat1.src, bat2.src, bat3.src, bat4.src, bat5.src, bat6.src];
 ---
 
 <div class="splash" data-splash data-pagefind-ignore transition:persist="splash" role="dialog" aria-modal="true" aria-label="开场动画，点击跳过">
@@ -19,7 +26,16 @@ const paint = (svg: string) => svg
   <div class="splash-stage" data-splash-stage>
     <div class="splash-track" data-splash-track>
       <div class="splash-bar" data-splash-bar></div>
-      <div class="splash-bat" data-splash-bat aria-hidden="true" set:html={paint(batRaw)}></div>
+      <div class="splash-mouth" aria-hidden="true"></div>
+      <div class="splash-bat" data-splash-bat aria-hidden="true">
+        {batFrames.map((src, index) => (
+          <span
+            class:list={['splash-bat-sprite', { 'is-on': index === 3 }]}
+            data-splash-bat-sprite
+            style={`--bat:url(${src})`}
+          ></span>
+        ))}
+      </div>
       <div class="splash-cave" data-splash-cave aria-hidden="true" set:html={paint(caveRaw)}></div>
     </div>
   </div>
@@ -37,6 +53,8 @@ const paint = (svg: string) => svg
     return Math.max(a, Math.min(b, v));
   }
 
+  const FLAP = [4, 5, 6, 5, 4, 3, 2, 1, 2, 3];
+
   function startSplash() {
     const html = document.documentElement;
     const splash = document.querySelector<HTMLElement>('[data-splash]');
@@ -44,10 +62,12 @@ const paint = (svg: string) => svg
     const track = document.querySelector<HTMLElement>('[data-splash-track]');
     const bar = document.querySelector<HTMLElement>('[data-splash-bar]');
     const bat = document.querySelector<HTMLElement>('[data-splash-bat]');
+    const sprites = [...document.querySelectorAll<HTMLElement>('[data-splash-bat-sprite]')];
+    const cave = document.querySelector<HTMLElement>('[data-splash-cave]');
     const avatar = document.querySelector<HTMLImageElement>('[data-splash-avatar]');
     const rings = document.querySelector<HTMLElement>('[data-splash-rings]');
     const veil = document.querySelector<HTMLElement>('[data-splash-veil]');
-    if (!splash || !stage || !track || !bar || !bat || !avatar || !rings || !veil) return;
+    if (!splash || !stage || !track || !bar || !bat || sprites.length < 6 || !cave || !avatar || !rings || !veil) return;
     if (splash.dataset.started) return;
     if (!html.classList.contains('splash-pending')) {
       splash.hidden = true;
@@ -59,14 +79,22 @@ const paint = (svg: string) => svg
     splash.hidden = false;
     html.classList.add('splash-playing', 'splash-avatar-cover');
 
+    let lastFrame = 3;
+    const setFrame = (index: number) => {
+      if (index === lastFrame || !sprites[index]) return;
+      sprites[lastFrame]?.classList.remove('is-on');
+      sprites[index].classList.add('is-on');
+      lastFrame = index;
+    };
+
     const size = 144;
-    const T_BAR = 2.4;
-    const T_HOLD = 2.75;
-    const T_FADE = 3.2;
-    const T_GROW_END = 3.75;
-    const T_LAND_END = 4.45;
+    const T_BAR = 3.05;
+    const T_HOLD = 3.4;
+    const T_FADE = 3.85;
+    const T_GROW_END = 4.4;
+    const T_LAND_END = 5.1;
     const T_VEIL_DUR = 1.05;
-    const T_DONE = 4.55;
+    const T_DONE = 5.2;
 
     const setAvatarBox = (x: number, y: number, w: number) => {
       avatar.style.opacity = '1';
@@ -81,18 +109,24 @@ const paint = (svg: string) => svg
     let landFrom: DOMRect | null = null;
     let landTo: DOMRect | null = null;
 
+    const blockScroll = (event: Event) => event.preventDefault();
+
     const finish = () => {
       if (stopped) return;
       stopped = true;
       cancelAnimationFrame(frame);
       html.classList.remove('splash-pending', 'splash-playing', 'splash-avatar-cover');
       document.removeEventListener('keydown', onKey);
+      splash.removeEventListener('wheel', blockScroll);
+      splash.removeEventListener('touchmove', blockScroll);
       try { sessionStorage.setItem('splash-done', '1'); } catch {}
       splash.hidden = true;
       splash.setAttribute('aria-hidden', 'true');
     };
 
     splash.addEventListener('click', finish, { once: true });
+    splash.addEventListener('wheel', blockScroll, { passive: false });
+    splash.addEventListener('touchmove', blockScroll, { passive: false });
     const onKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') finish();
     };
@@ -104,15 +138,25 @@ const paint = (svg: string) => svg
       if (!start) start = now;
       const t = (now - start) / 1000;
       const trackW = track.offsetWidth;
-      const batW = bat.offsetWidth || 96;
-      const caveW = 46;
-      const travel = Math.max(0, trackW - batW * 0.4 - caveW);
+      const batW = bat.offsetWidth || 98;
+      const caveW = cave.offsetWidth || 92;
+      const travel = Math.max(0, trackW - caveW * 0.38 - batW * 0.48);
 
       if (t < T_FADE) {
         const p = easeInOutCubic(clamp(t / T_BAR, 0, 1));
-        bar.style.width = `${p * 100}%`;
-        const bob = Math.sin(t * 2.2) * 1.6;
-        bat.style.transform = `translate(${p * travel}px, calc(-72% + ${bob}px))`;
+        const batX = p * travel;
+        const padL = parseFloat(getComputedStyle(track).paddingLeft) || 0;
+        const inner = Math.max(1, track.clientWidth - padL - (parseFloat(getComputedStyle(track).paddingRight) || 0));
+        const flapIndex = FLAP[Math.floor(t * 14) % FLAP.length] - 1;
+        setFrame(flapIndex);
+        const enter = easeInOutCubic(clamp((p - 0.91) / 0.09, 0, 1));
+        const trail = batW * 0.22 * (1 - enter);
+        bar.style.width = `${clamp(batX + batW * 0.52 - padL - trail, 0, inner)}px`;
+        const scale = 1 - 0.78 * enter;
+        const fade = 1 - 0.95 * enter;
+        const bob = Math.sin(t * 2.2) * 1.4 * (1 - enter);
+        bat.style.opacity = String(fade);
+        bat.style.transform = `translate3d(${batX}px, calc(-58% + ${bob}px), 0) scale(${scale})`;
         stage.style.opacity = t < T_HOLD ? '1' : String(1 - (t - T_HOLD) / (T_FADE - T_HOLD));
         rings.style.backgroundPosition = 'center, center 42%';
       } else {
@@ -128,8 +172,8 @@ const paint = (svg: string) => svg
         } else {
           if (!landFrom) {
             landFrom = new DOMRect(cx - size / 2, cy - size / 2, size, size);
-            const hero = document.querySelector<HTMLImageElement>('.profile-card img');
-            landTo = hero?.getBoundingClientRect() || null;
+            const profile = document.querySelector<HTMLImageElement>('.profile-card img');
+            landTo = profile?.getBoundingClientRect() || null;
           }
           if (landTo && landTo.width > 24) {
             const k = easeInOutCubic(clamp((t - T_GROW_END) / (T_LAND_END - T_GROW_END), 0, 1));

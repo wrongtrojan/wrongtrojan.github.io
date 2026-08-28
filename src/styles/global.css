@@ -49,7 +49,13 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scrollbar-color: var(--muted) var(--surface-soft); }
+html {
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow-y: overlay;
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted) var(--surface-soft);
+}
 body {
   margin: 0;
   color: var(--text);
@@ -62,10 +68,6 @@ a { color: inherit; text-decoration: none; }
 button, input { color: inherit; font: inherit; }
 img { display: block; max-width: 100%; }
 ::selection { color: #181921; background: #8be9fd; }
-::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-track { background: var(--surface-soft); }
-::-webkit-scrollbar-thumb { background: var(--muted); border: 2px solid var(--surface-soft); border-radius: 6px; }
-::-webkit-scrollbar-thumb:hover { background: var(--purple); }
 :focus-visible {
   outline: 2px solid var(--cyan);
   outline-offset: 3px;
@@ -797,7 +799,12 @@ html.splash-pending .splash,
 html.splash-playing .splash { display: block; }
 .splash[hidden] { display: none !important; }
 html.splash-pending,
-html.splash-pending body { overflow: hidden; }
+html.splash-playing {
+  overscroll-behavior: none;
+  scrollbar-width: none;
+}
+html.splash-pending::-webkit-scrollbar,
+html.splash-playing::-webkit-scrollbar { display: none; }
 html.splash-playing .profile-hero-image,
 html.splash-avatar-cover .profile-card img { visibility: hidden; }
 .splash-rings {
@@ -842,7 +849,8 @@ html.splash-avatar-cover .profile-card img { visibility: hidden; }
   z-index: 1;
   width: min(78vw, 600px);
   height: 18px;
-  padding: 3px;
+  padding: 3px 14px 3px 3px;
+  overflow: visible;
   border: 1px solid var(--border);
   border-radius: 999px;
   background: #14141c;
@@ -877,39 +885,63 @@ html.splash-avatar-cover .profile-card img { visibility: hidden; }
   background: linear-gradient(90deg, transparent, color-mix(in srgb, #f8f8f2, transparent 58%));
   pointer-events: none;
 }
+.splash-mouth,
 .splash-bat,
 .splash-cave {
   position: absolute;
   pointer-events: none;
   line-height: 0;
 }
+.splash-mouth {
+  top: 50%;
+  right: -2px;
+  z-index: 2;
+  width: 34px;
+  height: 26px;
+  border-radius: 50%;
+  background: #0b0b12;
+  box-shadow: 0 0 0 10px #0b0b12;
+  transform: translate(18%, -50%);
+}
 .splash-bat {
   top: 50%;
   left: 0;
-  z-index: 1;
-  color: var(--purple);
-  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, .45));
-  transform: translate(0, -72%);
+  z-index: 3;
+  width: 98px;
+  height: 98px;
+  opacity: 1;
+  transform: translate3d(0, -58%, 0);
+  transform-origin: 52% 58%;
+  filter: drop-shadow(0 1px 4px color-mix(in srgb, var(--purple), transparent 55%));
 }
-.splash-bat svg {
+.splash-bat-sprite {
+  position: absolute;
+  inset: 0;
   display: block;
-  width: 96px;
-  height: 48px;
-  overflow: visible;
-  fill: currentColor;
+  opacity: 0;
+  background: var(--purple);
+  mask-image: var(--bat);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: var(--bat);
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
+.splash-bat-sprite.is-on { opacity: 1; }
 .splash-cave {
   top: 50%;
-  right: -4px;
-  z-index: 2;
-  color: color-mix(in srgb, var(--text), transparent 12%);
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .4));
-  transform: translate(28%, -50%);
+  right: -6px;
+  z-index: 4;
+  color: color-mix(in srgb, var(--text), transparent 8%);
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, .5));
+  transform: translate(40%, -52%);
 }
 .splash-cave svg {
   display: block;
-  width: 70px;
-  height: 48px;
+  width: 96px;
+  height: 66px;
   overflow: visible;
   fill: currentColor;
 }
@@ -973,6 +1005,9 @@ html.splash-avatar-cover .profile-card img { visibility: hidden; }
   .icon-button { width: 38px; height: 38px; }
   .profile-hero { min-height: 530px; }
   .profile-hero-image, .profile-hero-blur { height: 760px; }
+  .splash-track { width: min(86vw, 600px); }
+  .splash-bat { width: 86px; height: 86px; }
+  .splash-cave svg { width: 84px; height: 58px; }
   .profile-card { padding-top: 46px; }
   .profile-card img { width: 112px; height: 112px; }
   .profile-card h1 { font-size: 1.8rem; }
