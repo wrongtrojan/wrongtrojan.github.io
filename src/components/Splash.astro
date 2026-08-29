@@ -1,6 +1,5 @@
 ---
 import author from '../assets/author.jpg';
-import caveRaw from '../assets/cave.svg?raw';
 import hero from '../assets/homepageImage.png';
 import bat1 from '../assets/bat1.png';
 import bat2 from '../assets/bat2.png';
@@ -8,14 +7,6 @@ import bat3 from '../assets/bat3.png';
 import bat4 from '../assets/bat4.png';
 import bat5 from '../assets/bat5.png';
 import bat6 from '../assets/bat6.png';
-
-const paint = (svg: string) => svg
-  .replace(/<\?xml[\s\S]*?\?>/i, '')
-  .replace(/<!DOCTYPE[\s\S]*?>/i, '')
-  .replace(/fill="#0{3,8}"/gi, 'fill="currentColor"')
-  .replace(/<svg\b/, '<svg fill="currentColor"')
-  .replace(/\swidth="[^"]*"/, '')
-  .replace(/\sheight="[^"]*"/, '');
 
 const batFrames = [bat1.src, bat2.src, bat3.src, bat4.src, bat5.src, bat6.src];
 ---
@@ -26,7 +17,6 @@ const batFrames = [bat1.src, bat2.src, bat3.src, bat4.src, bat5.src, bat6.src];
   <div class="splash-stage" data-splash-stage>
     <div class="splash-track" data-splash-track>
       <div class="splash-bar" data-splash-bar></div>
-      <div class="splash-mouth" aria-hidden="true"></div>
       <div class="splash-bat" data-splash-bat aria-hidden="true">
         {batFrames.map((src, index) => (
           <span
@@ -36,7 +26,6 @@ const batFrames = [bat1.src, bat2.src, bat3.src, bat4.src, bat5.src, bat6.src];
           ></span>
         ))}
       </div>
-      <div class="splash-cave" data-splash-cave aria-hidden="true" set:html={paint(caveRaw)}></div>
     </div>
   </div>
   <img class="splash-avatar" data-splash-avatar src={author.src} width="144" height="144" alt="" />
@@ -63,11 +52,10 @@ const batFrames = [bat1.src, bat2.src, bat3.src, bat4.src, bat5.src, bat6.src];
     const bar = document.querySelector<HTMLElement>('[data-splash-bar]');
     const bat = document.querySelector<HTMLElement>('[data-splash-bat]');
     const sprites = [...document.querySelectorAll<HTMLElement>('[data-splash-bat-sprite]')];
-    const cave = document.querySelector<HTMLElement>('[data-splash-cave]');
     const avatar = document.querySelector<HTMLImageElement>('[data-splash-avatar]');
     const rings = document.querySelector<HTMLElement>('[data-splash-rings]');
     const veil = document.querySelector<HTMLElement>('[data-splash-veil]');
-    if (!splash || !stage || !track || !bar || !bat || sprites.length < 6 || !cave || !avatar || !rings || !veil) return;
+    if (!splash || !stage || !track || !bar || !bat || sprites.length < 6 || !avatar || !rings || !veil) return;
     if (splash.dataset.started) return;
     if (!html.classList.contains('splash-pending')) {
       splash.hidden = true;
@@ -89,7 +77,6 @@ const batFrames = [bat1.src, bat2.src, bat3.src, bat4.src, bat5.src, bat6.src];
 
     const size = 144;
     const T_BAR = 3.05;
-    const T_HOLD = 3.4;
     const T_FADE = 3.85;
     const T_GROW_END = 4.4;
     const T_LAND_END = 5.1;
@@ -131,10 +118,8 @@ const batFrames = [bat1.src, bat2.src, bat3.src, bat4.src, bat5.src, bat6.src];
       if (stopped) return;
       if (!start) start = now;
       const t = (now - start) / 1000;
-      const trackW = track.offsetWidth;
       const batW = bat.offsetWidth || 98;
-      const caveW = cave.offsetWidth || 92;
-      const travel = Math.max(0, trackW - caveW * 0.38 - batW * 0.48);
+      const travel = Math.max(0, track.clientWidth - batW - 6);
 
       if (t < T_FADE) {
         const p = easeInOutCubic(clamp(t / T_BAR, 0, 1));
@@ -143,15 +128,18 @@ const batFrames = [bat1.src, bat2.src, bat3.src, bat4.src, bat5.src, bat6.src];
         const inner = Math.max(1, track.clientWidth - padL - (parseFloat(getComputedStyle(track).paddingRight) || 0));
         const flapIndex = FLAP[Math.floor(t * 14) % FLAP.length] - 1;
         setFrame(flapIndex);
-        const enter = easeInOutCubic(clamp((p - 0.91) / 0.09, 0, 1));
-        const trail = batW * 0.22 * (1 - enter);
-        bar.style.width = `${clamp(batX + batW * 0.52 - padL - trail, 0, inner)}px`;
-        const scale = 1 - 0.78 * enter;
-        const fade = 1 - 0.95 * enter;
-        const bob = Math.sin(t * 2.2) * 1.4 * (1 - enter);
+        const appear = easeOutCubic(clamp(p / 0.14, 0, 1));
+        const leave = easeInOutCubic(clamp((p - 0.94) / 0.06, 0, 1));
+        const barFollow = easeOutCubic(clamp((p - 0.08) / 0.14, 0, 1));
+        const follow = clamp(batX + 6, 0, inner) * barFollow;
+        bar.style.width = `${follow + (inner - follow) * leave}px`;
+        const scale = 0.2 + 0.8 * appear * (1 - leave);
+        const fade = appear * (1 - leave);
+        const bob = Math.sin(t * 2.2) * 1.4 * (1 - leave);
+        bat.style.transformOrigin = leave > 0 ? '100% 58%' : '0% 58%';
         bat.style.opacity = String(fade);
         bat.style.transform = `translate3d(${batX}px, calc(-58% + ${bob}px), 0) scale(${scale})`;
-        stage.style.opacity = t < T_HOLD ? '1' : String(1 - (t - T_HOLD) / (T_FADE - T_HOLD));
+        stage.style.opacity = t < T_BAR ? '1' : String(1 - (t - T_BAR) / (T_FADE - T_BAR));
         rings.style.backgroundPosition = 'center, center 42%';
       } else {
         stage.style.opacity = '0';

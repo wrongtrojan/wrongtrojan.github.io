@@ -842,15 +842,15 @@ html.splash-avatar-cover .profile-card img { visibility: hidden; }
   z-index: 1;
   width: min(78vw, 600px);
   height: 18px;
-  padding: 3px 14px 3px 3px;
+  padding: 3px;
   overflow: visible;
-  border: 1px solid var(--border);
+  border: 1px solid color-mix(in srgb, var(--border), #000 18%);
   border-radius: 999px;
-  background: #14141c;
+  background: #0e0e14;
   box-shadow:
-    inset 0 3px 6px rgba(0, 0, 0, .62),
-    inset 0 -1px 0 color-mix(in srgb, #f8f8f2, transparent 82%),
-    0 1px 0 color-mix(in srgb, #f8f8f2, transparent 90%);
+    inset 0 4px 8px rgba(0, 0, 0, .72),
+    inset 0 -1px 0 color-mix(in srgb, #f8f8f2, transparent 86%),
+    0 1px 0 color-mix(in srgb, #f8f8f2, transparent 88%);
 }
 .splash-bar {
   position: relative;
@@ -860,59 +860,41 @@ html.splash-avatar-cover .profile-card img { visibility: hidden; }
   border-radius: inherit;
   background:
     linear-gradient(180deg,
-      color-mix(in srgb, #f8f8f2, transparent 38%) 0%,
-      color-mix(in srgb, var(--purple), #f8f8f2 14%) 22%,
-      var(--purple) 55%,
-      color-mix(in srgb, var(--purple), #000 32%) 100%);
+      color-mix(in srgb, #f8f8f2, transparent 22%) 0%,
+      color-mix(in srgb, var(--purple), #f8f8f2 22%) 18%,
+      var(--purple) 48%,
+      color-mix(in srgb, var(--purple), #000 18%) 78%,
+      color-mix(in srgb, var(--purple), #000 42%) 100%);
   box-shadow:
-    inset 0 1px 0 color-mix(in srgb, #f8f8f2, transparent 42%),
-    0 0 6px color-mix(in srgb, var(--purple), transparent 70%);
-}
-.splash-bar::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 20px;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, color-mix(in srgb, #f8f8f2, transparent 58%));
-  pointer-events: none;
-}
-.splash-mouth,
-.splash-bat,
-.splash-cave {
-  position: absolute;
-  pointer-events: none;
-  line-height: 0;
-}
-.splash-mouth {
-  top: 50%;
-  right: -2px;
-  z-index: 2;
-  width: 34px;
-  height: 26px;
-  border-radius: 50%;
-  background: #0b0b12;
-  box-shadow: 0 0 0 10px #0b0b12;
-  transform: translate(18%, -50%);
+    inset 0 1px 0 color-mix(in srgb, #f8f8f2, transparent 28%),
+    inset 0 -1px 0 color-mix(in srgb, #000, transparent 55%);
 }
 .splash-bat {
+  position: absolute;
   top: 50%;
-  left: 0;
+  left: 3px;
   z-index: 3;
   width: 98px;
   height: 98px;
-  opacity: 1;
-  transform: translate3d(0, -58%, 0);
-  transform-origin: 52% 58%;
-  filter: drop-shadow(0 1px 4px color-mix(in srgb, var(--purple), transparent 55%));
+  opacity: 0;
+  pointer-events: none;
+  line-height: 0;
+  transform: translate3d(0, -58%, 0) scale(0.2);
+  transform-origin: 0% 58%;
+  filter:
+    drop-shadow(0 0 8px color-mix(in srgb, var(--purple), transparent 32%))
+    drop-shadow(0 2px 10px color-mix(in srgb, var(--purple), transparent 40%));
 }
 .splash-bat-sprite {
   position: absolute;
   inset: 0;
   display: block;
   opacity: 0;
-  background: var(--purple);
+  background:
+    linear-gradient(180deg,
+      color-mix(in srgb, var(--purple), #f8f8f2 30%) 0%,
+      var(--purple) 46%,
+      color-mix(in srgb, var(--purple), #000 26%) 100%);
   mask-image: var(--bat);
   mask-size: contain;
   mask-repeat: no-repeat;
@@ -923,21 +905,6 @@ html.splash-avatar-cover .profile-card img { visibility: hidden; }
   -webkit-mask-position: center;
 }
 .splash-bat-sprite.is-on { opacity: 1; }
-.splash-cave {
-  top: 50%;
-  right: -6px;
-  z-index: 4;
-  color: color-mix(in srgb, var(--text), transparent 8%);
-  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, .5));
-  transform: translate(40%, -52%);
-}
-.splash-cave svg {
-  display: block;
-  width: 96px;
-  height: 66px;
-  overflow: visible;
-  fill: currentColor;
-}
 .splash-avatar {
   position: fixed;
   left: 0;
@@ -1000,7 +967,6 @@ html.splash-avatar-cover .profile-card img { visibility: hidden; }
   .profile-hero-image, .profile-hero-blur { height: 760px; }
   .splash-track { width: min(86vw, 600px); }
   .splash-bat { width: 86px; height: 86px; }
-  .splash-cave svg { width: 84px; height: 58px; }
   .profile-card { padding-top: 46px; }
   .profile-card img { width: 112px; height: 112px; }
   .profile-card h1 { font-size: 1.8rem; }

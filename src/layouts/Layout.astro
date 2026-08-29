@@ -15,10 +15,11 @@ interface Props {
 const { title = site.title, description = site.description, image = '/android-chrome-512x512.png' } = Astro.props;
 const fullTitle = title === site.title ? site.title : `${title} · ${site.title}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const isHome = Astro.url.pathname === '/' || Astro.url.pathname === '/index.html';
 ---
 
 <!doctype html>
-<html lang="zh-CN" class="dark" data-theme="dark">
+<html lang="zh-CN" class:list={['dark', { 'splash-pending': isHome }]} data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -36,18 +37,22 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:image" content={new URL(image, Astro.site)} />
     <title>{fullTitle}</title>
     <ClientRouter />
-    <script is:inline>
+    <script is:inline data-astro-rerun>
       (function () {
         try {
-          if (sessionStorage.getItem('splash-done')) return;
-          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            sessionStorage.setItem('splash-done', '1');
+          var html = document.documentElement;
+          var path = location.pathname.replace(/\/index\.html$/, '/');
+          var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          var skip = path !== '/' || sessionStorage.getItem('splash-done') || reduce;
+          if (skip) {
+            html.classList.remove('splash-pending', 'splash-playing');
+            if (reduce) sessionStorage.setItem('splash-done', '1');
             return;
           }
-          var path = location.pathname.replace(/index\.html$/, '');
-          if (path !== '/') return;
-          document.documentElement.classList.add('splash-pending');
-        } catch (e) {}
+          html.classList.add('splash-pending', 'splash-playing');
+        } catch (e) {
+          document.documentElement.classList.remove('splash-pending', 'splash-playing');
+        }
       })();
     </script>
   </head>
