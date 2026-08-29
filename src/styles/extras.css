@@ -29,7 +29,10 @@
 }
 
 .katex-display {
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.95em 0.4em;
+  margin: 1.25em 0;
   scrollbar-width: thin;
   scrollbar-color: rgb(var(--color-neutral-400)) rgb(var(--color-neutral-700));
 }
