@@ -8,15 +8,15 @@ series: ["Python"]
 series_order: 1
 ---
 
-异步要解决的是 I/O 密集型问题：如何高效地等待大量网络事件，而不必给每个请求都开一条线程。线程数量一旦上去，往往在 socket 耗尽之前，内存或其他线程资源就先撑不住了。
+I/O 密集型程序大部分时间在等网络事件。若每个请求一条线程，线程数上去之后往往内存先耗尽，socket 还没用完。
 
-## 出发点：等待，而不是计算
+## 阻塞与事件循环
 
-爬虫、网关这类程序大部分时间在等内核说“这个 fd 可读了”。线程把等待藏进阻塞调用，但线程的开销昂贵。事件循环用 `selector` 同时盯着许多 fd，谁就绪就让谁继续——前提是等待期间不能一直占着调用栈不放。
+爬虫、网关这类程序大部分时间在等内核报告某个 fd 可读。线程把等待藏进阻塞调用，开销高。事件循环用 `selector` 同时盯许多 fd，谁就绪就让谁继续；等待期间不能一直占着调用栈。
 
 ## 回调式异步
 
-把“连上了再干什么”“读到了再干什么”拆成方法，注册进 selector。控制流因此不再是一条直线。
+把「连上了再干什么」「读到了再干什么」拆成方法，注册进 selector。控制流不再是一条直线。
 
 ```python
 import socket
@@ -76,7 +76,7 @@ def loop():
 
 ## 可暂停的对象
 
-要简化回调，关键是找到能在 I/O 阻塞时暂停、在 selector 报就绪后恢复的对象。CPython 的 `PyFrameObject` 分配在堆上，由解释器分配、GC 销毁，于是帧栈生命周期可以和一次函数调用的生命周期解开。这就是生成器的底层事实，也是协程的本质——早期 `@asyncio.coroutine` 就是生成器，后来的语法更干净。
+要简化回调，需要能在 I/O 阻塞时暂停、在 selector 报就绪后恢复的对象。CPython 的 `PyFrameObject` 分配在堆上，由解释器分配、GC 销毁，帧栈生命周期可以和一次函数调用解开。早期 `@asyncio.coroutine` 就是生成器，后来改成现在的语法。
 
 ## Future、Task 与事件循环
 
@@ -163,7 +163,7 @@ task_count = 0
 
 ## `yield from` 与 await
 
-生成器委托让子生成器看起来像普通调用。给 `Future` 写 `__iter__`，它就能出现在 `yield from` 右边，于是 `yield from f` 与 `yield f` 被收成同一种等待。再往后，语法上就把这件事写成 `await`。
+生成器委托让子生成器看起来像普通调用。给 `Future` 写 `__iter__`，它就能出现在 `yield from` 右边，于是 `yield from f` 与 `yield f` 同一种等待。语法上再写成 `await`。
 
 ```python
 class Future:
@@ -203,6 +203,6 @@ def read_all(sock):
 
 `Fetcher.fetch` 里连接写成 `yield from f`，读整页写成 `self.response = yield from read_all(sock)`。冒到 Task 的仍然是 `Future`，`Task.step` 不用改。
 
-## 回看 `async def`
+## `async def` 与 `await`
 
-回到现在的写法，`async def` 定义协程。`create_task` / `gather` 造出已经交给 event loop 的 Task。`await Task` 是等一个已在 loop 里跑的驱动器结束；`await` 普通协程是当前 Task 里做一次类似 `yield from sub_generator` 的委托；`await Future` 与最初的 `yield f` 同一件事。Task 负责往前推，loop 负责在 I/O 上叫醒它。
+`async def` 定义协程。`create_task` / `gather` 造出已经交给 event loop 的 Task。`await Task` 是等一个已在 loop 里跑的 Task 结束；`await` 普通协程是当前 Task 里做一次类似 `yield from sub_generator` 的委托；`await Future` 与最初的 `yield f` 相同。Task 负责往前推，loop 负责在 I/O 就绪时恢复它。
